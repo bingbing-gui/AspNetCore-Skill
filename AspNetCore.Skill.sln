@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.FrameWork.Practice", "MediatR.FrameWork\MediatR.FrameWork\MediatR.FrameWork.Practice.csproj", "{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MediatR.FrameWork", "MediatR.FrameWork", "{C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7} = {C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
+	EndGlobalSection
+EndGlobal
