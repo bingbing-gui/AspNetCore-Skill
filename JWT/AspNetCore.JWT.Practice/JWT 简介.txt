@@ -1,0 +1,30 @@
+﻿什么是JWT
+
+JWT是JSON Web Token 的缩写,JWT是双方之间传输信息的安全方法，使用JSON对象。这个信息被验证和信任，因为他是数字签名,
+jwt可以使用加密算发（使用HMAC算法）或使用RSA或ECDSA的公钥/私钥对进行签名
+
+JWT 有三部分构成
+Header
+Payload
+Signature
+
+1.
+Header 包含两部分，一个是签名的算法(常用的 HMAC,SHA256), 另一个是token 的类型，
+{
+"alg": "HMAC",
+"typ": "JWT"
+}
+
+2.
+Payload 是承载信息的地方，在这个地方可以存放用户信息和额外的数据
+
+3.
+Signature
+你需要首先对header和payload进行base64 编码, 然后将两部分的编码使用.连接起来
+然后通过header中声明的加密方式，然后就构成了jwt的第三部分.
+
+HMAC(base64UrlEncode(header) + "." +base64UrlEncode(payload),secret)
+
+其实这里的签名只是用来验证消息是否被篡改.
+
+上面这三部分构成JWT

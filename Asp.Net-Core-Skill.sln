@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.FrameWork.Practice"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MediatR.FrameWork", "MediatR.FrameWork", "{C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JWT", "JWT", "{52A12FFE-2B84-4530-88AA-B17F920DA030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.JWT.Practice", "JWT\AspNetCore.JWT.Practice\AspNetCore.JWT.Practice.csproj", "{D99AE553-4F21-4880-BDEE-7620A332DB2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D99AE553-4F21-4880-BDEE-7620A332DB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D99AE553-4F21-4880-BDEE-7620A332DB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D99AE553-4F21-4880-BDEE-7620A332DB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D99AE553-4F21-4880-BDEE-7620A332DB2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7} = {C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}
+		{D99AE553-4F21-4880-BDEE-7620A332DB2B} = {52A12FFE-2B84-4530-88AA-B17F920DA030}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
