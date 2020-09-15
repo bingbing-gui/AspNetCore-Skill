@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:51389",
-      "sslPort": 44387
+      "applicationUrl": "http://localhost:62364",
+      "sslPort": 44345
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "AspNetCore.JWT.Practice": {
+    "EPPlus.FrameWork.Practice": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger/index.html",
