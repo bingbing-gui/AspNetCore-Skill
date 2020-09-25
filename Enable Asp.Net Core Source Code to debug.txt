@@ -1,0 +1,6 @@
+
+1.Uncheck the (Tools -> Options -> Debugging -> Just My Code) checkbox.
+
+2.Ensure that the (Tools -> Options -> Debugging -> Symbol Settings -> Microsoft Symbol Servers) checkbox is set
+
+3.Ensure that the (Tools -> Options -> Debugging -> Enable Source Link support) checkbox is checked
