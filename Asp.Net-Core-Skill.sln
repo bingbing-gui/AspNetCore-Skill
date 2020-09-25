@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.JWT.Practice", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EPPlus.FrameWork", "EPPlus.FrameWork", "{671F3AA2-C1A2-4C24-A40E-572C2C24447E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPPlus.FrameWork.Practice", "EPPlus.FrameWork\EPPlus.FrameWork.Practice\EPPlus.FrameWork.Practice.csproj", "{1A9A62E8-2790-4A5D-9326-3C7B469F820B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPPlus.FrameWork.Practice", "EPPlus.FrameWork\EPPlus.FrameWork.Practice\EPPlus.FrameWork.Practice.csproj", "{1A9A62E8-2790-4A5D-9326-3C7B469F820B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Log.Practice", "AspNetCore.Log.Practice", "{BD188513-A02A-4231-A509-709E04E06A02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Log", "AspNetCore.Log.Practice\AspNetCore.Log\AspNetCore.Log.csproj", "{60D6D8F1-61E3-4EBA-A3EE-827660B5C92F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{1A9A62E8-2790-4A5D-9326-3C7B469F820B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A9A62E8-2790-4A5D-9326-3C7B469F820B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A9A62E8-2790-4A5D-9326-3C7B469F820B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60D6D8F1-61E3-4EBA-A3EE-827660B5C92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D6D8F1-61E3-4EBA-A3EE-827660B5C92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D6D8F1-61E3-4EBA-A3EE-827660B5C92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D6D8F1-61E3-4EBA-A3EE-827660B5C92F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7} = {C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}
 		{D99AE553-4F21-4880-BDEE-7620A332DB2B} = {52A12FFE-2B84-4530-88AA-B17F920DA030}
 		{1A9A62E8-2790-4A5D-9326-3C7B469F820B} = {671F3AA2-C1A2-4C24-A40E-572C2C24447E}
+		{60D6D8F1-61E3-4EBA-A3EE-827660B5C92F} = {BD188513-A02A-4231-A509-709E04E06A02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
