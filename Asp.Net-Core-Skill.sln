@@ -17,12 +17,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPPlus.FrameWork.Practice",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Log", "AspNetCore.Log", "{BD188513-A02A-4231-A509-709E04E06A02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Log.Practice", "AspNetCore.Log.Practice\AspNetCore.Log.Practice.csproj", "{E45522E5-6934-49F1-8F52-D8C1BF6619A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Log.Practice", "AspNetCore.Log.Practice\AspNetCore.Log.Practice.csproj", "{E45522E5-6934-49F1-8F52-D8C1BF6619A9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{0AF49E0E-46C7-412A-AFF4-F48E0680CC38}"
 	ProjectSection(SolutionItems) = preProject
 		Enable Asp.Net Core Source Code to debug.txt = Enable Asp.Net Core Source Code to debug.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DependencyInjection", "AspNetCore.DependencyInjection", "{C2D85F1B-E2C0-4194-9DBC-CADB8ABA45AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.DependencyInjection.Practice", "AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.Practice\AspNetCore.DependencyInjection.Practice.csproj", "{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +50,10 @@ Global
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +63,7 @@ Global
 		{D99AE553-4F21-4880-BDEE-7620A332DB2B} = {52A12FFE-2B84-4530-88AA-B17F920DA030}
 		{1A9A62E8-2790-4A5D-9326-3C7B469F820B} = {671F3AA2-C1A2-4C24-A40E-572C2C24447E}
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9} = {BD188513-A02A-4231-A509-709E04E06A02}
+		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B} = {C2D85F1B-E2C0-4194-9DBC-CADB8ABA45AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

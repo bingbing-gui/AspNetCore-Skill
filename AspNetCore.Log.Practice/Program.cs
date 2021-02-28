@@ -12,9 +12,12 @@ namespace AspNetCore.Log.Practice
 {
     public class Program
     {
+        /*
+         在 Main 中创建日志
+        */
         public static void Main(string[] args)
         {
-            var host =CreateHostBuilder(args).Build();
+            var host = CreateHostBuilder(args).Build();
             /*
              在Program 中创建日志
              */
@@ -39,10 +42,12 @@ namespace AspNetCore.Log.Practice
                      */
                     logging.ClearProviders();
                     logging.AddConsole();
+                    logging.AddDebug();
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+
                 });
     }
 }

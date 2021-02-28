@@ -15,14 +15,10 @@ namespace AspNetCore.Log.Practice
 {
     public class Startup
     {
-        /*
-         启动时创建日志
-        */
-       // private readonly ILogger _logger;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-           // _logger = logger;
+            // _logger = logger;
         }
         public IConfiguration Configuration { get; }
 
@@ -33,11 +29,18 @@ namespace AspNetCore.Log.Practice
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        /*
+         启动时创建日志
+            1.不支持将记录器注入到 Startup 构造函数中。
+            2.不支持将记录器注入到 Startup.ConfigureServices 方法签名中
+            这一限制的原因是，日志记录依赖于 DI 和配置，而配置又依赖于 DI。 
+            在完成 ConfigureServices 之前，不会设置 DI 容器。
+        */
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
-                //_logger.LogInformation("In Development environment");
+                logger.LogInformation("In Development environment");
                 app.UseDeveloperExceptionPage();
             }
 
