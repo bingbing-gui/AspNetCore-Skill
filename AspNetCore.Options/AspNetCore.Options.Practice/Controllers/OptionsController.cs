@@ -26,7 +26,8 @@ namespace AspNetCore.Options.Practice.Controllers
         public IEnumerable<PositionOptions> Get()
         {
             var positionOptions = new PositionOptions();
-            Configuration.GetSection(PositionOptions.Position).Bind(positionOptions);
+            //Configuration.GetSection(PositionOptions.Position).Bind(positionOptions);
+            positionOptions = Configuration.GetSection(PositionOptions.Position).Get<PositionOptions>();
             var list = new List<PositionOptions>();
             list.Add(positionOptions);
             return list;
