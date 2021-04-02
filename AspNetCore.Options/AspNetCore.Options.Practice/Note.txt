@@ -1,0 +1,58 @@
+﻿ASP.NET Core 中使用Options
+
+Options 使用了强类型类关联一组设置, 当配置单独存储到一个类, 设计软件有两个重要的原则:
+
+接口隔离原则或者封装：一个类仅依赖于它使用的配置.
+关注点分离: 应用的不同部分的设置不应该彼此依赖或相互耦合.
+选项还提供验证配置数据的机制
+
+一.绑定分层配置
+读取相关配置的首选方式是使用Options. 例如读取下列配置的值:
+"Position": {
+    "Title": "Editor",
+    "Name": "Joe Smith"
+  }
+
+创建一个PositionOptions 类：
+public class PositionOptions
+{
+    public const string Position = "Position";
+
+    public string Title { get; set; }
+    public string Name { get; set; }
+}
+一个options类必须满足下面条件：
+(1).必须是一个非抽象的类,这个类包含一个公共无参构造函数.
+(2).所有公共属性必须可读写.
+(3).字段不能绑定,在前面的类中Position不能被绑定.
+
+在下列代码中:
+(1).调用ConfigurationBinder.Bind 将Position节点绑定到PositionOptions类.
+(2).显示Position 配置的数据.
+public class OptionsController : ControllerBase
+{
+    private readonly ILogger<OptionsController> _logger;
+
+    private readonly IConfiguration Configuration;
+
+    public OptionsController(IConfiguration configuration, ILogger<OptionsController> logger)
+    {
+        Configuration = configuration;
+        _logger = logger;
+    }
+
+    [HttpGet]
+    public IEnumerable<PositionOptions> Get()
+    {
+        var positionOptions = new PositionOptions();
+        Configuration.GetSection(PositionOptions.Position).Bind(positionOptions);
+        var list = new List<PositionOptions>();
+        list.Add(positionOptions);
+        return list;
+    }
+}
+在前面code, 默认情况下，应用程序启动以后改变配置文件是可以读取到最新的.
+
+
+
+
