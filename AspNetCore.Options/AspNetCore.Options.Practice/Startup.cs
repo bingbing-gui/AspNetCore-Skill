@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
@@ -28,6 +30,26 @@ namespace AspNetCore.Options.Practice
         {
 
             services.AddControllers();
+            services.Configure<PositionOptions>(Configuration.GetSection(PositionOptions.Position));
+            services.Configure<TopItemSettings>(TopItemSettings.Month, Configuration.GetSection("TopItem:Month"));
+            services.Configure<TopItemSettings>(TopItemSettings.Year, Configuration.GetSection("TopItem:Year"));
+
+            services.AddOptions<MyConfigOptions>().Bind<MyConfigOptions>(Configuration.GetSection(MyConfigOptions.MyConfig))
+                .ValidateDataAnnotations()
+                .Validate(config =>
+                {
+                    if (config.Key2 != 0)
+                    {
+                        return config.Key3 > config.Key2;
+                    }
+                    return true;
+                }, "Key3 must be > than Key2.");
+
+            services.Configure<MyConfigOptions>(Configuration.GetSection(
+                                        MyConfigOptions.MyConfig));
+
+            services.TryAddEnumerable(ServiceDescriptor.Singleton<IValidateOptions<MyConfigOptions>, MyConfigValidation>());
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCore.Options.Practice", Version = "v1" });
