@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,20 +22,33 @@ namespace AspNetCore.DependencyInjection.Practice
                 var serviceProvider = scope.ServiceProvider;
                 try
                 {
-                    var myDependency=serviceProvider.GetRequiredService<IMyDependency>();
+                    var myDependency = serviceProvider.GetRequiredService<IMyDependency>();
                     myDependency.WriteMessage("Call services from main");
                 }
                 catch (Exception ex)
                 {
-                   var logger =serviceProvider.GetService<ILogger<Program>>();
+                    var logger = serviceProvider.GetService<ILogger<Program>>();
                     logger.LogError(ex, "An error occurred.");
                 }
+                
             }
             host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
+                Host.CreateDefaultBuilder(args)
+                
+                .ConfigureHostConfiguration(configHost =>
+                {
+                    configHost.SetBasePath(Directory.GetCurrentDirectory());
+                    configHost.AddJsonFile("hostsettings.json", optional: true);
+                    configHost.AddEnvironmentVariables(prefix: "PREFIX_");
+                    configHost.AddCommandLine(args);
+                })
+                .ConfigureAppConfiguration(configApp =>
+                {
+                
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
