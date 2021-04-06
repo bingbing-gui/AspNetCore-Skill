@@ -32,9 +32,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Options", "AspNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Practice", "AspNetCore.Options\AspNetCore.Options.Practice\AspNetCore.Options.Practice.csproj", "{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Project", "AspNetCore.Log\Log.Project\Log.Project.csproj", "{919CAB70-1CB8-4CF7-9764-1CC6A7EE628F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Project", "AspNetCore.Log\Log.Project\Log.Project.csproj", "{919CAB70-1CB8-4CF7-9764-1CC6A7EE628F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Scope.Project", "AspNetCore.Log\Log.Scope.Project\Log.Scope.Project.csproj", "{917AE32C-5195-462D-A99E-D732183EF33A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Scope.Project", "AspNetCore.Log\Log.Scope.Project\Log.Scope.Project.csproj", "{917AE32C-5195-462D-A99E-D732183EF33A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Serilog", "AspNetCore.Log\AspNetCore.Serilog\AspNetCore.Serilog.csproj", "{03026168-A66A-4BE7-930E-CCAC5FC5EED5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{917AE32C-5195-462D-A99E-D732183EF33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{917AE32C-5195-462D-A99E-D732183EF33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{917AE32C-5195-462D-A99E-D732183EF33A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03026168-A66A-4BE7-930E-CCAC5FC5EED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03026168-A66A-4BE7-930E-CCAC5FC5EED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03026168-A66A-4BE7-930E-CCAC5FC5EED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03026168-A66A-4BE7-930E-CCAC5FC5EED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
 		{919CAB70-1CB8-4CF7-9764-1CC6A7EE628F} = {BD188513-A02A-4231-A509-709E04E06A02}
 		{917AE32C-5195-462D-A99E-D732183EF33A} = {BD188513-A02A-4231-A509-709E04E06A02}
+		{03026168-A66A-4BE7-930E-CCAC5FC5EED5} = {BD188513-A02A-4231-A509-709E04E06A02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
