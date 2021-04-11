@@ -38,6 +38,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Scope.Project", "AspNet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Serilog", "AspNetCore.Log\AspNetCore.Serilog\AspNetCore.Serilog.csproj", "{03026168-A66A-4BE7-930E-CCAC5FC5EED5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Middleware", "AspNetCore.Middleware", "{64EAD733-6E08-4A4A-AE0E-B22894AC3642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Middleware", "AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ExceptionHandle", "AspNetCore.ExceptionHandle", "{97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ExceptionHandle", "AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.csproj", "{A9381237-5BC6-4F45-96A9-94DA79F6537C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +88,14 @@ Global
 		{03026168-A66A-4BE7-930E-CCAC5FC5EED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03026168-A66A-4BE7-930E-CCAC5FC5EED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03026168-A66A-4BE7-930E-CCAC5FC5EED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9381237-5BC6-4F45-96A9-94DA79F6537C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9381237-5BC6-4F45-96A9-94DA79F6537C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9381237-5BC6-4F45-96A9-94DA79F6537C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9381237-5BC6-4F45-96A9-94DA79F6537C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +110,8 @@ Global
 		{919CAB70-1CB8-4CF7-9764-1CC6A7EE628F} = {BD188513-A02A-4231-A509-709E04E06A02}
 		{917AE32C-5195-462D-A99E-D732183EF33A} = {BD188513-A02A-4231-A509-709E04E06A02}
 		{03026168-A66A-4BE7-930E-CCAC5FC5EED5} = {BD188513-A02A-4231-A509-709E04E06A02}
+		{947EEC82-13EB-4D2E-B05F-D4E14DDB697E} = {64EAD733-6E08-4A4A-AE0E-B22894AC3642}
+		{A9381237-5BC6-4F45-96A9-94DA79F6537C} = {97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
