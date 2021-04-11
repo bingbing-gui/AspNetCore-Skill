@@ -32,6 +32,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Options", "AspNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Practice", "AspNetCore.Options\AspNetCore.Options.Practice\AspNetCore.Options.Practice.csproj", "{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Window.ManualResetEventSlim", "Window.ManualResetEventSlim", "{F9C1278E-43E0-4654-A8EC-73B93C59EFFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Window.ManualResetEventSlim.Practice", "Window.ManualResetEventSlim\Window.ManualResetEventSlim.Practice\Window.ManualResetEventSlim.Practice.csproj", "{48EC4989-7FAA-4642-84C5-D255B99BEC17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +66,10 @@ Global
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EC4989-7FAA-4642-84C5-D255B99BEC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EC4989-7FAA-4642-84C5-D255B99BEC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EC4989-7FAA-4642-84C5-D255B99BEC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EC4989-7FAA-4642-84C5-D255B99BEC17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +81,7 @@ Global
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9} = {BD188513-A02A-4231-A509-709E04E06A02}
 		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B} = {C2D85F1B-E2C0-4194-9DBC-CADB8ABA45AE}
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
+		{48EC4989-7FAA-4642-84C5-D255B99BEC17} = {F9C1278E-43E0-4654-A8EC-73B93C59EFFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
