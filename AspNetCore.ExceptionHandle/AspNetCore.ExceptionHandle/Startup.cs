@@ -43,7 +43,7 @@ namespace AspNetCore.ExceptionHandle
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.ExceptionHandle v1"));
             }
-
+            app.UseExceptionHandler("/error");
             app.UseHttpsRedirection();
 
             app.UseRouting();

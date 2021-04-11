@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace AspNetCore.ExceptionHandle.Exception
+﻿namespace AspNetCore.ExceptionHandle.Exception
 {
     public interface IKnowException
     {
