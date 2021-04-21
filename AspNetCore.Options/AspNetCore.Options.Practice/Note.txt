@@ -124,11 +124,11 @@ public void ConfigureServices(IServiceCollection services)
 //通过构造函数注入
 public OptionsController(IConfiguration configuration, IOptionsSnapshot<PositionOptions> options, 
         ILogger<OptionsController> logger)
-    {
+{
         Configuration = configuration;
         _options = options.Value;
         _logger = logger;
-    }
+}
 IOptionsMonitor
 public void ConfigureServices(IServiceCollection services)
 {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice
+namespace AspNetCore.Options.Bind.Practice
 {
     public class MyConfigOptions
     {
