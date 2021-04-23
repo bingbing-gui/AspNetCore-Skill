@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 
-namespace Options.Project.Service
+namespace AspNetCore.Options.Practice.Extension
 {
     public interface IOrderService
     {

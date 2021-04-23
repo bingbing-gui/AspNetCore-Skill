@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Options.Project.Service;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice2.Controllers
+namespace AspNetCore.Options.Validation.Practice.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -19,19 +19,24 @@ namespace AspNetCore.Options.Practice2.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
+        private readonly IOptions<MyConfigOptions> _config;
+
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        public int Get([FromServices] IOrderService orderService)
+        public IEnumerable<WeatherForecast> Get()
         {
-            Console.WriteLine($"The IOptions Patter ShowIOptionsMaxOrderCount:{orderService.ShowIOptionsMaxOrderCount()}");
-            //能够读取到最新配置
-            Console.WriteLine($"The IOptionsMonitor Patter ShowIOptionsMonitorOrderCount:{orderService.ShowIOptionsMonitorOrderCount()}");
-            Console.WriteLine($"The IOptionsSnapshotMax Patter ShowIOptionsSnapshotMaxOrderCount:{orderService.ShowIOptionsSnapshotMaxOrderCount()}");
-            return 1;
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
         }
     }
 }

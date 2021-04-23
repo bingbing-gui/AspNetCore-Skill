@@ -23,20 +23,17 @@ namespace AspNetCore.Options.Bind.Practice.Controllers
 
         private readonly TopItemSettings _yearTopItem;
 
-        private readonly IOptions<MyConfigOptions> _config;
-
-        public OptionsBindController(IConfiguration configuration
-            //IOptionsMonitor<PositionOptions> options,//单路模式下
-            //IOptionsSnapshot<TopItemSettings> optionsSnapshot,//Scope 模式
-            //IOptions<MyConfigOptions> config,
-            //ILogger<OptionsBindController> logger
+        public OptionsBindController(IConfiguration configuration,
+            IOptionsMonitor<PositionOptions> options,
+            IOptionsSnapshot<TopItemSettings> optionsSnapshot,
+            ILogger<OptionsBindController> logger
             )
         {
             Configuration = configuration;
-            //_options = options.CurrentValue;
-            //_monthTopItem = optionsSnapshot.Get(TopItemSettings.Month);
-            //_yearTopItem = optionsSnapshot.Get(TopItemSettings.Year);
-            //_logger = logger;
+            _options = options.CurrentValue;
+            _monthTopItem = optionsSnapshot.Get(TopItemSettings.Month);
+            _yearTopItem = optionsSnapshot.Get(TopItemSettings.Year);
+            _logger = logger;
             //_config = config;
             //try
             //{
@@ -62,8 +59,8 @@ namespace AspNetCore.Options.Bind.Practice.Controllers
             var positionOptions = new PositionOptions();
             Configuration.GetSection(PositionOptions.Position).Bind(positionOptions);
             Console.WriteLine($"Positioin Bind");
-            Console.WriteLine($"PositionOptions.Title {positionOptions.Title}");
-            Console.WriteLine($"PositionOptions.Name {positionOptions.Name}");
+            Console.WriteLine($"PositionOptions.Title= {positionOptions.Title}");
+            Console.WriteLine($"PositionOptions.Name= {positionOptions.Name}");
             return 1;
         }
         /// <summary>
@@ -78,8 +75,32 @@ namespace AspNetCore.Options.Bind.Practice.Controllers
             var positionOptions = new PositionOptions();
             positionOptions = Configuration.GetSection(PositionOptions.Position).Get<PositionOptions>();
             Console.WriteLine($"Positioin Get");
-            Console.WriteLine($"PositionOptions.Title {positionOptions.Title}");
-            Console.WriteLine($"PositionOptions.Name {positionOptions.Name}");
+            Console.WriteLine($"PositionOptions.Title= {positionOptions.Title}");
+            Console.WriteLine($"PositionOptions.Name= {positionOptions.Name}");
+            return 1;
+        }
+        /// <summary>
+        /// 获取month 实例
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("monthsection")]
+        public int GetMonthSection()
+        {
+            Console.WriteLine($"Month Get");
+            Console.WriteLine($"Month section= {_monthTopItem.Name}");
+            Console.WriteLine($"Month section= {_monthTopItem.Model}");
+            return 1;
+        }
+        /// <summary>
+        /// 获取year 实例
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("yearsection")]
+        public int GetYearSection()
+        {
+            Console.WriteLine($"Month Get");
+            Console.WriteLine($"Month setcion= {_yearTopItem.Name}");
+            Console.WriteLine($"Month setcion= {_yearTopItem.Model}");
             return 1;
         }
         //[HttpGet("get2")]

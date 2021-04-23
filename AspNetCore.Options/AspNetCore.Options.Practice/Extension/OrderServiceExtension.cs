@@ -1,12 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Options.Project.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice2.Extension
+namespace AspNetCore.Options.Practice.Extension
 {
     public static class OrderServiceExtension
     {

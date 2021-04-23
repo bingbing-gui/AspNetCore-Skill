@@ -1,20 +1,20 @@
-using AspNetCore.Options.Practice2.Extension;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-using Options.Project.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice2
+namespace AspNetCore.Options.Bind.Practice
 {
     public class Startup
     {
@@ -22,15 +22,22 @@ namespace AspNetCore.Options.Practice2
         {
             Configuration = configuration;
         }
+
         public IConfiguration Configuration { get; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOrderService(Configuration.GetSection("OrderServiceOptions"));
+
             services.AddControllers();
+            services.Configure<PositionOptions>(Configuration.GetSection(PositionOptions.Position));
+            //为实例注册不同的名称,通过：符号类分隔不同的JSON节点
+            services.Configure<TopItemSettings>(TopItemSettings.Month, Configuration.GetSection("TopItem:Month"));
+            services.Configure<TopItemSettings>(TopItemSettings.Year, Configuration.GetSection("TopItem:Year"));
+           
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCore.Options.Practice2", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCore.Options.Practice", Version = "v1" });
             });
         }
 
@@ -41,7 +48,7 @@ namespace AspNetCore.Options.Practice2
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.Options.Practice2 v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.Options.Practice v1"));
             }
 
             app.UseHttpsRedirection();

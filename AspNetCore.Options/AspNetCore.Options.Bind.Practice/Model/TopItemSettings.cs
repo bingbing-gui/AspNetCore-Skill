@@ -11,6 +11,7 @@ namespace AspNetCore.Options.Bind.Practice
         public const string Year = "Year";
 
         public string Name { get; set; }
+
         public string Model { get; set; }
     }
 }

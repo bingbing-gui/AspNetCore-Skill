@@ -1,6 +1,6 @@
 using System;
 
-namespace AspNetCore.Options.Practice2
+namespace AspNetCore.Options.Validation.Practice
 {
     public class WeatherForecast
     {
