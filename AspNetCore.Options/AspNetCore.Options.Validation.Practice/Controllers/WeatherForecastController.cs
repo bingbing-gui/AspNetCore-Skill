@@ -19,24 +19,39 @@ namespace AspNetCore.Options.Validation.Practice.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        private readonly IOptions<MyConfigOptions> _config;
+        private readonly IOptions<MyConfigOptions> _option;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOptions<MyConfigOptions> options)
         {
             _logger = logger;
-        }
-
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
-        {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            _option = options;
+            _option = options;
+            try
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                var configValue = _option.Value;
+            }
+            catch (OptionsValidationException ex)
+            {
+                foreach (var failure in ex.Failures)
+                {
+                    _logger.LogError(failure);
+                }
+            }
+        }
+        [HttpGet("validation")]
+        public int Get()
+        {
+            try
+            {
+                Console.WriteLine($"Key1={_option.Value.Key1}");
+                Console.WriteLine($"Key1={_option.Value.Key2}");
+                Console.WriteLine($"Key1={_option.Value.Key3}");
+            }
+            catch (OptionsValidationException optValEx)
+            {
+                _logger.LogError(optValEx.Message);
+            }
+            return 1;
         }
     }
 }

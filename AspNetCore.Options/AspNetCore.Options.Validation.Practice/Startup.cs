@@ -28,7 +28,8 @@ namespace AspNetCore.Options.Validation.Practice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOptions<MyConfigOptions>().Bind<MyConfigOptions>(Configuration.GetSection(MyConfigOptions.MyConfig))
-                .ValidateDataAnnotations()
+                .ValidateDataAnnotations()//通过属性的方式验证
+                //第一个参数验证的业务逻辑,第二个参数是返回的错误
                 .Validate(config =>
                 {
                     if (config.Key2 != 0)
@@ -37,10 +38,9 @@ namespace AspNetCore.Options.Validation.Practice
                     }
                     return true;
                 }, "Key3 must be > than Key2.");
-
             services.Configure<MyConfigOptions>(Configuration.GetSection(MyConfigOptions.MyConfig));
-            services.TryAddEnumerable(ServiceDescriptor.Singleton<IValidateOptions<MyConfigOptions>, MyConfigValidation>());
 
+            services.TryAddEnumerable(ServiceDescriptor.Singleton<IValidateOptions<MyConfigOptions>, MyConfigValidation>());
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

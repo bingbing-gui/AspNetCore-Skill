@@ -34,18 +34,6 @@ namespace AspNetCore.Options.Bind.Practice.Controllers
             _monthTopItem = optionsSnapshot.Get(TopItemSettings.Month);
             _yearTopItem = optionsSnapshot.Get(TopItemSettings.Year);
             _logger = logger;
-            //_config = config;
-            //try
-            //{
-            //    var configValue = _config.Value;
-            //}
-            //catch (OptionsValidationException ex)
-            //{
-            //    foreach (var failure in ex.Failures)
-            //    {
-            //        _logger.LogError(failure);
-            //    }
-            //}
         }
         /// <summary>
         ///通过Bind方法将配置文件绑定到实体类
@@ -103,21 +91,5 @@ namespace AspNetCore.Options.Bind.Practice.Controllers
             Console.WriteLine($"Month setcion= {_yearTopItem.Model}");
             return 1;
         }
-        //[HttpGet("get2")]
-        //public ContentResult Get2()
-        //{
-        //    string msg;
-        //    try
-        //    {
-        //        msg = $"Key1: {_config.Value.Key1} \n" +
-        //              $"Key2: {_config.Value.Key2} \n" +
-        //              $"Key3: {_config.Value.Key3}";
-        //    }
-        //    catch (OptionsValidationException optValEx)
-        //    {
-        //        return Content(optValEx.Message);
-        //    }
-        //    return Content(msg);
-        //}
     }
 }

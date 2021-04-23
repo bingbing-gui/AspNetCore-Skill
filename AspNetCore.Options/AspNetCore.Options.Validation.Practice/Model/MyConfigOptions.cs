@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace AspNetCore.Options.Validation.Practice
 {
+    /// <summary>
+    /// 通过IValidateOptions 方式进行验证
+    /// </summary>
     public class MyConfigOptions
     {
         public const string MyConfig = "MyConfig";
@@ -16,9 +19,9 @@ namespace AspNetCore.Options.Validation.Practice
         [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$")]
         public string Key1 { get; set; }
 
-        [Range(0, 1000,ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+        [Range(0, 1000, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public int Key2 { get; set; }
-        
+
         public int Key3 { get; set; }
     }
     public class MyConfigValidation : IValidateOptions<MyConfigOptions>
@@ -53,6 +56,7 @@ namespace AspNetCore.Options.Validation.Practice
             }
             if (vor != null)
             {
+                //失败时返回的错误信息
                 return ValidateOptionsResult.Fail(vor);
             }
 
