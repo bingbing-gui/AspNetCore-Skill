@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCore.ExceptionHandle.Exception;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace AspNetCore.ExceptionHandle.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            throw new System.Exception("Error");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

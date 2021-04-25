@@ -9,7 +9,16 @@ namespace AspNetCore.DependencyInjection.Lifetime.Practice
     {
         string OperationId { get; }
     }
+    /// <summary>
+    /// 瞬间
+    /// </summary>
     public interface IOperationTransient : IOperation { }
+    /// <summary>
+    /// 范围
+    /// </summary>
     public interface IOperationScoped : IOperation { }
+    /// <summary>
+    /// 单例
+    /// </summary>
     public interface IOperationSingleton : IOperation { }
 }

@@ -7,13 +7,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNetCore.ExceptionHandle.Controllers
 {
     [Route("/error")]
     public class ErrorController : Controller
     {
-
         public IActionResult Index()
         {
             var exceptionHandlerPathFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
@@ -21,9 +21,15 @@ namespace AspNetCore.ExceptionHandle.Controllers
             var knowException = ex as IKnowException;
             if (knowException == null)
             {
-                
+                var logger = HttpContext.RequestServices.GetService<ILogger<MyExceptionFilterAttribute>>();
+                logger.LogError(ex, ex.Message);
+                knowException = KnowException.Unknown;
             }
-            return View();
+            else
+            {
+                knowException = KnowException.FromKnownException(knowException);
+            }
+            return View(knowException);
         }
     }
 }

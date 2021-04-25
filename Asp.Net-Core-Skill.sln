@@ -46,6 +46,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ExceptionHandle", "AspNetCore.ExceptionHandle", "{97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}"
+	ProjectSection(SolutionItems) = preProject
+		doc.txt = doc.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle", "AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.csproj", "{A9381237-5BC6-4F45-96A9-94DA79F6537C}"
 EndProject

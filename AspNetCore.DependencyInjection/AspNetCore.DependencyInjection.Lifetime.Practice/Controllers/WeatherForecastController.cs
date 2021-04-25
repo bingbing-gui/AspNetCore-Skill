@@ -42,9 +42,9 @@ namespace AspNetCore.DependencyInjection.Lifetime.Practice.Controllers
                               [FromServices] IOperationTransient operationTransient)
         {
 
-            _logger.LogError($"Scoped={operationScoped.OperationId}");
-            _logger.LogError($"Single={operationSingleton.OperationId}");
-            _logger.LogError($"Transient={operationTransient.OperationId}");
+            Console.WriteLine($"Scoped={operationScoped.OperationId}");
+            Console.WriteLine($"Single={operationSingleton.OperationId}");
+            Console.WriteLine($"Transient={operationTransient.OperationId}");
             return 1;
         }
     }

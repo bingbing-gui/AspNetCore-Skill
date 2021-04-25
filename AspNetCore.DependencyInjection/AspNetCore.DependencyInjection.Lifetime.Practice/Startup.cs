@@ -29,7 +29,6 @@ namespace AspNetCore.DependencyInjection.Lifetime.Practice
             services.AddSingleton<IOperationSingleton, Operation>();
             services.AddScoped<IOperationScoped, Operation>();
             services.AddSingleton<IOperationSingleton, Operation>();
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
