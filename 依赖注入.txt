@@ -1,0 +1,20 @@
+﻿1、借助依赖入住框架，帮助我们在应用程序构建时，遵循设计原则，确保代码可维护性和可扩展性。
+2、ASP.NET Core的整个架构中，依赖注入框架提供了对象创建和生命周期管理的核心能力，各个组件相互协作
+,也是依赖注入框架的能力来实现的.
+
+组件包:
+Microsoft.Extensions.DependencyInjection.Abstractions
+Microsoft.Extensions.DependencyInjection
+
+核心类型:
+IServiceCollection
+ServiceDescriptor
+IServiceProvider
+IServiceScope
+
+声明周期:ServiceLifetime
+1.单例Singleton
+2.作用域Scoped
+3.瞬时Transient
+
+

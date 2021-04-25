@@ -25,6 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{0AF49E0E-46C
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DependencyInjection", "AspNetCore.DependencyInjection", "{C2D85F1B-E2C0-4194-9DBC-CADB8ABA45AE}"
+	ProjectSection(SolutionItems) = preProject
+		依赖注入.txt = 依赖注入.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection.Practice", "AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.Practice\AspNetCore.DependencyInjection.Practice.csproj", "{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}"
 EndProject
@@ -61,6 +64,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Startup", "AspNetCore.Startup", "{9BE170B6-EFB2-4DAB-80B8-256CE09CB280}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Startup.Practice", "AspNetCore.Startup\AspNetCore.Startup.Practice\AspNetCore.Startup.Practice.csproj", "{369346CD-0194-4C29-8E26-8DC940FE323B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.DependencyInjection.Lifetime.Practice", "AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.Lifetime.Practice\AspNetCore.DependencyInjection.Lifetime.Practice.csproj", "{E6C204AF-67A4-4306-8902-C6044F322FFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,6 +133,10 @@ Global
 		{369346CD-0194-4C29-8E26-8DC940FE323B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{369346CD-0194-4C29-8E26-8DC940FE323B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{369346CD-0194-4C29-8E26-8DC940FE323B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +157,7 @@ Global
 		{71C2313D-9FB7-4954-A25C-39DF7C3C3409} = {A00C6D8E-26C2-42B0-9763-002053B80AC4}
 		{852A2450-27A8-4B6A-8968-0D4F80357618} = {A7B15901-38A8-4DE2-B944-7F2CAE0B22A3}
 		{369346CD-0194-4C29-8E26-8DC940FE323B} = {9BE170B6-EFB2-4DAB-80B8-256CE09CB280}
+		{E6C204AF-67A4-4306-8902-C6044F322FFD} = {C2D85F1B-E2C0-4194-9DBC-CADB8ABA45AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
