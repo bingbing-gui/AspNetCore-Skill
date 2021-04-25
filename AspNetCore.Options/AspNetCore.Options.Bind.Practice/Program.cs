@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice.Extension
+namespace AspNetCore.Options.Bind.Practice
 {
     public class Program
     {

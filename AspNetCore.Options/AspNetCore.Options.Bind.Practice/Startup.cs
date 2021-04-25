@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice.Extension
+namespace AspNetCore.Options.Bind.Practice
 {
     public class Startup
     {
@@ -29,10 +29,12 @@ namespace AspNetCore.Options.Practice.Extension
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddOrderService(Configuration.GetSection("OrderServiceOptions"));
-
             services.AddControllers();
-
+            services.Configure<PositionOptions>(Configuration.GetSection(PositionOptions.Position));
+            //为实例注册不同的名称,通过：符号类分隔不同的JSON节点
+            services.Configure<TopItemSettings>(TopItemSettings.Month, Configuration.GetSection("TopItem:Month"));
+            services.Configure<TopItemSettings>(TopItemSettings.Year, Configuration.GetSection("TopItem:Year"));
+           
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCore.Options.Practice", Version = "v1" });

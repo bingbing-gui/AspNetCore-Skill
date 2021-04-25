@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice.Extension
+namespace AspNetCore.Options.Validation.Practice
 {
     public class Startup
     {
@@ -22,20 +22,29 @@ namespace AspNetCore.Options.Practice.Extension
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOptions<MyConfigOptions>().Bind<MyConfigOptions>(Configuration.GetSection(MyConfigOptions.MyConfig))
+                .ValidateDataAnnotations()//通过属性的方式验证
+                //第一个参数验证的业务逻辑,第二个参数是返回的错误
+                .Validate(config =>
+                {
+                    if (config.Key2 != 0)
+                    {
+                        return config.Key3 > config.Key2;
+                    }
+                    return true;
+                }, "Key3 must be > than Key2.");
+            services.Configure<MyConfigOptions>(Configuration.GetSection(MyConfigOptions.MyConfig));
 
-            services.AddOrderService(Configuration.GetSection("OrderServiceOptions"));
-
+            services.TryAddEnumerable(ServiceDescriptor.Singleton<IValidateOptions<MyConfigOptions>, MyConfigValidation>());
             services.AddControllers();
-
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCore.Options.Practice", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCore.Options.Validation.Practice", Version = "v1" });
             });
         }
 
@@ -46,7 +55,7 @@ namespace AspNetCore.Options.Practice.Extension
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.Options.Practice v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.Options.Validation.Practice v1"));
             }
 
             app.UseHttpsRedirection();

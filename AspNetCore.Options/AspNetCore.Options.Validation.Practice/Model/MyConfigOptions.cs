@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace AspNetCore.Options.Practice
+namespace AspNetCore.Options.Validation.Practice
 {
+    /// <summary>
+    /// 通过IValidateOptions 方式进行验证
+    /// </summary>
     public class MyConfigOptions
     {
         public const string MyConfig = "MyConfig";
 
         [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$")]
         public string Key1 { get; set; }
-        [Range(0, 1000,ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+
+        [Range(0, 1000, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public int Key2 { get; set; }
+
         public int Key3 { get; set; }
     }
     public class MyConfigValidation : IValidateOptions<MyConfigOptions>
@@ -25,8 +30,7 @@ namespace AspNetCore.Options.Practice
 
         public MyConfigValidation(IConfiguration config)
         {
-            _config = config.GetSection(MyConfigOptions.MyConfig)
-                .Get<MyConfigOptions>();
+            _config = config.GetSection(MyConfigOptions.MyConfig).Get<MyConfigOptions>();
         }
 
         public ValidateOptionsResult Validate(string name, MyConfigOptions options)
@@ -39,12 +43,10 @@ namespace AspNetCore.Options.Practice
             {
                 vor = $"{options.Key1} doesn't match RegEx \n";
             }
-
             if (options.Key2 < 0 || options.Key2 > 1000)
             {
                 vor = $"{options.Key2} doesn't match Range 0 - 1000 \n";
             }
-
             if (_config.Key2 != default)
             {
                 if (_config.Key3 <= _config.Key2)
@@ -52,9 +54,9 @@ namespace AspNetCore.Options.Practice
                     vor += "Key3 must be > than Key2.";
                 }
             }
-
             if (vor != null)
             {
+                //失败时返回的错误信息
                 return ValidateOptionsResult.Fail(vor);
             }
 

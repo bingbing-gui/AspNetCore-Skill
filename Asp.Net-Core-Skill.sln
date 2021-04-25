@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInject
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Options", "AspNetCore.Options", "{05DBA937-5B6E-4FDC-9F43-4155696B4964}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Practice", "AspNetCore.Options\AspNetCore.Options.Practice\AspNetCore.Options.Practice.csproj", "{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Bind.Practice", "AspNetCore.Options\AspNetCore.Options.Bind.Practice\AspNetCore.Options.Bind.Practice.csproj", "{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Project", "AspNetCore.Log\Log.Project\Log.Project.csproj", "{919CAB70-1CB8-4CF7-9764-1CC6A7EE628F}"
 EndProject
@@ -55,15 +55,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Window.ManualResetEventSlim
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.StaticFileMiddle", "AspNetCore.StaticFileMiddle", "{A00C6D8E-26C2-42B0-9763-002053B80AC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.StaticFileMiddle.Pratice", "AspNetCore.StaticFileMiddle\AspNetCore.StaticFileMiddle.Pratice\AspNetCore.StaticFileMiddle.Pratice.csproj", "{71C2313D-9FB7-4954-A25C-39DF7C3C3409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.StaticFileMiddle.Pratice", "AspNetCore.StaticFileMiddle\AspNetCore.StaticFileMiddle.Pratice\AspNetCore.StaticFileMiddle.Pratice.csproj", "{71C2313D-9FB7-4954-A25C-39DF7C3C3409}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.FileProvider", "AspNetCore.FileProvider", "{A7B15901-38A8-4DE2-B944-7F2CAE0B22A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.FileProvider.Practice", "AspNetCore.FileProvider\AspNetCore.FileProvider.Practice\AspNetCore.FileProvider.Practice.csproj", "{852A2450-27A8-4B6A-8968-0D4F80357618}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.FileProvider.Practice", "AspNetCore.FileProvider\AspNetCore.FileProvider.Practice\AspNetCore.FileProvider.Practice.csproj", "{852A2450-27A8-4B6A-8968-0D4F80357618}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Practice", "AspNetCore.Options\AspNetCore.Options.Practice\AspNetCore.Options.Practice.csproj", "{44E2D1E5-B164-46E2-8324-C9EC44C4998A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Startup", "AspNetCore.Startup", "{9BE170B6-EFB2-4DAB-80B8-256CE09CB280}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Startup.Practice", "AspNetCore.Startup\AspNetCore.Startup.Practice\AspNetCore.Startup.Practice.csproj", "{369346CD-0194-4C29-8E26-8DC940FE323B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Startup.Practice", "AspNetCore.Startup\AspNetCore.Startup.Practice\AspNetCore.Startup.Practice.csproj", "{369346CD-0194-4C29-8E26-8DC940FE323B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Options.Validation.Practice", "AspNetCore.Options\AspNetCore.Options.Validation.Practice\AspNetCore.Options.Validation.Practice.csproj", "{9F5993F0-7A1C-4598-AA90-031BAE44B958}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.DependencyInjection.Lifetime.Practice", "AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.Lifetime.Practice\AspNetCore.DependencyInjection.Lifetime.Practice.csproj", "{E6C204AF-67A4-4306-8902-C6044F322FFD}"
 EndProject
@@ -129,6 +133,10 @@ Global
 		{852A2450-27A8-4B6A-8968-0D4F80357618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{852A2450-27A8-4B6A-8968-0D4F80357618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{852A2450-27A8-4B6A-8968-0D4F80357618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E2D1E5-B164-46E2-8324-C9EC44C4998A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E2D1E5-B164-46E2-8324-C9EC44C4998A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E2D1E5-B164-46E2-8324-C9EC44C4998A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E2D1E5-B164-46E2-8324-C9EC44C4998A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{369346CD-0194-4C29-8E26-8DC940FE323B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{369346CD-0194-4C29-8E26-8DC940FE323B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{369346CD-0194-4C29-8E26-8DC940FE323B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -137,6 +145,10 @@ Global
 		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5993F0-7A1C-4598-AA90-031BAE44B958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5993F0-7A1C-4598-AA90-031BAE44B958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5993F0-7A1C-4598-AA90-031BAE44B958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5993F0-7A1C-4598-AA90-031BAE44B958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,8 +168,8 @@ Global
 		{48EC4989-7FAA-4642-84C5-D255B99BEC17} = {F9C1278E-43E0-4654-A8EC-73B93C59EFFA}
 		{71C2313D-9FB7-4954-A25C-39DF7C3C3409} = {A00C6D8E-26C2-42B0-9763-002053B80AC4}
 		{852A2450-27A8-4B6A-8968-0D4F80357618} = {A7B15901-38A8-4DE2-B944-7F2CAE0B22A3}
+		{44E2D1E5-B164-46E2-8324-C9EC44C4998A} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
 		{369346CD-0194-4C29-8E26-8DC940FE323B} = {9BE170B6-EFB2-4DAB-80B8-256CE09CB280}
-		{E6C204AF-67A4-4306-8902-C6044F322FFD} = {C2D85F1B-E2C0-4194-9DBC-CADB8ABA45AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

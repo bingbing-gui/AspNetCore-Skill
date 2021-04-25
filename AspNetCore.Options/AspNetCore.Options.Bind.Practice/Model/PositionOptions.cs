@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Text.RegularExpressions;
 
-namespace AspNetCore.Options.Practice
+namespace AspNetCore.Options.Bind.Practice
 {
     public class PositionOptions
     {
