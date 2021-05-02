@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@namespace AspNetCore.UsingHttpClient.Practice.GitHub
+@model NamedClientModel
+@{ ViewData["Title"] = "Pull Requests for Docs Repo"; }
+
+<h1>@ViewData["Title"]</h1>
+@if (Model.GetPullRequestsError)
+{
+    <p>Unable to get issues from GitHub. Please try again later.</p>
+}
+else
+{
+    @foreach (var pullRequest in Model.PullRequests)
+    {
+        <li>@pullRequest.Title</li>
+    }
+}
