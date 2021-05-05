@@ -80,7 +80,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.MakeHttpRequest"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.MakeHttpRequest.Practice", "AspNetCore.MakeHttpRequest\AspNetCore.MakeHttpRequest.Practice\AspNetCore.MakeHttpRequest.Practice.csproj", "{D239DE59-E5F7-48E8-A669-19ABB5F1803F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.UsingHttpClient.Practice", "AspNetCore.MakeHttpRequest\AspNetCore.UsingHttpClient.Practice\AspNetCore.UsingHttpClient.Practice.csproj", "{A75CBB66-5618-47BA-B013-E4E178DE168F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.UsingHttpClient.Practice", "AspNetCore.MakeHttpRequest\AspNetCore.UsingHttpClient.Practice\AspNetCore.UsingHttpClient.Practice.csproj", "{A75CBB66-5618-47BA-B013-E4E178DE168F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.UsingHttpVerb.Practice", "AspNetCore.MakeHttpRequest\AspNetCore.UsingHttpVerb.Practice\AspNetCore.UsingHttpVerb.Practice.csproj", "{49EB56C2-C807-489E-AF68-BAED91980C31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -172,6 +174,10 @@ Global
 		{A75CBB66-5618-47BA-B013-E4E178DE168F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A75CBB66-5618-47BA-B013-E4E178DE168F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A75CBB66-5618-47BA-B013-E4E178DE168F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EB56C2-C807-489E-AF68-BAED91980C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EB56C2-C807-489E-AF68-BAED91980C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EB56C2-C807-489E-AF68-BAED91980C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EB56C2-C807-489E-AF68-BAED91980C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -198,6 +204,7 @@ Global
 		{03529777-DFC6-4AD8-84BC-77F50256B571} = {97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}
 		{D239DE59-E5F7-48E8-A669-19ABB5F1803F} = {8038F662-3EE7-49DB-A14A-CDAEA13C42E1}
 		{A75CBB66-5618-47BA-B013-E4E178DE168F} = {8038F662-3EE7-49DB-A14A-CDAEA13C42E1}
+		{49EB56C2-C807-489E-AF68-BAED91980C31} = {8038F662-3EE7-49DB-A14A-CDAEA13C42E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
