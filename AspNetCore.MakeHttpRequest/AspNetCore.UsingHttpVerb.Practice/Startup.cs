@@ -1,3 +1,4 @@
+using AspNetCore.UsingHttpVerb.Practice.Handlers;
 using AspNetCore.UsingHttpVerb.Practice.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,14 +40,22 @@ namespace AspNetCore.UsingHttpVerb.Practice
                 httpClient.Timeout = TimeSpan.FromSeconds(5);
             })
             .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, certChain, policyErrors) =>
                 {
-                    ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, certChain, policyErrors) =>
-                    {
-                        return true;
-                    }
+                    return true;
                 }
+            }
             );
             services.AddScoped<IOperationScoped, OperationScoped>();
+
+            services.AddTransient<OperationHandler>();
+            services.AddTransient<OperationResponseHandler>();
+
+            services.AddHttpClient("operation")
+                .AddHttpMessageHandler<OperationHandler>()
+                .AddHttpMessageHandler<OperationResponseHandler>()
+                .SetHandlerLifetime(TimeSpan.FromSeconds(50));
 
             services.AddControllersWithViews();
         }
