@@ -1,0 +1,277 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Setup.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"PO-Revision-Date: 2020-05-28 08:44\n"
+
+#. ModelState.AddModelError(nameof(model.ConnectionString), S["The connection string is mandatory for this provider."]);
+#: OrchardCore.Setup\Controllers\SetupController.cs:105
+msgctxt "OrchardCore.Setup.Controllers.SetupController"
+msgid "The connection string is mandatory for this provider."
+msgstr "La stringa di connessione è obbligatoria per questo provider."
+
+#. ModelState.AddModelError(nameof(model.Password), S["The password is required."]);
+#: OrchardCore.Setup\Controllers\SetupController.cs:111
+msgctxt "OrchardCore.Setup.Controllers.SetupController"
+msgid "The password is required."
+msgstr "La password è obbligatoria."
+
+#. ModelState.AddModelError(nameof(model.PasswordConfirmation), S["The password confirmation doesn't match the password."]);
+#: OrchardCore.Setup\Controllers\SetupController.cs:116
+msgctxt "OrchardCore.Setup.Controllers.SetupController"
+msgid "The password confirmation doesn't match the password."
+msgstr "La conferma della password non corrisponde al contenuto del campo password."
+
+#. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
+#. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
+#: OrchardCore.Setup\Controllers\SetupController.cs:125
+#: OrchardCore.Setup\Controllers\SetupController.cs:130
+msgctxt "OrchardCore.Setup.Controllers.SetupController"
+msgid "Invalid recipe."
+msgstr "Ricetta non valida."
+
+#. ModelState.AddModelError(nameof(model.Email), S["Invalid email."]);
+#: OrchardCore.Setup\Controllers\SetupController.cs:135
+msgctxt "OrchardCore.Setup.Controllers.SetupController"
+msgid "Invalid email."
+msgstr "Indirizzo e-mail non valido."
+
+#. <title>@T["Orchard Setup"]</title>
+#: OrchardCore.Setup\Views\_Layout.cshtml:17
+msgctxt "OrchardCore.Setup.Views._Layout"
+msgid "Orchard Setup"
+msgstr "Impostazione Orchard"
+
+#. <label for="culturesList" class="mr-2">@T["Change language"]</label>
+#: OrchardCore.Setup\Views\_Layout.cshtml:33
+msgctxt "OrchardCore.Setup.Views._Layout"
+msgid "Change language"
+msgstr "Cambia lingua"
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "one non-alphanumeric"
+msgstr "uno non alfanumerico"
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "one uppercase"
+msgstr "una maiuscola"
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "one lowercase"
+msgstr "una minuscola"
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid ", "
+msgstr ", "
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "one digit"
+msgstr "un numero"
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid " and "
+msgstr " e "
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "{0} characters in total"
+msgstr "{0} caratteri in totale"
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid ", with {0} unique characters"
+msgstr ", con {0} caratteri unici"
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:0
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Password must have at least {0}."
+msgstr "La password deve avere almeno {0} caratteri."
+
+#. <h1>@T["Setup"]</h1>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:68
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Setup"
+msgstr "Configura"
+
+#. <p class="lead">@T["Please answer a few questions to configure your site."]</p>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:69
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Please answer a few questions to configure your site."
+msgstr "Per favore rispondi ad alcune domande per configurare il tuo sito."
+
+#. <strong>@T["No recipes available."]</strong> @T["It is not possible to set up a site without a recipe."]
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:75
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "No recipes available."
+msgstr "Non ci sono ricette disponibili."
+
+#. <strong>@T["No recipes available."]</strong> @T["It is not possible to set up a site without a recipe."]
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:75
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "It is not possible to set up a site without a recipe."
+msgstr "Non è possibile creare un sito senza ricetta."
+
+#. <label asp-for="SiteName">@T["What is the name of your site?"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:82
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "What is the name of your site?"
+msgstr "Quale è il nome del tuo sito?"
+
+#. <span asp-validation-for="SiteName" class="text-danger">@T["The site name is required."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:84
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "The site name is required."
+msgstr "Il nome del sito è obbligatorio."
+
+#. <span class="text-muted form-text small">@T["This is used as the default title of your pages."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:85
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "This is used as the default title of your pages."
+msgstr "Questo dato verrà usato come titolo predefinito delle tue pagine."
+
+#. <label asp-for="RecipeName">@T["Recipe"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:94
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Recipe"
+msgstr "Ricetta"
+
+#. <button id="noRecipeButton" title="@T["No Recipes Available"]" class="btn btn-secondary dropdown-toggle disabled" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+#. @T["No Recipes Available"]
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:98
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:99
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "No Recipes Available"
+msgstr "Non ci sono ricette disponibili"
+
+#. <span class="text-muted form-text small">@T["Recipes allow you to setup your site with additional pre-configured options, features and settings out of the box."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:117
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Recipes allow you to setup your site with additional pre-configured options, features and settings out of the box."
+msgstr "Le ricette ti permettono di configurare il tuo sito con opzioni, funzionalità e impostazioni aggiuntive."
+
+#. <label asp-for="SiteTimeZone">@T["Default Time Zone"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:123
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Default Time Zone"
+msgstr "Fuso Orario Predefinito"
+
+#. <span class="text-muted form-text small">@T["Determines the default time zone used when displaying and editing dates and times."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:133
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Determines the default time zone used when displaying and editing dates and times."
+msgstr "Impostando il fuso orario predefinito esso verrà utilizzato quando si visualizzano e si modificano date e orari."
+
+#. @T["Database"]
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:140
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Database"
+msgstr "Database"
+
+#. <span class="text-muted form-text small">@T["The database is used to store the site's configuration and its contents. You can specify a custom table prefix if you intend to reuse the same database for multiple sites."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:141
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "The database is used to store the site's configuration and its contents. You can specify a custom table prefix if you intend to reuse the same database for multiple sites."
+msgstr "Il database è utilizzato per memorizzare la configurazione del sito e i suoi contenuti. Puoi specificare un prefisso tabella personalizzato se si intende riutilizzare lo stesso database per più siti."
+
+#. <label asp-for="DatabaseProvider">@T["What type of database to use?"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:145
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "What type of database to use?"
+msgstr "Che tipo di database utilizzare?"
+
+#. <option value="@provider.Value" data-connection-string="@provider.HasConnectionString" data-table-prefix="@provider.HasTablePrefix" data-connection-string-sample="@T["The connection string to your database instance. e.g., {0}", provider.SampleConnectionString]">@provider.Name</option>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:149
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "The connection string to your database instance. e.g., {0}"
+msgstr "La stringa di connessione alla tua istanza di database. es. {0}"
+
+#. <label asp-for="TablePrefix">@T["Table Prefix"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:156
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Table Prefix"
+msgstr "Prefisso Tabelle"
+
+#. <label asp-for="ConnectionString">@T["Connection string"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:164
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Connection string"
+msgstr "Stringa di connessione"
+
+#. <div class="input-group-append reveal" title="@T["Show/hide connection string"]">
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:168
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Show/hide connection string"
+msgstr "Mostra/nascondi stringa di connessione"
+
+#. @T["Super User"]
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:179
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Super User"
+msgstr "Amministratore"
+
+#. <span class="text-muted form-text small">@T["The super user has all the rights. It should be used only during Setup and for disaster recovery."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:180
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "The super user has all the rights. It should be used only during Setup and for disaster recovery."
+msgstr "L'amministratore ha tutti i diritti. Dovrebbe essere utilizzato solo durante il Setup e per il ripristino a seguito di problemi gravi."
+
+#. <label asp-for="UserName">@T["User name"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:184
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "User name"
+msgstr "Nome utente"
+
+#. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:186
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "The user name is required."
+msgstr "Il nome utente è obbligatorio."
+
+#. <label for="Email">@T["Email"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:189
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Email"
+msgstr "Email"
+
+#. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:191
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "The email is invalid."
+msgstr "L'email non è valida."
+
+#. <label asp-for="Password">@T["Password"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:197
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Password"
+msgstr "Password"
+
+#. <input asp-for="Password" type="password" class="form-control" data-toggle="popover" data-placement="top" data-trigger="focus" data-title="@T["Password strength"]" data-content="@passwordTooltip" required pattern="@passwordRegex" />
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:198
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Password strength"
+msgstr "Sicurezza password"
+
+#. <label asp-for="PasswordConfirmation">@T["Password Confirmation"]</label>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:204
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Password Confirmation"
+msgstr "Conferma password"
+
+#. <button class="btn btn-primary" type="submit" id="SubmitButton">@T["Finish Setup"]</button>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:211
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Finish Setup"
+msgstr "Termina configurazione"
+

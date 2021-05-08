@@ -1,0 +1,274 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Layers.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"PO-Revision-Date: 2020-05-27 15:47\n"
+
+#. .Add(S["Design"], design => design
+#: OrchardCore.Layers\AdminMenu.cs:26
+msgctxt "OrchardCore.Layers.AdminMenu"
+msgid "Design"
+msgstr "Design"
+
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Layers\AdminMenu.cs:27
+msgctxt "OrchardCore.Layers.AdminMenu"
+msgid "Settings"
+msgstr "Impostazioni"
+
+#. .Add(S["Zones"], S["Zones"], zones => zones
+#. .Add(S["Zones"], S["Zones"], zones => zones
+#: OrchardCore.Layers\AdminMenu.cs:28
+#: OrchardCore.Layers\AdminMenu.cs:28
+msgctxt "OrchardCore.Layers.AdminMenu"
+msgid "Zones"
+msgstr "Zone"
+
+#. .Add(S["Widgets"], S["Widgets"], widgets => widgets
+#. .Add(S["Widgets"], S["Widgets"], widgets => widgets
+#: OrchardCore.Layers\AdminMenu.cs:33
+#: OrchardCore.Layers\AdminMenu.cs:33
+msgctxt "OrchardCore.Layers.AdminMenu"
+msgid "Widgets"
+msgstr "Widgets"
+
+#. _notifier.Success(H["Layer deleted successfully."]);
+#: OrchardCore.Layers\Controllers\AdminController.cs:228
+msgctxt "OrchardCore.Layers.Controllers.AdminController"
+msgid "Layer deleted successfully."
+msgstr "Livello cancellato con successo."
+
+#. _notifier.Error(H["The layer couldn't be deleted: you must remove any associated widgets first."]);
+#: OrchardCore.Layers\Controllers\AdminController.cs:232
+msgctxt "OrchardCore.Layers.Controllers.AdminController"
+msgid "The layer couldn't be deleted: you must remove any associated widgets first."
+msgstr "Il layer non può essere eliminato: devi prima rimuovere qualsiasi widget associato."
+
+#. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name is required."]);
+#: OrchardCore.Layers\Controllers\AdminController.cs:308
+msgctxt "OrchardCore.Layers.Controllers.AdminController"
+msgid "The layer name is required."
+msgstr "Il nome del livello è obbligatorio."
+
+#. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name already exists."]);
+#: OrchardCore.Layers\Controllers\AdminController.cs:312
+msgctxt "OrchardCore.Layers.Controllers.AdminController"
+msgid "The layer name already exists."
+msgstr "Un livello con questo nome esiste già."
+
+#. ModelState.AddModelError(nameof(LayerEditViewModel.Rule), S["The rule is required."]);
+#: OrchardCore.Layers\Controllers\AdminController.cs:317
+msgctxt "OrchardCore.Layers.Controllers.AdminController"
+msgid "The rule is required."
+msgstr "La regola è obbligatoria."
+
+#. context.Updater.ModelState.AddModelError("LayerMetadata.Zone", S["Zone is missing"]);
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:76
+msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
+msgid "Zone is missing"
+msgstr "Zona mancante"
+
+#. Description = S["Site layers define the rules and zone placement for widgets."],
+#: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:28
+msgctxt "OrchardCore.Layers.GraphQL.SiteLayersQuery"
+msgid "Site layers define the rules and zone placement for widgets."
+msgstr "I livelli del sito definiscono le regole e la zona di posizionamento dei widget."
+
+#. <label asp-for="Title">@T["Title"]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:4
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "Title"
+msgstr "Titolo"
+
+#. <label class="custom-control-label" asp-for="LayerMetadata.RenderTitle">@T["Render title"]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:12
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "Render title"
+msgstr "Mostra Titolo"
+
+#. <span class="hint">— @T["If checked, the title will be rendered with the widget."]</span>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:13
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "If checked, the title will be rendered with the widget."
+msgstr "Se selezionato, il titolo viene mostrato con il widget."
+
+#. <label asp-for="LayerMetadata.Layer">@T["The layer the widget should be associated with."]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:18
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "The layer the widget should be associated with."
+msgstr "Il livello a cui il widget viene associato."
+
+#. <label asp-for="Zones">@T["Available zones for Layers"]</label>
+#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:4
+msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
+msgid "Available zones for Layers"
+msgstr "Zone disponibili per i livelli"
+
+#. <span class="hint">@T["A comma separated list of values, representing the available zones for widgets."]</span>
+#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:7
+msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
+msgid "A comma separated list of values, representing the available zones for widgets."
+msgstr "Un elenco di valori separato da virgole, che rappresenta le zone disponibili per i widget."
+
+#. <h1>@RenderTitleSegments(T["Create Layer"])</h1>
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Admin.Create"
+msgid "Create Layer"
+msgstr "Crea Livello"
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:7
+msgctxt "OrchardCore.Layers.Views.Admin.Create"
+msgid "Name"
+msgstr "Nome"
+
+#. <label asp-for="Rule">@T["Rule"]</label>
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:13
+msgctxt "OrchardCore.Layers.Views.Admin.Create"
+msgid "Rule"
+msgstr "Regola"
+
+#. <label asp-for="Description">@T["Description"]</label>
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:19
+msgctxt "OrchardCore.Layers.Views.Admin.Create"
+msgid "Description"
+msgstr "Descrizione"
+
+#. <input class="button" type="submit" value="@T["Create"]" />
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:24
+msgctxt "OrchardCore.Layers.Views.Admin.Create"
+msgid "Create"
+msgstr "Crea"
+
+#. <h1>@RenderTitleSegments(T["Edit Layer - {0}", Model.Name])</h1>
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Admin.Edit"
+msgid "Edit Layer - {0}"
+msgstr "Modifica livello - {0}"
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:7
+msgctxt "OrchardCore.Layers.Views.Admin.Edit"
+msgid "Name"
+msgstr "Nome"
+
+#. <label asp-for="Rule">@T["Rule"]</label>
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:13
+msgctxt "OrchardCore.Layers.Views.Admin.Edit"
+msgid "Rule"
+msgstr "Regola"
+
+#. <label asp-for="Description">@T["Description"]</label>
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:19
+msgctxt "OrchardCore.Layers.Views.Admin.Edit"
+msgid "Description"
+msgstr "Descrizione"
+
+#. <input class="button" type="submit" value="@T["Save"]" />
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:24
+msgctxt "OrchardCore.Layers.Views.Admin.Edit"
+msgid "Save"
+msgstr "Salva"
+
+#. <h1>@RenderTitleSegments(T["Edit Widgets and Layers"])</h1>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:15
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Edit Widgets and Layers"
+msgstr "Modifica Widget e Livelli"
+
+#. @T["Widget successfully moved. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Undo</strong></a>."]
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:22
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Widget successfully moved. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Undo</strong></a>."
+msgstr "Widget spostato con successo. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\">Annulla<strong></strong></a>."
+
+#. <h3>@T["Zones"]</h3>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:31
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Zones"
+msgstr "Zone"
+
+#. <p class="alert alert-warning">@T["Please <a href=\"{0}\">define the available zones</a> before adding Widgets", Url.Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = LayerSiteSettingsDisplayDriver.GroupId })]</p>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:35
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Please <a href=\"{0}\">define the available zones</a> before adding Widgets"
+msgstr "Per favore, <a href=\"{0}\">indica una zona</a> prima di aggiungere dei widget"
+
+#. @T["Add Widget"]
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:74
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Add Widget"
+msgstr "Aggiungi Widget"
+
+#. <h3>@T["Layers"]</h3>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:98
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Layers"
+msgstr "Livelli"
+
+#. <span class="hint">@T["Select a layer to reveal its associated widgets."]</span>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:100
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Select a layer to reveal its associated widgets."
+msgstr "Seleziona un layer per mostrare i widget associati."
+
+#. <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })">@T["Edit"]</a>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:114
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Edit"
+msgstr "Modifica"
+
+#. <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:115
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Delete"
+msgstr "Elimina"
+
+#. <p class="alert alert-warning">@T["Please <a href=\"{0}\">create a layer</a> before adding Widgets", Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })]</p>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:128
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
+msgstr "Per favore, <a href=\"{0}\">crea un livello</a> prima di aggiungere dei widget"
+
+#. <a class="button btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:131
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Add"
+msgstr "Aggiungi"
+
+#. <h5>@T["All Layers"]</h5>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Edit"
+msgid "All Layers"
+msgstr "Tutti i livelli"
+
+#. <h5>@T["All Layers"]</h5>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Summary"
+msgid "All Layers"
+msgstr "Tutti i livelli"
+
+#. <span class="hint">@T["Adds all layers to the plan."]</span>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Summary"
+msgid "Adds all layers to the plan."
+msgstr "Aggiunge tutti i livelli al piano."
+
+#. <h4 class="card-title">@T["All Layers"]</h4>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
+msgid "All Layers"
+msgstr "Tutti i livelli"
+
+#. <p>@T["Exports all layers."]</p>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
+msgid "Exports all layers."
+msgstr "Esporta tutti i livelli."
+

@@ -1,0 +1,216 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Twitter.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"PO-Revision-Date: 2020-03-31 14:14\n"
+
+#. builder.Add(S["Security"], security => security
+#: OrchardCore.Twitter\AdminMenu.cs:28
+msgctxt "OrchardCore.Twitter.AdminMenu"
+msgid "Security"
+msgstr "安全"
+
+#. .Add(S["Authentication"], authentication => authentication
+#: OrchardCore.Twitter\AdminMenu.cs:29
+msgctxt "OrchardCore.Twitter.AdminMenu"
+msgid "Authentication"
+msgstr "认证"
+
+#. .Add(S["Twitter"], "18", settings => settings
+#: OrchardCore.Twitter\AdminMenu.cs:30
+msgctxt "OrchardCore.Twitter.AdminMenu"
+msgid "Twitter"
+msgstr "Twitter"
+
+#. builder.Add(S["Security"], security => security
+#: OrchardCore.Twitter\AdminMenu.cs:59
+msgctxt "OrchardCore.Twitter.AdminMenuSignin"
+msgid "Security"
+msgstr "安全"
+
+#. .Add(S["Twitter"], "15", settings => settings
+#: OrchardCore.Twitter\AdminMenu.cs:60
+msgctxt "OrchardCore.Twitter.AdminMenuSignin"
+msgid "Twitter"
+msgstr "Twitter"
+
+#. .Add(S["Sign in with Twitter"], "15", client => client
+#: OrchardCore.Twitter\AdminMenu.cs:62
+msgctxt "OrchardCore.Twitter.AdminMenuSignin"
+msgid "Sign in with Twitter"
+msgstr "使用Twitter登录"
+
+#. yield return new ValidationResult(S["ConsumerKey is required"], new string[] { nameof(settings.ConsumerKey) });
+#: OrchardCore.Twitter\Services\TwitterSettingsService.cs:57
+msgctxt "OrchardCore.Twitter.Services.TwitterSettingsService"
+msgid "ConsumerKey is required"
+msgstr "需要ConsumerKey"
+
+#. yield return new ValidationResult(S["ConsumerSecret is required"], new string[] { nameof(settings.ConsumerSecret) });
+#: OrchardCore.Twitter\Services\TwitterSettingsService.cs:62
+msgctxt "OrchardCore.Twitter.Services.TwitterSettingsService"
+msgid "ConsumerSecret is required"
+msgstr "需要ConsumerSecret"
+
+#. yield return new ValidationResult(S["Access Token is required"], new string[] { nameof(settings.AccessToken) });
+#: OrchardCore.Twitter\Services\TwitterSettingsService.cs:67
+msgctxt "OrchardCore.Twitter.Services.TwitterSettingsService"
+msgid "Access Token is required"
+msgstr "访问令牌是必需的"
+
+#. yield return new ValidationResult(S["Access Token Secret is required"], new string[] { nameof(settings.AccessTokenSecret) });
+#: OrchardCore.Twitter\Services\TwitterSettingsService.cs:72
+msgctxt "OrchardCore.Twitter.Services.TwitterSettingsService"
+msgid "Access Token Secret is required"
+msgstr "访问令牌是必需的"
+
+#. public override LocalizedString DisplayText => S["Update Twitter Status Task"];
+#: OrchardCore.Twitter\Workflows\Activities\UpdateTwitterStatusTask.cs:35
+msgctxt "OrchardCore.Twitter.Workflows.Activities.UpdateTwitterStatusTask"
+msgid "Update Twitter Status Task"
+msgstr "更新 Twitter 状态任务"
+
+#. public override LocalizedString Category => S["Social"];
+#: OrchardCore.Twitter\Workflows\Activities\UpdateTwitterStatusTask.cs:38
+msgctxt "OrchardCore.Twitter.Workflows.Activities.UpdateTwitterStatusTask"
+msgid "Social"
+msgstr "社交"
+
+#. return Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Twitter\Workflows\Activities\UpdateTwitterStatusTask.cs:50
+msgctxt "OrchardCore.Twitter.Workflows.Activities.UpdateTwitterStatusTask"
+msgid "Done"
+msgstr "完成"
+
+#. return Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Twitter\Workflows\Activities\UpdateTwitterStatusTask.cs:50
+msgctxt "OrchardCore.Twitter.Workflows.Activities.UpdateTwitterStatusTask"
+msgid "Failed"
+msgstr "失败"
+
+#. <span class="icon"><i class="fab fa-twitter" aria-hidden="true"></i></span><span class="title">@T["Twitter"]</span>
+#: OrchardCore.Twitter\Views\NavigationItemText-twitter.Id.cshtml:1
+msgctxt "OrchardCore.Twitter.Views.NavigationItemText-twitter.Id"
+msgid "Twitter"
+msgstr "Twitter"
+
+#. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:4
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "The current tenant will be reloaded when the settings are saved."
+msgstr "保存设置后, 将重新加载当前租户。"
+
+#. <h3>@T["Twitter Integration Settings"]</h3>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:6
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "Twitter Integration Settings"
+msgstr "Twitter 集成设置"
+
+#. <label asp-for="APIKey">@T["API key"]</label>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:10
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "API key"
+msgstr "API密钥"
+
+#. <span class="hint">@T["The API key defined in the Keys and tokens tab of twitter app dashboard."]</span>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:13
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "The API key defined in the Keys and tokens tab of twitter app dashboard."
+msgstr "在 Twitter 应用仪表板的 \"密钥和令牌\" 选项卡中定义的 API secret key。"
+
+#. <label asp-for="APISecretKey">@T["API secret key"]</label>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:19
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "API secret key"
+msgstr "API 密钥"
+
+#. <span class="hint">@T["The API secret defined in the Keys and tokens tab of twitter app dashboard."]</span>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:22
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "The API secret defined in the Keys and tokens tab of twitter app dashboard."
+msgstr "在 Twitter 应用仪表板的 \"密钥和令牌\" 选项卡中定义的 API secret key。"
+
+#. <label asp-for="AccessToken">@T["Access Token"]</label>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:28
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "Access Token"
+msgstr "访问令牌"
+
+#. <span class="hint">@T["The Access Token defined in the Keys and tokens tab of twitter app dashboard."]</span>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:31
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "The Access Token defined in the Keys and tokens tab of twitter app dashboard."
+msgstr "在 Twitter 应用仪表板的 \"密钥和令牌\" 选项卡中定义的访问令牌。"
+
+#. <label asp-for="AccessTokenSecret">@T["Access Token Secret"]</label>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:37
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "Access Token Secret"
+msgstr "访问令牌密钥"
+
+#. <span class="hint">@T["The Access Token Secret in the Keys and tokens tab of twitter app dashboard."]</span>
+#: OrchardCore.Twitter\Views\TwitterSettings.Edit.cshtml:40
+msgctxt "OrchardCore.Twitter.Views.TwitterSettings.Edit"
+msgid "The Access Token Secret in the Keys and tokens tab of twitter app dashboard."
+msgstr "在 Twitter 应用仪表板的 \"密钥和令牌\" 选项卡中定义的访问令牌密钥。"
+
+#. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
+#: OrchardCore.Twitter\Views\TwitterSigninSettings.Edit.cshtml:4
+msgctxt "OrchardCore.Twitter.Views.TwitterSigninSettings.Edit"
+msgid "The current tenant will be reloaded when the settings are saved."
+msgstr "保存设置后，当前租户将会被重新加载。"
+
+#. <h3>@T["Sign in with Twitter Settings"]</h3>
+#: OrchardCore.Twitter\Views\TwitterSigninSettings.Edit.cshtml:6
+msgctxt "OrchardCore.Twitter.Views.TwitterSigninSettings.Edit"
+msgid "Sign in with Twitter Settings"
+msgstr "使用Twitter设置登录"
+
+#. <label asp-for="CallbackPath">@T["CallbackPath"]</label>
+#: OrchardCore.Twitter\Views\TwitterSigninSettings.Edit.cshtml:10
+msgctxt "OrchardCore.Twitter.Views.TwitterSigninSettings.Edit"
+msgid "CallbackPath"
+msgstr "回调地址"
+
+#. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
+#: OrchardCore.Twitter\Views\TwitterSigninSettings.Edit.cshtml:13
+msgctxt "OrchardCore.Twitter.Views.TwitterSigninSettings.Edit"
+msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
+msgstr "应用程序的基路径内将返回用户代理的请求路径。中间件到达时将处理此请求。"
+
+#. <h4><i class="fab fa-twitter"></i>@Model.Activity.GetTitleOrDefault(() => T["Update Twitter Status"])</h4>
+#: OrchardCore.Twitter\Views\Items\UpdateTwitterStatusTask.Fields.Design.cshtml:8
+msgctxt "OrchardCore.Twitter.Views.Items.UpdateTwitterStatusTask.Fields.Design"
+msgid "Update Twitter Status"
+msgstr "更新 Twitter 状态"
+
+#. <label asp-for="StatusTemplate">@T["Template for updating twitter status"]</label>
+#: OrchardCore.Twitter\Views\Items\UpdateTwitterStatusTask.Fields.Edit.cshtml:6
+msgctxt "OrchardCore.Twitter.Views.Items.UpdateTwitterStatusTask.Fields.Edit"
+msgid "Template for updating twitter status"
+msgstr "更新 twitter 状态的模板"
+
+#. <span class="hint">@T["The status text of the tweet."]</span>
+#: OrchardCore.Twitter\Views\Items\UpdateTwitterStatusTask.Fields.Edit.cshtml:9
+msgctxt "OrchardCore.Twitter.Views.Items.UpdateTwitterStatusTask.Fields.Edit"
+msgid "The status text of the tweet."
+msgstr "推特的状态文本。"
+
+#. <h4 class="card-title"><i class="fab fa-twitter"></i>@T["Update Twitter Status"]</h4>
+#: OrchardCore.Twitter\Views\Items\UpdateTwitterStatusTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Twitter.Views.Items.UpdateTwitterStatusTask.Fields.Thumbnail"
+msgid "Update Twitter Status"
+msgstr "更新 Twitter 状态"
+
+#. <p>@T["Post a tweet"]</p>
+#: OrchardCore.Twitter\Views\Items\UpdateTwitterStatusTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Twitter.Views.Items.UpdateTwitterStatusTask.Fields.Thumbnail"
+msgid "Post a tweet"
+msgstr "发布一个推文"
+

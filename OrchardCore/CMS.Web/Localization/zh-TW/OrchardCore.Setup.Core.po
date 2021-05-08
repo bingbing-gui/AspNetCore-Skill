@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Setup.Core.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"PO-Revision-Date: 2020-05-03 21:03\n"
+
+#. context.Errors.Add("DatabaseProvider", S["An error occurred while initializing the datastore: {0}", e.Message]);
+#: OrchardCore.Setup.Core\SetupService.cs:168
+msgctxt "OrchardCore.Setup.Services.SetupService"
+msgid "An error occurred while initializing the datastore: {0}"
+msgstr "初始化資料庫的時候發生錯誤：{0}"
+

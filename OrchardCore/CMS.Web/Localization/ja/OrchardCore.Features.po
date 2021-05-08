@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Features.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"PO-Revision-Date: 2020-05-10 20:40\n"
+
+#. .Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, configuration => configuration
+#: OrchardCore.Features\AdminMenu.cs:25
+msgctxt "OrchardCore.Features.AdminMenu"
+msgid "Configuration"
+msgstr "構成"
+
+#. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
+#. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Features\AdminMenu.cs:27
+#: OrchardCore.Features\AdminMenu.cs:27
+msgctxt "OrchardCore.Features.AdminMenu"
+msgid "Features"
+msgstr "機能"
+
+#. ModelState.AddModelError("featureIds", H["Please select one or more features."].ToString());
+#: OrchardCore.Features\Controllers\AdminController.cs:94
+msgctxt "OrchardCore.Features.Controllers.AdminController"
+msgid "Please select one or more features."
+msgstr "一つ以上の機能を選択してください"
+
+#. _notifier.Success(H["{0} was {1}", feature.Name ?? feature.Id, enabled ? "enabled" : "disabled"]);
+#: OrchardCore.Features\Controllers\AdminController.cs:194
+msgctxt "OrchardCore.Features.Controllers.AdminController"
+msgid "{0} was {1}"
+msgstr "{0} は {1}"
+
+#. _notifier.Success(H["{0} was enabled", enabledFeature.Name]);
+#: OrchardCore.Features\Services\ModuleService.cs:71
+msgctxt "OrchardCore.Features.Services.ModuleService"
+msgid "{0} was enabled"
+msgstr "{0} は有効化されました"
+
+#. _notifier.Success(H["{0} was disabled", feature.Name]);
+#: OrchardCore.Features\Services\ModuleService.cs:98
+msgctxt "OrchardCore.Features.Services.ModuleService"
+msgid "{0} was disabled"
+msgstr "{0} は無効化されました"
+
+#. <span class="icon"><i class="fa fa-gear" aria-hidden="true"></i></span><span class="title">@T["Configuration"]</span>
+#: OrchardCore.Features\Views\NavigationItemText-configuration.Id.cshtml:1
+msgctxt "OrchardCore.Features.Views.NavigationItemText-configuration.Id"
+msgid "Configuration"
+msgstr "構成"
+
+#. <h1>@RenderTitleSegments(T["Features"])</h1>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:9
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Features"
+msgstr "機能"
+
+#. @T["Bulk Actions"]
+#: OrchardCore.Features\Views\Admin\Features.cshtml:14
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Bulk Actions"
+msgstr "一括操作"
+
+#. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Disable)">@T["Disable"]</a>
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:17
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Disable"
+msgstr "無効化"
+
+#. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Enable)">@T["Enable"]</a>
+#. <a asp-action="Enable" asp-route-id="@feature.Descriptor.Id" class="btn btn-primary btn-sm" itemprop="UnsafeUrl">@T["Enable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:18
+#: OrchardCore.Features\Views\Admin\Features.cshtml:129
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Enable"
+msgstr "有効化"
+
+#. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Toggle)">@T["Toggle"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:19
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Toggle"
+msgstr "有効・無効の切り替え"
+
+#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:31
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Filter"
+msgstr "フィルタ"
+
+#. <input id="search-box" class="form-control mr-sm-2" placeholder="@T["Search"]" type="search" autofocus>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:33
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Search"
+msgstr "検索"
+
+#: OrchardCore.Features\Views\Admin\Features.cshtml:0
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Uncategorized"
+msgstr "未分類"
+
+#: OrchardCore.Features\Views\Admin\Features.cshtml:0
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Are you sure you want to disable the {0} feature? Continue?"
+msgstr ""
+
+#: OrchardCore.Features\Views\Admin\Features.cshtml:0
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Disabling the {0} feature will also disable the following dependent features:{1}Continue?"
+msgstr ""
+
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Disable Feature"
+msgstr "機能を無効にする"
+
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "Yes"
+msgstr "はい"
+
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "No"
+msgstr "いいえ"
+
+#. @T["<strong>Nothing here!</strong> Your search returned no results."]
+#: OrchardCore.Features\Views\Admin\Features.cshtml:148
+msgctxt "OrchardCore.Features.Views.Admin.Features"
+msgid "<strong>Nothing here!</strong> Your search returned no results."
+msgstr ""
+
+#. <h5>@T["All Features"]</h5>
+#: OrchardCore.Features\Views\Items\AllFeaturesDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Features.Views.Items.AllFeaturesDeploymentStep.Edit"
+msgid "All Features"
+msgstr "全機能"
+
+#. <h5>@T["All Features"]</h5>
+#: OrchardCore.Features\Views\Items\AllFeaturesDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Features.Views.Items.AllFeaturesDeploymentStep.Summary"
+msgid "All Features"
+msgstr "全機能"
+
+#. <span class="hint">@T["Adds all features and their state to the plan."]</span>
+#: OrchardCore.Features\Views\Items\AllFeaturesDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Features.Views.Items.AllFeaturesDeploymentStep.Summary"
+msgid "Adds all features and their state to the plan."
+msgstr ""
+
+#. <h4 class="card-title">@T["All Features"]</h4>
+#: OrchardCore.Features\Views\Items\AllFeaturesDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Features.Views.Items.AllFeaturesDeploymentStep.Thumbnail"
+msgid "All Features"
+msgstr "全機能"
+
+#. <p>@T["Exports the state of all features."]</p>
+#: OrchardCore.Features\Views\Items\AllFeaturesDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Features.Views.Items.AllFeaturesDeploymentStep.Thumbnail"
+msgid "Exports the state of all features."
+msgstr ""
+

@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: el\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Admin.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Greek\n"
+"Language: el_GR\n"
+"PO-Revision-Date: 2020-06-02 14:15\n"
+
+#. .Add(S["Configuration"], design => design
+#: OrchardCore.Admin\AdminMenu.cs:26
+msgctxt "OrchardCore.Admin.AdminMenu"
+msgid "Configuration"
+msgstr "Παραμετροποίηση"
+
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Admin\AdminMenu.cs:27
+msgctxt "OrchardCore.Admin.AdminMenu"
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#. .Add(S["Admin"], S["Admin"].PrefixPosition(), admin => admin
+#. .Add(S["Admin"], S["Admin"].PrefixPosition(), admin => admin
+#: OrchardCore.Admin\AdminMenu.cs:28
+#: OrchardCore.Admin\AdminMenu.cs:28
+msgctxt "OrchardCore.Admin.AdminMenu"
+msgid "Admin"
+msgstr "Διαχειριστής"
+
+#. <h4>@T["Welcome to Orchard"]</h4>
+#: OrchardCore.Admin\Views\AdminDashboard.cshtml:2
+msgctxt "OrchardCore.Admin.Views.AdminDashboard"
+msgid "Welcome to Orchard"
+msgstr "Καλώς ήλθατε στο Orchard"
+
+#. <p>@T["Feel free to browse the menu and discover all its possibilities."]</p>
+#: OrchardCore.Admin\Views\AdminDashboard.cshtml:3
+msgctxt "OrchardCore.Admin.Views.AdminDashboard"
+msgid "Feel free to browse the menu and discover all its possibilities."
+msgstr "Μπορείτε να περιηγηθείτε στο μενού και να ανακαλύψετε όλες τις δυνατότητές του."
+
+#. <label asp-for="DisplayMenuFilter" class="custom-control-label">@T["Enable Admin Menu filter"]</label>
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:6
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Enable Admin Menu filter"
+msgstr "Ενεργοποίηση φίλτρου Μενού Διαχειριστή"
+
+#. <span class="hint">@T["Whether a quick search to filter the admin menu is displayed."]</span>
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:8
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Whether a quick search to filter the admin menu is displayed."
+msgstr "Εάν εμφανίζεται μια γρήγορη αναζήτηση για φιλτράρισμα του μενού διαχειριστή."
+
+#. <span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span><span class="title">@T["Admin"]</span>
+#: OrchardCore.Admin\Views\NavigationItemText-admin.Id.cshtml:1
+msgctxt "OrchardCore.Admin.Views.NavigationItemText-admin.Id"
+msgid "Admin"
+msgstr "Διαχειριστής"
+

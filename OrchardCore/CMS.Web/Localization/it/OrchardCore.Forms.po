@@ -1,0 +1,600 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Forms.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"PO-Revision-Date: 2020-05-27 15:47\n"
+
+#. public override LocalizedString DisplayText => S["Add Model Validation Error Task"];
+#: OrchardCore.Forms\Workflows\Activities\AddModelValidationErrorTask.cs:27
+msgctxt "OrchardCore.Forms.Workflows.Activities.AddModelValidationErrorTask"
+msgid "Add Model Validation Error Task"
+msgstr "Aggiungi un Task per la validazione del modello"
+
+#. public override LocalizedString Category => S["Validation"];
+#: OrchardCore.Forms\Workflows\Activities\AddModelValidationErrorTask.cs:29
+msgctxt "OrchardCore.Forms.Workflows.Activities.AddModelValidationErrorTask"
+msgid "Validation"
+msgstr "Validazione"
+
+#. return Outcomes(S["Done"]);
+#: OrchardCore.Forms\Workflows\Activities\AddModelValidationErrorTask.cs:45
+msgctxt "OrchardCore.Forms.Workflows.Activities.AddModelValidationErrorTask"
+msgid "Done"
+msgstr "Fatto"
+
+#. public override LocalizedString DisplayText => S["Bind Model State Task"];
+#: OrchardCore.Forms\Workflows\Activities\BindModelStateTask.cs:31
+msgctxt "OrchardCore.Forms.Workflows.Activities.BindModelStateTask"
+msgid "Bind Model State Task"
+msgstr "Task per la compilazione dello stato del modello"
+
+#. public override LocalizedString Category => S["Validation"];
+#: OrchardCore.Forms\Workflows\Activities\BindModelStateTask.cs:33
+msgctxt "OrchardCore.Forms.Workflows.Activities.BindModelStateTask"
+msgid "Validation"
+msgstr "Validazione"
+
+#. return Outcomes(S["Done"]);
+#: OrchardCore.Forms\Workflows\Activities\BindModelStateTask.cs:37
+msgctxt "OrchardCore.Forms.Workflows.Activities.BindModelStateTask"
+msgid "Done"
+msgstr "Fatto"
+
+#. public override LocalizedString DisplayText => S["Validate Antiforgery Token Task"];
+#: OrchardCore.Forms\Workflows\Activities\ValidateAntiforgeryTokenTask.cs:31
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateAntiforgeryTokenTask"
+msgid "Validate Antiforgery Token Task"
+msgstr "Task per la validazione dell'Antiforgery Token"
+
+#. public override LocalizedString Category => S["Validation"];
+#: OrchardCore.Forms\Workflows\Activities\ValidateAntiforgeryTokenTask.cs:33
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateAntiforgeryTokenTask"
+msgid "Validation"
+msgstr "Validazione"
+
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateAntiforgeryTokenTask.cs:39
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateAntiforgeryTokenTask"
+msgid "Done"
+msgstr "Fatto"
+
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateAntiforgeryTokenTask.cs:39
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateAntiforgeryTokenTask"
+msgid "Valid"
+msgstr "Valido"
+
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateAntiforgeryTokenTask.cs:39
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateAntiforgeryTokenTask"
+msgid "Invalid"
+msgstr "Non valido"
+
+#. public override LocalizedString DisplayText => S["Validate Form Field Task"];
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormFieldTask.cs:31
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormFieldTask"
+msgid "Validate Form Field Task"
+msgstr "Task per la validazione dei campi del form"
+
+#. public override LocalizedString Category => S["Validation"];
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormFieldTask.cs:33
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormFieldTask"
+msgid "Validation"
+msgstr "Validazione"
+
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormFieldTask.cs:49
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormFieldTask"
+msgid "Done"
+msgstr "Fatto"
+
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormFieldTask.cs:49
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormFieldTask"
+msgid "Valid"
+msgstr "Valido"
+
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormFieldTask.cs:49
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormFieldTask"
+msgid "Invalid"
+msgstr "Non valido"
+
+#. public override LocalizedString DisplayText => S["Validate Form Task"];
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormTask.cs:27
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormTask"
+msgid "Validate Form Task"
+msgstr "Task per la validazione del form"
+
+#. public override LocalizedString Category => S["Validation"];
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormTask.cs:29
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormTask"
+msgid "Validation"
+msgstr "Validazione"
+
+#. return Outcomes(S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormTask.cs:35
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormTask"
+msgid "Valid"
+msgstr "Valido"
+
+#. return Outcomes(S["Valid"], S["Invalid"]);
+#: OrchardCore.Forms\Workflows\Activities\ValidateFormTask.cs:35
+msgctxt "OrchardCore.Forms.Workflows.Activities.ValidateFormTask"
+msgid "Invalid"
+msgstr "Non valido"
+
+#. <h4><i class="fa fa-exclamation-triangle"></i>@Model.Activity.GetTitleOrDefault(() => T["Add Form Validation Error"])</h4>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Design"
+msgid "Add Form Validation Error"
+msgstr "Aggiungi un errore di validazione del form"
+
+#. <span>@T["<em>{0}</em>: <em>{1}</em>", Model.Activity.Key, Model.Activity.ErrorMessage]</span>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Design.cshtml:6
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Design"
+msgid "<em>{0}</em>: <em>{1}</em>"
+msgstr "<em>{0}</em>: <em>{1}</em>"
+
+#. <label asp-for="Key">@T["Key"]</label>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Edit"
+msgid "Key"
+msgstr "Chiave"
+
+#. <span class="hint">@T["The name of the form field that has an invalid value."]</span>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Edit.cshtml:8
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Edit"
+msgid "The name of the form field that has an invalid value."
+msgstr "Il nome del campo del form che ha un valore non valido."
+
+#. <label asp-for="ErrorMessage">@T["Error Message"]</label>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Edit.cshtml:12
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Edit"
+msgid "Error Message"
+msgstr "Messaggio di Errore"
+
+#. <span class="hint">@T["The validation error message to display."]</span>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Edit.cshtml:15
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Edit"
+msgid "The validation error message to display."
+msgstr "Il messaggio di errore mostrato durante la validazione."
+
+#. <h4 class="card-title"><i class="fa fa-exclamation-triangle"></i>@T["Add Form Validation Error"]</h4>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Thumbnail"
+msgid "Add Form Validation Error"
+msgstr "Aggiungi Validazione Form"
+
+#. <p>@T["Adds a validation error to the model state."]</p>
+#: OrchardCore.Forms\Views\Items\AddModelValidationErrorTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Forms.Views.Items.AddModelValidationErrorTask.Fields.Thumbnail"
+msgid "Adds a validation error to the model state."
+msgstr "Aggiungi validazione allo stato del modello."
+
+#. <h4><i class="fa fa-clone"></i>@Model.Activity.GetTitleOrDefault(() => T["Bind Form Model State"])</h4>
+#: OrchardCore.Forms\Views\Items\BindModelStateTask.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Forms.Views.Items.BindModelStateTask.Fields.Design"
+msgid "Bind Form Model State"
+msgstr "Associa form allo stato del modello"
+
+#. <h4 class="card-title"><i class="fa fa-clone"></i>@T["Bind Form to Model State"]</h4>
+#: OrchardCore.Forms\Views\Items\BindModelStateTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Forms.Views.Items.BindModelStateTask.Fields.Thumbnail"
+msgid "Bind Form to Model State"
+msgstr "Associa form allo stato del modello"
+
+#. <p>@T["Binds submitted form fields to the model state."]</p>
+#: OrchardCore.Forms\Views\Items\BindModelStateTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Forms.Views.Items.BindModelStateTask.Fields.Thumbnail"
+msgid "Binds submitted form fields to the model state."
+msgstr "Associa i campi del form inviati allo stato del modello."
+
+#. <label asp-for="Text">@T["Text"]</label>
+#: OrchardCore.Forms\Views\Items\ButtonPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.ButtonPart.Fields.Edit"
+msgid "Text"
+msgstr "Testo"
+
+#. <span class="hint">@T["The text to display on the button."]</span>
+#: OrchardCore.Forms\Views\Items\ButtonPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.ButtonPart.Fields.Edit"
+msgid "The text to display on the button."
+msgstr "Il testo da mostrare nel bottone."
+
+#. <label asp-for="Type">@T["Type"]</label>
+#: OrchardCore.Forms\Views\Items\ButtonPart.Fields.Edit.cshtml:11
+msgctxt "OrchardCore.Forms.Views.Items.ButtonPart.Fields.Edit"
+msgid "Type"
+msgstr "Tipo"
+
+#. <span class="hint">@T["The button type."]</span>
+#: OrchardCore.Forms\Views\Items\ButtonPart.Fields.Edit.cshtml:17
+msgctxt "OrchardCore.Forms.Views.Items.ButtonPart.Fields.Edit"
+msgid "The button type."
+msgstr "Tipo del bottone."
+
+#. <label asp-for="Id">@T["ID"]</label>
+#: OrchardCore.Forms\Views\Items\FormElementPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.FormElementPart.Fields.Edit"
+msgid "ID"
+msgstr "ID"
+
+#. <span class="hint">@T["The ID to render on this form element."]</span>
+#: OrchardCore.Forms\Views\Items\FormElementPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.FormElementPart.Fields.Edit"
+msgid "The ID to render on this form element."
+msgstr "L'ID utilizzato per questo elemento del form."
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.Forms\Views\Items\FormInputElementPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.FormInputElementPart.Fields.Edit"
+msgid "Name"
+msgstr "Nome"
+
+#. <span class="hint">@T["The name to render on this form element."]</span>
+#: OrchardCore.Forms\Views\Items\FormInputElementPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.FormInputElementPart.Fields.Edit"
+msgid "The name to render on this form element."
+msgstr "Il nome utilizzato per questo elemento del form."
+
+#. <label asp-for="Action">@T["Action"]</label>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "Action"
+msgstr "Azione"
+
+#. <span class="hint">@T["The URL to submit the form to."]</span>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "The URL to submit the form to."
+msgstr "L'URL di destinazione del form."
+
+#. <label asp-for="Method">@T["Method"]</label>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:11
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "Method"
+msgstr "Metodo"
+
+#. <span class="hint">@T["The HTTP method to use when submitting the form."]</span>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:16
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "The HTTP method to use when submitting the form."
+msgstr "Il metodo HTTP da utilizzare quando si invia il form."
+
+#. <label asp-for="EncType">@T["EncType"]</label>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:20
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "EncType"
+msgstr "EncType"
+
+#. <span class="hint">@T["The enctype to use when submitting the form using POST method."]</span>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:26
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "The enctype to use when submitting the form using POST method."
+msgstr "Il tipo di econding utilizzato quando si effettua l'invio dei parametri del form tramite metodo POST."
+
+#. <label asp-for="EnableAntiForgeryToken" class="custom-control-label">@T["Anti Forgery Token"]</label>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:32
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "Anti Forgery Token"
+msgstr "Anti Forgery Token"
+
+#. <span class="hint">@T["Check to generate an Anti Forgery Token in the form."]</span>
+#: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:33
+msgctxt "OrchardCore.Forms.Views.Items.FormPart.Fields.Edit"
+msgid "Check to generate an Anti Forgery Token in the form."
+msgstr "Spunta la casella per generare un Anti Forgery Token all'interno del form."
+
+#. <label asp-for="Type">@T["Type"]</label>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Type"
+msgstr "Tipo"
+
+#. <option value="text">@T["Text"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Text"
+msgstr "Testo"
+
+#. <option value="number">@T["Number"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:8
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Number"
+msgstr "Numero"
+
+#. <option value="email">@T["Email"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:9
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Email"
+msgstr "Email"
+
+#. <option value="tel">@T["Phone"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:10
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Phone"
+msgstr "Telefono"
+
+#. <option value="date">@T["Date"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:11
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Date"
+msgstr "Data"
+
+#. <option value="time">@T["Time"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:12
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Time"
+msgstr "Ora"
+
+#. <option value="datetime">@T["DateTime"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:13
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "DateTime"
+msgstr "Data Ora"
+
+#. <option value="datetime-local">@T["Local DateTime"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:14
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Local DateTime"
+msgstr "Data e ora locale"
+
+#. <option value="month">@T["Month"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:15
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Month"
+msgstr "Mese"
+
+#. <option value="week">@T["Week"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:16
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Week"
+msgstr "Settimana"
+
+#. <option value="hidden">@T["Hidden"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:17
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Hidden"
+msgstr "Nascosto"
+
+#. <option value="password">@T["Password"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:18
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Password"
+msgstr "Password"
+
+#. <option value="radio">@T["Radio"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:19
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Radio"
+msgstr "Radio"
+
+#. <option value="checkbox">@T["Checkbox"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:20
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Checkbox"
+msgstr "CheckBox"
+
+#. <option value="color">@T["Color"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:21
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Color"
+msgstr "Colore"
+
+#. <option value="range">@T["Range"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:22
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Range"
+msgstr "Intervallo"
+
+#. <option value="file">@T["File"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:23
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "File"
+msgstr "File"
+
+#. <option value="url">@T["Url"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:24
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Url"
+msgstr "URL"
+
+#. <option value="image">@T["Image"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:25
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Image"
+msgstr "Immagine"
+
+#. <option value="reset">@T["Reset"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:26
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Reset"
+msgstr "Ripristina"
+
+#. <option value="search">@T["Search"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:27
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Search"
+msgstr "Cerca"
+
+#. <option value="submit">@T["Submit"]</option>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:28
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Submit"
+msgstr "Invia"
+
+#. <span class="hint">@T["The button type."]</span>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:30
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "The button type."
+msgstr "Tipo del bottone."
+
+#. <label asp-for="Placeholder">@T["Placeholder Text"]</label>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:34
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Placeholder Text"
+msgstr "Testo segnaposto"
+
+#. <span class="hint">@T["The text to display when the field has no value."]</span>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:36
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "The text to display when the field has no value."
+msgstr "Il testo da visualizzare quando il campo non ha valore."
+
+#. <label asp-for="DefaultValue">@T["Default Value"]</label>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:40
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "Default Value"
+msgstr "Valore predefinito"
+
+#. <span class="hint">@T["The default value for this field."]</span>
+#: OrchardCore.Forms\Views\Items\InputPart.Fields.Edit.cshtml:42
+msgctxt "OrchardCore.Forms.Views.Items.InputPart.Fields.Edit"
+msgid "The default value for this field."
+msgstr "Valore predefinito per questo campo."
+
+#. <label asp-for="For">@T["For"]</label>
+#: OrchardCore.Forms\Views\Items\LabelPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.LabelPart.Fields.Edit"
+msgid "For"
+msgstr "Per"
+
+#. <span class="hint">@T["The ID of the form element to associate with this label."]</span>
+#: OrchardCore.Forms\Views\Items\LabelPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.LabelPart.Fields.Edit"
+msgid "The ID of the form element to associate with this label."
+msgstr "L'ID dell'elemento del form da associare a questa etichetta."
+
+#. <label asp-for="Placeholder">@T["Placeholder Text"]</label>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "Placeholder Text"
+msgstr "Testo segnaposto"
+
+#. <span class="hint">@T["The text to display when the textarea has no value."]</span>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "The text to display when the textarea has no value."
+msgstr "Il testo da visualizzare quando il testo multilinea non ha valore."
+
+#. <label asp-for="DefaultValue">@T["Default Value"]</label>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:11
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "Default Value"
+msgstr "Valore predefinito"
+
+#. <span class="hint">@T["The default value for this textarea."]</span>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:13
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "The default value for this textarea."
+msgstr "Valore predefinito per il testo multilinea."
+
+#. <h4><i class="fa fa-shield-alt"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate Antiforgery Token"])</h4>
+#: OrchardCore.Forms\Views\Items\ValidateAntiforgeryTokenTask.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Forms.Views.Items.ValidateAntiforgeryTokenTask.Fields.Design"
+msgid "Validate Antiforgery Token"
+msgstr "Valida Antiforgery Token"
+
+#. <h4 class="card-title"><i class="fa fa-shield-alt"></i>@T["Validate Antiforgery Token"]</h4>
+#: OrchardCore.Forms\Views\Items\ValidateAntiforgeryTokenTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Forms.Views.Items.ValidateAntiforgeryTokenTask.Fields.Thumbnail"
+msgid "Validate Antiforgery Token"
+msgstr "Valida Antiforgery Token"
+
+#. <p>@T["Validates the antiforgery token for the current HTTP context in which the workflow executes."]</p>
+#: OrchardCore.Forms\Views\Items\ValidateAntiforgeryTokenTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Forms.Views.Items.ValidateAntiforgeryTokenTask.Fields.Thumbnail"
+msgid "Validates the antiforgery token for the current HTTP context in which the workflow executes."
+msgstr "Valida antiforgery token per il contesto HTTP del workflow in esecuzione."
+
+#. <h4><i class="fa fa-shield-alt"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate Form Field"])</h4>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Design"
+msgid "Validate Form Field"
+msgstr "Valida campo form"
+
+#. <span>@T["Validate <em>{0}</em>", Model.Activity.FieldName]</span>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Design.cshtml:6
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Design"
+msgid "Validate <em>{0}</em>"
+msgstr "Valida <em>{0}</em>"
+
+#. <label asp-for="FieldName">@T["Field Name"]</label>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Edit"
+msgid "Field Name"
+msgstr "Nome Campo"
+
+#. <span class="hint">@T["The name of the form field to validate."]</span>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Edit.cshtml:8
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Edit"
+msgid "The name of the form field to validate."
+msgstr "Il nome del campo da validare."
+
+#. <label asp-for="ErrorMessage">@T["Error Message"]</label>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Edit.cshtml:12
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Edit"
+msgid "Error Message"
+msgstr "Messaggio di Errore"
+
+#. <span class="hint">@T["The validation error message to display."]</span>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Edit.cshtml:15
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Edit"
+msgid "The validation error message to display."
+msgstr "Il messaggio di errore di validazione mostrato."
+
+#. <h4 class="card-title"><i class="fa fa-shield-alt"></i>@T["Validate Form Field"]</h4>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Thumbnail"
+msgid "Validate Form Field"
+msgstr "Valida campo form"
+
+#. <p>@T["Validates a specific form field."]</p>
+#: OrchardCore.Forms\Views\Items\ValidateFormFieldTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormFieldTask.Fields.Thumbnail"
+msgid "Validates a specific form field."
+msgstr "Valido un campo specifico del form."
+
+#. <h4><i class="fa fa-shield-alt"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate Form"])</h4>
+#: OrchardCore.Forms\Views\Items\ValidateFormTask.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormTask.Fields.Design"
+msgid "Validate Form"
+msgstr "Valida Form"
+
+#. <h4 class="card-title"><i class="fa fa-shield-alt"></i>@T["Validate Form"]</h4>
+#: OrchardCore.Forms\Views\Items\ValidateFormTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormTask.Fields.Thumbnail"
+msgid "Validate Form"
+msgstr "Valida Form"
+
+#. <p>@T["Checks whether the submitted form contains any validation errors."]</p>
+#: OrchardCore.Forms\Views\Items\ValidateFormTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Forms.Views.Items.ValidateFormTask.Fields.Thumbnail"
+msgid "Checks whether the submitted form contains any validation errors."
+msgstr "Controlla se il form inviato contiene degli errori di validazione."
+
+#. <label asp-for="For">@T["For"]</label>
+#: OrchardCore.Forms\Views\Items\ValidationPart.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Forms.Views.Items.ValidationPart.Fields.Edit"
+msgid "For"
+msgstr "Per"
+
+#. <span class="hint">@T["The field name that this validation is for."]</span>
+#: OrchardCore.Forms\Views\Items\ValidationPart.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Forms.Views.Items.ValidationPart.Fields.Edit"
+msgid "The field name that this validation is for."
+msgstr "Il nome del campo su cui viene applicata la validazione."
+
+#. <div class="hint">@T["Displays a list of validation errors."]</div>
+#: OrchardCore.Forms\Views\Items\ValidationSummaryPart.Fields.Edit.cshtml:1
+msgctxt "OrchardCore.Forms.Views.Items.ValidationSummaryPart.Fields.Edit"
+msgid "Displays a list of validation errors."
+msgstr "Visualizza una lista di errori di validazione."
+

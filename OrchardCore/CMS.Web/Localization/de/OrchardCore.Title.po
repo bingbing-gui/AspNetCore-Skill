@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Title.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"PO-Revision-Date: 2020-06-04 17:44\n"
+
+#. updater.ModelState.AddModelError(Prefix, S["A value is required for Title."]);
+#: OrchardCore.Title\Drivers\TitlePartDisplay.cs:52
+msgctxt "OrchardCore.Title.Drivers.TitlePartDisplay"
+msgid "A value is required for Title."
+msgstr "Ein Wert wird für den Titel benötigt."
+
+#. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
+#: OrchardCore.Title\Settings\TitlePartSettingsDisplayDriver.cs:57
+msgctxt "OrchardCore.Title.Settings.TitlePartSettingsDisplayDriver"
+msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
+msgstr "Muster enthält keinen gültigen Liquid-Ausdruck. Details: {0}"
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
+#: OrchardCore.Title\Views\TitlePart.DisplayOption.cshtml:4
+msgctxt "OrchardCore.Title.Views.TitlePart.DisplayOption"
+msgid "Standard"
+msgstr "Standard"
+
+#. <label asp-for="Title">@T["Title"]</label>
+#: OrchardCore.Title\Views\TitlePart.Edit.cshtml:13
+msgctxt "OrchardCore.Title.Views.TitlePart.Edit"
+msgid "Title"
+msgstr "Titel"
+
+#. <span class="hint">@T["The title of the content item. Set empty to generate it using the pattern."]</span>
+#: OrchardCore.Title\Views\TitlePart.Edit.cshtml:18
+msgctxt "OrchardCore.Title.Views.TitlePart.Edit"
+msgid "The title of the content item. Set empty to generate it using the pattern."
+msgstr "Der Titel des Inhaltselements. Leer lassen, um diesen mithilfe des Musters zu generieren."
+
+#. <span class="hint">@T["The title of the content item. It will be automatically generated."]</span>
+#: OrchardCore.Title\Views\TitlePart.Edit.cshtml:22
+msgctxt "OrchardCore.Title.Views.TitlePart.Edit"
+msgid "The title of the content item. It will be automatically generated."
+msgstr "Der Titel des Inhaltselements. Dieser wird automatisch generiert."
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
+#: OrchardCore.Title\Views\TitlePart.Option.cshtml:4
+msgctxt "OrchardCore.Title.Views.TitlePart.Option"
+msgid "Standard"
+msgstr "Standard"
+
+#. <label asp-for="Options">@T["Options"]</label>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:15
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Options"
+msgstr "Optionen"
+
+#. <option value="@TitlePartOptions.Editable" selected="@(Model.Options == TitlePartOptions.Editable)">@T["Title is editable"]</option>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:17
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Title is editable"
+msgstr "Titel ist editierbar"
+
+#. <option value="@TitlePartOptions.EditableRequired" selected="@(Model.Options == TitlePartOptions.EditableRequired)">@T["Title is editable and required"]</option>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:18
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Title is editable and required"
+msgstr "Titel ist editierbar und erforderlich"
+
+#. <option value="@TitlePartOptions.GeneratedDisabled" selected="@(Model.Options == TitlePartOptions.GeneratedDisabled)">@T["Title is generated and input is disabled"]</option>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:19
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Title is generated and input is disabled"
+msgstr "Titel wird generiert und Eingabe ist deaktiviert"
+
+#. <option value="@TitlePartOptions.GeneratedHidden" selected="@(Model.Options == TitlePartOptions.GeneratedHidden)">@T["Title is generated and input is hidden"]</option>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:20
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Title is generated and input is hidden"
+msgstr "Titel wird generiert und Eingabe ist ausgeblendet"
+
+#. <label asp-for="Pattern">@T["Pattern"]</label>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:26
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Pattern"
+msgstr "Muster"
+
+#. <span class="hint">@T["The pattern used to render the title of this content type. With Liquid support."]</span>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:28
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "The pattern used to render the title of this content type. With Liquid support."
+msgstr "Das verwendete Muster, anhand dessen der Titel des Inhaltselements generiert wird. Liquid wird unterstützt."
+

@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.Google.pot\n"
+"Project-Id-Version: orchard-core\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2020-03-31 13:46\n"
+
+#. builder.Add(S["Security"], security => security
+#: OrchardCore.Google\AdminMenu.cs:28
+msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
+msgid "Security"
+msgstr "Bảo mật"
+
+#. .Add(S["Authentication"], authentication => authentication
+#: OrchardCore.Google\AdminMenu.cs:29
+msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
+msgid "Authentication"
+msgstr "Xác thực"
+
+#. .Add(S["Google"], "16", settings => settings
+#: OrchardCore.Google\AdminMenu.cs:30
+msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
+msgid "Google"
+msgstr "Google"
+
+#. builder.Add(S["Configuration"], configuration => configuration
+#: OrchardCore.Google\AdminMenu.cs:59
+msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Google\AdminMenu.cs:60
+msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
+msgid "Settings"
+msgstr "Cài đặt"
+
+#. .Add(S["Google Analytics"], S["Google Analytics"], settings => settings
+#. .Add(S["Google Analytics"], S["Google Analytics"], settings => settings
+#: OrchardCore.Google\AdminMenu.cs:61
+#: OrchardCore.Google\AdminMenu.cs:61
+msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#. <h3>@T["Google Analytics Settings"]</h3>
+#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:4
+msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
+msgid "Google Analytics Settings"
+msgstr "Cài đặt Google Analytics"
+
+#. <label asp-for="TrackingID">@T["Tracking ID"]</label>
+#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:8
+msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
+msgid "Tracking ID"
+msgstr "Tracking ID"
+
+#. <span class="hint">@T["The tracking ID defined in your Google Analytics account."]</span>
+#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:11
+msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
+msgid "The tracking ID defined in your Google Analytics account."
+msgstr "Tracking ID đã định nghĩa trong tài khoản Google Analytics của bạn."
+
+#. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:4
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "The current tenant will be reloaded when the settings are saved."
+msgstr "Trang web hiện tại sẽ được tải lại sau khi các cài đặt được lưu."
+
+#. <h3>@T["Google Authentication Settings"]</h3>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:6
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "Google Authentication Settings"
+msgstr "Cài đặt Xác thực Google"
+
+#. <label asp-for="ClientID">@T["Client ID"]</label>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:10
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "Client ID"
+msgstr "Client ID"
+
+#. <span class="hint">@T["The client id defined in Google API console for the application."]</span>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:13
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "The client id defined in Google API console for the application."
+msgstr "Client Id định nghĩa trong bảng điều khiển Google API cho ứng dụng."
+
+#. <label asp-for="ClientSecret">@T["API secret key"]</label>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:19
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "API secret key"
+msgstr "Khoá bí mật API"
+
+#. <span class="hint">@T["The client secret defined in Google API console for the application."]</span>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:22
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "The client secret defined in Google API console for the application."
+msgstr "Khoá bí mật cho client được xác định trong bảng điều khiển Google API cho ứng dụng."
+
+#. <label asp-for="CallbackPath">@T["CallbackPath"]</label>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:28
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "CallbackPath"
+msgstr "CallbackPath"
+
+#. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:31
+msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
+msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
+msgstr "Đường dẫn yêu cầu trong đường dẫn cơ sở của ứng dụng nơi tác nhân người dùng sẽ được trả về. Phần mềm trung gian sẽ xử lý yêu cầu này khi nó đến."
+
+#. <span class="icon"><i class="fa fa-google" aria-hidden="true"></i></span><span class="title">@T["Google"]</span>
+#: OrchardCore.Google\Views\NavigationItemText-google.Id.cshtml:1
+msgctxt "OrchardCore.Google.Views.NavigationItemText-google.Id"
+msgid "Google"
+msgstr "Google"
+
+#. <span class="icon"><i class="fa fa-google" aria-hidden="true"></i></span><span class="title">@T["Google Analytics"]</span>
+#: OrchardCore.Google\Views\NavigationItemText-googleAnalytics.Id.cshtml:1
+msgctxt "OrchardCore.Google.Views.NavigationItemText-googleAnalytics.Id"
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
