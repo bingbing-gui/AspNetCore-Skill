@@ -90,6 +90,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Web", "OrchardCore\CMS.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.StaticFiles", "AspNetCore.StaticFileMiddle\AspNetCore.StaticFiles\AspNetCore.StaticFiles.csproj", "{DF9762E7-A493-4718-BA82-EDBA2C86D4ED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Route", "AspNetCore.Route", "{AB433611-1EF7-4A7C-9C81-866625866725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Route", "AspNetCore.Route\AspNetCore.Route\AspNetCore.Route.csproj", "{8BCF1BB0-464B-41DA-AEE5-9FF7F5C03287}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +196,10 @@ Global
 		{DF9762E7-A493-4718-BA82-EDBA2C86D4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF9762E7-A493-4718-BA82-EDBA2C86D4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF9762E7-A493-4718-BA82-EDBA2C86D4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BCF1BB0-464B-41DA-AEE5-9FF7F5C03287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BCF1BB0-464B-41DA-AEE5-9FF7F5C03287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BCF1BB0-464B-41DA-AEE5-9FF7F5C03287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BCF1BB0-464B-41DA-AEE5-9FF7F5C03287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -221,6 +229,7 @@ Global
 		{49EB56C2-C807-489E-AF68-BAED91980C31} = {8038F662-3EE7-49DB-A14A-CDAEA13C42E1}
 		{4E5A25BE-31D9-4712-BB46-FE969EEBB023} = {C74B4A94-4217-40FF-A8EF-7E5271AA7E5A}
 		{DF9762E7-A493-4718-BA82-EDBA2C86D4ED} = {A00C6D8E-26C2-42B0-9763-002053B80AC4}
+		{8BCF1BB0-464B-41DA-AEE5-9FF7F5C03287} = {AB433611-1EF7-4A7C-9C81-866625866725}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
