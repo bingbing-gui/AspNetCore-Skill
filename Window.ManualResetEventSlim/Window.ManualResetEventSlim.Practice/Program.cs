@@ -8,7 +8,7 @@ namespace Window.ManualResetEventSlim.Practice
     {
         static void Main()
         {
-            MRES_SetWaitReset();
+            //MRES_SetWaitReset();
             MRES_SpinCountWaitHandle();
         }
         // Demonstrates:
@@ -19,29 +19,33 @@ namespace Window.ManualResetEventSlim.Practice
         //      ManualResetEventSlim.IsSet
         static void MRES_SetWaitReset()
         {
-            System.Threading.ManualResetEventSlim mres1 = new System.Threading.ManualResetEventSlim(); // initialize as unsignaled
-
+            System.Threading.ManualResetEventSlim mres1 = new System.Threading.ManualResetEventSlim(false); // initialize as unsignaled
+            System.Threading.ManualResetEventSlim mres2 = new System.Threading.ManualResetEventSlim(false); // initialize as unsignaled
+            System.Threading.ManualResetEventSlim mres3 = new System.Threading.ManualResetEventSlim(true);  // initialize as signaled
+            
             // Start an asynchronous Task that manipulates mres3 and mres2
             var observer = Task.Factory.StartNew(() =>
             {
                 mres1.Wait();
-                Console.WriteLine("mres1=" + mres1.IsSet);
                 Console.WriteLine("observer sees signaled mres1!");
                 Console.WriteLine("observer resetting mres3...");
+                mres3.Reset(); // should switch to unsignaled
                 Console.WriteLine("observer signalling mres2");
+                mres2.Set();
             });
 
-            Console.WriteLine("first");
-            Console.WriteLine("second");
-            mres1.Set(); //ture This will "kick off" the observer Task 
-            //mres2.Wait(); // This won't return until observer Task has finished resetting mres3
+            Console.WriteLine("main thread: mres3.IsSet = {0} (should be true)", mres3.IsSet);
+            Console.WriteLine("main thread signalling mres1");
+            mres1.Set(); // This will "kick off" the observer Task
+            mres2.Wait(); // This won't return until observer Task has finished resetting mres3
             Console.WriteLine("main thread sees signaled mres2!");
-            Console.WriteLine("main thread: mres3.IsSet = {0} (should be false)");
+            Console.WriteLine("main thread: mres3.IsSet = {0} (should be false)", mres3.IsSet);
 
             // It's good form to Dispose() a ManualResetEventSlim when you're done with it
             observer.Wait(); // make sure that this has fully completed
             mres1.Dispose();
-            Console.ReadLine();
+            mres2.Dispose();
+            mres3.Dispose();
         }
 
         // Demonstrates:
