@@ -13,6 +13,7 @@ namespace AspNetCore.JWT.Practice.Controllers
     public class UserController : ControllerBase
     {
         [HttpGet("user")]
+        [Authorize(Policy = Policies.Admin)]
         [Authorize(Policy = Policies.User)]
         public IActionResult GetUser()
         {

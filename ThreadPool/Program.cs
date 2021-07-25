@@ -27,50 +27,37 @@ namespace ThreadPoolExample
         #region
         static void Main(string[] args)
         {
-
-
             Stopwatch mywatch = new Stopwatch();
-
             Console.WriteLine("Thread Pool Execution");
-
             mywatch.Start();
-            ProcessWithThreadPoolMethod();
+            ExecuteWithThreadPoolMethod();
             mywatch.Stop();
-
-            Console.WriteLine("Time consumed by ProcessWithThreadPoolMethod is : " + mywatch.ElapsedTicks.ToString());
+            Console.WriteLine("Time consumed by ProcessWithThreadPoolMethod is :" + mywatch.ElapsedTicks.ToString());
             mywatch.Reset();
-
-
             Console.WriteLine("Thread Execution");
-
             mywatch.Start();
-            ProcessWithThreadMethod();
+            ExecuteWithThreadMethod();
             mywatch.Stop();
-
-            Console.WriteLine("Time consumed by ProcessWithThreadMethod is : " + mywatch.ElapsedTicks.ToString());
+            Console.WriteLine("Time consumed by ExecuteWithThreadMethod is : " + mywatch.ElapsedTicks.ToString());
             Console.Read();
         }
-
-        static void ProcessWithThreadPoolMethod()
+        static void ExecuteWithThreadPoolMethod()
         {
-            for (int i = 0; i <= 10; i++)
+            for (int i = 0; i <= 100; i++)
             {
-                ThreadPool.QueueUserWorkItem(new WaitCallback(Process));
+                ThreadPool.QueueUserWorkItem(new WaitCallback(ProcessTask));
             }
         }
-
-        static void ProcessWithThreadMethod()
+        static void ExecuteWithThreadMethod()
         {
-            for (int i = 0; i <= 10; i++)
+            for (int i = 0; i <= 100; i++)
             {
-                Thread obj = new Thread(Process);
+                Thread obj = new Thread(ProcessTask);
                 obj.Start();
             }
         }
-
-        static void Process(object callback)
+        static void ProcessTask(object callback)
         {
-
         }
         #endregion
     }
