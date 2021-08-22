@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.FrameWork.Practice"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MediatR.FrameWork", "MediatR.FrameWork", "{C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JWT", "JWT", "{52A12FFE-2B84-4530-88AA-B17F920DA030}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.JWT", "AspNetCore.JWT", "{52A12FFE-2B84-4530-88AA-B17F920DA030}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.JWT.Practice", "JWT\AspNetCore.JWT.Practice\AspNetCore.JWT.Practice.csproj", "{D99AE553-4F21-4880-BDEE-7620A332DB2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.JWT", "AspNetCore.JWT\AspNetCore.JWT.csproj", "{D99AE553-4F21-4880-BDEE-7620A332DB2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EPPlus.FrameWork", "EPPlus.FrameWork", "{671F3AA2-C1A2-4C24-A40E-572C2C24447E}"
 EndProject
@@ -102,7 +102,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadPool", "ThreadPool\Th
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spider", "Spider", "{EB28097F-A219-4C3B-A145-4E89DDED6683}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spider", "Spider\Spider.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spider", "Spider\Spider.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

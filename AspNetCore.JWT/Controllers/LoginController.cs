@@ -12,7 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
-namespace AspNetCore.JWT.Practice.Controllers
+namespace AspNetCore.JWT
 {
     [ApiController]
     [Route("[controller]")]
@@ -54,8 +54,13 @@ namespace AspNetCore.JWT.Practice.Controllers
         }
         string GenerateJWTToken(User userInfo)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:SecretKey"]));
-
+            //1.创建JwtSecurityTokenHandler
+            var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+            //2.创建Private Key 
+            var tokenKey = Encoding.UTF8.GetBytes(_config["Jwt:SecretKey"]);
+            //3.创建SymmetricSecurityKey
+            var securityKey = new SymmetricSecurityKey(tokenKey);
+            //4.创建SigningCredentials
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
@@ -65,6 +70,7 @@ namespace AspNetCore.JWT.Practice.Controllers
                 new Claim("role",userInfo.UserRole),
                 new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
             };
+            //5.创建JwtSecurityToken
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
@@ -72,7 +78,7 @@ namespace AspNetCore.JWT.Practice.Controllers
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: credentials
                 );
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            return jwtSecurityTokenHandler.WriteToken(token);
         }
     }
 }

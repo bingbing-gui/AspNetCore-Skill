@@ -1,6 +1,7 @@
 ﻿什么是JWT
 
-JWT是JSON Web Token 的缩写,JWT是双方之间传输信息的安全方法，使用JSON对象。这个信息被验证和信任，因为他是数字签名,
+JWT是JSON Web Token 的缩写,JWT是双方之间传输信息的安全方法，
+使用JSON对象。这个信息被验证和信任，因为他是数字签名,
 jwt可以使用加密算发（使用HMAC算法）或使用RSA或ECDSA的公钥/私钥对进行签名
 
 JWT 有三部分构成
