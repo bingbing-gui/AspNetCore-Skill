@@ -17,7 +17,7 @@ namespace SocketClient
             //}
             //Console.WriteLine("EndTime={0}", DateTime.Now);
 
-
+            SyncSocketClient.StartClient();
             Console.Read();
         }
     }

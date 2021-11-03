@@ -36,7 +36,7 @@ namespace AspNetCore.Startup.Practice
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     Console.WriteLine("ConfigureWebHostDefaults");
-                    //webBuilder.UseStartup<Startup>();
+                    ///webBuilder.UseStartup<Startup>();
                     //替换startup 类
                     webBuilder.ConfigureServices(services =>
                     {
@@ -60,11 +60,12 @@ namespace AspNetCore.Startup.Practice
                             endpoints.MapControllers();
                         });
                     });
-              
+
                 })
                 .ConfigureHostConfiguration(builder =>
                 {
-                      Console.WriteLine("ConfigureHostConfiguration");
+                    
+                    Console.WriteLine("ConfigureHostConfiguration");
                 })
                 .ConfigureAppConfiguration(builder =>
                 {
@@ -74,7 +75,7 @@ namespace AspNetCore.Startup.Practice
                 {
                     Console.WriteLine("ConfigureServices");
                 });
-              
-              
+
+
     }
 }
