@@ -114,7 +114,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppConfiguration", "Configuration\WebAppConfiguration\WebAppConfiguration.csproj", "{CC7F136A-CFCD-47A8-BC8A-7E68210C3B7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileConfigurationProvider", "FileConfigurationProvider\FileConfigurationProvider.csproj", "{CD5A7CEB-09F6-4105-B969-DE69F8CFA577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileConfigurationProvider", "FileConfigurationProvider\FileConfigurationProvider.csproj", "{CD5A7CEB-09F6-4105-B969-DE69F8CFA577}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{E6F9B6BF-15B1-4DDB-BC20-634773C1A663}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpOverrideNew", "CSharp\CSharpOverrideNew\CSharpOverrideNew.csproj", "{1E88604F-1137-45A1-81C7-D29032B1B984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpBase", "CSharp\CSharpBase\CSharpBase.csproj", "{BBF6C4A9-33E7-4A15-8CB0-2E4792B75E7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -250,6 +256,14 @@ Global
 		{CD5A7CEB-09F6-4105-B969-DE69F8CFA577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD5A7CEB-09F6-4105-B969-DE69F8CFA577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD5A7CEB-09F6-4105-B969-DE69F8CFA577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E88604F-1137-45A1-81C7-D29032B1B984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E88604F-1137-45A1-81C7-D29032B1B984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E88604F-1137-45A1-81C7-D29032B1B984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E88604F-1137-45A1-81C7-D29032B1B984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF6C4A9-33E7-4A15-8CB0-2E4792B75E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF6C4A9-33E7-4A15-8CB0-2E4792B75E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF6C4A9-33E7-4A15-8CB0-2E4792B75E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF6C4A9-33E7-4A15-8CB0-2E4792B75E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -287,6 +301,8 @@ Global
 		{D1F7E9A8-9479-46BC-ACAE-580874815C65} = {ECA94CAE-6395-4A83-8E0A-46079A255CCE}
 		{CC7F136A-CFCD-47A8-BC8A-7E68210C3B7F} = {F049AD56-5E95-47A9-A226-BA6BE7FF8D0B}
 		{CD5A7CEB-09F6-4105-B969-DE69F8CFA577} = {F049AD56-5E95-47A9-A226-BA6BE7FF8D0B}
+		{1E88604F-1137-45A1-81C7-D29032B1B984} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
+		{BBF6C4A9-33E7-4A15-8CB0-2E4792B75E7D} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

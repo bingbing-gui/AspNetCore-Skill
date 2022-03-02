@@ -42,11 +42,11 @@ namespace AspNetCore.Route
 
             });
             app.Use(next => context =>
-             {
+            {
                 //Location 4: runs after UseEndpoints - will only run if there was no match
                 Console.WriteLine($"4. Endpoint: {context.GetEndpoint()?.DisplayName ?? "(null)"}");
-                  return next(context);
-             });
+                return next(context);
+            });
         }
     }
 }
