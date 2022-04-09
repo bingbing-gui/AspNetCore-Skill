@@ -1,3 +1,4 @@
+using AspNetCore.Middleware.Controllers;
 using AspNetCore.Middleware.MyMiddleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -81,7 +82,19 @@ namespace AspNetCore.Middleware
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.Use(async (context, next) =>
+            {
+                if (context.GetEndpoint()?.Metadata.GetMetadata<RequiresAuditAttribute>() is not null)
+                {
+                    Console.WriteLine($"ACCESS TO SENSITIVE DATA AT: {DateTime.UtcNow}");
+                }
+
+                await next(context);
+            });
+
+            app.MapGet("/", () => "Audit isn't required.");
+            app.MapGet("/sensitive", () => "Audit required for sensitive data.")
+                .WithMetadata(new RequiresAuditAttribute());
 
             app.UseEndpoints(endpoints =>
             {

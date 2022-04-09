@@ -3,6 +3,7 @@ using AspNetCore.UsingHttpClient.Practice.Models;
 using AspNetCore.UsingHttpClient.Practice.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Net.Http.Headers;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -38,9 +39,17 @@ namespace AspNetCore.UsingHttpClient.Practice.Controllers
 
         public async Task<IActionResult> BasicUsage()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches");
-            request.Headers.Add("Accept", "application/vnd.github.v3+json");
-            request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
+            var request = new HttpRequestMessage(HttpMethod.Get,
+                "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches")
+            {
+                Headers =
+                {
+                    { HeaderNames.Accept, "application/vnd.github.v3+json" },
+                    { HeaderNames.UserAgent, "HttpRequestsSample" }
+                }
+            };
+            //request.Headers.Add("Accept", "application/vnd.github.v3+json");
+            //request.Headers.Add("User-Agent", "HttpClientFactory-Sample");            
             var client = _clientFactory.CreateClient();
             var reponse = await client.SendAsync(request);
             BasicUsageModel basicUsageModel = new BasicUsageModel();

@@ -35,5 +35,13 @@ namespace AspNetCore.Middleware.Controllers
             })
             .ToArray();
         }
+        [HttpGet("sensitive")]
+        [RequiresAudit]
+        public string Sensitive()
+        {
+            return "sensitive";
+        }
     }
+    public class RequiresAuditAttribute : Attribute { }
+
 }

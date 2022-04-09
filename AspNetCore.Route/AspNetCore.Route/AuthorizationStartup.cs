@@ -12,6 +12,7 @@ namespace AspNetCore.Route
         {
             services.AddAuthorization();
             services.AddHealthChecks();
+            services.AddControllersWithViews();
         }
 
         #region snippet

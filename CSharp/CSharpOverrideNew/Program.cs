@@ -17,6 +17,11 @@ namespace CSharpOverrideNew
             bcdc.Method1();
             bcdc.Method2();
             TestCars1();
+            Console.WriteLine("----------");
+
+
+            Car c = new BMWMinnivan();
+            c.DescribeCar();
         }
         public static void TestCars1()
         {
@@ -165,6 +170,14 @@ namespace CSharpOverrideNew
         public override void ShowDetails()
         {
             System.Console.WriteLine("Carries seven people.");
+        }
+    }
+
+    class BMWMinnivan : Minivan
+    {
+        public override void ShowDetails()
+        {
+            System.Console.WriteLine("BMWMinnivan Carries seven people.");
         }
     }
 }

@@ -20,12 +20,12 @@ namespace AspNetCore.Route
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    //webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>();
                     //webBuilder.UseStartup<RouteTemplateStartup>();
-                    // webBuilder.UseStartup<AuthorizationStartup>();
+                    //webBuilder.UseStartup<AuthorizationStartup>();
                     //webBuilder.UseStartup<EndpointInspectorStartup>();
                     //webBuilder.UseStartup<MiddlewareFlowStartup>(); 
-                    //webBuilder.UseStartup<IntegratedMiddlewareStartup>();
+                   // webBuilder.UseStartup<IntegratedMiddlewareStartup>();
                 });
     }
 }

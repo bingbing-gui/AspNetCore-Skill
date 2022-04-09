@@ -45,7 +45,7 @@ namespace AspNetCore.Route
                 {
                     await context.Response.WriteAsync("sensitive data");
                 })
-                .WithMetadata(new AuditPolicyAttribute(needsAudit: true));
+                .WithMetadata(new AuditPolicyAttribute(needsAudit: false));
             });
 
         } 

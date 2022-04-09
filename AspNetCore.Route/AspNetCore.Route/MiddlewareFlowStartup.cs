@@ -38,7 +38,7 @@ namespace AspNetCore.Route
                     Console.WriteLine(
                        $"3. Endpoint: {context.GetEndpoint()?.DisplayName ?? "(null)"}");
                     return Task.CompletedTask;
-                }).WithDisplayName("Hello");
+                }).WithDisplayName("Hello World");
 
             });
             app.Use(next => context =>

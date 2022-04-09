@@ -43,9 +43,7 @@ namespace AspNetCore.Route
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.Use(next => context =>
             {
                 var endpoint = context.GetEndpoint();
@@ -53,9 +51,7 @@ namespace AspNetCore.Route
                 {
                     return Task.CompletedTask;
                 }
-
                 Console.WriteLine($"Endpoint: {endpoint.DisplayName}");
-
                 if (endpoint is RouteEndpoint routeEndpoint)
                 {
                     Console.WriteLine("Endpoint has route pattern: " +
@@ -75,7 +71,9 @@ namespace AspNetCore.Route
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
             });
+
         }
     }
 }
