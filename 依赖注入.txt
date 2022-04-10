@@ -18,3 +18,5 @@ IServiceScope
 3.瞬时Transient
 
 
+
+
