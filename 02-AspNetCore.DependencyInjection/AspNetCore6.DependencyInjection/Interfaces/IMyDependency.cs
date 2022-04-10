@@ -6,4 +6,5 @@
         void WriteMessage(string message);
     }
     #endregion
+
 }
