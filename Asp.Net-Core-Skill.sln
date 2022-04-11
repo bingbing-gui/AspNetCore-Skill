@@ -142,7 +142,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-AspNetCore.DependencyInj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.DependencyInjection", "02-AspNetCore.DependencyInjection\AspNetCore6.DependencyInjection\AspNetCore6.DependencyInjection.csproj", "{71BD22B7-F35E-4463-958E-3C9523F3051B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.ObjectDisposeFromContainer", "02-AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.ObjectDisposeFromContainer", "02-AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.FourWaysToDisposeIDisposables", "02-AspNetCore.DependencyInjection\AspNetCore6.FourWaysToDisposeIDisposables\AspNetCore6.FourWaysToDisposeIDisposables.csproj", "{5BAB753E-548E-46F0-8FBF-1429B3A486AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -322,6 +324,10 @@ Global
 		{F7874E47-992B-4024-A321-DF74288406E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7874E47-992B-4024-A321-DF74288406E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7874E47-992B-4024-A321-DF74288406E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -370,6 +376,7 @@ Global
 		{F939966A-62B5-490D-B54B-8B82BCAE4914} = {130B405E-B50B-443E-A919-674CC9E7FA9D}
 		{71BD22B7-F35E-4463-958E-3C9523F3051B} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{F7874E47-992B-4024-A321-DF74288406E9} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
+		{5BAB753E-548E-46F0-8FBF-1429B3A486AB} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
