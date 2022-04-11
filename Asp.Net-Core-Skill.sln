@@ -34,9 +34,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Scope.Project", "AspNet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Serilog", "AspNetCore.Log\AspNetCore.Serilog\AspNetCore.Serilog.csproj", "{03026168-A66A-4BE7-930E-CCAC5FC5EED5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Middleware", "AspNetCore.Middleware", "{64EAD733-6E08-4A4A-AE0E-B22894AC3642}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-AspNetCore.Middleware", "03-AspNetCore.Middleware", "{64EAD733-6E08-4A4A-AE0E-B22894AC3642}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fundamentals\03-AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ExceptionHandle", "AspNetCore.ExceptionHandle", "{97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}"
 	ProjectSection(SolutionItems) = preProject
@@ -129,22 +129,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpOut", "CSharp\CSharpO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net6Route", "AspNetCore.Route\Net6Route\Net6Route.csproj", "{54383456-755A-4D60-A39A-C0B76A09FFCF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{9191ADFA-8918-46BF-9DEB-5351A72FC84B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamentals", "{9191ADFA-8918-46BF-9DEB-5351A72FC84B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.OverView", "01-AspNetCore.OverView", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.OverView", "Fundamentals\01-AspNetCore.OverView", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.OverView", "01-AspNetCore.OverView\AspNetCore.OverView\AspNetCore6.OverView.csproj", "{F939966A-62B5-490D-B54B-8B82BCAE4914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.OverView", "Fundamentals\01-AspNetCore.OverView\AspNetCore.OverView\AspNetCore6.OverView.csproj", "{F939966A-62B5-490D-B54B-8B82BCAE4914}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-AspNetCore.DependencyInjection", "02-AspNetCore.DependencyInjection", "{F9856C07-A857-4DB7-9323-F58B9513CCA9}"
 	ProjectSection(SolutionItems) = preProject
 		依赖注入.txt = 依赖注入.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.DependencyInjection", "02-AspNetCore.DependencyInjection\AspNetCore6.DependencyInjection\AspNetCore6.DependencyInjection.csproj", "{71BD22B7-F35E-4463-958E-3C9523F3051B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.DependencyInjection", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.DependencyInjection\AspNetCore6.DependencyInjection.csproj", "{71BD22B7-F35E-4463-958E-3C9523F3051B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.ObjectDisposeFromContainer", "02-AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.ObjectDisposeFromContainer", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.FourWaysToDisposeIDisposables", "02-AspNetCore.DependencyInjection\AspNetCore6.FourWaysToDisposeIDisposables\AspNetCore6.FourWaysToDisposeIDisposables.csproj", "{5BAB753E-548E-46F0-8FBF-1429B3A486AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.FourWaysToDisposeIDisposables", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.FourWaysToDisposeIDisposables\AspNetCore6.FourWaysToDisposeIDisposables.csproj", "{5BAB753E-548E-46F0-8FBF-1429B3A486AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -341,6 +341,7 @@ Global
 		{919CAB70-1CB8-4CF7-9764-1CC6A7EE628F} = {BD188513-A02A-4231-A509-709E04E06A02}
 		{917AE32C-5195-462D-A99E-D732183EF33A} = {BD188513-A02A-4231-A509-709E04E06A02}
 		{03026168-A66A-4BE7-930E-CCAC5FC5EED5} = {BD188513-A02A-4231-A509-709E04E06A02}
+		{64EAD733-6E08-4A4A-AE0E-B22894AC3642} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{947EEC82-13EB-4D2E-B05F-D4E14DDB697E} = {64EAD733-6E08-4A4A-AE0E-B22894AC3642}
 		{A9381237-5BC6-4F45-96A9-94DA79F6537C} = {97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}
 		{48EC4989-7FAA-4642-84C5-D255B99BEC17} = {F9C1278E-43E0-4654-A8EC-73B93C59EFFA}
@@ -373,7 +374,9 @@ Global
 		{039CEF44-4CE2-409A-ACA7-71EB6EEF1D41} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 		{1AD57972-3CDC-4337-89F2-7E299AF9DCCC} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 		{54383456-755A-4D60-A39A-C0B76A09FFCF} = {AB433611-1EF7-4A7C-9C81-866625866725}
+		{130B405E-B50B-443E-A919-674CC9E7FA9D} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{F939966A-62B5-490D-B54B-8B82BCAE4914} = {130B405E-B50B-443E-A919-674CC9E7FA9D}
+		{F9856C07-A857-4DB7-9323-F58B9513CCA9} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{71BD22B7-F35E-4463-958E-3C9523F3051B} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{F7874E47-992B-4024-A321-DF74288406E9} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{5BAB753E-548E-46F0-8FBF-1429B3A486AB} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
