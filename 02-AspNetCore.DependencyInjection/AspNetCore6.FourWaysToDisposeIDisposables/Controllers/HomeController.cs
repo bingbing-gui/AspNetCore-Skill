@@ -21,11 +21,15 @@ namespace AspNetCore6.FourWaysToDisposeIDisposables.Controllers
             //_disposable = new MyDisposable();
             _logger = logger;
         }
-
-        public IActionResult Index()
+        /// <summary>
+        /// 1.可以通过FromService获取服务
+        /// 2.HttpContext.RequestServices 获取服务
+        /// </summary>
+        /// <param name="singletonCreatedByContainer"></param>
+        /// <returns></returns>
+        public IActionResult Index([FromServices]SingletonCreatedByContainer singletonCreatedByContainer)
         {
             //HttpContext.Response.RegisterForDispose(_disposable);
-            
             return View();
         }
 
