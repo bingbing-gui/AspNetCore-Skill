@@ -18,5 +18,13 @@ IServiceScope
 3.瞬时Transient
 
 
+services.AddSingleton(new Service1());
+services.AddSingleton(new Service2())
+在上述代码中：
+服务实例不是由服务容器创建的。
+框架不会自动释放服务。
+开发人员负责释放服务。
+
+
 
 

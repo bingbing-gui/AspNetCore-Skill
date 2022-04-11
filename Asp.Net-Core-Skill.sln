@@ -24,8 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{0AF49E0E-46C
 		Enable Asp.Net Core Source Code to debug.txt = Enable Asp.Net Core Source Code to debug.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection.Practice", "02-AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.Practice\AspNetCore.DependencyInjection.Practice.csproj", "{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Options", "AspNetCore.Options", "{05DBA937-5B6E-4FDC-9F43-4155696B4964}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Bind.Practice", "AspNetCore.Options\AspNetCore.Options.Bind.Practice\AspNetCore.Options.Bind.Practice.csproj", "{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}"
@@ -66,8 +64,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Startup.Practice", "AspNetCore.Startup\AspNetCore.Startup.Practice\AspNetCore.Startup.Practice.csproj", "{369346CD-0194-4C29-8E26-8DC940FE323B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Validation.Practice", "AspNetCore.Options\AspNetCore.Options.Validation.Practice\AspNetCore.Options.Validation.Practice.csproj", "{9F5993F0-7A1C-4598-AA90-031BAE44B958}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection.Lifetime.Practice", "02-AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.Lifetime.Practice\AspNetCore.DependencyInjection.Lifetime.Practice.csproj", "{E6C204AF-67A4-4306-8902-C6044F322FFD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle.Pratice", "AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.Pratice\AspNetCore.ExceptionHandle.Pratice.csproj", "{03529777-DFC6-4AD8-84BC-77F50256B571}"
 EndProject
@@ -139,14 +135,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.OverView", "0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.OverView", "01-AspNetCore.OverView\AspNetCore.OverView\AspNetCore6.OverView.csproj", "{F939966A-62B5-490D-B54B-8B82BCAE4914}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection", "02-AspNetCore.DependencyInjection\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.csproj", "{D23A868A-0659-4632-B7A9-F5EF23BF91A5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-AspNetCore.DependencyInjection", "02-AspNetCore.DependencyInjection", "{F9856C07-A857-4DB7-9323-F58B9513CCA9}"
 	ProjectSection(SolutionItems) = preProject
 		依赖注入.txt = 依赖注入.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.DependencyInjection", "02-AspNetCore.DependencyInjection\AspNetCore6.DependencyInjection\AspNetCore6.DependencyInjection.csproj", "{71BD22B7-F35E-4463-958E-3C9523F3051B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.ObjectDisposeFromContainer", "02-AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -170,10 +166,6 @@ Global
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -222,10 +214,6 @@ Global
 		{9F5993F0-7A1C-4598-AA90-031BAE44B958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F5993F0-7A1C-4598-AA90-031BAE44B958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F5993F0-7A1C-4598-AA90-031BAE44B958}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6C204AF-67A4-4306-8902-C6044F322FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03529777-DFC6-4AD8-84BC-77F50256B571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03529777-DFC6-4AD8-84BC-77F50256B571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03529777-DFC6-4AD8-84BC-77F50256B571}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -326,14 +314,14 @@ Global
 		{F939966A-62B5-490D-B54B-8B82BCAE4914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F939966A-62B5-490D-B54B-8B82BCAE4914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F939966A-62B5-490D-B54B-8B82BCAE4914}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D23A868A-0659-4632-B7A9-F5EF23BF91A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D23A868A-0659-4632-B7A9-F5EF23BF91A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D23A868A-0659-4632-B7A9-F5EF23BF91A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D23A868A-0659-4632-B7A9-F5EF23BF91A5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7874E47-992B-4024-A321-DF74288406E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7874E47-992B-4024-A321-DF74288406E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7874E47-992B-4024-A321-DF74288406E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7874E47-992B-4024-A321-DF74288406E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -343,7 +331,6 @@ Global
 		{D99AE553-4F21-4880-BDEE-7620A332DB2B} = {52A12FFE-2B84-4530-88AA-B17F920DA030}
 		{1A9A62E8-2790-4A5D-9326-3C7B469F820B} = {671F3AA2-C1A2-4C24-A40E-572C2C24447E}
 		{E45522E5-6934-49F1-8F52-D8C1BF6619A9} = {BD188513-A02A-4231-A509-709E04E06A02}
-		{79D8EED5-F469-42AF-AAD6-E87F6E3F3C2B} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{BC8BC4FB-9008-4494-AF0D-6E4D31386B15} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
 		{919CAB70-1CB8-4CF7-9764-1CC6A7EE628F} = {BD188513-A02A-4231-A509-709E04E06A02}
 		{917AE32C-5195-462D-A99E-D732183EF33A} = {BD188513-A02A-4231-A509-709E04E06A02}
@@ -356,7 +343,6 @@ Global
 		{44E2D1E5-B164-46E2-8324-C9EC44C4998A} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
 		{369346CD-0194-4C29-8E26-8DC940FE323B} = {9BE170B6-EFB2-4DAB-80B8-256CE09CB280}
 		{9F5993F0-7A1C-4598-AA90-031BAE44B958} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
-		{E6C204AF-67A4-4306-8902-C6044F322FFD} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{03529777-DFC6-4AD8-84BC-77F50256B571} = {97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}
 		{D239DE59-E5F7-48E8-A669-19ABB5F1803F} = {8038F662-3EE7-49DB-A14A-CDAEA13C42E1}
 		{A75CBB66-5618-47BA-B013-E4E178DE168F} = {8038F662-3EE7-49DB-A14A-CDAEA13C42E1}
@@ -382,8 +368,8 @@ Global
 		{1AD57972-3CDC-4337-89F2-7E299AF9DCCC} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 		{54383456-755A-4D60-A39A-C0B76A09FFCF} = {AB433611-1EF7-4A7C-9C81-866625866725}
 		{F939966A-62B5-490D-B54B-8B82BCAE4914} = {130B405E-B50B-443E-A919-674CC9E7FA9D}
-		{D23A868A-0659-4632-B7A9-F5EF23BF91A5} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{71BD22B7-F35E-4463-958E-3C9523F3051B} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
+		{F7874E47-992B-4024-A321-DF74288406E9} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
