@@ -35,6 +35,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Serilog", "AspNetCore.Log\AspNetCore.Serilog\AspNetCore.Serilog.csproj", "{03026168-A66A-4BE7-930E-CCAC5FC5EED5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-AspNetCore.Middleware", "03-AspNetCore.Middleware", "{64EAD733-6E08-4A4A-AE0E-B22894AC3642}"
+	ProjectSection(SolutionItems) = preProject
+		中间件.txt = 中间件.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fundamentals\03-AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
 EndProject
@@ -131,7 +134,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net6Route", "AspNetCore.Rou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamentals", "{9191ADFA-8918-46BF-9DEB-5351A72FC84B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.OverView", "Fundamentals\01-AspNetCore.OverView", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.OverView", "01-AspNetCore.OverView", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.OverView", "Fundamentals\01-AspNetCore.OverView\AspNetCore.OverView\AspNetCore6.OverView.csproj", "{F939966A-62B5-490D-B54B-8B82BCAE4914}"
 EndProject
@@ -145,6 +148,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.ObjectDisposeFromContainer", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.FourWaysToDisposeIDisposables", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.FourWaysToDisposeIDisposables\AspNetCore6.FourWaysToDisposeIDisposables.csproj", "{5BAB753E-548E-46F0-8FBF-1429B3A486AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-AspNetCore.Host", "04-AspNetCore.Host", "{531B3AE7-3F2C-4EE5-BB7C-BE490BB64180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.Middleware", "Fundamentals\03-AspNetCore.Middleware\AspNetCore6.Middleware\AspNetCore6.Middleware.csproj", "{057A0F82-37F3-4E05-9605-F37C1C8A82F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.BranchMiddlePipeline", "Fundamentals\AspNetCore6.BranchMiddlePipeline\AspNetCore6.BranchMiddlePipeline.csproj", "{972AC5A1-B910-447E-9630-C2F72567354F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -328,6 +337,14 @@ Global
 		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{057A0F82-37F3-4E05-9605-F37C1C8A82F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{057A0F82-37F3-4E05-9605-F37C1C8A82F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{057A0F82-37F3-4E05-9605-F37C1C8A82F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{057A0F82-37F3-4E05-9605-F37C1C8A82F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972AC5A1-B910-447E-9630-C2F72567354F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972AC5A1-B910-447E-9630-C2F72567354F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972AC5A1-B910-447E-9630-C2F72567354F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972AC5A1-B910-447E-9630-C2F72567354F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -380,6 +397,9 @@ Global
 		{71BD22B7-F35E-4463-958E-3C9523F3051B} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{F7874E47-992B-4024-A321-DF74288406E9} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{5BAB753E-548E-46F0-8FBF-1429B3A486AB} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
+		{531B3AE7-3F2C-4EE5-BB7C-BE490BB64180} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{057A0F82-37F3-4E05-9605-F37C1C8A82F2} = {64EAD733-6E08-4A4A-AE0E-B22894AC3642}
+		{972AC5A1-B910-447E-9630-C2F72567354F} = {64EAD733-6E08-4A4A-AE0E-B22894AC3642}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
