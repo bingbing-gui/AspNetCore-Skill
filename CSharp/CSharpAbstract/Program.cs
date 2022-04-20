@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,39 +13,45 @@ namespace CSharpAbstract
     {
         static async Task Main(string[] args)
         {
-            //int[] array = { 2, 3, 4, 6, 9 };
+            List<int> list = new List<int> { 1, 3, 6, 9 };
+            List<int> list2 = new List<int> { 1, 2, 4, 6, 11 };
+            
+            foreach (var element in list2)
+            {
+                list.Add(element);
+            }
 
-            //foreach (ref int i in array.AsSpan())
-            //{
-            //    array[i] = i++;
-            //}
-            //Square square = new Square(12);
-            //Console.WriteLine($"Area of the square = {square.GetArea()}");
-            //System.Threading.Thread thread = new System.Threading.Thread(A);
-            //thread.Start();
-            //System.Threading.Thread thread2 = new System.Threading.Thread(B);
-            //thread2.Start();
-            //System.Threading.ThreadPool.QueueUserWorkItem(A);
-            //System.Threading.ThreadPool.QueueUserWorkItem(B);
-            //Console.Read();
-            //CancellationTokenSource t = new CancellationTokenSource();
-            ////Task<int> t2=Task<int>.Run(F,);
-            ////t2.ContinueWith()   
-            //ProcessPriorityClass
-            ////F();
-            //B("");
-            //var sw = new Stopwatch();
-            //sw.Start();
-            //Task delay = Task.Delay(5000);
-            //Console.WriteLine("async: Running for {0} seconds", sw.Elapsed.TotalSeconds);
+            foreach (var element in list.OrderBy(e => e))
+            {
+                Console.WriteLine(element);
+            }
 
-            //Console.WriteLine("1:" + Thread.CurrentThread.ManagedThreadId);
-            //Console.ReadLine();
+            string orign = "aabbbbcccccddd";
+            List<char> dest = new List<char>();
+            dest.AddRange(orign);
+            //var grouByList =dest.GroupBy(a => a);
+            var dict = new Dictionary<char, int>();
+            foreach (var element in dest)
+            {
+                if (dict.ContainsKey(element))
+                {
+                    int i = dict[element];
+                    dict[element] = i + 1;
+                }
+                else
+                {
+                    dict.Add(element, 1);
+                }
+            }
+            var stringBuilder = new StringBuilder();
 
-
-            //var task = new Task<string>();
-            //task.Start()
-
+            foreach (var ele in dict)
+            {
+                stringBuilder.Append(ele.Key);
+                stringBuilder.Append(ele.Value);
+            }
+            Console.WriteLine(stringBuilder.ToString());
+            Console.ReadLine();
         }
         public static async Task<int> F()
         {

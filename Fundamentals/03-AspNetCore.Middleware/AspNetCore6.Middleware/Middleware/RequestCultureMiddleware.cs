@@ -15,7 +15,7 @@ namespace AspNetCore6.Middleware.Middleware
             var cultureQuery = context.Request.Query["culture"];
             if (!string.IsNullOrWhiteSpace(cultureQuery))
             {
-                var culture = new CultureInfo(cultureQuery) ;
+                var culture = new CultureInfo(cultureQuery);
                 CultureInfo.CurrentCulture = culture;
                 CultureInfo.CurrentUICulture = culture;
             }
@@ -26,6 +26,7 @@ namespace AspNetCore6.Middleware.Middleware
     {
         public static IApplicationBuilder UseRequestCulture(this IApplicationBuilder builder)
         {
+            
             return builder.UseMiddleware<RequestCultureMiddleware>();
         }
     }
