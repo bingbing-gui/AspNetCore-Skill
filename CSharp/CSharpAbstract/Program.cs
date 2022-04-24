@@ -13,23 +13,54 @@ namespace CSharpAbstract
     {
         static async Task Main(string[] args)
         {
+            var binaryStr = Convert.ToString(529, 2);
+            int count = 0;
+            int LongC = 0;
+            for (int i = 0; i < binaryStr.Length; i++)
+            {
+                if (binaryStr[i] == '0')
+                {
+                    count++;
+                }
+                else
+                {
+                    if (count > LongC)
+                    {
+                        LongC = count;
+                    }
+                    count = 0;
+                }
+
+            }
+            Console.WriteLine(LongC);
+            Console.WriteLine(binaryStr);
+
+            int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+           
+
+            var index = SerachIndex(array, 6);
+
             List<int> list = new List<int> { 1, 3, 6, 9 };
             List<int> list2 = new List<int> { 1, 2, 4, 6, 11 };
-            
-            foreach (var element in list2)
+            list.AddRange(list2);
+            for (int i = 0; i < list.Count(); i++)
             {
-                list.Add(element);
+                for (int j = i + 1; j < list.Count(); j++)
+                {
+                    if (list[i] > list[j])
+                    {
+                        int temp = list[i];
+                        list[i] = list[j];
+                        list[j] = temp;
+                    }
+                }
             }
-
-            foreach (var element in list.OrderBy(e => e))
-            {
-                Console.WriteLine(element);
-            }
+            list.ForEach(i => Console.WriteLine(i));
 
             string orign = "aabbbbcccccddd";
             List<char> dest = new List<char>();
             dest.AddRange(orign);
-            //var grouByList =dest.GroupBy(a => a);
             var dict = new Dictionary<char, int>();
             foreach (var element in dest)
             {
@@ -44,14 +75,44 @@ namespace CSharpAbstract
                 }
             }
             var stringBuilder = new StringBuilder();
-
             foreach (var ele in dict)
             {
                 stringBuilder.Append(ele.Key);
                 stringBuilder.Append(ele.Value);
             }
             Console.WriteLine(stringBuilder.ToString());
+
             Console.ReadLine();
+        }
+        public static int SerachIndex(int[] nums, int target)
+        {
+            int left = 0;
+            int right = nums.Length - 1;
+            int middle = 0;
+            while (left < right)
+            {
+                middle = (left + right) / 2;
+                if (nums[middle] == target)
+                {
+                    return middle;
+                }
+                else if (nums[middle] > target)
+                {
+                    right = middle - 1;
+                }
+                else
+                {
+                    left = middle + 1;
+                }
+            }
+            if (nums[middle] > target)
+            {
+                return middle - 1;
+            }
+            else
+            {
+                return middle;
+            }
         }
         public static async Task<int> F()
         {
