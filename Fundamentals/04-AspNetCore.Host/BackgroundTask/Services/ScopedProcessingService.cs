@@ -17,7 +17,7 @@ namespace BackgroundTask.Services
         private int executionCount = 0;
         private readonly ILogger<ScopedProcessingService> _logger;
         public ScopedProcessingService(ILogger<ScopedProcessingService> logger)
-        { 
+        {
             _logger = logger;
         }
         public async Task DoWork(CancellationToken stoppingToken)
@@ -25,7 +25,7 @@ namespace BackgroundTask.Services
             while (!stoppingToken.IsCancellationRequested)
             {
                 executionCount++;
-                _logger.LogInformation("Scoped Processing Service is working. Count: {Count}", executionCount);
+                _logger.LogInformation("Scoped Processing Service is working. Count: {0} Thread Id={1}", executionCount, Thread.CurrentThread.ManagedThreadId);
                 await Task.Delay(10000, stoppingToken);
             }
         }

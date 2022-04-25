@@ -30,7 +30,7 @@ namespace BackgroundTask.Services
         private async Task DoWork(CancellationToken stoppingToken)
         {
             _logger.LogInformation(
-                   "Consume Scoped Service Hosted Service is working.");
+                   "Consume Scoped Service Hosted Service is working. Thread Id={0}",Thread.CurrentThread.ManagedThreadId);
 
             using (var scope = ServiceProvider.CreateScope())
             {

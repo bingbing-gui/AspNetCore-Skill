@@ -19,7 +19,7 @@ namespace BackgroundTask.Services
         }
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Timed Hosted Service running");
+            _logger.LogInformation("Timed Hosted Service running Thread Id={0}",Thread.CurrentThread.ManagedThreadId);
             _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
             return Task.CompletedTask;
         }
@@ -28,7 +28,7 @@ namespace BackgroundTask.Services
             var count = Interlocked.Increment(ref executionCount);
 
             _logger.LogInformation(
-                "Timed Hosted Service is working. Count: {Count}", count);
+                "Timed Hosted Service is working. Count: {Count},Thread Id={1}", count,Thread.CurrentThread.ManagedThreadId);
         }
         public Task StopAsync(CancellationToken cancellationToken)
         {

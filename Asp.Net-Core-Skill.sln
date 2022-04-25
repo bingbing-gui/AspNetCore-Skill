@@ -163,11 +163,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPC.Client", "GRPC\GRPC.Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpLinq", "CSharp\CSharpLinq\CSharpLinq.csproj", "{55583B89-1BD6-4912-855F-6B00FA7DA399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.GenericHost", "Fundamentals\04-AspNetCore.Host\AspNetCore6.GenericHost\AspNetCore6.GenericHost.csproj", "{F58534DD-DC29-4E04-BD74-601968B8C866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.GenericHost", "Fundamentals\04-AspNetCore.Host\AspNetCore6.GenericHost\AspNetCore6.GenericHost.csproj", "{F58534DD-DC29-4E04-BD74-601968B8C866}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-AspNetCore.Servers", "05-AspNetCore.Servers", "{DC592A7A-D047-4941-8429-F2AB317F6586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTask", "Fundamentals\04-AspNetCore.Host\BackgroundTask\BackgroundTask.csproj", "{CC07369C-C152-4D07-9D85-1DA3A5A7CF7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundTask", "Fundamentals\04-AspNetCore.Host\BackgroundTask\BackgroundTask.csproj", "{CC07369C-C152-4D07-9D85-1DA3A5A7CF7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06-AspNetCore.Configuration", "06-AspNetCore.Configuration", "{8F676163-7600-45EA-8899-C71A31E8F6D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07-AspNetCore.Options", "07-AspNetCore.Options", "{94401DDF-9986-4E93-A8C4-FB69DB7B2218}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.Configuration", "Fundamentals\06-AspNetCore.Configuration\AspNetCore6.Configuration\AspNetCore6.Configuration.csproj", "{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -379,6 +385,10 @@ Global
 		{CC07369C-C152-4D07-9D85-1DA3A5A7CF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC07369C-C152-4D07-9D85-1DA3A5A7CF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC07369C-C152-4D07-9D85-1DA3A5A7CF7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -440,6 +450,9 @@ Global
 		{F58534DD-DC29-4E04-BD74-601968B8C866} = {531B3AE7-3F2C-4EE5-BB7C-BE490BB64180}
 		{DC592A7A-D047-4941-8429-F2AB317F6586} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{CC07369C-C152-4D07-9D85-1DA3A5A7CF7F} = {531B3AE7-3F2C-4EE5-BB7C-BE490BB64180}
+		{8F676163-7600-45EA-8899-C71A31E8F6D2} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{94401DDF-9986-4E93-A8C4-FB69DB7B2218} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F} = {8F676163-7600-45EA-8899-C71A31E8F6D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
