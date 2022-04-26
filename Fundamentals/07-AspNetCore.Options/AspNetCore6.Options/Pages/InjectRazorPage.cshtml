@@ -1,0 +1,9 @@
+﻿@page
+@using AspNetCore6.Options.Models
+@using Microsoft.Extensions.Options
+@model AspNetCore6.Options.Pages.InjectRazorPageModel
+@inject IOptions<MyOptions> optionsAccessor
+
+<p><b>Option1:</b> @optionsAccessor.Value.Option1</p>
+<p><b>Option2:</b> @optionsAccessor.Value.Option2</p>
+
