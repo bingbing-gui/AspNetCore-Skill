@@ -1,9 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>ab61c7d5-a283-413d-ae90-cc09f9302dbd</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.Development.ini" />
+    <None Remove="appsettings.Development.xml" />
+    <None Remove="appsettings.ini" />
+    <None Remove="appsettings.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Development.xml" />
+    <Content Include="appsettings.xml" />
+    <Content Include="appsettings.Development.ini" />
+    <Content Include="appsettings.ini" />
+  </ItemGroup>
 
 </Project>

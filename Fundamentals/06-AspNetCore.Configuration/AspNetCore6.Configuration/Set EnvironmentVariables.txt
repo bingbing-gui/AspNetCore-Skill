@@ -1,0 +1,32 @@
+﻿使用默认配置时，读取 appsettings.json、appsettings.{Environment}.json 和用户机密之后，
+EnvironmentVariablesConfigurationProvider会读取环境变量键值对中加载配置。因此，
+从环境中读取的键值会替代从appsettings.json、appsettings.{Environment}.json
+和用户机密中读取的值。
+
+1. 在项目目录中运行
+
+set MyKey="My key from Environment"
+set Position__Title=Environment_Editor
+set Position__Name=Environment_Rick
+dotnet run
+
+前面的环境设置：
+仅在进程中设置，这些进程是从设置进程的命令窗口启动的。
+不会由通过 Visual Studio 启动的浏览器读取。
+
+2. 以下 setx 命令可用于在 Windows 上设置环境键和值。 
+  与 set 不同，setx 设置是持久的。 /M 在系统环境中设置变量。 
+  如果未使用 /M 开关，则会设置用户环境变量。
+
+--设置用户环境变量
+setx MyKey "My key from setx Environment"
+setx Position__Title Environment_Editor
+setx Position__Name Environment_Rick
+--设置系统环境变量
+setx MyKey "My key from setx Environment" /M
+setx Position__Title Environment_Editor /M
+setx Position__Name Environment_Rick /M
+
+测试前面的命令是否会替代 appsettings.json 和 appsettings.{Environment}.json：
+ 使用 Visual Studio：退出并重启 Visual Studio。
+ 使用 CLI：启动新的命令窗口并输入 dotnet run。

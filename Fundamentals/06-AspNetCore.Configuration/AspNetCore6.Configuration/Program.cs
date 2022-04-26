@@ -1,4 +1,4 @@
-#define Scene2
+#define KeyPerFileConfigurationProvider
 #if Scene
 #region
 using AspNetCore6.Configuration.Options;
@@ -33,7 +33,7 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.Run();
 #endregion
-#elif Scene2
+#elif SwitchMappings
 #region
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
@@ -61,6 +61,136 @@ app.MapRazorPages();
 app.Run();
 #endregion
 
-#elif Scene3
+#elif IniConfigurationProvider 
+#region
+using AspNetCore6.Configuration.Options;
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.ConfigureAppConfiguration((hostBuilderContext, configurationBuilder) =>
+    {
+        configurationBuilder.Sources.Clear();
+        var environment = hostBuilderContext.HostingEnvironment;
+        configurationBuilder.AddIniFile("appsettings.ini", optional: true, reloadOnChange: true);
+        configurationBuilder.AddIniFile($"appsettings.{environment.EnvironmentName}.ini", optional: true, reloadOnChange: true);
 
+        configurationBuilder.AddEnvironmentVariables();
+        if (args != null)
+        {
+            configurationBuilder.AddCommandLine(args);
+        }
+    }
+);
+// Add services to the container.
+builder.Services.AddRazorPages();
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+app.MapRazorPages();
+app.Run();
+#endregion
+
+#elif JsonConfigurationProvider
+#region
+using AspNetCore6.Configuration.Options;
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.ConfigureAppConfiguration((hostBuilderContext, configurationBuilder) =>
+    {
+        configurationBuilder.Sources.Clear();
+        var environment = hostBuilderContext.HostingEnvironment;
+        configurationBuilder.AddXmlFile("appsettings.xml", optional: true, reloadOnChange: true);
+        configurationBuilder.AddXmlFile($"appsettings.{environment.EnvironmentName}.xml", optional: true, reloadOnChange: true);
+        configurationBuilder.AddEnvironmentVariables();
+        if (args != null)
+        {
+            configurationBuilder.AddCommandLine(args);
+        }
+    }
+);
+// Add services to the container.
+builder.Services.AddRazorPages();
+var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+app.MapRazorPages();
+app.Run();
+#endregion
+#elif MemoryConfigurationProvider
+var builder=WebApplication.CreateBuilder(args);
+builder.Host.ConfigureAppConfiguration((hostBuilderContext, configurationBuilder) => 
+{
+    configurationBuilder.Sources.Clear();
+
+    var dict = new Dictionary<string, string>
+        {
+           {"MyKey", "Dictionary MyKey Value"},
+           {"Position:Title", "Dictionary_Title"},
+           {"Position:Name", "Dictionary_Name" },
+           {"Logging:LogLevel:Default", "Warning"}
+        };
+
+    configurationBuilder.AddInMemoryCollection(dict);
+
+    configurationBuilder.AddEnvironmentVariables();
+
+    if (args != null)
+    {
+        configurationBuilder.AddCommandLine(args);
+    }
+});
+builder.Services.AddRazorPages();
+var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+app.MapRazorPages();
+app.Run();
+
+#elif KeyPerFileConfigurationProvider 
+var builder =WebApplication.CreateBuilder(args);
+builder.Host.ConfigureAppConfiguration((hostBuilderContext, configurationBuilder) =>
+{
+    var path = Path.Combine(Directory.GetCurrentDirectory(),"path/to/files");
+    configurationBuilder.AddKeyPerFile(path, optional:true);
+});
+builder.Services.AddRazorPages();
+var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+app.MapRazorPages();
+app.Run();
 #endif
