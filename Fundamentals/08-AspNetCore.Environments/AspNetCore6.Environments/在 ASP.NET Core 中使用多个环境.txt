@@ -1,0 +1,52 @@
+﻿1. 环境
+
+
+为了确定运行时环境，ASP.NET Core 从以下环境变量中读取信息：
+
+DOTNET_ENVIRONMENT
+
+ASPNETCORE_ENVIRONMENT，调用 WebApplication.CreateBuilder 方法时。 默认 ASP.NET Core Web 应用模板调用 WebApplication.CreateBuilder。 ASPNETCORE_ENVIRONMENT 值替代 DOTNET_ENVIRONMENT。
+IHostEnvironment.EnvironmentName 可以设置为任意值，但是框架提供了下列值：
+
+Development：launchSettings.json 文件将本地计算机上的 ASPNETCORE_ENVIRONMENT 设置为 Development。
+Staging
+Production：没有设置 DOTNET_ENVIRONMENT 和 ASPNETCORE_ENVIRONMENT 时的默认值。
+
+2.通过设置环境变量来设置环境
+
+通常，可以使用环境变量或平台设置来设置用于测试的特定环境。 
+如果未设置环境，默认值为 Production，这会禁用大多数调试功能
+
+2.1 Windows - 为进程设置环境变量
+
+launchSettings.json 中的环境值替代在系统环境中设置的值。
+若要在使用 dotnet run 启动应用时为当前会话设置 ASPNETCORE_ENVIRONMENT，
+请在命令提示符处或 PowerShell 中使用以下命令：
+
+控制台设置环境变量:
+set ASPNETCORE_ENVIRONMENT=Staging
+dotnet run --no-launch-profile
+
+PowerShell 设置环境变量：
+$Env:ASPNETCORE_ENVIRONMENT = "Staging"
+dotnet run --no-launch-profile
+
+2.2 Windows - 全局设置环境变量
+
+前面的命令只为通过此命令窗口启动的进程设置 ASPNETCORE_ENVIRONMENT。
+
+控制台设置环境变量:
+setx ASPNETCORE_ENVIRONMENT Staging /M
+
+PowerShell 设置环境变量：
+[Environment]::SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Staging", "Machine")
+
+
+3.使用代码设置环境
+
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    EnvironmentName = Environments.Staging
+}); 
+
+4.按环境配置服务和中间件
