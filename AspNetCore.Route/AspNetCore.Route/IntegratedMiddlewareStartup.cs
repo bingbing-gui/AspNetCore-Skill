@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,9 +25,9 @@ namespace AspNetCore.Route
             // Location 2: After routing runs. Middleware can match based on metadata.
             app.Use(next => context =>
             {
+                //判断终结点是否使用元数据
                 var endpoint = context.GetEndpoint();
-                if (endpoint?.Metadata.GetMetadata<AuditPolicyAttribute>()?.NeedsAudit
-                                                                                == true)
+                if (endpoint?.Metadata.GetMetadata<AuditPolicyAttribute>()?.NeedsAudit== true)
                 {
                     Console.WriteLine($"ACCESS TO SENSITIVE DATA AT: {DateTime.UtcNow}");
                 }
@@ -41,6 +41,7 @@ namespace AspNetCore.Route
                     await context.Response.WriteAsync("Hello world!");
                 });
                 // Using metadata to configure the audit policy.
+                //该终结点上使用元数据
                 endpoints.MapGet("/sensitive", async context =>
                 {
                     await context.Response.WriteAsync("sensitive data");

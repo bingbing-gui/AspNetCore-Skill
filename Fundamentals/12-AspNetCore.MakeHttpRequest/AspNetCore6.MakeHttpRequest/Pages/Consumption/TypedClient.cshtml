@@ -1,0 +1,8 @@
+﻿@page
+@model TypedClientModel
+@{
+    ViewData["Title"] = "Consumption-TypedClient";
+}
+<h1>Consumption patterns - TypedClient</h1>
+
+@await Component.InvokeAsync("GitHubBranches",new {gitHubBranches=Model.GitHubBranches})

@@ -1,4 +1,4 @@
-﻿#define CurrentEndpointMiddlewareOrder
+﻿#define MapHealthChecks
 #if UseRouting
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -181,6 +181,114 @@ app.Use(async (context, next) =>
 });
 app.Run();
 #endregion
-#else
+#elif RequiresAudit
+#region
+using AspNetCore6.Route;
 
+var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+builder.Services.AddRazorPages();
+//添加HealthChecks
+builder.Services.AddHealthChecks();
+var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseHttpMethodOverride();
+app.UseRouting();
+/*
+中间件可以在 UseRouting 之前运行，以修改路由操作的数据。
+通常，在路由之前出现的中间件会修改请求的某些属性，如 UseRewriter、UseHttpMethodOverride 或 UsePathBase。
+中间件可以在 UseRouting 和 UseEndpoints 之间运行，以便在执行终结点前处理路由结果。
+在 UseRouting 和 UseEndpoints 之间运行的中间件：
+通常会检查元数据以了解终结点。
+通常会根据 UseAuthorization 和 UseCors 做出安全决策。
+中间件和元数据的组合允许按终结点配置策略
+ */
+app.Use(async (context, next) =>
+{
+    if (context.GetEndpoint()?.Metadata.GetMetadata<RequiresAuditAttribute>() is not null)
+    {
+        Console.WriteLine($"ACCESS TO SENSITIVE DATA AT: {DateTime.UtcNow}");
+    }
+
+    await next(context);
+});
+app.MapGet("/", () => "Audit isn't required.");
+
+app.MapGet("/sensitive", () => "Audit required for sensitive data.")
+    .WithMetadata(new RequiresAuditAttribute());
+app.Run();
+#endregion
+#elif CompareTerminalMiddlewareRouting
+#region
+var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+builder.Services.AddRazorPages();
+//添加HealthChecks
+builder.Services.AddHealthChecks();
+var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseHttpMethodOverride();
+app.UseRouting();
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path == "/")
+    {
+        await context.Response.WriteAsync("Terminal Middleware.");
+        return;
+    }
+    await next(context);
+});
+
+app.UseRouting();
+
+// Approach 2: Routing.
+app.MapGet("/Routing", () => "Routing.");
+app.Run();
+
+#endregion
+
+#elif MapHealthChecks
+#region
+var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+builder.Services.AddRazorPages();
+//添加HealthChecks
+builder.Services.AddHealthChecks();
+var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseHttpMethodOverride();
+app.UseRouting();
+// <snippet_MapHealthChecks>
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapHealthChecks("/healthz").RequireAuthorization();
+// </snippet_MapHealthChecks>
+app.Run();
+#endregion
 #endif
