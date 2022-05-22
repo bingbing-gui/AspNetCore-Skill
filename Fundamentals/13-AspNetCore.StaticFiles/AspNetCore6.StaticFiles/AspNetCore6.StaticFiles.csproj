@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot-custom\**" />
+    <Content Remove="wwwroot-custom\**" />
+    <EmbeddedResource Remove="wwwroot-custom\**" />
+    <None Remove="wwwroot-custom\**" />
+  </ItemGroup>
+
+</Project>

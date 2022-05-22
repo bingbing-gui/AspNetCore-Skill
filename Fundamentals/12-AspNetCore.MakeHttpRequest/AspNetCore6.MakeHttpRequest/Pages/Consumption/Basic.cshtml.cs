@@ -24,6 +24,7 @@ namespace AspNetCore6.MakeHttpRequest.Pages
                     {HeaderNames.UserAgent,"HttpRequestsSample"},
                 },
             };
+
             var httpClient = _httpClientFactory.CreateClient();
             var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
 
