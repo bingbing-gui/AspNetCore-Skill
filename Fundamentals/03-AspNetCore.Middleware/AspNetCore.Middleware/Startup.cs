@@ -89,15 +89,18 @@ namespace AspNetCore.Middleware
                 //    Console.WriteLine($"ACCESS TO SENSITIVE DATA AT: {DateTime.UtcNow}");
                 //}
 
-                await next(context);
+                await next();
             });
             
-            app.MapGet("/", () => "Audit isn't required.");
-            app.MapGet("/sensitive", () => "Audit required for sensitive data.")
-                .WithMetadata(new RequiresAuditAttribute());
+            //app.MapGet("/", () => "Audit isn't required.");
+            //app.MapGet("/sensitive", () => "Audit required for sensitive data.")
+            //    .WithMetadata(new RequiresAuditAttribute());
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGet("/", () => "Audit isn't required.");
+                endpoints.MapGet("/sensitive", () => "Audit required for sensitive data.")
+                    .WithMetadata(new RequiresAuditAttribute());
                 endpoints.MapControllers();
             });
         }
