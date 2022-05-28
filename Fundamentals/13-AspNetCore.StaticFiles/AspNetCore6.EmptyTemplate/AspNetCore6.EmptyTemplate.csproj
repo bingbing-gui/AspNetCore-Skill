@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot-custom\**" />
-    <Content Remove="wwwroot-custom\**" />
-    <EmbeddedResource Remove="wwwroot-custom\**" />
-    <None Remove="wwwroot-custom\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="wwwroot\default.htm" />
     <Content Remove="wwwroot\default.html" />
     <Content Remove="wwwroot\images\MyImage.jpg" />
@@ -23,12 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\index.html" />
-    <None Include="wwwroot\index.htm" />
     <None Include="wwwroot\default.htm" />
+    <None Include="wwwroot\default.html" />
     <None Include="wwwroot\images\MyImage.jpg" />
     <None Include="wwwroot\images\red-rose.jpg" />
-    <None Include="wwwroot\default.html" />
+    <None Include="wwwroot\index.htm" />
+    <None Include="wwwroot\index.html" />
   </ItemGroup>
 
 </Project>

@@ -199,11 +199,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.MVC.HandleError
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.MakeHttpRequest", "Fundamentals\12-AspNetCore.MakeHttpRequest\AspNetCore6.MakeHttpRequest\AspNetCore6.MakeHttpRequest.csproj", "{73485E00-B2F8-4C18-954D-6F98EB4BF80D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeHttpRequestConsole", "Fundamentals\12-AspNetCore.MakeHttpRequest\MakeHttpRequestConsole\MakeHttpRequestConsole.csproj", "{A8AB6B64-C57D-47C7-8E3D-5524BF018EE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MakeHttpRequestConsole", "Fundamentals\12-AspNetCore.MakeHttpRequest\MakeHttpRequestConsole\MakeHttpRequestConsole.csproj", "{A8AB6B64-C57D-47C7-8E3D-5524BF018EE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.StaticFiles", "Fundamentals\13-AspNetCore.StaticFiles\AspNetCore6.StaticFiles\AspNetCore6.StaticFiles.csproj", "{E5B627A5-8041-49AE-A4C7-D1AA9E6FA95F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.StaticFiles", "Fundamentals\13-AspNetCore.StaticFiles\AspNetCore6.StaticFiles\AspNetCore6.StaticFiles.csproj", "{E5B627A5-8041-49AE-A4C7-D1AA9E6FA95F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6.StaticFiles.Auth", "Fundamentals\13-AspNetCore.StaticFiles\AspNetCore6.StaticFiles.Auth\AspNetCore6.StaticFiles.Auth.csproj", "{DF840394-F9D4-4E45-B356-6A51175C803F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.StaticFiles.Auth", "Fundamentals\13-AspNetCore.StaticFiles\AspNetCore6.StaticFiles.Auth\AspNetCore6.StaticFiles.Auth.csproj", "{DF840394-F9D4-4E45-B356-6A51175C803F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.EmptyTemplate", "Fundamentals\13-AspNetCore.StaticFiles\AspNetCore6.EmptyTemplate\AspNetCore6.EmptyTemplate.csproj", "{3A661485-40F5-410E-9424-8BA90670A323}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty.Framwork", "ThirdParty.Framwork", "{728878FE-9942-47D3-BC75-2AF0E37719C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{FE2E9D39-39FD-4503-B24A-44B7E32A4B01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -459,6 +465,10 @@ Global
 		{DF840394-F9D4-4E45-B356-6A51175C803F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF840394-F9D4-4E45-B356-6A51175C803F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF840394-F9D4-4E45-B356-6A51175C803F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A661485-40F5-410E-9424-8BA90670A323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A661485-40F5-410E-9424-8BA90670A323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A661485-40F5-410E-9424-8BA90670A323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A661485-40F5-410E-9424-8BA90670A323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -539,6 +549,7 @@ Global
 		{A8AB6B64-C57D-47C7-8E3D-5524BF018EE7} = {90282F6E-629A-4280-A57A-25F6A5A0B8C7}
 		{E5B627A5-8041-49AE-A4C7-D1AA9E6FA95F} = {2C45688F-89E6-479F-A55A-9182790B61B2}
 		{DF840394-F9D4-4E45-B356-6A51175C803F} = {2C45688F-89E6-479F-A55A-9182790B61B2}
+		{3A661485-40F5-410E-9424-8BA90670A323} = {2C45688F-89E6-479F-A55A-9182790B61B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
