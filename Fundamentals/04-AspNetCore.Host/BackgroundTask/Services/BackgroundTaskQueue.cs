@@ -27,7 +27,6 @@ namespace BackgroundTask.Services
             _queue = Channel.CreateBounded<Func<CancellationToken, ValueTask>>(option);
         }
 
-
         public async ValueTask QueueBackgroundWorkItemAsync(Func<CancellationToken, ValueTask> workItem)
         {
             if (workItem == null)

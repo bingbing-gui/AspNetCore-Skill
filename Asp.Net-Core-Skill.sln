@@ -56,10 +56,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.StaticFileMiddle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.StaticFileMiddle.Pratice", "AspNetCore.StaticFileMiddle\AspNetCore.StaticFileMiddle.Pratice\AspNetCore.StaticFileMiddle.Pratice.csproj", "{71C2313D-9FB7-4954-A25C-39DF7C3C3409}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.FileProvider", "AspNetCore.FileProvider", "{A7B15901-38A8-4DE2-B944-7F2CAE0B22A3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.FileProvider.Practice", "AspNetCore.FileProvider\AspNetCore.FileProvider.Practice\AspNetCore.FileProvider.Practice.csproj", "{852A2450-27A8-4B6A-8968-0D4F80357618}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Practice", "AspNetCore.Options\AspNetCore.Options.Practice\AspNetCore.Options.Practice.csproj", "{44E2D1E5-B164-46E2-8324-C9EC44C4998A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Startup", "AspNetCore.Startup", "{9BE170B6-EFB2-4DAB-80B8-256CE09CB280}"
@@ -217,15 +213,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.CustomModelBindi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.RouteToCode", "AspNetCore.RouteToCode", "{9B10ED09-6169-4292-BC39-74D5C3CE1649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.RouteToCode", "MVC\02-AspNetCore.RouteToCode\AspNetCore.RouteToCode\AspNetCore.RouteToCode.csproj", "{FF6A6BC4-85FE-480A-9949-44758AFF6327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RouteToCode", "MVC\02-AspNetCore.RouteToCode\AspNetCore.RouteToCode\AspNetCore.RouteToCode.csproj", "{FF6A6BC4-85FE-480A-9949-44758AFF6327}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.HttpContext", "AspNetCore.HttpContext", "{7C0C7386-78AC-440D-9EB3-51077F906018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.WebApi.HttpContenxt", "MVC\03-AspNetCore.HttpContext\AspNetCore.WebApi.HttpContenxt\AspNetCore.WebApi.HttpContenxt.csproj", "{91EFDCF5-7348-46E2-8E34-9CA2337F85AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WebApi.HttpContenxt", "MVC\03-AspNetCore.HttpContext\AspNetCore.WebApi.HttpContenxt\AspNetCore.WebApi.HttpContenxt.csproj", "{91EFDCF5-7348-46E2-8E34-9CA2337F85AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.RazorPage.HttpContext", "MVC\03-AspNetCore.HttpContext\AspNetCore.RazorPage.HttpContext\AspNetCore.RazorPage.HttpContext.csproj", "{BAFCECA6-C687-45A2-806E-47F4EC03ED7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RazorPage.HttpContext", "MVC\03-AspNetCore.HttpContext\AspNetCore.RazorPage.HttpContext\AspNetCore.RazorPage.HttpContext.csproj", "{BAFCECA6-C687-45A2-806E-47F4EC03ED7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.MVCView.HttpContext", "MVC\03-AspNetCore.HttpContext\AspNetCore.MVCView.HttpContext\AspNetCore.MVCView.HttpContext.csproj", "{D0A888C4-9E95-453C-A8C4-42AF405CFE14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.MVCView.HttpContext", "MVC\03-AspNetCore.HttpContext\AspNetCore.MVCView.HttpContext\AspNetCore.MVCView.HttpContext.csproj", "{D0A888C4-9E95-453C-A8C4-42AF405CFE14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.FileProvider", "AspNetCore.FileProvider", "{334E2C49-37E0-4FFF-A5B2-AE9B6B019307}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.FileProvider", "MVC\04-AspNetCore.FileProvider\AspNetCore.FileProvider\AspNetCore.FileProvider.csproj", "{190E0B83-7E7F-427C-BE44-39D07C440C41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WatchFile", "MVC\04-AspNetCore.FileProvider\AspNetCore.WatchFile\AspNetCore.WatchFile.csproj", "{DF67DB5B-7D0E-4288-A863-581BA550199F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ChangeToToken", "MVC\04-AspNetCore.FileProvider\AspNetCore.ChangeToToken\AspNetCore.ChangeToToken.csproj", "{36B8DB43-D48E-4F57-8B3B-DACC3288204F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -281,10 +285,6 @@ Global
 		{71C2313D-9FB7-4954-A25C-39DF7C3C3409}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71C2313D-9FB7-4954-A25C-39DF7C3C3409}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71C2313D-9FB7-4954-A25C-39DF7C3C3409}.Release|Any CPU.Build.0 = Release|Any CPU
-		{852A2450-27A8-4B6A-8968-0D4F80357618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{852A2450-27A8-4B6A-8968-0D4F80357618}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{852A2450-27A8-4B6A-8968-0D4F80357618}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{852A2450-27A8-4B6A-8968-0D4F80357618}.Release|Any CPU.Build.0 = Release|Any CPU
 		{44E2D1E5-B164-46E2-8324-C9EC44C4998A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{44E2D1E5-B164-46E2-8324-C9EC44C4998A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44E2D1E5-B164-46E2-8324-C9EC44C4998A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -505,6 +505,18 @@ Global
 		{D0A888C4-9E95-453C-A8C4-42AF405CFE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0A888C4-9E95-453C-A8C4-42AF405CFE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0A888C4-9E95-453C-A8C4-42AF405CFE14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190E0B83-7E7F-427C-BE44-39D07C440C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190E0B83-7E7F-427C-BE44-39D07C440C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190E0B83-7E7F-427C-BE44-39D07C440C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190E0B83-7E7F-427C-BE44-39D07C440C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF67DB5B-7D0E-4288-A863-581BA550199F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF67DB5B-7D0E-4288-A863-581BA550199F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF67DB5B-7D0E-4288-A863-581BA550199F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF67DB5B-7D0E-4288-A863-581BA550199F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B8DB43-D48E-4F57-8B3B-DACC3288204F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B8DB43-D48E-4F57-8B3B-DACC3288204F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B8DB43-D48E-4F57-8B3B-DACC3288204F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B8DB43-D48E-4F57-8B3B-DACC3288204F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -525,7 +537,6 @@ Global
 		{A9381237-5BC6-4F45-96A9-94DA79F6537C} = {97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}
 		{48EC4989-7FAA-4642-84C5-D255B99BEC17} = {F9C1278E-43E0-4654-A8EC-73B93C59EFFA}
 		{71C2313D-9FB7-4954-A25C-39DF7C3C3409} = {A00C6D8E-26C2-42B0-9763-002053B80AC4}
-		{852A2450-27A8-4B6A-8968-0D4F80357618} = {A7B15901-38A8-4DE2-B944-7F2CAE0B22A3}
 		{44E2D1E5-B164-46E2-8324-C9EC44C4998A} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
 		{369346CD-0194-4C29-8E26-8DC940FE323B} = {9BE170B6-EFB2-4DAB-80B8-256CE09CB280}
 		{9F5993F0-7A1C-4598-AA90-031BAE44B958} = {05DBA937-5B6E-4FDC-9F43-4155696B4964}
@@ -598,6 +609,10 @@ Global
 		{91EFDCF5-7348-46E2-8E34-9CA2337F85AF} = {7C0C7386-78AC-440D-9EB3-51077F906018}
 		{BAFCECA6-C687-45A2-806E-47F4EC03ED7D} = {7C0C7386-78AC-440D-9EB3-51077F906018}
 		{D0A888C4-9E95-453C-A8C4-42AF405CFE14} = {7C0C7386-78AC-440D-9EB3-51077F906018}
+		{334E2C49-37E0-4FFF-A5B2-AE9B6B019307} = {FE2E9D39-39FD-4503-B24A-44B7E32A4B01}
+		{190E0B83-7E7F-427C-BE44-39D07C440C41} = {334E2C49-37E0-4FFF-A5B2-AE9B6B019307}
+		{DF67DB5B-7D0E-4288-A863-581BA550199F} = {334E2C49-37E0-4FFF-A5B2-AE9B6B019307}
+		{36B8DB43-D48E-4F57-8B3B-DACC3288204F} = {334E2C49-37E0-4FFF-A5B2-AE9B6B019307}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

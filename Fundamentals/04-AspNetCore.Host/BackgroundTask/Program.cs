@@ -6,14 +6,15 @@ using Microsoft.Extensions.Hosting;
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
-        services.AddSingleton<MonitorLoop>();
-        services.AddSingleton<IBackgroundTaskQueue>(ctx =>
-        {
-            if (!int.TryParse(hostContext.Configuration["QueueCapacity"], out var queueCapacity))
-                queueCapacity = 100;
-            return new BackgroundTaskQueue(queueCapacity);
-        });
-        services.AddHostedService<QueuedHostedService>();
+        //services.AddSingleton<MonitorLoop>();
+        //services.AddSingleton<IBackgroundTaskQueue>(ctx =>
+        //{
+        //    if (!int.TryParse(hostContext.Configuration["QueueCapacity"], out var queueCapacity))
+        //        queueCapacity = 100;
+        //    return new BackgroundTaskQueue(queueCapacity);
+        //});
+        //services.AddHostedService<QueuedHostedService>();
+
         services.AddHostedService<TimedHostedService>();
         #region
         services.AddHostedService<ConsumeScopedServiceHostedService>();
@@ -24,8 +25,8 @@ using var host = Host.CreateDefaultBuilder(args)
 
 await host.StartAsync();
 #region snippet4
-var monitorLoop = host.Services.GetRequiredService<MonitorLoop>();
-monitorLoop.StartMonitorLoop();
+//var monitorLoop = host.Services.GetRequiredService<MonitorLoop>();
+//monitorLoop.StartMonitorLoop();
 #endregion
 
 await host.WaitForShutdownAsync();
