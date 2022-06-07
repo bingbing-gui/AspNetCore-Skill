@@ -1,4 +1,5 @@
 ﻿using AspNetCore.ChangeToToken.Extensions;
+using AspNetCore.ChangeToToken.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,10 @@ namespace AspNetCore.ChangeToToken
             #region Method 2 ConfigurationMonitor
             services.AddSingleton<IConfigurationMonitor,ConfigurationMonitor>();
             #endregion
+            #region Method 3 FileStream 监控文件是否变更,如果变更通知缓存失效
+            services.AddMemoryCache();
+            services.AddSingleton<FileService>();
+            #endregion
             services.AddRazorPages();
         }
 
@@ -42,6 +47,8 @@ namespace AspNetCore.ChangeToToken
             ChangeToken.OnChange(
                 () => Configuration.GetReloadToken(), (env) => InvokeChange(env), env);
             #endregion
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -1,4 +1,5 @@
 ﻿using AspNetCore.ChangeToToken.Extensions;
+using AspNetCore.ChangeToToken.Service;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -14,8 +15,12 @@ namespace AspNetCore.ChangeToToken.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+
         private readonly IConfiguration _config;
+
         private readonly IConfigurationMonitor _monitor;
+
+        private readonly FileService _fileService;
 
         private readonly Dictionary<string, string> _styleDict = new Dictionary<string, string>()
         {
@@ -32,17 +37,21 @@ namespace AspNetCore.ChangeToToken.Pages
 
         public HtmlString FileContents { get; private set; }
 
-        public IndexModel(IConfiguration config, IConfigurationMonitor monitor, ILogger<IndexModel> logger)
+        public IndexModel(IConfiguration config,
+            IConfigurationMonitor monitor,
+            FileService fileService,
+            ILogger<IndexModel> logger)
         {
             _config = config;
             _monitor = monitor;
+            _fileService = fileService;
             _logger = logger;
         }
 
         [TempData]
         public string CurrentState { get; set; }
 
-        public void OnGet()
+        public async void OnGet()
         {
             DefaultLogLevel = _config["Logging:LogLevel:Default"];
             SystemLogLevel = _config["Logging:LogLevel:System"];
@@ -54,6 +63,12 @@ namespace AspNetCore.ChangeToToken.Pages
             ViewData["MicrosoftLogLevelStyle"] = _styleDict[_config["Logging:LogLevel:Microsoft"]];
 
             CurrentState = _monitor.CurrentState;
+
+            #region
+            var content = await _fileService.GetFileContents("poem.txt");
+            FileContents = new HtmlString(content.Replace("\r\n", "<br>"));
+            #endregion
+
         }
         public IActionResult OnPostStartMonitoring()
         {
