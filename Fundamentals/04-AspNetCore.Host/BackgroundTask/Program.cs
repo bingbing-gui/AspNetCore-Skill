@@ -14,7 +14,6 @@ using var host = Host.CreateDefaultBuilder(args)
         //    return new BackgroundTaskQueue(queueCapacity);
         //});
         //services.AddHostedService<QueuedHostedService>();
-
         services.AddHostedService<TimedHostedService>();
         #region
         services.AddHostedService<ConsumeScopedServiceHostedService>();
