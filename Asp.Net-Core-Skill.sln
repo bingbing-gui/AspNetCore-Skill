@@ -203,33 +203,33 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.EmptyTemplate",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty.Framwork", "ThirdParty.Framwork", "{728878FE-9942-47D3-BC75-2AF0E37719C3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{FE2E9D39-39FD-4503-B24A-44B7E32A4B01}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Advanced", "Advanced", "{FE2E9D39-39FD-4503-B24A-44B7E32A4B01}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModeBinding", "AspNetCore.ModeBinding", "{1FEDB4D8-96B5-4D10-8E88-AB02C77B4866}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ModelBinding", "MVC\01-AspNetCore.ModelBinding\AspNetCore.ModelBinding\AspNetCore.ModelBinding.csproj", "{032971D5-6668-47D5-95C1-D2AEA8C307BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ModelBinding", "Advanced\01-AspNetCore.ModelBinding\AspNetCore.ModelBinding\AspNetCore.ModelBinding.csproj", "{032971D5-6668-47D5-95C1-D2AEA8C307BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.CustomModelBinding", "MVC\01-AspNetCore.ModelBinding\AspNetCore.CustomModelBinding\AspNetCore.CustomModelBinding.csproj", "{B5FEE457-62F8-41A7-A38A-940E779AA85A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.CustomModelBinding", "Advanced\01-AspNetCore.ModelBinding\AspNetCore.CustomModelBinding\AspNetCore.CustomModelBinding.csproj", "{B5FEE457-62F8-41A7-A38A-940E779AA85A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.RouteToCode", "AspNetCore.RouteToCode", "{9B10ED09-6169-4292-BC39-74D5C3CE1649}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RouteToCode", "MVC\02-AspNetCore.RouteToCode\AspNetCore.RouteToCode\AspNetCore.RouteToCode.csproj", "{FF6A6BC4-85FE-480A-9949-44758AFF6327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RouteToCode", "Advanced\02-AspNetCore.RouteToCode\AspNetCore.RouteToCode\AspNetCore.RouteToCode.csproj", "{FF6A6BC4-85FE-480A-9949-44758AFF6327}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.HttpContext", "AspNetCore.HttpContext", "{7C0C7386-78AC-440D-9EB3-51077F906018}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WebApi.HttpContenxt", "MVC\03-AspNetCore.HttpContext\AspNetCore.WebApi.HttpContenxt\AspNetCore.WebApi.HttpContenxt.csproj", "{91EFDCF5-7348-46E2-8E34-9CA2337F85AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WebApi.HttpContenxt", "Advanced\03-AspNetCore.HttpContext\AspNetCore.WebApi.HttpContenxt\AspNetCore.WebApi.HttpContenxt.csproj", "{91EFDCF5-7348-46E2-8E34-9CA2337F85AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RazorPage.HttpContext", "MVC\03-AspNetCore.HttpContext\AspNetCore.RazorPage.HttpContext\AspNetCore.RazorPage.HttpContext.csproj", "{BAFCECA6-C687-45A2-806E-47F4EC03ED7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RazorPage.HttpContext", "Advanced\03-AspNetCore.HttpContext\AspNetCore.RazorPage.HttpContext\AspNetCore.RazorPage.HttpContext.csproj", "{BAFCECA6-C687-45A2-806E-47F4EC03ED7D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.MVCView.HttpContext", "MVC\03-AspNetCore.HttpContext\AspNetCore.MVCView.HttpContext\AspNetCore.MVCView.HttpContext.csproj", "{D0A888C4-9E95-453C-A8C4-42AF405CFE14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.MVCView.HttpContext", "Advanced\03-AspNetCore.HttpContext\AspNetCore.MVCView.HttpContext\AspNetCore.MVCView.HttpContext.csproj", "{D0A888C4-9E95-453C-A8C4-42AF405CFE14}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.FileProvider", "AspNetCore.FileProvider", "{334E2C49-37E0-4FFF-A5B2-AE9B6B019307}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.FileProvider", "MVC\04-AspNetCore.FileProvider\AspNetCore.FileProvider\AspNetCore.FileProvider.csproj", "{190E0B83-7E7F-427C-BE44-39D07C440C41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.FileProvider", "Advanced\04-AspNetCore.FileProvider\AspNetCore.FileProvider\AspNetCore.FileProvider.csproj", "{190E0B83-7E7F-427C-BE44-39D07C440C41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WatchFile", "MVC\04-AspNetCore.FileProvider\AspNetCore.WatchFile\AspNetCore.WatchFile.csproj", "{DF67DB5B-7D0E-4288-A863-581BA550199F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WatchFile", "Advanced\04-AspNetCore.FileProvider\AspNetCore.WatchFile\AspNetCore.WatchFile.csproj", "{DF67DB5B-7D0E-4288-A863-581BA550199F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ChangeToToken", "MVC\04-AspNetCore.FileProvider\AspNetCore.ChangeToToken\AspNetCore.ChangeToToken.csproj", "{36B8DB43-D48E-4F57-8B3B-DACC3288204F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ChangeToToken", "Advanced\04-AspNetCore.FileProvider\AspNetCore.ChangeToToken\AspNetCore.ChangeToToken.csproj", "{36B8DB43-D48E-4F57-8B3B-DACC3288204F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
