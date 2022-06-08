@@ -17,15 +17,43 @@ namespace AspNetCore.WatchFile
         private static readonly string _fileFilter = Path.Combine("TextFiles", "*.txt");
         public static void Main(string[] args)
         {
-            #region 文件监控
+            #region Method 1 文件监控
             Console.WriteLine($"Monitoring for changes with filter '{_fileFilter}' (Ctrl + C to quit)...");
 
-            while (true)
-            {
-                MainAsync().GetAwaiter().GetResult();
-            }
+            //while (true)
+            //{
+            //    MainAsync().GetAwaiter().GetResult();
+            //}
+            #endregion
+
+            #region Medthod 2
+            var physicalFileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
+
+            var changeToken = () =>
+                 {
+                     return physicalFileProvider.Watch(_fileFilter);
+                 };
+
+            var action = (Object str) =>
+                  {
+                      Console.WriteLine(str.ToString());
+                  };
+            ChangeToken(changeToken, action, "文件发生改变！");
+            Console.ReadLine();
             #endregion
         }
+        #region ChangeToken 监控文件
+        public static void ChangeToken(Func<IChangeToken> func, Action<Object> action, Object state)
+        {
+            var changeToken = func();
+            changeToken.RegisterChangeCallback(_ =>
+            {
+                action(state);
+
+                ChangeToken(func, action, state);
+            }, state);
+        }
+        #endregion
         private static async Task MainAsync()
         {
             var fileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
