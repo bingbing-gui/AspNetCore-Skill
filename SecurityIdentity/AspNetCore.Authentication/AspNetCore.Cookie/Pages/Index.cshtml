@@ -1,0 +1,19 @@
+﻿@page
+@model AspNetCore.Cookie.Page.IndexModel
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor httpContextAccessor;
+@{
+    ViewData["Title"] = "Index";
+}
+@if (httpContextAccessor!.HttpContext!.User!.Identity!.IsAuthenticated)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Hello @httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value!</h1>
+            <p>Username: @httpContextAccessor.HttpContext.User.Identity.Name</p>
+        </div>
+    </div>
+
+
+}
+
+<h1>Cookie Sample</h1>

@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ExceptionHandle"
 		doc.txt = doc.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle", "AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.csproj", "{A9381237-5BC6-4F45-96A9-94DA79F6537C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle", "Fundamentals\11-AspNetCore.HandleError\Old.Version\AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.csproj", "{A9381237-5BC6-4F45-96A9-94DA79F6537C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Window.ManualResetEventSlim", "Window.ManualResetEventSlim", "{F9C1278E-43E0-4654-A8EC-73B93C59EFFA}"
 EndProject
@@ -49,7 +49,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Startup", "AspNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Startup.Practice", "AspNetCore.Startup\AspNetCore.Startup.Practice\AspNetCore.Startup.Practice.csproj", "{369346CD-0194-4C29-8E26-8DC940FE323B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle.Pratice", "AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.Pratice\AspNetCore.ExceptionHandle.Pratice.csproj", "{03529777-DFC6-4AD8-84BC-77F50256B571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle.Pratice", "Fundamentals\11-AspNetCore.HandleError\Old.Version\AspNetCore.ExceptionHandle.Pratice\AspNetCore.ExceptionHandle.Pratice.csproj", "{03529777-DFC6-4AD8-84BC-77F50256B571}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.MakeHttpRequest.Practice", "Fundamentals\12-AspNetCore.MakeHttpRequest\Old.Version\AspNetCore.MakeHttpRequest.Practice\AspNetCore.MakeHttpRequest.Practice.csproj", "{D239DE59-E5F7-48E8-A669-19ABB5F1803F}"
 EndProject
@@ -77,11 +77,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spider", "Spider", "{EB2809
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spider", "ThirdParty.Framwork\Spider\Spider.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketClient", "SocketClient\SocketClient.csproj", "{E9FDCF20-02F4-4067-96F3-94C50A844426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketClient", "Socket\SocketClient\SocketClient.csproj", "{E9FDCF20-02F4-4067-96F3-94C50A844426}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Socket", "Socket", "{ECA94CAE-6395-4A83-8E0A-46079A255CCE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "SocketServer\SocketServer.csproj", "{D1F7E9A8-9479-46BC-ACAE-580874815C65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "Socket\SocketServer\SocketServer.csproj", "{D1F7E9A8-9479-46BC-ACAE-580874815C65}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{E6F9B6BF-15B1-4DDB-BC20-634773C1A663}"
 EndProject
@@ -227,6 +227,26 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Options.Validation.Practice", "Fundamentals\07-AspNetCore.Options\Old.Version\AspNetCore.Options.Validation.Practice\AspNetCore.Options.Validation.Practice.csproj", "{E32960BC-719D-4AFF-95F2-CAE132C12A21}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.OptionsValidation", "Fundamentals\07-AspNetCore.Options\Old.Version\AspNetCore6.OptionsValidation\AspNetCore6.OptionsValidation.csproj", "{5DEA1D61-224A-4D0F-B5AF-B1F404FEF93D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecurityIdentity", "SecurityIdentity", "{E2837BD1-E7C6-49B8-950D-646C2A51DBA9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Cookie", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.Cookie\AspNetCore.Cookie.csproj", "{012BD388-7090-40D8-B47F-74B5C147D226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49DA9B10-70E8-4DB9-9C0A-BD13C7E82A79}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Authentication", "AspNetCore.Authentication", "{A2992994-A02D-475E-BCEF-E0C8E0E04FCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Authentication.EP1", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.Authentication.EP1\AspNetCore.Authentication.EP1.csproj", "{99C945AE-43BA-4A34-83C9-6E0EEC352FC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Identity", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.Identity\AspNetCore.Identity.csproj", "{BE80564B-3433-4499-ADB0-61A3CE6AED72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Old.Version", "Old.Version", "{9628F40A-FEEB-4428-ADE5-0FAB71307324}"
+	ProjectSection(SolutionItems) = preProject
+		doc.txt = doc.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -518,6 +538,18 @@ Global
 		{5DEA1D61-224A-4D0F-B5AF-B1F404FEF93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DEA1D61-224A-4D0F-B5AF-B1F404FEF93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DEA1D61-224A-4D0F-B5AF-B1F404FEF93D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012BD388-7090-40D8-B47F-74B5C147D226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012BD388-7090-40D8-B47F-74B5C147D226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012BD388-7090-40D8-B47F-74B5C147D226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012BD388-7090-40D8-B47F-74B5C147D226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C945AE-43BA-4A34-83C9-6E0EEC352FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C945AE-43BA-4A34-83C9-6E0EEC352FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C945AE-43BA-4A34-83C9-6E0EEC352FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C945AE-43BA-4A34-83C9-6E0EEC352FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE80564B-3433-4499-ADB0-61A3CE6AED72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE80564B-3433-4499-ADB0-61A3CE6AED72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE80564B-3433-4499-ADB0-61A3CE6AED72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE80564B-3433-4499-ADB0-61A3CE6AED72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -534,11 +566,11 @@ Global
 		{03026168-A66A-4BE7-930E-CCAC5FC5EED5} = {D178C90D-6CEA-4F0C-9F73-BF90937C77E4}
 		{64EAD733-6E08-4A4A-AE0E-B22894AC3642} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{947EEC82-13EB-4D2E-B05F-D4E14DDB697E} = {64EAD733-6E08-4A4A-AE0E-B22894AC3642}
-		{A9381237-5BC6-4F45-96A9-94DA79F6537C} = {97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}
+		{A9381237-5BC6-4F45-96A9-94DA79F6537C} = {9628F40A-FEEB-4428-ADE5-0FAB71307324}
 		{48EC4989-7FAA-4642-84C5-D255B99BEC17} = {F9C1278E-43E0-4654-A8EC-73B93C59EFFA}
 		{71C2313D-9FB7-4954-A25C-39DF7C3C3409} = {A00C6D8E-26C2-42B0-9763-002053B80AC4}
 		{369346CD-0194-4C29-8E26-8DC940FE323B} = {9BE170B6-EFB2-4DAB-80B8-256CE09CB280}
-		{03529777-DFC6-4AD8-84BC-77F50256B571} = {97B4988B-E1AC-46ED-BC20-0CF925BBFCAF}
+		{03529777-DFC6-4AD8-84BC-77F50256B571} = {9628F40A-FEEB-4428-ADE5-0FAB71307324}
 		{D239DE59-E5F7-48E8-A669-19ABB5F1803F} = {2D18DBFE-1761-473A-8475-E432D7C7CD7A}
 		{A75CBB66-5618-47BA-B013-E4E178DE168F} = {2D18DBFE-1761-473A-8475-E432D7C7CD7A}
 		{49EB56C2-C807-489E-AF68-BAED91980C31} = {2D18DBFE-1761-473A-8475-E432D7C7CD7A}
@@ -618,6 +650,11 @@ Global
 		{EAED6512-0494-4EC6-BEE1-426957C42C63} = {6C9F3D80-4AD4-4B8A-8501-BE202C21EB75}
 		{E32960BC-719D-4AFF-95F2-CAE132C12A21} = {6C9F3D80-4AD4-4B8A-8501-BE202C21EB75}
 		{5DEA1D61-224A-4D0F-B5AF-B1F404FEF93D} = {6C9F3D80-4AD4-4B8A-8501-BE202C21EB75}
+		{012BD388-7090-40D8-B47F-74B5C147D226} = {A2992994-A02D-475E-BCEF-E0C8E0E04FCA}
+		{A2992994-A02D-475E-BCEF-E0C8E0E04FCA} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
+		{99C945AE-43BA-4A34-83C9-6E0EEC352FC3} = {A2992994-A02D-475E-BCEF-E0C8E0E04FCA}
+		{BE80564B-3433-4499-ADB0-61A3CE6AED72} = {A2992994-A02D-475E-BCEF-E0C8E0E04FCA}
+		{9628F40A-FEEB-4428-ADE5-0FAB71307324} = {A958E665-2F95-409B-B98D-A33E26706FE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
