@@ -32,8 +32,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle", "Fundamentals\11-AspNetCore.HandleError\Old.Version\AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.csproj", "{A9381237-5BC6-4F45-96A9-94DA79F6537C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Window.ManualResetEventSlim", "Window.ManualResetEventSlim", "{F9C1278E-43E0-4654-A8EC-73B93C59EFFA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Window.ManualResetEventSlim.Practice", "Task\Window.ManualResetEventSlim.Practice\Window.ManualResetEventSlim.Practice.csproj", "{48EC4989-7FAA-4642-84C5-D255B99BEC17}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.StaticFileMiddle.Pratice", "Fundamentals\13-AspNetCore.StaticFiles\Old.Version\AspNetCore.StaticFileMiddle.Pratice\AspNetCore.StaticFileMiddle.Pratice.csproj", "{71C2313D-9FB7-4954-A25C-39DF7C3C3409}"
