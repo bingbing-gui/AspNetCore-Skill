@@ -1,6 +1,9 @@
 ﻿using AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NETCore.MailKit.Extensions;
+using Microsoft.Extensions.DependencyInjection;
+using NETCore.MailKit.Infrastructure.Internal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,9 +23,12 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(identityOption =>
     identityOption.Password.RequireDigit = false;
     identityOption.Password.RequireNonAlphanumeric = false;
     identityOption.Password.RequireUppercase = false;
+    //开启用户登陆Email 确认
+    identityOption.SignIn.RequireConfirmedEmail = true;
 })
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
+
 
 builder.Services.ConfigureApplicationCookie(configure =>
 {
@@ -31,10 +37,18 @@ builder.Services.ConfigureApplicationCookie(configure =>
     configure.ExpireTimeSpan = TimeSpan.FromMinutes(5);
     configure.SlidingExpiration = true;
 });
+var configurationManager = builder.Configuration;
+builder.Services.AddMailKit(optionsAction =>
+{
+    optionsAction.UseMailKit(configurationManager.GetSection("Mail").Get<MailKitOptions>());
+});
+
 builder.Services.AddControllersWithViews();
 
 
 var app = builder.Build();
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
