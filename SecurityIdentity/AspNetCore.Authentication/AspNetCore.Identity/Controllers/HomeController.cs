@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NETCore.MailKit.Core;
 
@@ -22,7 +23,7 @@ namespace AspNetCore.Identity.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public IActionResult Secret()
         {
             return View();
