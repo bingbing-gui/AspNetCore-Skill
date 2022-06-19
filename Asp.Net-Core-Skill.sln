@@ -221,7 +221,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Cookie", "Securi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Authentication", "AspNetCore.Authentication", "{A2992994-A02D-475E-BCEF-E0C8E0E04FCA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Authentication.EP1", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.Authentication.EP1\AspNetCore.Authentication.EP1.csproj", "{99C945AE-43BA-4A34-83C9-6E0EEC352FC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Authentication", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.Authentication\AspNetCore.Authentication.csproj", "{99C945AE-43BA-4A34-83C9-6E0EEC352FC3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Identity", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.Identity\AspNetCore.Identity.csproj", "{BE80564B-3433-4499-ADB0-61A3CE6AED72}"
 EndProject
