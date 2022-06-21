@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCore.IdentityJWT.API.Controllers
 {
-    public class AuthController : ControllerBase
+    [ApiController]
+    [Route("api/auth")]
+    public class AuthController : Controller
     {
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;
@@ -14,19 +16,21 @@ namespace AspNetCore.IdentityJWT.API.Controllers
             _configuration = configuration;
         }
         [HttpPost("Register")]
-        public async Task<IActionResult> RegisterAsync([FromBody]RegisterViewModel model)
+        public async Task<IActionResult> RegisterAsync([FromBody] RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
                 var result = await _userService.RegisterUserAsync(model);
                 if (result.IsSuccess)
+                {
                     return Ok(result);
+                }
                 return BadRequest(result);
             }
             return BadRequest("Some properties are not valid");
         }
         [HttpGet("ConfirmEmail")]
-        public async Task<IActionResult> ConfirmEmailAsync(string userId,string token)
+        public async Task<IActionResult> ConfirmEmailAsync(string userId, string token)
         {
             if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(token))
                 return NotFound();
@@ -35,7 +39,7 @@ namespace AspNetCore.IdentityJWT.API.Controllers
 
             if (result.IsSuccess)
             {
-                return Redirect($"{_configuration["AppUrl"]}/ConfirmEmail.html");
+                return Redirect($"{_configuration["DomainUrl"]}/ConfirmEmail.html");
             }
             return BadRequest("");
         }
@@ -66,7 +70,7 @@ namespace AspNetCore.IdentityJWT.API.Controllers
             return BadRequest(result); // 400
         }
         [HttpPost("ResetPassword")]
-        public async Task<IActionResult> ResetPasswordAsync(ResetPasswordViewModel model)
+        public async Task<IActionResult> ResetPasswordAsync([FromForm] ResetPasswordViewModel model)
         {
             if (ModelState.IsValid)
             {

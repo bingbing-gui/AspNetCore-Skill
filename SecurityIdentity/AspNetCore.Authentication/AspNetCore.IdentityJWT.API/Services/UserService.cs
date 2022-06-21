@@ -14,7 +14,7 @@ namespace AspNetCore.IdentityJWT.API.Services
         private readonly IConfiguration _configuration;
         private readonly IMailService _mailService;
         public UserService(
-            UserManager<IdentityUser> userManager, 
+            UserManager<IdentityUser> userManager,
             IConfiguration configuration,
             IMailService mailService)
         {
@@ -41,10 +41,10 @@ namespace AspNetCore.IdentityJWT.API.Services
             if (identityResult.Succeeded)
             {
                 #region Email Verify
-                var token=await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 var encodedEmailToken = Encoding.UTF8.GetBytes(token);
-                var validEmailToken=WebEncoders.Base64UrlEncode(encodedEmailToken);
-                string url = $"{_configuration["AppUrl"]}/api/auth/confirmemail?userid={user.Id}&token={validEmailToken}";
+                var validEmailToken = WebEncoders.Base64UrlEncode(encodedEmailToken);
+                string url = $"{_configuration["DomainUrl"]}/api/auth/confirmemail?userid={user.Id}&token={validEmailToken}";
 
                 await _mailService.SendEmailAsync(user.Email, "Confirm your email", $"<h1>Welcome to Auth Demo</h1>" +
                     $"<p>Please confirm your email by <a href='{url}'>Clicking here</a></p>");
@@ -53,7 +53,8 @@ namespace AspNetCore.IdentityJWT.API.Services
                 return new UserManagerResponse
                 {
                     Message = "User created sucessfully!",
-                    IsSuccess = true
+                    IsSuccess = true,
+                    ExtraInfo = url
                 };
             }
             return new UserManagerResponse
@@ -115,7 +116,7 @@ namespace AspNetCore.IdentityJWT.API.Services
                 new Claim("Email",model.Email),
                 new Claim(ClaimTypes.NameIdentifier,user.Id)
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["AuthSettings:Key"]));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["AuthSettings:SecretKey"]));
             var token = new JwtSecurityToken(
                 issuer: _configuration["AuthSettings:Issuer"],
                 audience: _configuration["AuthSettings:Audience"],
