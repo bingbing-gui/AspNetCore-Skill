@@ -238,7 +238,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Old.Version", "Old.Version"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{11F153F4-CFBA-46DA-880D-A2EE75CD6B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.IdentityJWT.API", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.IdentityJWT.API\AspNetCore.IdentityJWT.API.csproj", "{1F20C0ED-1860-4C20-8131-7513B0AE069D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.IdentityJWT.API", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.IdentityJWT.API\AspNetCore.IdentityJWT.API.csproj", "{1F20C0ED-1860-4C20-8131-7513B0AE069D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.IdentityWithQRCode", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.IdentityWithQRCode\AspNetCore.IdentityWithQRCode.csproj", "{E65D30C4-4F98-45AA-AAFA-1210A0EA2D54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Security", "AspNetCore.Security", "{82D3D102-1341-408F-80E3-E2CD2C73F355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.AntiRequestForgery", "SecurityIdentity\AspNetCore.Security\AspNetCore.AntiRequestForgery\AspNetCore.AntiRequestForgery.csproj", "{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -546,6 +552,14 @@ Global
 		{1F20C0ED-1860-4C20-8131-7513B0AE069D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F20C0ED-1860-4C20-8131-7513B0AE069D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F20C0ED-1860-4C20-8131-7513B0AE069D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E65D30C4-4F98-45AA-AAFA-1210A0EA2D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65D30C4-4F98-45AA-AAFA-1210A0EA2D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65D30C4-4F98-45AA-AAFA-1210A0EA2D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65D30C4-4F98-45AA-AAFA-1210A0EA2D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -657,6 +671,9 @@ Global
 		{47333C66-F952-495D-A0E0-2454F4A462F0} = {2C45688F-89E6-479F-A55A-9182790B61B2}
 		{643D426D-334F-40BB-94CA-3C35799E935C} = {130B405E-B50B-443E-A919-674CC9E7FA9D}
 		{1F20C0ED-1860-4C20-8131-7513B0AE069D} = {A2992994-A02D-475E-BCEF-E0C8E0E04FCA}
+		{E65D30C4-4F98-45AA-AAFA-1210A0EA2D54} = {A2992994-A02D-475E-BCEF-E0C8E0E04FCA}
+		{82D3D102-1341-408F-80E3-E2CD2C73F355} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
+		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41} = {82D3D102-1341-408F-80E3-E2CD2C73F355}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
