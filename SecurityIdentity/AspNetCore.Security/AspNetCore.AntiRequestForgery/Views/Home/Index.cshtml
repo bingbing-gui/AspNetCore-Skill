@@ -1,11 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!-- 移除 Tag Helper
+@removeTagHelper Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper, Microsoft.AspNetCore.Mvc.TagHelpers
+-->
+<form method="post">
+    <!--第一种方法
+    所有的 ASP.NET Core MVC and Razor Pages 表单都会生成 antiforgery tokens.
+    如果form表单不是GET的话,自动生成隐藏域antiforgery tokens-->
+</form>
 
-<form method="">
+<!form method="post">
+<!--不使用 Tag Helper -->
+</!form>
+
+<form>
+    <!--通过显示方式添加 antiforgery token-->
+    @Html.AntiForgeryToken()
 
 </form>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!--移除 Tag Helper-->

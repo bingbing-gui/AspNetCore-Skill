@@ -4,6 +4,15 @@ using System.Diagnostics;
 
 namespace AspNetCore.AntiRequestForgery.Controllers
 {
+    /*
+     ValidateAntiForgeryToken和AutoValidateAntiforgeryToken
+     区别: AutoValidateAntiforgeryToken 不验证下列请求 
+        GET
+        HEAD
+        OPTIONS
+        TRACE
+     */
+    [AutoValidateAntiforgeryToken]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -12,7 +21,8 @@ namespace AspNetCore.AntiRequestForgery.Controllers
         {
             _logger = logger;
         }
-
+        [HttpOptions]
+        [ValidateAntiForgeryToken]
         public IActionResult Index()
         {
             return View();

@@ -244,7 +244,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.IdentityWithQRCo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Security", "AspNetCore.Security", "{82D3D102-1341-408F-80E3-E2CD2C73F355}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.AntiRequestForgery", "SecurityIdentity\AspNetCore.Security\AspNetCore.AntiRequestForgery\AspNetCore.AntiRequestForgery.csproj", "{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.AntiRequestForgery", "SecurityIdentity\AspNetCore.Security\AspNetCore.AntiRequestForgery\AspNetCore.AntiRequestForgery.csproj", "{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.CORS", "AspNetCore.CORS", "{AECC08EE-0A7B-455C-B263-A2D58E484EF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.CORS", "SecurityIdentity\AspNetCore.CORS\AspNetCore.CORS\AspNetCore.CORS.csproj", "{0260E578-547F-48F1-BFFB-1ABB73CB8C1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -560,6 +564,10 @@ Global
 		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0260E578-547F-48F1-BFFB-1ABB73CB8C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0260E578-547F-48F1-BFFB-1ABB73CB8C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0260E578-547F-48F1-BFFB-1ABB73CB8C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0260E578-547F-48F1-BFFB-1ABB73CB8C1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -674,6 +682,8 @@ Global
 		{E65D30C4-4F98-45AA-AAFA-1210A0EA2D54} = {A2992994-A02D-475E-BCEF-E0C8E0E04FCA}
 		{82D3D102-1341-408F-80E3-E2CD2C73F355} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
 		{73A7EE02-03EA-48C1-9785-C6F2A3CFDA41} = {82D3D102-1341-408F-80E3-E2CD2C73F355}
+		{AECC08EE-0A7B-455C-B263-A2D58E484EF0} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
+		{0260E578-547F-48F1-BFFB-1ABB73CB8C1C} = {AECC08EE-0A7B-455C-B263-A2D58E484EF0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
