@@ -254,6 +254,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.IPSafetyList", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.IPSafetyList", "SecurityIdentity\AspNetCore.IPSafetyList\AspNetCore.IPSafetyList\AspNetCore.IPSafetyList.csproj", "{A5E15CC2-612E-4937-8E0E-7E7CFB849907}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.UserSecrets", "AspNetCore.UserSecrets", "{CB600790-0619-421F-BBDD-4529FE1B25E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.UserSecrets", "SecurityIdentity\AspNetCore.UserSecrets\AspNetCore.UserSecrets\AspNetCore.UserSecrets.csproj", "{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -576,6 +580,10 @@ Global
 		{A5E15CC2-612E-4937-8E0E-7E7CFB849907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5E15CC2-612E-4937-8E0E-7E7CFB849907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5E15CC2-612E-4937-8E0E-7E7CFB849907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -694,6 +702,8 @@ Global
 		{0260E578-547F-48F1-BFFB-1ABB73CB8C1C} = {AECC08EE-0A7B-455C-B263-A2D58E484EF0}
 		{73334535-C031-4955-9DD2-4A126C01794E} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
 		{A5E15CC2-612E-4937-8E0E-7E7CFB849907} = {73334535-C031-4955-9DD2-4A126C01794E}
+		{CB600790-0619-421F-BBDD-4529FE1B25E1} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
+		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1} = {CB600790-0619-421F-BBDD-4529FE1B25E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
