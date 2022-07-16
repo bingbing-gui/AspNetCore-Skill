@@ -248,15 +248,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.AntiRequestForge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.CORS", "AspNetCore.CORS", "{AECC08EE-0A7B-455C-B263-A2D58E484EF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.CORS", "SecurityIdentity\AspNetCore.CORS\AspNetCore.CORS\AspNetCore.CORS.csproj", "{0260E578-547F-48F1-BFFB-1ABB73CB8C1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.CORS", "SecurityIdentity\AspNetCore.CORS\AspNetCore.CORS\AspNetCore.CORS.csproj", "{0260E578-547F-48F1-BFFB-1ABB73CB8C1C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.IPSafetyList", "AspNetCore.IPSafetyList", "{73334535-C031-4955-9DD2-4A126C01794E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.IPSafetyList", "SecurityIdentity\AspNetCore.IPSafetyList\AspNetCore.IPSafetyList\AspNetCore.IPSafetyList.csproj", "{A5E15CC2-612E-4937-8E0E-7E7CFB849907}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.IPSafetyList", "SecurityIdentity\AspNetCore.IPSafetyList\AspNetCore.IPSafetyList\AspNetCore.IPSafetyList.csproj", "{A5E15CC2-612E-4937-8E0E-7E7CFB849907}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.UserSecrets", "AspNetCore.UserSecrets", "{CB600790-0619-421F-BBDD-4529FE1B25E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.UserSecrets", "SecurityIdentity\AspNetCore.UserSecrets\AspNetCore.UserSecrets\AspNetCore.UserSecrets.csproj", "{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.UserSecrets", "SecurityIdentity\AspNetCore.UserSecrets\AspNetCore.UserSecrets\AspNetCore.UserSecrets.csproj", "{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DataProtection", "AspNetCore.DataProtection", "{AD2E6AE0-73F1-4134-8821-55548E1B64A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerAPIs", "SecurityIdentity\AspNetCore.DataProtection\ConsumerAPIs\ConsumerAPIs.csproj", "{69222A6F-AB3D-499F-BB5C-5C95424C86EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordHasing", "SecurityIdentity\AspNetCore.DataProtection\PasswordHasing\PasswordHasing.csproj", "{3597D9D6-2340-4A7A-9B49-49724DF2C390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LimitLifeTimePayload", "SecurityIdentity\LimitLifeTimePayload\LimitLifeTimePayload.csproj", "{F603570D-2C84-4708-8BD0-39F1DD8BFC00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -584,6 +592,18 @@ Global
 		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69222A6F-AB3D-499F-BB5C-5C95424C86EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69222A6F-AB3D-499F-BB5C-5C95424C86EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69222A6F-AB3D-499F-BB5C-5C95424C86EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69222A6F-AB3D-499F-BB5C-5C95424C86EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3597D9D6-2340-4A7A-9B49-49724DF2C390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3597D9D6-2340-4A7A-9B49-49724DF2C390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3597D9D6-2340-4A7A-9B49-49724DF2C390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3597D9D6-2340-4A7A-9B49-49724DF2C390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F603570D-2C84-4708-8BD0-39F1DD8BFC00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F603570D-2C84-4708-8BD0-39F1DD8BFC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F603570D-2C84-4708-8BD0-39F1DD8BFC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F603570D-2C84-4708-8BD0-39F1DD8BFC00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -704,6 +724,10 @@ Global
 		{A5E15CC2-612E-4937-8E0E-7E7CFB849907} = {73334535-C031-4955-9DD2-4A126C01794E}
 		{CB600790-0619-421F-BBDD-4529FE1B25E1} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
 		{8DF2F8A9-1FFB-4ECE-AAF2-89C514E92CB1} = {CB600790-0619-421F-BBDD-4529FE1B25E1}
+		{AD2E6AE0-73F1-4134-8821-55548E1B64A9} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
+		{69222A6F-AB3D-499F-BB5C-5C95424C86EA} = {AD2E6AE0-73F1-4134-8821-55548E1B64A9}
+		{3597D9D6-2340-4A7A-9B49-49724DF2C390} = {AD2E6AE0-73F1-4134-8821-55548E1B64A9}
+		{F603570D-2C84-4708-8BD0-39F1DD8BFC00} = {AD2E6AE0-73F1-4134-8821-55548E1B64A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

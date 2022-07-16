@@ -8,6 +8,7 @@ conStrBuilder.Password = builder.Configuration["DbPassword"];
 var connection = conStrBuilder.ConnectionString;
 
 Console.WriteLine($"connection:{connection}");
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
