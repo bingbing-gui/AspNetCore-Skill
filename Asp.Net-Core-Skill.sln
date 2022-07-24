@@ -260,11 +260,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.UserSecrets", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DataProtection", "AspNetCore.DataProtection", "{AD2E6AE0-73F1-4134-8821-55548E1B64A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerAPIs", "SecurityIdentity\AspNetCore.DataProtection\ConsumerAPIs\ConsumerAPIs.csproj", "{69222A6F-AB3D-499F-BB5C-5C95424C86EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumerAPIs", "SecurityIdentity\AspNetCore.DataProtection\ConsumerAPIs\ConsumerAPIs.csproj", "{69222A6F-AB3D-499F-BB5C-5C95424C86EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordHasing", "SecurityIdentity\AspNetCore.DataProtection\PasswordHasing\PasswordHasing.csproj", "{3597D9D6-2340-4A7A-9B49-49724DF2C390}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordHasing", "SecurityIdentity\AspNetCore.DataProtection\PasswordHasing\PasswordHasing.csproj", "{3597D9D6-2340-4A7A-9B49-49724DF2C390}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LimitLifeTimePayload", "SecurityIdentity\LimitLifeTimePayload\LimitLifeTimePayload.csproj", "{F603570D-2C84-4708-8BD0-39F1DD8BFC00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LimitLifeTimePayload", "SecurityIdentity\LimitLifeTimePayload\LimitLifeTimePayload.csproj", "{F603570D-2C84-4708-8BD0-39F1DD8BFC00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{D3B37E80-0520-4F57-A264-A4F9B69A55B2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "WebApps\MVC\MvcMovie\MvcMovie.csproj", "{1EDFB132-73CA-4F21-9621-2D591D0455EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{8C5EAC0A-0D4C-4458-96A0-D2F6DFD3F0E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -604,6 +610,10 @@ Global
 		{F603570D-2C84-4708-8BD0-39F1DD8BFC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F603570D-2C84-4708-8BD0-39F1DD8BFC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F603570D-2C84-4708-8BD0-39F1DD8BFC00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDFB132-73CA-4F21-9621-2D591D0455EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDFB132-73CA-4F21-9621-2D591D0455EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDFB132-73CA-4F21-9621-2D591D0455EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDFB132-73CA-4F21-9621-2D591D0455EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -728,6 +738,8 @@ Global
 		{69222A6F-AB3D-499F-BB5C-5C95424C86EA} = {AD2E6AE0-73F1-4134-8821-55548E1B64A9}
 		{3597D9D6-2340-4A7A-9B49-49724DF2C390} = {AD2E6AE0-73F1-4134-8821-55548E1B64A9}
 		{F603570D-2C84-4708-8BD0-39F1DD8BFC00} = {AD2E6AE0-73F1-4134-8821-55548E1B64A9}
+		{1EDFB132-73CA-4F21-9621-2D591D0455EB} = {8C5EAC0A-0D4C-4458-96A0-D2F6DFD3F0E1}
+		{8C5EAC0A-0D4C-4458-96A0-D2F6DFD3F0E1} = {D3B37E80-0520-4F57-A264-A4F9B69A55B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
