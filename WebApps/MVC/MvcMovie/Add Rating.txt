@@ -1,0 +1,8 @@
+﻿1.在实体类中添加Rating
+2.在Index.cshtml 中新增字段显示
+3.在Create.cshtml 中新增字段显示
+4.设置改项目为启动项,并运行下列命令
+	Add-Migration Rating
+	Update-Database
+
+
