@@ -1,0 +1,22 @@
+﻿@model PartialViews.ViewModels.Article
+
+<h2>@Model.Title></h2>
+
+@await Html.PartialAsync("_AuthorPartial",Model.AuthorName)
+
+@Model.PublicationDate
+
+@{
+    var index = 0;
+    foreach (var section in Model.Sections)
+    {
+
+        @(await Html.PartialAsync("_ArticleSection",
+                                  section,
+                                  new ViewDataDictionary(ViewData)
+                                  {
+                                    {"index",index}
+                                  }))
+        index++;
+    }
+}
