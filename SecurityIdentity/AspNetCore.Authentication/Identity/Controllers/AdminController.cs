@@ -69,33 +69,20 @@ namespace Identity.Controllers
             var appUser = await _userManager.FindByIdAsync(updateUserDTO.Id);
             if (appUser != null)
             {
-                IdentityResult validEmail = null;
-                if (!string.IsNullOrEmpty(updateUserDTO.Name) && !string.IsNullOrEmpty(updateUserDTO.Email))
-                {
-                    appUser.UserName = updateUserDTO.Name;
+                if (updateUserDTO.Email != null)
                     appUser.Email = updateUserDTO.Email;
-                    validEmail = await _userValidator.ValidateAsync(_userManager, appUser);
-                    if (!validEmail.Succeeded)
-                        Errors(validEmail);
-                }
                 else
-                    ModelState.AddModelError("", "用户名和邮件不能为空");
-                IdentityResult validPass = null;
-                if (!string.IsNullOrEmpty(updateUserDTO.Password))
-                {
-                    validPass = await _passwordValidator.ValidateAsync(_userManager, appUser, updateUserDTO.Password);
-                    if (validPass.Succeeded)
-                        appUser.PasswordHash = _passwordHasher.HashPassword(appUser, updateUserDTO.Password);
-                    else
-                        Errors(validPass);
-                }
+                    ModelState.AddModelError("", "邮箱不能为空");
+                if (updateUserDTO.Name != null)
+                    appUser.UserName = updateUserDTO.Name;
+                else
+                    ModelState.AddModelError("", "用户名不能为空");
+                if (updateUserDTO.Password != null)
+                    appUser.PasswordHash = _passwordHasher.HashPassword(appUser, updateUserDTO.Password);
                 else
                     ModelState.AddModelError("", "密码不能为空");
-                if (!string.IsNullOrEmpty(updateUserDTO.Name) &&
-                    !string.IsNullOrEmpty(updateUserDTO.Email) &&
-                    !string.IsNullOrEmpty(updateUserDTO.Password) &&
-                    validEmail.Succeeded &&
-                    validPass.Succeeded)
+                if (!string.IsNullOrEmpty(updateUserDTO.Email) &&
+                    !string.IsNullOrEmpty(updateUserDTO.Password))
                 {
                     var result = await _userManager.UpdateAsync(appUser);
                     if (result.Succeeded)
@@ -113,7 +100,6 @@ namespace Identity.Controllers
                 ModelState.AddModelError("", "没有发现该用户");
             return View(updateUserDTO);
         }
-
         [HttpPost]
         public async Task<IActionResult> Delete(string Id)
         {
