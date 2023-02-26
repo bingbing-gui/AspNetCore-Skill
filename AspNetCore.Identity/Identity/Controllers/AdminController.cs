@@ -8,11 +8,18 @@ namespace Identity.Controllers
     {
         private UserManager<AppUser> _userManager;
         private IPasswordHasher<AppUser> _passwordHasher;
+        private IPasswordValidator<AppUser> _passwordValidator;
+        private IUserValidator<AppUser> _userValidator;
         public AdminController(UserManager<AppUser> userManager,
-                               IPasswordHasher<AppUser> passwordHash)
+                               IPasswordHasher<AppUser> passwordHash,
+                               IPasswordValidator<AppUser> passwordValidator,
+                               IUserValidator<AppUser> userValidator
+                               )
         {
             _userManager = userManager;
             _passwordHasher = passwordHash;
+            _passwordValidator = passwordValidator;
+            _userValidator = userValidator;
         }
         public IActionResult Index()
         {
@@ -62,20 +69,33 @@ namespace Identity.Controllers
             var appUser = await _userManager.FindByIdAsync(updateUserDTO.Id);
             if (appUser != null)
             {
-                if (updateUserDTO.Email != null)
-                    appUser.Email = updateUserDTO.Email;
-                else
-                    ModelState.AddModelError("", "邮箱不能为空");
-                if (updateUserDTO.Name != null)
+                IdentityResult validEmail = null;
+                if (!string.IsNullOrEmpty(updateUserDTO.Name) && !string.IsNullOrEmpty(updateUserDTO.Email))
+                {
                     appUser.UserName = updateUserDTO.Name;
+                    appUser.Email = updateUserDTO.Email;
+                    validEmail = await _userValidator.ValidateAsync(_userManager, appUser);
+                    if (!validEmail.Succeeded)
+                        Errors(validEmail);
+                }
                 else
-                    ModelState.AddModelError("", "用户名不能为空");
-                if (updateUserDTO.Password != null)
-                    appUser.PasswordHash = _passwordHasher.HashPassword(appUser, updateUserDTO.Password);
+                    ModelState.AddModelError("", "用户名和邮件不能为空");
+                IdentityResult validPass = null;
+                if (!string.IsNullOrEmpty(updateUserDTO.Password))
+                {
+                    validPass = await _passwordValidator.ValidateAsync(_userManager, appUser, updateUserDTO.Password);
+                    if (validPass.Succeeded)
+                        appUser.PasswordHash = _passwordHasher.HashPassword(appUser, updateUserDTO.Password);
+                    else
+                        Errors(validPass);
+                }
                 else
                     ModelState.AddModelError("", "密码不能为空");
-                if (!string.IsNullOrEmpty(updateUserDTO.Email) &&
-                    !string.IsNullOrEmpty(updateUserDTO.Password))
+                if (!string.IsNullOrEmpty(updateUserDTO.Name) &&
+                    !string.IsNullOrEmpty(updateUserDTO.Email) &&
+                    !string.IsNullOrEmpty(updateUserDTO.Password) &&
+                    validEmail.Succeeded &&
+                    validPass.Succeeded)
                 {
                     var result = await _userManager.UpdateAsync(appUser);
                     if (result.Succeeded)
@@ -93,7 +113,6 @@ namespace Identity.Controllers
                 ModelState.AddModelError("", "没有发现该用户");
             return View(updateUserDTO);
         }
-
         [HttpPost]
         public async Task<IActionResult> Delete(string Id)
         {

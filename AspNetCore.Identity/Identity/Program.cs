@@ -1,3 +1,4 @@
+using Identity.IdentityPolicy;
 using Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +13,20 @@ builder.Services.AddDbContext<AppIdentityDbContext>(
     options => options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"])
     );
 
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequiredLength = 8;
+    options.Password.RequireLowercase = true;
+
+    options.User.RequireUniqueEmail = true;
+    options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz";
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<IPasswordValidator<AppUser>, CustomPasswordPolicy>();
+builder.Services.AddTransient<IUserValidator<AppUser>, CustomUsernameEmailPolicy>();
 
 
 var app = builder.Build();
