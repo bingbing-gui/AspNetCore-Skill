@@ -1,4 +1,6 @@
 ﻿using Identity.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,14 +10,18 @@ namespace Identity.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private UserManager<AppUser> _userManager;
+        public HomeController(UserManager<AppUser> userManager, ILogger<HomeController> logger)
         {
+            _userManager = userManager;
             _logger = logger;
         }
-
-        public IActionResult Index()
+        [Authorize]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var appUser = await _userManager.GetUserAsync(HttpContext.User);
+            var message = "Hello " + appUser?.UserName;
+            return View((object)message);
         }
 
         public IActionResult Privacy()

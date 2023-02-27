@@ -1,4 +1,4 @@
-using Identity.IdentityPolicy;
+﻿using Identity.IdentityPolicy;
 using Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -22,12 +22,26 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz";
 });
 
+builder.Services.ConfigureApplicationCookie(
+        opts =>
+        {
+            //默认登录页面
+            opts.LoginPath = "/Account/Login";
+            //设置Cookie名称
+            opts.Cookie.Name = ".AspNetCore.Identity.Application";
+            //设置Cookie超时时间
+            opts.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+            //设置滑动时间
+            opts.SlidingExpiration = true;
+        }
+    );
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddTransient<IPasswordValidator<AppUser>, CustomPasswordPolicy>();
-builder.Services.AddTransient<IUserValidator<AppUser>, CustomUsernameEmailPolicy>();
-
+#region 自定义密码、用户名、邮箱策略
+//builder.Services.AddTransient<IPasswordValidator<AppUser>, CustomPasswordPolicy>();
+//builder.Services.AddTransient<IUserValidator<AppUser>, CustomUsernameEmailPolicy>();
+#endregion
 
 var app = builder.Build();
 
