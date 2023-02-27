@@ -34,14 +34,14 @@ namespace Identity.Controllers
                 if (appUser != null)
                 {
                     await _signInManager.SignOutAsync();
-                    var signInResult = await _signInManager.PasswordSignInAsync(appUser, login.Password, 
+                    var signInResult = await _signInManager.PasswordSignInAsync(appUser, login.Password,
                         login.RememberMe, false);
                     if (signInResult.Succeeded)
                     {
                         return Redirect(login.ReturnUrl ?? "/");
                     }
                 }
-                ModelState.AddModelError(nameof(login.Email),"Login Failed: Invalid Email or password");
+                ModelState.AddModelError(nameof(login.Email), "Login Failed: Invalid Email or password");
             }
             return View(login);
         }
