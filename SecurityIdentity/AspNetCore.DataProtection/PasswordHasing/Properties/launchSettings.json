@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "PasswordHasing": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59556;http://localhost:59557"
+    }
+  }
+}

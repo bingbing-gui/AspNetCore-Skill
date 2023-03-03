@@ -27,6 +27,7 @@ builder.Services.ConfigureApplicationCookie(
         {
             //默认登录页面
             opts.LoginPath = "/Account/Login";
+            opts.AccessDeniedPath = "/Account/AccessDenied";
             //设置Cookie名称
             opts.Cookie.Name = ".AspNetCore.Identity.Application";
             //设置Cookie超时时间

@@ -9,14 +9,13 @@ namespace Identity.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
         private UserManager<AppUser> _userManager;
         public HomeController(UserManager<AppUser> userManager, ILogger<HomeController> logger)
         {
             _userManager = userManager;
             _logger = logger;
         }
-        [Authorize]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Index()
         {
             var appUser = await _userManager.GetUserAsync(HttpContext.User);
