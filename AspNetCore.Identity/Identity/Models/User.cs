@@ -16,5 +16,23 @@ namespace Identity.Models
         [DataType(DataType.Password)]
         [DisplayName("密码")]
         public string Password { get; set; } = null!;
+
+        [DisplayName("年龄")]
+        public int Age
+        {
+            get; set;
+        }
+        [DisplayName("国家")]
+        public Country Country
+        {
+            get;
+            set;
+        }
+        [DisplayName("薪水")]
+        [Required]
+        public string Salary
+        {
+            get; set;
+        } = null!;
     }
 }

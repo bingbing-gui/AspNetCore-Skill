@@ -35,6 +35,9 @@ namespace Identity.Controllers
                 {
                     UserName = user.Name,
                     Email = user.Email,
+                    Age = user.Age,
+                    Country = user.Country,
+                    Salary = user.Salary
                 };
                 var identityResult = await _userManager.CreateAsync(appUser, user.Password);
                 if (identityResult.Succeeded)
@@ -56,6 +59,9 @@ namespace Identity.Controllers
                 updateUserDTO.Id = appUser.Id;
                 updateUserDTO.Name = appUser.UserName ?? "";
                 updateUserDTO.Email = appUser.Email == null ? "" : appUser.Email;
+                updateUserDTO.Age = appUser.Age;
+                updateUserDTO.Country = appUser.Country;
+                updateUserDTO.Salary = appUser.Salary;
                 return View(updateUserDTO);
             }
             else
@@ -80,6 +86,12 @@ namespace Identity.Controllers
                 }
                 else
                     ModelState.AddModelError("", "用户名和邮件不能为空");
+
+                appUser.Age = updateUserDTO.Age;
+                appUser.Country = updateUserDTO.Country;
+                if (!string.IsNullOrEmpty(updateUserDTO.Salary))
+                    appUser.Salary = updateUserDTO.Salary;
+
                 IdentityResult validPass = null;
                 if (!string.IsNullOrEmpty(updateUserDTO.Password))
                 {
