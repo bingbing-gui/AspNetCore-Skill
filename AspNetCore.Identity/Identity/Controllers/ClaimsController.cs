@@ -1,4 +1,5 @@
 ﻿using Identity.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -8,10 +9,34 @@ namespace Identity.Controllers
     public class ClaimsController : Controller
     {
         private UserManager<AppUser> _userManager;
-        public ClaimsController(UserManager<AppUser> userManager)
+        private IAuthorizationService _authorizationService;
+        public ClaimsController(UserManager<AppUser> userManager, IAuthorizationService authorizationService)
         {
             _userManager = userManager;
+            _authorizationService = authorizationService;
         }
+
+        [Authorize(Policy = "AspManager")]
+        public IActionResult Project() => View("Index", User.Claims);
+
+        [Authorize(Policy = "AllowTom")]
+        public IActionResult TomFiles() => View("Index", User.Claims);
+
+
+        public async Task<IActionResult> PrivateAccess()
+        {
+            string[] allowedUsers = { "tom", "alice" };
+            var authorized = await _authorizationService.AuthorizeAsync(User, allowedUsers, "PrivateAccess");
+            if (authorized.Succeeded)
+            {
+                return View("Index", User.Claims);
+            }
+            else
+            {
+                return new ChallengeResult();
+            }
+        }
+
         public IActionResult Index()
         {
             return View(User.Claims);

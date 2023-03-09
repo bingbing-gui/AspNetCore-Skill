@@ -1,5 +1,7 @@
-﻿using Identity.IdentityPolicy;
+﻿using Identity.CustomPolicy;
+using Identity.IdentityPolicy;
 using Identity.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,6 +38,28 @@ builder.Services.ConfigureApplicationCookie(
             opts.SlidingExpiration = true;
         }
     );
+
+#region 授权策略
+
+builder.Services.AddTransient<IAuthorizationHandler, AllowUsersHandler>();
+builder.Services.AddTransient<IAuthorizationHandler,AllowPrivateHandler>();
+builder.Services.AddAuthorization(authorizationOptions =>
+{
+    authorizationOptions.AddPolicy("AspManager", authorizationPolicy =>
+    {
+        authorizationPolicy.RequireRole("Manager");
+        authorizationPolicy.RequireClaim("Coding-Skill", "ASP.NET Core MVC");
+    });
+    authorizationOptions.AddPolicy("AllowTom", authorizationPolicy =>
+    {
+        authorizationPolicy.AddRequirements(new AllowUserPolicy("tom"));
+    });
+    authorizationOptions.AddPolicy("PrivateAccess", authorizationPolicy =>
+    {
+        authorizationPolicy.AddRequirements(new AllowPrivatePolicy());
+    });
+});
+#endregion
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
