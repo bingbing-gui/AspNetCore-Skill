@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: cs\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.Themes.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.Themes.pot\n"
+"X-Crowdin-File-ID: 830\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2020-05-28 18:58\n"
+"PO-Revision-Date: 2022-05-05 19:18\n"
 
 #. .Add(S["Design"], NavigationConstants.AdminMenuDesignPosition, design => design
 #: OrchardCore.Themes\AdminMenu.cs:25
@@ -16,67 +18,73 @@ msgctxt "OrchardCore.Themes.AdminMenu"
 msgid "Design"
 msgstr "Vzhled"
 
-#. .Add(S["Themes"], "Themes", installed => installed
-#: OrchardCore.Themes\AdminMenu.cs:28
+#. .Add(S["Themes"], S["Themes"].PrefixPosition(), installed => installed
+#. .Add(S["Themes"], S["Themes"].PrefixPosition(), installed => installed
+#: OrchardCore.Themes\AdminMenu.cs:27
+#: OrchardCore.Themes\AdminMenu.cs:27
 msgctxt "OrchardCore.Themes.AdminMenu"
 msgid "Themes"
-msgstr "Šablony"
+msgstr "Motivy"
 
-#. _notifier.Success(H["{0} was enabled", feature.Name ?? feature.Id]);
-#. _notifier.Success(H["{0} was enabled", feature.Name ?? feature.Id]);
-#: OrchardCore.Themes\Controllers\AdminController.cs:154
-#: OrchardCore.Themes\Controllers\AdminController.cs:233
+#. await _notifier.SuccessAsync(H["{0} was enabled", feature.Name ?? feature.Id]);
+#: OrchardCore.Themes\Controllers\AdminController.cs:146
 msgctxt "OrchardCore.Themes.Controllers.AdminController"
 msgid "{0} was enabled"
-msgstr "Šablona {0} byl povolena"
+msgstr "Motiv {0} byl povolen"
 
-#. _notifier.Success(H["{0} was set as the default {1} theme", feature.Name ?? feature.Id, isAdmin ? "Admin" : "Site"]);
-#: OrchardCore.Themes\Controllers\AdminController.cs:157
+#. await _notifier.SuccessAsync(H["{0} was set as the default {1} theme", feature.Name ?? feature.Id, isAdmin ? "Admin" : "Site"]);
+#: OrchardCore.Themes\Controllers\AdminController.cs:149
 msgctxt "OrchardCore.Themes.Controllers.AdminController"
 msgid "{0} was set as the default {1} theme"
-msgstr "Motiv {0} byl nastaven jako výchozí téma {1}"
+msgstr "{0} byl nastaven jako výchozí motiv {1}"
 
-#. _notifier.Success(H["The Site theme was reset."]);
-#: OrchardCore.Themes\Controllers\AdminController.cs:174
+#. await _notifier.SuccessAsync(H["The Site theme was reset."]);
+#: OrchardCore.Themes\Controllers\AdminController.cs:166
 msgctxt "OrchardCore.Themes.Controllers.AdminController"
 msgid "The Site theme was reset."
-msgstr "Šablona stránky byla nastavena na výchozí."
+msgstr "Motiv webu byl resetován."
 
-#. _notifier.Success(H["The Admin theme was reset."]);
-#: OrchardCore.Themes\Controllers\AdminController.cs:189
+#. await _notifier.SuccessAsync(H["The Admin theme was reset."]);
+#: OrchardCore.Themes\Controllers\AdminController.cs:181
 msgctxt "OrchardCore.Themes.Controllers.AdminController"
 msgid "The Admin theme was reset."
-msgstr "Šablona administrace byla nastavena na výchozí."
+msgstr "Motiv administrace byl resetován."
 
-#. _notifier.Success(H["{0} was disabled", feature.Name ?? feature.Id]);
-#: OrchardCore.Themes\Controllers\AdminController.cs:211
+#. await _notifier.SuccessAsync(H["{0} was disabled.", feature.Name ?? feature.Id]);
+#: OrchardCore.Themes\Controllers\AdminController.cs:204
 msgctxt "OrchardCore.Themes.Controllers.AdminController"
-msgid "{0} was disabled"
-msgstr "Šablona {0} byla zakázána"
+msgid "{0} was disabled."
+msgstr "Motiv {0} byl zakázán."
+
+#. await _notifier.SuccessAsync(H["{0} was enabled.", feature.Name ?? feature.Id]);
+#: OrchardCore.Themes\Controllers\AdminController.cs:227
+msgctxt "OrchardCore.Themes.Controllers.AdminController"
+msgid "{0} was enabled."
+msgstr "Motiv {0} byl povolen."
 
 #. throw new InvalidOperationException(H["The theme \"{0}\" is already in the stack of themes that need features disabled.", themeName].ToString());
 #: OrchardCore.Themes\Services\ThemeService.cs:42
 msgctxt "OrchardCore.Themes.Services.ThemeService"
 msgid "The theme \"{0}\" is already in the stack of themes that need features disabled."
-msgstr "Šablona \"{0}\" je již v seznamu šablon, která potřebují zakázat některé funkce."
+msgstr "Motiv \"{0}\" je již v seznamu motivů, která potřebují zakázat některé funkce."
 
 #. throw new InvalidOperationException(H["The theme \"{0}\" is already in the stack of themes that need features enabled.", themeName].ToString());
 #: OrchardCore.Themes\Services\ThemeService.cs:73
 msgctxt "OrchardCore.Themes.Services.ThemeService"
 msgid "The theme \"{0}\" is already in the stack of themes that need features enabled."
-msgstr "Šablona \"{0}\" je již v seznamu šablon, která potřebují povolit některé funkce."
+msgstr "Motiv \"{0}\" je již v seznamu motivů, která potřebují povolit některé funkce."
 
-#. _notifier.Success(H["{0} was enabled.", enabledFeature.Name]);
+#. await _notifier.SuccessAsync(H["{0} was enabled.", enabledFeature.Name]);
 #: OrchardCore.Themes\Services\ThemeService.cs:114
 msgctxt "OrchardCore.Themes.Services.ThemeService"
 msgid "{0} was enabled."
-msgstr "Šablona {0} byla povolena."
+msgstr "Motiv {0} byl povolen."
 
-#. _notifier.Success(H["{0} was disabled.", feature.Name]);
+#. await _notifier.SuccessAsync(H["{0} was disabled.", feature.Name]);
 #: OrchardCore.Themes\Services\ThemeService.cs:141
 msgctxt "OrchardCore.Themes.Services.ThemeService"
 msgid "{0} was disabled."
-msgstr "Šablona {0} byla zakázána."
+msgstr "Motiv {0} byl zakázán."
 
 #. <span class="icon"><i class="fas fa-desktop" aria-hidden="true"></i></span><span class="title">@T["Design"]</span>
 #: OrchardCore.Themes\Views\NavigationItemText-themes.Id.cshtml:1
@@ -84,131 +92,115 @@ msgctxt "OrchardCore.Themes.Views.NavigationItemText-themes.Id"
 msgid "Design"
 msgstr "Vzhled"
 
-#. <h1>@RenderTitleSegments(T["Themes"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Themes"])</h1></zone>
 #: OrchardCore.Themes\Views\Admin\Index.cshtml:3
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Themes"
-msgstr ""
+msgstr "Motivy"
 
 #. <p>@T["There are no themes installed."]</p>
 #: OrchardCore.Themes\Views\Admin\Index.cshtml:7
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "There are no themes installed."
-msgstr "Není nainstalována žádná šablona."
-
-#. <small>@T["By: {0}", themeEntry.Extension.Manifest.Author]</small><br />
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:22
-msgctxt "OrchardCore.Themes.Views.Admin.Index"
-msgid "By: {0}"
-msgstr "Autor: {0}"
-
-#. <small>@T["Tags: {0}", string.Join(", ", themeEntry.Extension.Manifest.Tags.ToArray())]</small><br />
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:30
-msgctxt "OrchardCore.Themes.Views.Admin.Index"
-msgid "Tags: {0}"
-msgstr ""
-
-#. <small>@T["Version: {0}", themeEntry.Extension.Manifest.Version]</small>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:32
-msgctxt "OrchardCore.Themes.Views.Admin.Index"
-msgid "Version: {0}"
-msgstr "Verze: {0}"
+msgstr "Není nainstalován žádný motiv."
 
 #. <button type="submit" class="btn btn-sm btn-primary">@T["Make Current"]</button>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:40
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:44
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Make Current"
 msgstr "Nastavit jako aktuální"
 
 #. <button type="submit" class="btn btn-sm btn-secondary">@T["Disable"]</button>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:48
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:51
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Disable"
 msgstr "Zakázat"
 
 #. <button type="submit" class="btn btn-sm btn-secondary">@T["Enable"]</button>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:54
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:57
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Enable"
 msgstr "Povolit"
 
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:0
+#. <span class="text-muted">@T["This is the current Admin theme"]</span>
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:67
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "This is the current Admin theme"
-msgstr "Toto je aktuální šablona administrace"
+msgstr "Toto je aktuální motiv vzhledu administrace"
 
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:0
+#. <span class="text-muted">@T["This is the current Site theme"]</span>
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:71
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "This is the current Site theme"
-msgstr "Toto je aktuální šablona webu"
+msgstr "Toto je aktuální motiv vzhledu webu"
 
 #. <h4>@T["Reset current themes"]</h4>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:79
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:81
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset current themes"
-msgstr "Obnovit aktuální šablonu"
+msgstr "Obnovit aktuální motivy"
 
 #. <p>@T["The following actions reset the themes. It is used for sites that can't use theming."]</p>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:80
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:82
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "The following actions reset the themes. It is used for sites that can't use theming."
 msgstr "Následující akce resetuje motivy. To se používá pro weby, kde nelze použít motivy."
 
-#. <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-#. <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:81
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:81
+#. <a asp-action="ResetSiteTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
+#. <a asp-action="ResetSiteTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:83
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:83
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset Site Theme"
-msgstr "Nastavit šablona stránky na výchozí"
+msgstr "Resetovat motiv vzhledu webu"
 
-#. <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:81
+#. <a asp-action="ResetSiteTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:83
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Are you sure you want to reset the Site theme?"
-msgstr "Opravdu chcete šablonu webu nastavit na výchozí?"
+msgstr "Opravdu chcete resetovat motiv webu?"
 
-#. <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
-#. <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:82
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:82
+#. <a asp-action="ResetAdminTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
+#. <a asp-action="ResetAdminTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:84
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:84
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset Admin Theme"
-msgstr "Nastavit šablona administrace na výchozí"
+msgstr "Resetovat motiv vzhledu administrace"
 
-#. <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:82
+#. <a asp-action="ResetAdminTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:84
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Are you sure you want to reset the Admin theme?"
-msgstr "Opravdu chcete šablonu administrace nastavit na výchozí?"
+msgstr "Opravdu chcete resetovat motiv administrace?"
 
 #. <h5>@T["Themes"]</h5>
 #: OrchardCore.Themes\Views\Items\ThemesDeploymentStep.Edit.cshtml:3
 msgctxt "OrchardCore.Themes.Views.Items.ThemesDeploymentStep.Edit"
 msgid "Themes"
-msgstr "Šablony"
+msgstr "Motivy"
 
 #. <h5>@T["Themes"]</h5>
 #: OrchardCore.Themes\Views\Items\ThemesDeploymentStep.Summary.cshtml:3
 msgctxt "OrchardCore.Themes.Views.Items.ThemesDeploymentStep.Summary"
 msgid "Themes"
-msgstr "Šablony"
+msgstr "Motivy"
 
 #. <span class="hint">@T["Adds the currently selected site theme and admin theme to the plan."]</span>
 #: OrchardCore.Themes\Views\Items\ThemesDeploymentStep.Summary.cshtml:5
 msgctxt "OrchardCore.Themes.Views.Items.ThemesDeploymentStep.Summary"
 msgid "Adds the currently selected site theme and admin theme to the plan."
-msgstr "Přidat aktuálně vybranou šablonu stránky a administrace do plánu."
+msgstr "Přidat aktuálně vybraný motiv stránky a administrace do plánu."
 
 #. <h4 class="card-title">@T["Themes"]</h4>
 #: OrchardCore.Themes\Views\Items\ThemesDeploymentStep.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Themes.Views.Items.ThemesDeploymentStep.Thumbnail"
 msgid "Themes"
-msgstr "Šablony"
+msgstr "Motivy"
 
 #. <p>@T["Exports the currently selected site theme and admin theme."]</p>
 #: OrchardCore.Themes\Views\Items\ThemesDeploymentStep.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Themes.Views.Items.ThemesDeploymentStep.Thumbnail"
 msgid "Exports the currently selected site theme and admin theme."
-msgstr "Exportuje aktuálně vybranou šablonu stránky a administrace."
+msgstr "Exportuje aktuálně vybraný motiv stránky a administrace."
 

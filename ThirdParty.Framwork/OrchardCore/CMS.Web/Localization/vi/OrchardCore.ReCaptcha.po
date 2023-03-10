@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: vi\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.ReCaptcha.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.ReCaptcha.pot\n"
+"X-Crowdin-File-ID: 798\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2020-03-31 13:59\n"
+"PO-Revision-Date: 2021-10-07 22:43\n"
 
 #. .Add(S["Security"], security => security
 #: OrchardCore.ReCaptcha\AdminMenu.cs:26
@@ -22,13 +24,25 @@ msgctxt "OrchardCore.ReCaptcha.AdminMenu"
 msgid "Settings"
 msgstr "Cài đặt"
 
-#. .Add(S["reCaptcha"], S["reCaptcha"], registration => registration
-#. .Add(S["reCaptcha"], S["reCaptcha"], registration => registration
+#. .Add(S["reCaptcha"], S["reCaptcha"].PrefixPosition(), registration => registration
+#. .Add(S["reCaptcha"], S["reCaptcha"].PrefixPosition(), registration => registration
 #: OrchardCore.ReCaptcha\AdminMenu.cs:28
 #: OrchardCore.ReCaptcha\AdminMenu.cs:28
 msgctxt "OrchardCore.ReCaptcha.AdminMenu"
 msgid "reCaptcha"
-msgstr "reCaptcha"
+msgstr ""
+
+#. services.AddSiteSettingsPropertyDeploymentStep<ReCaptchaSettings, DeploymentStartup>(S => S["ReCaptcha settings"], S => S["Exports the ReCaptcha settings."]);
+#: OrchardCore.ReCaptcha\Startup.cs:34
+msgctxt "OrchardCore.ReCaptcha.DeploymentStartup"
+msgid "ReCaptcha settings"
+msgstr ""
+
+#. services.AddSiteSettingsPropertyDeploymentStep<ReCaptchaSettings, DeploymentStartup>(S => S["ReCaptcha settings"], S => S["Exports the ReCaptcha settings."]);
+#: OrchardCore.ReCaptcha\Startup.cs:34
+msgctxt "OrchardCore.ReCaptcha.DeploymentStartup"
+msgid "Exports the ReCaptcha settings."
+msgstr ""
 
 #. public override LocalizedString DisplayText => S["Validate ReCaptcha Task"];
 #: OrchardCore.ReCaptcha\Workflows\ValidateReCaptchaTask.cs:31
@@ -76,7 +90,7 @@ msgstr "Trang web hiện tại sẽ được tải lại sau khi các cài đặ
 #: OrchardCore.ReCaptcha\Views\ReCaptchaSettings.Edit.cshtml:6
 msgctxt "OrchardCore.ReCaptcha.Views.ReCaptchaSettings.Edit"
 msgid "Site Key"
-msgstr "Site Key"
+msgstr ""
 
 #. <span class="hint">@T["Your Google's reCaptcha Site Key."]</span>
 #: OrchardCore.ReCaptcha\Views\ReCaptchaSettings.Edit.cshtml:9
@@ -118,13 +132,13 @@ msgctxt "OrchardCore.ReCaptcha.Views.Items.ReCaptchaPart.Fields.Edit"
 msgid "<a {0}>ReCaptcha settings</a> are not configured. The captcha will not be displayed."
 msgstr "<a {0}>Cài đặt ReCaptcha</a> không được cấu hình. Các hình ảnh xác thực sẽ không được hiển thị."
 
-#. <h4><i class="fa fa-shield-alt"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate ReCaptcha"])</h4>
+#. <h4><i class="fa fa-shield-alt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate ReCaptcha"])</h4>
 #: OrchardCore.ReCaptcha\Views\Items\ValidateReCaptchaTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.ReCaptcha.Views.Items.ValidateReCaptchaTask.Fields.Design"
 msgid "Validate ReCaptcha"
 msgstr "Xác thực ReCaptcha"
 
-#. <h4 class="card-title"><i class="fa fa-shield-alt"></i>@T["Validate ReCaptcha"]</h4>
+#. <h4 class="card-title"><i class="fa fa-shield-alt" aria-hidden="true"></i>@T["Validate ReCaptcha"]</h4>
 #: OrchardCore.ReCaptcha\Views\Items\ValidateReCaptchaTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.ReCaptcha.Views.Items.ValidateReCaptchaTask.Fields.Thumbnail"
 msgid "Validate ReCaptcha"

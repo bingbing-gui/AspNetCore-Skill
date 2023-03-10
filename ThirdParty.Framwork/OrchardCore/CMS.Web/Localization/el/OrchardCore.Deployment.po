@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: el\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.Deployment.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.Deployment.pot\n"
+"X-Crowdin-File-ID: 730\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2020-06-02 14:55\n"
+"PO-Revision-Date: 2022-10-11 20:05\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Deployment\AdminMenu.cs:25
@@ -40,73 +42,107 @@ msgctxt "OrchardCore.Deployment.AdminMenu"
 msgid "Package Import"
 msgstr "Εισαγωγή Πακέτου"
 
-#. new SelectListItem() { Text = S["Delete"], Value = nameof(DeploymentPlansBulkAction.Delete) }
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:112
+#. .Add(S["JSON Import"], S["JSON Import"].PrefixPosition(), deployment => deployment
+#. .Add(S["JSON Import"], S["JSON Import"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Deployment\AdminMenu.cs:37
+#: OrchardCore.Deployment\AdminMenu.cs:37
+msgctxt "OrchardCore.Deployment.AdminMenu"
+msgid "JSON Import"
+msgstr "Εισαγωγή JSON"
+
+#. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Delete) }
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:106
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#. _notifier.Success(H["Deployment plan {0} successfully deleted.", item.Name]);
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:143
+#. await _notifier.SuccessAsync(H["Deployment plans successfully deleted."]);
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:142
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
-msgid "Deployment plan {0} successfully deleted."
-msgstr ""
+msgid "Deployment plans successfully deleted."
+msgstr "Τα σχέδια ανάπτυξης διαγράφηκαν με επιτυχία."
 
 #. ModelState.AddModelError(nameof(CreateDeploymentPlanViewModel.Name), S["The name is mandatory."]);
 #. ModelState.AddModelError(nameof(EditDeploymentPlanViewModel.Name), S["The name is mandatory."]);
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:219
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:278
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:217
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:282
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "The name is mandatory."
 msgstr "Το όνομα είναι υποχρεωτικό."
 
-#. _notifier.Success(H["Deployment plan updated successfully"]);
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:288
+#. ModelState.AddModelError(nameof(CreateDeploymentPlanViewModel.Name), S["A deployment plan with the same name already exists."]);
+#. ModelState.AddModelError(nameof(CreateDeploymentPlanViewModel.Name), S["A deployment plan with the same name already exists."]);
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:223
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:289
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
-msgid "Deployment plan updated successfully"
-msgstr "Το σχέδιο ανάπτυξης ενημερώθηκε με επιτυχία"
+msgid "A deployment plan with the same name already exists."
+msgstr "Υπάρχει ήδη ένα σχέδιο ανάπτυξης με το ίδιο όνομα."
 
-#. _notifier.Success(H["Deployment plan deleted successfully"]);
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:314
+#. await _notifier.SuccessAsync(H["Deployment plan updated successfully."]);
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:300
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
-msgid "Deployment plan deleted successfully"
-msgstr "Το σχέδιο ανάπτυξης διαγράφηκε επιτυχώς"
+msgid "Deployment plan updated successfully."
+msgstr "Το σχέδιο ανάπτυξης ενημερώθηκε με επιτυχία."
 
-#. _notifier.Success(H["Deployment package imported"]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:80
+#. await _notifier.SuccessAsync(H["Deployment plan deleted successfully."]);
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:326
+msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
+msgid "Deployment plan deleted successfully."
+msgstr "Το σχέδιο ανάπτυξης διαγράφηκε με επιτυχία."
+
+#. await _notifier.ErrorAsync(H["Only zip or json files are supported."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:84
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
-msgid "Deployment package imported"
-msgstr "Το πακέτο ανάπτυξης εισήχθη"
+msgid "Only zip or json files are supported."
+msgstr "Υποστηρίζονται μόνο αρχεία zip ή json."
 
-#. _notifier.Error(H["Please add a file to import."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:97
+#. await _notifier.SuccessAsync(H["Deployment package imported."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:91
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "Deployment package imported."
+msgstr "Το πακέτο ανάπτυξης εισήχθη."
+
+#. await _notifier.ErrorAsync(H["Please add a file to import."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:108
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Please add a file to import."
-msgstr ""
+msgstr "Επιλέξτε ένα αρχείο για εισαγωγή."
 
-#. _notifier.Success(H["Deployment plan step added successfully"]);
-#: OrchardCore.Deployment\Controllers\StepController.cs:121
+#. ModelState.AddModelError(nameof(model.Json), S["The recipe is written in an incorrect json format."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:134
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "The recipe is written in an incorrect json format."
+msgstr "Η συνταγή είναι γραμμένη σε λανθασμένη μορφή json."
+
+#. await _notifier.SuccessAsync(H["Recipe imported."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:148
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "Recipe imported."
+msgstr "Η συνταγή εισήχθη."
+
+#. await _notifier.SuccessAsync(H["Deployment plan step added successfully."]);
+#: OrchardCore.Deployment\Controllers\StepController.cs:117
 msgctxt "OrchardCore.Deployment.Controllers.StepController"
-msgid "Deployment plan step added successfully"
-msgstr "Το βήμα του σχεδίου ανάπτυξης προστέθηκε με επιτυχία"
+msgid "Deployment plan step added successfully."
+msgstr "Το βήμα του σχεδίου ανάπτυξης προστέθηκε με επιτυχία."
 
-#. _notifier.Success(H["Deployment plan step updated successfully"]);
+#. await _notifier.SuccessAsync(H["Deployment plan step updated successfully."]);
+#: OrchardCore.Deployment\Controllers\StepController.cs:190
+msgctxt "OrchardCore.Deployment.Controllers.StepController"
+msgid "Deployment plan step updated successfully."
+msgstr "Το βήμα του σχεδίου ανάπτυξης ενημερώθηκε με επιτυχία."
+
+#. await _notifier.ErrorAsync(H["The deployment plan step has validation errors."]);
 #: OrchardCore.Deployment\Controllers\StepController.cs:194
 msgctxt "OrchardCore.Deployment.Controllers.StepController"
-msgid "Deployment plan step updated successfully"
-msgstr "Το βήμα του σχεδίου ανάπτυξης ενημερώθηκε με επιτυχία"
+msgid "The deployment plan step has validation errors."
+msgstr "Το βήμα του σχεδίου ανάπτυξης έχει σφάλματα επικύρωσης."
 
-#. _notifier.Error(H["The deployment plan step has validation errors"]);
-#: OrchardCore.Deployment\Controllers\StepController.cs:198
+#. await _notifier.SuccessAsync(H["Deployment step deleted successfully."]);
+#: OrchardCore.Deployment\Controllers\StepController.cs:226
 msgctxt "OrchardCore.Deployment.Controllers.StepController"
-msgid "The deployment plan step has validation errors"
-msgstr "Το βήμα του σχεδίου εγκατάστασης έχει σφάλματα επικύρωσης"
-
-#. _notifier.Success(H["Deployment step deleted successfully"]);
-#: OrchardCore.Deployment\Controllers\StepController.cs:230
-msgctxt "OrchardCore.Deployment.Controllers.StepController"
-msgid "Deployment step deleted successfully"
-msgstr "Το βήμα ανάπτυξης διαγράφηκε επιτυχώς"
+msgid "Deployment step deleted successfully."
+msgstr "Το βήμα ανάπτυξης διαγράφηκε επιτυχώς."
 
 #. name: S["File Download"],
 #: OrchardCore.Deployment\Services\FileDownloadDeploymentTargetProvider.cs:22
@@ -120,13 +156,25 @@ msgctxt "OrchardCore.Deployment.FileDownloadDeploymentTargetProvider"
 msgid "Download a deployment plan locally."
 msgstr "Κάντε λήψη του σχεδίου ανάπτυξης."
 
+#. updater.ModelState.AddModelError(Prefix, nameof(JsonRecipeDeploymentStepViewModel.Json), S["The recipe must have a name property"]);
+#: OrchardCore.Deployment\Steps\JsonRecipeDeploymentStepDriver.cs:71
+msgctxt "OrchardCore.Deployment.Steps.JsonRecipeDeploymentStepDriver"
+msgid "The recipe must have a name property"
+msgstr "Η συνταγή πρέπει να έχει μια ιδιότητα ονόματος"
+
+#. updater.ModelState.AddModelError(Prefix, nameof(JsonRecipeDeploymentStepViewModel.Json), S["Invalid JSON supplied"]);
+#: OrchardCore.Deployment\Steps\JsonRecipeDeploymentStepDriver.cs:77
+msgctxt "OrchardCore.Deployment.Steps.JsonRecipeDeploymentStepDriver"
+msgid "Invalid JSON supplied"
+msgstr "Δόθηκε μη έγκυρο JSON"
+
 #. class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Deployment\Views\DeploymentStep.Summary.cshtml:9
 msgctxt "OrchardCore.Deployment.Views.DeploymentStep.Summary"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#. itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#. data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 #: OrchardCore.Deployment\Views\DeploymentStep.Summary.cshtml:16
 msgctxt "OrchardCore.Deployment.Views.DeploymentStep.Summary"
 msgid "Delete"
@@ -138,7 +186,7 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentStep.Thumbnail"
 msgid "Add"
 msgstr "Προσθήκη"
 
-#. <h1>@RenderTitleSegments(T["Create Deployment Plan"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Deployment Plan"])</h1></zone>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:3
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Create Deployment Plan"
@@ -150,83 +198,83 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Name"
 msgstr "Όνομα"
 
-#. <span asp-validation-for="Name" class="text-danger">@T["The name is required."]</span>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:10
-msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
-msgid "The name is required."
-msgstr "Πρέπει να συμπληρωθεί το όνομα."
-
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:14
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Create"
 msgstr "Δημιουργία"
 
-#. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:15
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#. <h1>@RenderTitleSegments(T["Deployment Plan"])</h1>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:6
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Deployment Plan"])</h1></zone>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:11
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Deployment Plan"
 msgstr "Σχέδιο Aνάπτυξης"
 
+#. <div class="d-none" id="stepOrderErrorMessage" data-message="@T["Error updating step order"]"></div>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:15
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
+msgid "Error updating step order"
+msgstr "Σφάλμα κατά την ενημέρωση της σειράς βημάτων"
+
 #. @T["Execute"]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:13
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:21
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Execute"
 msgstr "Εκτέλεση"
 
 #. @T["Add Step"]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:22
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:27
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Add Step"
 msgstr "Προσθήκη Βήματος"
 
 #. @T["<strong>Nothing here!</strong> There are no steps on this plan for the moment."]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:45
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:52
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "<strong>Nothing here!</strong> There are no steps on this plan for the moment."
 msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Δεν υπάρχουν βήματα σε αυτό το σχέδιο προς το παρόν."
 
-#. <h5 class="modal-title">@T["Available Steps"]</h5>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:55
+#. <h5 class="modal-title" id="available-steps-title">@T["Available Steps"]</h5>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:62
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Available Steps"
 msgstr "Διαθέσιμα Βήματα"
 
-#. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus>
-#. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:62
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:62
+#. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus />
+#. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus />
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:67
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:67
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Filter"
 msgstr "Φίλτρο"
 
-#. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:77
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:113
+#. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
+#. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:82
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:117
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#. <h5 class="modal-title">@T["Available Targets"]</h5>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:87
+#. <h5 class="modal-title" id="available-targets-title">@T["Available Targets"]</h5>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:92
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Available Targets"
 msgstr "Διαθέσιμοι Στόχοι"
 
-#. <a class="btn btn-primary btn-sm" href="@Url.RouteUrl(routeWithId)" itemprop="UnsafeUrl">@T["Select"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:105
+#. <a class="btn btn-primary btn-sm" href="@Url.RouteUrl(routeWithId)" data-url-af="UnsafeUrl">@T["Select"]</a>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:109
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Select"
 msgstr "Επιλογή"
 
-#. <h1>@RenderTitleSegments(T["Edit Deployment Plan"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Deployment Plan"])</h1></zone>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:3
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Edit Deployment Plan"
@@ -238,50 +286,44 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Name"
 msgstr "Όνομα"
 
-#. <span asp-validation-for="Name" class="text-danger">@T["The name is required."]</span>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:11
-msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
-msgid "The name is required."
-msgstr "Πρέπει να συμπληρωθεί το όνομα."
-
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:15
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:16
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#. <h1>@RenderTitleSegments(T["Deployment Plans"])</h1>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:9
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Deployment Plans"])</h1></zone>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:8
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Deployment Plans"
 msgstr "Σχέδια Aνάπτυξης"
 
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:19
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:21
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add Deployment Plan"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:24
+#. <a asp-route-action="Create" class="btn btn-secondary create" role="button">@T["Add Deployment Plan"]</a>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:25
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Add Deployment Plan"
 msgstr "Προσθήκη Σχεδίου Ανάπτυξης"
 
-#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:35
+#. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:38
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Select All"
 msgstr "Επιλογή Όλων"
 
 #. <label id="items" for="select-all">@T.Plural(Model.DeploymentPlans.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:36
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:39
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "1 item"
 msgid_plural "{0} items"
@@ -289,13 +331,13 @@ msgstr[0] "1 αντικείμενο"
 msgstr[1] "{0} αντικείμενα"
 
 #. <label id="items" for="select-all">@T.Plural(Model.DeploymentPlans.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:36
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:39
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Items {0} to {1}"
 msgstr "Αντικειμένα {0} έως {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.DeploymentPlans.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:36
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:39
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
@@ -303,58 +345,82 @@ msgstr[0] " / {0} αντικείμενο συνολικά"
 msgstr[1] " / {0} αντικείμενα συνολικά"
 
 #. @T["Actions"]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:43
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:46
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Actions"
 msgstr "Ενέργειες"
 
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:48
+#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:51
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Bulk Action"
 msgstr "Μαζική Ενέργεια"
 
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:48
+#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:51
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr "Είσαι βέβαιος(α) ότι θέλεις να {0} αυτό(ά) τα στοιχεία;"
+msgstr "Είστε βέβαιοι ότι θέλετε να {0} αυτά τα στοιχεία;"
+
+#. <a asp-action="Display" asp-route-id="@entry.DeploymentPlan.Id" class="btn btn-info btn-sm">@T["Manage Steps"]</a>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:64
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "Manage Steps"
+msgstr ""
 
 #. <a asp-action="Edit" asp-route-id="@entry.DeploymentPlan.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:63
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:65
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#. <a asp-action="Delete" asp-route-id="@entry.DeploymentPlan.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:64
+#. <a asp-action="Delete" asp-route-id="@entry.DeploymentPlan.Id" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:66
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#. @T["<strong>Nothing here!</strong> There are no deployment plans for the moment."]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:79
+#. @T["<strong>Nothing here!</strong> There are no deployment plans at the moment."]
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:81
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
-msgid "<strong>Nothing here!</strong> There are no deployment plans for the moment."
-msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Δεν υπάρχουν προς το παρόν σχέδια ανάπτυξης."
+msgid "<strong>Nothing here!</strong> There are no deployment plans at the moment."
+msgstr ""
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:134
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:145
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:138
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:149
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "selected"
 msgstr "επιλεγμένα"
 
-#. <h1>@RenderTitleSegments(T["Import Deployment Package"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Import Deployment Package"])</h1></zone>
 #: OrchardCore.Deployment\Views\Import\Index.cshtml:1
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Import Deployment Package"
 msgstr "Εισαγωγή Πακέτου Ανάπτυξης"
 
-#. <button class="btn btn-primary" type="submit">@T["Import"]</button>
+#. <label for="file" class="form-label">@T["Select a file"]</label>
 #: OrchardCore.Deployment\Views\Import\Index.cshtml:8
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
+msgid "Select a file"
+msgstr ""
+
+#. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
+#: OrchardCore.Deployment\Views\Import\Index.cshtml:11
+msgctxt "OrchardCore.Deployment.Views.Import.Index"
+msgid "Import"
+msgstr "Εισαγωγή"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["JSON Import"])</h1></zone>
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:2
+msgctxt "OrchardCore.Deployment.Views.Import.Json"
+msgid "JSON Import"
+msgstr "Εισαγωγή JSON"
+
+#. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:15
+msgctxt "OrchardCore.Deployment.Views.Import.Json"
 msgid "Import"
 msgstr "Εισαγωγή"
 
@@ -436,13 +502,13 @@ msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.
 msgid "Deployment Plans"
 msgstr "Σχέδια Aνάπτυξης"
 
-#. <span class="badge badge-success">@T["All"]</span>
+#. <span class="badge bg-success">@T["All"]</span>
 #: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Summary.cshtml:15
 msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Summary"
 msgid "All"
 msgstr "Όλα"
 
-#. <span class="badge badge-warning">@T["No deployment plan selected."]</span>
+#. <span class="badge bg-warning">@T["No deployment plan selected."]</span>
 #: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Summary.cshtml:26
 msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Summary"
 msgid "No deployment plan selected."
@@ -459,6 +525,42 @@ msgstr "Σχέδια Aνάπτυξης"
 msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Thumbnail"
 msgid "Exports all or specified deployment plans."
 msgstr "Εξάγει όλα ή συγκεκριμένα σχέδια ανάπτυξης."
+
+#. <h5>@T["JSON Recipe"]</h5>
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:3
+msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Edit"
+msgid "JSON Recipe"
+msgstr "Συνταγή JSON"
+
+#. <label asp-for="Json">@T["Recipe"]</label>
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:8
+msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Edit"
+msgid "Recipe"
+msgstr "Συνταγή"
+
+#. <span class="hint">@T["The json recipe."]</span>
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:13
+msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Edit"
+msgid "The json recipe."
+msgstr "Η συνταγή json."
+
+#. <h5>@T["JSON Recipe"]</h5>
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Summary.cshtml:3
+msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Summary"
+msgid "JSON Recipe"
+msgstr "Συνταγή JSON"
+
+#. <h4 class="card-title">@T["JSON Recipe"]</h4>
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Thumbnail"
+msgid "JSON Recipe"
+msgstr "Συνταγή JSON"
+
+#. <p>@T["Exports a JSON Recipe."]</p>
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Thumbnail"
+msgid "Exports a JSON Recipe."
+msgstr "Εξάγει μια συνταγή JSON."
 
 #. <h5>@T["Recipe File"]</h5>
 #: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:3
@@ -568,7 +670,7 @@ msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit
 msgid "The recipe tags (comma separated values)."
 msgstr "Οι ετικέτες της συνταγής (τιμές διαχωρισμένες με κόμμα)."
 
-#. <label class="custom-control-label" asp-for="IsSetupRecipe">@T["Setup recipe"]</label>
+#. <label class="form-check-label" asp-for="IsSetupRecipe">@T["Setup recipe"]</label>
 #: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:72
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Setup recipe"
@@ -598,44 +700,44 @@ msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Thum
 msgid "Exports a recipe file."
 msgstr "Εξάγει ένα αρχείο συνταγών."
 
-#. <h1>@RenderTitleSegments(T["Create Step"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Step"])</h1></zone>
 #: OrchardCore.Deployment\Views\Step\Create.cshtml:3
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
 msgid "Create Step"
 msgstr "Δημιουργία Βήματος"
 
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 #: OrchardCore.Deployment\Views\Step\Create.cshtml:14
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
 msgid "Create"
 msgstr "Δημιουργία"
 
-#. <a class="btn btn-secondary" asp-route-action="Display" asp-route-controller="DeploymentPlan" asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Display" asp-route-controller="DeploymentPlan" asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
 #: OrchardCore.Deployment\Views\Step\Create.cshtml:15
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#. <h1>@RenderTitleSegments(T["Edit Step"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Step"])</h1></zone>
 #: OrchardCore.Deployment\Views\Step\Edit.cshtml:3
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Edit Step"
 msgstr "Επεξεργασία Βήματος"
 
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.Deployment\Views\Step\Edit.cshtml:14
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#. itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:21
+#. data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:22
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Delete"
 msgstr "Διαγραφή"
 
 #. asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:26
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:28
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Cancel"
 msgstr "Άκυρο"

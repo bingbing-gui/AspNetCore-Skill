@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: el\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.ReverseProxy.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.ReverseProxy.pot\n"
+"X-Crowdin-File-ID: 802\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2020-01-16 16:07\n"
+"PO-Revision-Date: 2022-05-03 08:27\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.ReverseProxy\AdminMenu.cs:22
@@ -22,13 +24,31 @@ msgctxt "OrchardCore.ReverseProxy.AdminMenu"
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#. .Add(S["Reverse Proxy"], S["Reverse Proxy"], entry => entry
-#. .Add(S["Reverse Proxy"], S["Reverse Proxy"], entry => entry
+#. .Add(S["Reverse Proxy"], S["Reverse Proxy"].PrefixPosition(), entry => entry
+#. .Add(S["Reverse Proxy"], S["Reverse Proxy"].PrefixPosition(), entry => entry
 #: OrchardCore.ReverseProxy\AdminMenu.cs:24
 #: OrchardCore.ReverseProxy\AdminMenu.cs:24
 msgctxt "OrchardCore.ReverseProxy.AdminMenu"
 msgid "Reverse Proxy"
 msgstr "Αντιστροφή μεσολάβησης"
+
+#. services.AddSiteSettingsPropertyDeploymentStep<ReverseProxySettings, DeploymentStartup>(S => S["Reverse Proxy settings"], S => S["Exports the Reverse Proxy settings."]);
+#: OrchardCore.ReverseProxy\Startup.cs:47
+msgctxt "OrchardCore.ReverseProxy.DeploymentStartup"
+msgid "Reverse Proxy settings"
+msgstr ""
+
+#. services.AddSiteSettingsPropertyDeploymentStep<ReverseProxySettings, DeploymentStartup>(S => S["Reverse Proxy settings"], S => S["Exports the Reverse Proxy settings."]);
+#: OrchardCore.ReverseProxy\Startup.cs:47
+msgctxt "OrchardCore.ReverseProxy.DeploymentStartup"
+msgid "Exports the Reverse Proxy settings."
+msgstr ""
+
+#. <span class="icon"><i class="fa fa-sync" aria-hidden="true"></i></span><span class="title">@T["Reverse Proxy"]</span>
+#: OrchardCore.ReverseProxy\Views\NavigationItemText-reverseproxy.Id.cshtml:1
+msgctxt "OrchardCore.ReverseProxy.Views.NavigationItemText-reverseproxy.Id"
+msgid "Reverse Proxy"
+msgstr ""
 
 #. @T["The current tenant will be reloaded when the settings are saved."]
 #: OrchardCore.ReverseProxy\Views\ReverseProxySettings.Edit.cshtml:4

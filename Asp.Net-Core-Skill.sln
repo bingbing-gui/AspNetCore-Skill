@@ -278,7 +278,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity", "AspNetCore.Iden
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFrameworkCore", "EntityFrameworkCore", "{F0FA7506-5C98-4485-B12C-28228C2E6AB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.EFCore", "EntityFrameworkCore\App.EFCore\App.EFCore.csproj", "{A07B329B-D58E-4A6A-B4BC-47BCAAB90D9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.EFCore", "EntityFrameworkCore\App.EFCore\App.EFCore.csproj", "{A07B329B-D58E-4A6A-B4BC-47BCAAB90D9A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.IdentityJWT.API", "SecurityIdentity\AspNetCore.Authentication\AspNetCore.IdentityJWT.API\AspNetCore.IdentityJWT.API.csproj", "{85F9E6A2-B115-46B4-8D7E-0A489E4B91C1}"
 EndProject

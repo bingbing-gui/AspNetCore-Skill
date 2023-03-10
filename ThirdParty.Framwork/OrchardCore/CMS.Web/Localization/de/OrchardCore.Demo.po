@@ -2,19 +2,21 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.Demo.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.Demo.pot\n"
+"X-Crowdin-File-ID: 726\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2020-06-04 18:14\n"
+"PO-Revision-Date: 2021-07-15 18:38\n"
 
 #. .Add(S["Demo"], "10", demo => demo
 #: OrchardCore.Demo\AdminMenu.cs:25
 msgctxt "OrchardCore.Demo.AdminMenu"
 msgid "Demo"
-msgstr "Demo"
+msgstr ""
 
 #. .Add(S["This Menu Item 1"], "0", item => item
 #: OrchardCore.Demo\AdminMenu.cs:27
@@ -78,13 +80,13 @@ msgstr "Das ist Menüpunkt 3.1"
 #: OrchardCore.Demo\AdminMenu.cs:50
 msgctxt "OrchardCore.Demo.AdminMenu"
 msgid "Todo (Liquid - Frontend)"
-msgstr "Todo (Liquid - Frontend)"
+msgstr ""
 
 #. <span class="icon"><i class="fa fa-hashtag" aria-hidden="true"></i></span><span class="title">@T["Demo"]</span>
 #: OrchardCore.Demo\Views\NavigationItemText-demo.Id.cshtml:1
 msgctxt "OrchardCore.Demo.Views.NavigationItemText-demo.Id"
 msgid "Demo"
-msgstr "Demo"
+msgstr ""
 
 #. <label asp-for="FirstName">@T["First Name"]</label>
 #. <input asp-for="FirstName" type="text" class="form-control" placeholder="@T["First Name"]" />
@@ -110,7 +112,7 @@ msgctxt "OrchardCore.Demo.Views.UserProfile.Edit"
 msgid "Age"
 msgstr "Alter"
 
-#. <h1>@RenderTitleSegments(T["Edit {0}", (string)Model.ContentItem.ContentType])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", (string)Model.ContentItem.ContentType])</h1></zone>
 #: OrchardCore.Demo\Views\Content\Edit.cshtml:2
 msgctxt "OrchardCore.Demo.Views.Content.Edit"
 msgid "Edit {0}"

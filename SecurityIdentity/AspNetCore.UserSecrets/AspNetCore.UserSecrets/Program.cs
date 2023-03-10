@@ -3,7 +3,8 @@ using System.Data.SqlClient;
 var builder = WebApplication.CreateBuilder(args);
 
 var conStrBuilder = new SqlConnectionStringBuilder(
-        builder.Configuration.GetConnectionString("Movies"));
+        builder.Configuration.GetConnectionString("Movies")
+        );
 conStrBuilder.Password = builder.Configuration["DbPassword"];
 var connection = conStrBuilder.ConnectionString;
 

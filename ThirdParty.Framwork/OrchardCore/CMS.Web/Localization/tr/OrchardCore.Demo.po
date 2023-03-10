@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: tr\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.Demo.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.Demo.pot\n"
+"X-Crowdin-File-ID: 726\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2020-05-10 20:49\n"
+"PO-Revision-Date: 2022-03-24 15:52\n"
 
 #. .Add(S["Demo"], "10", demo => demo
 #: OrchardCore.Demo\AdminMenu.cs:25
@@ -78,7 +80,7 @@ msgstr "Bu Menü Öğesi 3.1"
 #: OrchardCore.Demo\AdminMenu.cs:50
 msgctxt "OrchardCore.Demo.AdminMenu"
 msgid "Todo (Liquid - Frontend)"
-msgstr ""
+msgstr "Todo (Liquid - Frontend)"
 
 #. <span class="icon"><i class="fa fa-hashtag" aria-hidden="true"></i></span><span class="title">@T["Demo"]</span>
 #: OrchardCore.Demo\Views\NavigationItemText-demo.Id.cshtml:1
@@ -92,7 +94,7 @@ msgstr "Demo"
 #: OrchardCore.Demo\Views\UserProfile.Edit.cshtml:5
 msgctxt "OrchardCore.Demo.Views.UserProfile.Edit"
 msgid "First Name"
-msgstr ""
+msgstr "Ad"
 
 #. <label asp-for="LastName">@T["Last Name"]</label>
 #. <input asp-for="LastName" type="text" class="form-control" placeholder="@T["Last Name"]" />
@@ -100,7 +102,7 @@ msgstr ""
 #: OrchardCore.Demo\Views\UserProfile.Edit.cshtml:10
 msgctxt "OrchardCore.Demo.Views.UserProfile.Edit"
 msgid "Last Name"
-msgstr ""
+msgstr "Soyad"
 
 #. <label asp-for="Age">@T["Age"]</label>
 #. <input asp-for="Age" type="text" class="form-control" placeholder="@T["Age"]" />
@@ -110,7 +112,7 @@ msgctxt "OrchardCore.Demo.Views.UserProfile.Edit"
 msgid "Age"
 msgstr "Yaş"
 
-#. <h1>@RenderTitleSegments(T["Edit {0}", (string)Model.ContentItem.ContentType])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", (string)Model.ContentItem.ContentType])</h1></zone>
 #: OrchardCore.Demo\Views\Content\Edit.cshtml:2
 msgctxt "OrchardCore.Demo.Views.Content.Edit"
 msgid "Edit {0}"

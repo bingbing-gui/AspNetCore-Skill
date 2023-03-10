@@ -2,25 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.Alias.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.Alias.pot\n"
+"X-Crowdin-File-ID: 700\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2020-06-04 17:44\n"
-
-#. updater.ModelState.AddModelError(Prefix, nameof(alias.Alias), S["Your alias is too long. The alias can only be up to {0} characters.", MaxAliasLength]);
-#: OrchardCore.Alias\Drivers\AliasPartDisplayDriver.cs:58
-msgctxt "OrchardCore.Alias.Drivers.AliasPartDisplayDriver"
-msgid "Your alias is too long. The alias can only be up to {0} characters."
-msgstr "Dein Alias ist zu lang. Der Alias kann nur bis zu {0} Zeichen lang sein."
-
-#. updater.ModelState.AddModelError(Prefix, nameof(alias.Alias), S["Your alias is already in use."]);
-#: OrchardCore.Alias\Drivers\AliasPartDisplayDriver.cs:63
-msgctxt "OrchardCore.Alias.Drivers.AliasPartDisplayDriver"
-msgid "Your alias is already in use."
-msgstr "Dein Alias wird bereits verwendet."
+"PO-Revision-Date: 2022-09-28 07:06\n"
 
 #. Description = S["the alias part of the content item"];
 #: OrchardCore.Alias\GraphQL\AliasInputObjectType.cs:13
@@ -40,20 +30,20 @@ msgctxt "OrchardCore.Alias.GraphQL.AliasQueryObjectType"
 msgid "Alternative path for the content item"
 msgstr "Alternativer Pfad für das Inhaltselement"
 
-#. context.Fail(S["Your alias is too long. The alias can only be up to {0} characters.", AliasPartDisplayDriver.MaxAliasLength]);
-#: OrchardCore.Alias\Handlers\AliasPartHandler.cs:52
-msgctxt "OrchardCore.Alias.Handlers.AliasPartHandler"
+#. yield return new ValidationResult(S["Your alias is too long. The alias can only be up to {0} characters.", AliasPart.MaxAliasLength], new string[] { nameof(part.Alias) });
+#: OrchardCore.Alias\Models\AliasPartExtensions.cs:18
+msgctxt "OrchardCore.Alias.Models.AliasPartExtensions"
 msgid "Your alias is too long. The alias can only be up to {0} characters."
 msgstr "Dein Alias ist zu lang. Der Alias kann nur bis zu {0} Zeichen lang sein."
 
-#. context.Fail(S["Your alias is already in use."]);
-#: OrchardCore.Alias\Handlers\AliasPartHandler.cs:57
-msgctxt "OrchardCore.Alias.Handlers.AliasPartHandler"
+#. yield return new ValidationResult(S["Your alias is already in use."], new[] { nameof(part.Alias) });
+#: OrchardCore.Alias\Models\AliasPartExtensions.cs:23
+msgctxt "OrchardCore.Alias.Models.AliasPartExtensions"
 msgid "Your alias is already in use."
 msgstr "Dein Alias wird bereits verwendet."
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
-#: OrchardCore.Alias\Settings\AliasPartSettingsDisplayDriver.cs:54
+#: OrchardCore.Alias\Settings\AliasPartSettingsDisplayDriver.cs:43
 msgctxt "OrchardCore.Alias.Settings.AliasPartSettingsDisplayDriver"
 msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Muster enthält keinen gültigen Liquid-Ausdruck. Details: {0}"
@@ -82,31 +72,31 @@ msgid "Standard"
 msgstr "Standard"
 
 #. <label asp-for="Options">@T["Options"]</label>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:14
+#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "Options"
 msgstr "Optionen"
 
 #. <option value="@AliasPartOptions.Editable" selected="@(Model.Options == AliasPartOptions.Editable)">@T["Alias is editable"]</option>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:16
+#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "Alias is editable"
 msgstr "Alias ist editierbar"
 
 #. <option value="@AliasPartOptions.GeneratedDisabled" selected="@(Model.Options == AliasPartOptions.GeneratedDisabled)">@T["Alias is generated and input is disabled"]</option>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:17
+#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:18
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "Alias is generated and input is disabled"
 msgstr "Alias ist generiert und Eingabe ist deaktiviert"
 
 #. <label asp-for="Pattern">@T["Pattern"]</label>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:23
+#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "Pattern"
 msgstr "Muster"
 
 #. <span class="hint">@T["The pattern used to render the alias of this content type."]</span>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:25
+#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:26
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "The pattern used to render the alias of this content type."
 msgstr "Das Muster, das verwendet wird, um den Alias dieses Inhaltstyps zu rendern."

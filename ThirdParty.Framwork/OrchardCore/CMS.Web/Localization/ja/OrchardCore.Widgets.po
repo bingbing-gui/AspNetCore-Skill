@@ -2,49 +2,57 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /dev/Localization/OrchardCore.Widgets.pot\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.Widgets.pot\n"
+"X-Crowdin-File-ID: 840\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-03-31 14:23\n"
+"PO-Revision-Date: 2022-10-11 20:34\n"
 
-#. <button type="button" title="@T["Insert Widget"]" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-#: OrchardCore.Widgets\Views\ContentCard-WidgetsListPart.Edit.cshtml:22
+#. <button type="button" title="@T["Insert Widget"]" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+#: OrchardCore.Widgets\Views\ContentCard-WidgetsListPart.Edit.cshtml:24
 msgctxt "OrchardCore.Widgets.Views.ContentCard-WidgetsListPart.Edit"
 msgid "Insert Widget"
-msgstr ""
+msgstr "ウィジェットの挿入"
 
 #. <button type="button" class="btn btn-danger widget-list-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Widgets\Views\ContentCard-WidgetsListPart.Edit.cshtml:46
+#: OrchardCore.Widgets\Views\ContentCard-WidgetsListPart.Edit.cshtml:53
 msgctxt "OrchardCore.Widgets.Views.ContentCard-WidgetsListPart.Edit"
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #. <button type="button" class="btn btn-danger widget-list-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Widgets\Views\ContentCard-WidgetsListPart.Edit.cshtml:46
+#: OrchardCore.Widgets\Views\ContentCard-WidgetsListPart.Edit.cshtml:53
 msgctxt "OrchardCore.Widgets.Views.ContentCard-WidgetsListPart.Edit"
 msgid "Are you sure you want to remove this item?"
-msgstr ""
+msgstr "この項目を削除しますか？"
 
 #. <span data-content-type-display-text="@contentTypeDisplayText" class="widget-editor-header-text">@T["{0} {1}", contentItemDisplayText, contentTypeDisplayText]</span>
 #: OrchardCore.Widgets\Views\ContentCard.Preview.cshtml:16
 msgctxt "OrchardCore.Widgets.Views.ContentCard.Preview"
 msgid "{0} {1}"
-msgstr ""
+msgstr "{0} {1}"
 
-#. <a admin-for="@contentItem" asp-route-returnUrl="@FullRequestPath" /> - <small class="text-muted">@T["Widget"]</small>
-#: OrchardCore.Widgets\Views\Widget.SummaryAdmin.cshtml:13
+#. <span>@T["Actions"]</span>
+#: OrchardCore.Widgets\Views\Widget.SummaryAdmin.cshtml:60
 msgctxt "OrchardCore.Widgets.Views.Widget.SummaryAdmin"
-msgid "Widget"
-msgstr ""
+msgid "Actions"
+msgstr "操作"
 
-#. <button type="button" title="@T["Add Widget"]" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-#: OrchardCore.Widgets\Views\WidgetsListPart.Edit.cshtml:129
+#. <button type="button" title="@T["Add Widget"]" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+#: OrchardCore.Widgets\Views\WidgetsListPart.Edit.cshtml:134
 msgctxt "OrchardCore.Widgets.Views.WidgetsListPart.Edit"
 msgid "Add Widget"
 msgstr "ウィジェットの追加"
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
+#: OrchardCore.Widgets\Views\WidgetsListPart.Option.cshtml:4
+msgctxt "OrchardCore.Widgets.Views.WidgetsListPart.Option"
+msgid "Standard"
+msgstr ""
 
 #. <label asp-for="Zones">@T["Available widgets zones"]</label>
 #: OrchardCore.Widgets\Views\WidgetsPartSettings.Edit.cshtml:4
