@@ -1,0 +1,22 @@
+﻿@model TwoFactor
+@{
+    ViewData["Title"] = "输入授权码";
+}
+<div class="container">
+    <form asp-action="LoginTwoStep" method="post">
+        <div class="mb-3 row align-items-center">
+            <div class="col-sm-1">
+                <label asp-for="TwoFactorCode" class="control-label"></label>
+                <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+            </div>
+            <div class="col-sm-11">
+                <input asp-for="TwoFactorCode" class="form-control" value="@Model.TwoFactorCode" />
+            </div>
+        </div>
+        <div class="mb-3 row align-items-center">
+            <div class="col-sm-11 offset-sm-1">
+                <button class="btn btn-primary" type="submit">登录</button>
+            </div>
+        </div>
+    </form>
+</div>

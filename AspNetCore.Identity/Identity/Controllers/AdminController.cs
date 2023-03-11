@@ -36,6 +36,7 @@ namespace Identity.Controllers
                     UserName = user.Name,
                     Email = user.Email,
                     Age = user.Age,
+                    TwoFactorEnabled=true,
                     Country = user.Country,
                     Salary = user.Salary
                 };
@@ -48,8 +49,6 @@ namespace Identity.Controllers
             }
             return View(user);
         }
-
-
         public async Task<IActionResult> Update(string Id)
         {
             var appUser = await _userManager.FindByIdAsync(Id);

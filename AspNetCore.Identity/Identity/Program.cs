@@ -1,4 +1,5 @@
-﻿using Identity.CustomPolicy;
+﻿using Identity.CommonService;
+using Identity.CustomPolicy;
 using Identity.IdentityPolicy;
 using Identity.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -38,6 +39,9 @@ builder.Services.ConfigureApplicationCookie(
             opts.SlidingExpiration = true;
         }
     );
+
+builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.Configure<EmailSetting>(builder.Configuration.GetSection("EmailSetting"));
 
 #region 授权策略
 
