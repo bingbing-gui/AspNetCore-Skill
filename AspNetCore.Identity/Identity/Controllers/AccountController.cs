@@ -13,7 +13,7 @@ namespace Identity.Controllers
         private UserManager<AppUser> _userManager;
         private SignInManager<AppUser> _signInManager;
         private CommonService.IEmailService _emailService;
-        public AccountController(UserManager<AppUser> userManager, 
+        public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  CommonService.IEmailService emailService)
         {
@@ -46,10 +46,17 @@ namespace Identity.Controllers
                     {
                         return Redirect(login.ReturnUrl ?? "/");
                     }
-                    if (appUser.TwoFactorEnabled)
+                    var emailStatus = await _userManager.IsEmailConfirmedAsync(appUser);
+                    if (emailStatus == false)
                     {
-                        return RedirectToAction("LoginTwoStep", new { Email = appUser.Email, ReturnUrl = login.ReturnUrl });
+                        ModelState.AddModelError(nameof(login.Email), "Email为确认，请首先确认!");
                     }
+                    #region 启用2FA登录
+                    //if (appUser.TwoFactorEnabled)
+                    //{
+                    //    return RedirectToAction("LoginTwoStep", new { Email = appUser.Email, ReturnUrl = login.ReturnUrl });
+                    //}
+                    #endregion
                 }
                 ModelState.AddModelError(nameof(login.Email), "Login Failed: Invalid Email or password");
             }
