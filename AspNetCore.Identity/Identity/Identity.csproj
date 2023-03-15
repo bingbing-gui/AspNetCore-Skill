@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DB\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="DB\IdentityDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

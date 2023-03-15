@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NETCore.MailKit.Core;
+using System.ComponentModel.DataAnnotations;
 
 namespace Identity.Controllers
 {
@@ -100,6 +101,64 @@ namespace Identity.Controllers
             return RedirectToAction("Index", "Home");
         }
         public IActionResult AccessDenied()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> ForgotPassword([Required] string email)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(email);
+            }
+            var appUser = await _userManager.FindByEmailAsync(email);
+            if (appUser == null)
+            {
+                return RedirectToAction(nameof(ForgotPasswordConfirmation));
+            }
+            var token = await _userManager.GeneratePasswordResetTokenAsync(appUser);
+            var url = Url.Action("ResetPassword", "Account", new { Email = email, Token = token }, Request.Scheme);
+            _emailService.Send(appUser!.Email ?? "450190369@qq.com", "重置密码", $"{url}");
+            return RedirectToAction("ForgotPasswordConfirmation");
+        }
+        [AllowAnonymous]
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            var resetPassword = new ResetPassword() { Token = token, Email = email };
+            return View(resetPassword);
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> ResetPassword(ResetPassword resetPassword)
+        {
+            if (!ModelState.IsValid)
+                return View(resetPassword);
+            var appUser = await _userManager.FindByEmailAsync(resetPassword.Email);
+            if (appUser == null)
+                RedirectToAction("ResetPasswordConfirmation");
+            var resetPassResult = await _userManager.ResetPasswordAsync(appUser, resetPassword.Token, resetPassword.Password);
+            if (!resetPassResult.Succeeded)
+            {
+                foreach (var error in resetPassResult.Errors)
+                    ModelState.AddModelError(error.Code, error.Description);
+                return View();
+            }
+            return RedirectToAction("ResetPasswordConfirmation");
+        }
+
+        [AllowAnonymous]
+        public IActionResult ResetPasswordConfirmation()
         {
             return View();
         }

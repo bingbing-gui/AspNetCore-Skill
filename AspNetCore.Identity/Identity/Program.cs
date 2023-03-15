@@ -12,6 +12,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole>().
 AddEntityFrameworkStores<AppIdentityDbContext>().
 AddDefaultTokenProviders();
 
+builder.Services.Configure<DataProtectionTokenProviderOptions>(opts => opts.TokenLifespan = TimeSpan.FromHours(10));
+
 builder.Services.AddDbContext<AppIdentityDbContext>(
     options => options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"])
     );
@@ -48,7 +50,7 @@ builder.Services.Configure<EmailSetting>(builder.Configuration.GetSection("Email
 #region 授权策略
 
 builder.Services.AddTransient<IAuthorizationHandler, AllowUsersHandler>();
-builder.Services.AddTransient<IAuthorizationHandler,AllowPrivateHandler>();
+builder.Services.AddTransient<IAuthorizationHandler, AllowPrivateHandler>();
 builder.Services.AddAuthorization(authorizationOptions =>
 {
     authorizationOptions.AddPolicy("AspManager", authorizationPolicy =>
