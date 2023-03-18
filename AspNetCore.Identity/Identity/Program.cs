@@ -20,13 +20,24 @@ builder.Services.AddDbContext<AppIdentityDbContext>(
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    options.Password.RequiredLength = 8;
-    options.Password.RequireLowercase = true;
 
     options.User.RequireUniqueEmail = true;
     options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz";
-    //启用Email确认
+
+    #region 设置密码策略
+    options.Password.RequiredLength = 8;
+    options.Password.RequireLowercase = true;
+    #endregion
+    #region 启用Email确认
     options.SignIn.RequireConfirmedEmail = true;
+    #endregion
+
+    #region 设置用户登陆次数
+    options.Lockout.AllowedForNewUsers = true;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromHours(10);
+    options.Lockout.MaxFailedAccessAttempts = 3;
+    #endregion
+
 });
 
 builder.Services.ConfigureApplicationCookie(

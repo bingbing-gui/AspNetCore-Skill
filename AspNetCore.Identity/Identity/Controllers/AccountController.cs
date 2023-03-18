@@ -42,7 +42,7 @@ namespace Identity.Controllers
                 {
                     await _signInManager.SignOutAsync();
                     var signInResult = await _signInManager.PasswordSignInAsync(appUser, login.Password,
-                        login.RememberMe, false);
+                        login.RememberMe, true);
                     if (signInResult.Succeeded)
                     {
                         return Redirect(login.ReturnUrl ?? "/");
@@ -51,6 +51,10 @@ namespace Identity.Controllers
                     if (emailStatus == false)
                     {
                         ModelState.AddModelError(nameof(login.Email), "Email为确认，请首先确认!");
+                    }
+                    if (signInResult.IsLockedOut)
+                    {
+                        ModelState.AddModelError(nameof(signInResult.IsLockedOut), "用户被锁定，请10分钟之后再次尝试");
                     }
                     #region 启用2FA登录
                     //if (appUser.TwoFactorEnabled)

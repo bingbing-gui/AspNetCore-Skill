@@ -53,7 +53,7 @@ namespace AspNetCore.JWT.Practice
                 });
             services.AddAuthorization(config =>
             {
-                config.AddPolicy(Policies.Admin, Policies.AdminPolicy());
+                config.AddPolicy(Policies.Admin,Policies.AdminPolicy());
                 config.AddPolicy(Policies.User, Policies.UserPolicy());
             });
             //Register the Swagger generator, defining 1 or more Swagger documents
