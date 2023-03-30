@@ -36,7 +36,6 @@ app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     //通过ServiceProvider 获取依赖注入Service
-
     endpoints.ServiceProvider.GetService<ILogger<Program>>();
 
     //将API封装到特定类中

@@ -78,6 +78,7 @@ builder.Services.AddRazorPages();
 
 //一个接口映射到多个子类
 builder.Services.AddScoped<IMyDependency,MyDependency>();
+
 builder.Services.AddTransient<IOperationTransient,Operation>();
 builder.Services.AddScoped<IOperationScoped,Operation>();
 builder.Services.AddSingleton<IOperationSingleton,Operation>();

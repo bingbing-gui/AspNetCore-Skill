@@ -9,7 +9,6 @@ namespace AspNetCore6.DependencyInjection.Models
         {
             OperationId = Guid.NewGuid().ToString()[^4..];
         }
-
         public string OperationId { get; }
     }
     #endregion

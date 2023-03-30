@@ -7,6 +7,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<Service1>();
 builder.Services.AddSingleton<Service2>();
+
+
 var myKey = builder.Configuration["MyKey"];
 builder.Services.AddScoped<IService3>(sp => new Service3(myKey));
 
