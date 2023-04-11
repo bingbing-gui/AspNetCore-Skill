@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace EFCoreMigration.Migrations
+namespace EFCoreDbContext.Migrations
 {
     /// <inheritdoc />
-    public partial class migrations2 : Migration
+    public partial class migrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

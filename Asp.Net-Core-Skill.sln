@@ -284,9 +284,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreMigration", "EntityFr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Startup", "Fundamentals\01-AspNetCore.Startup\AspNetCore.Startup\AspNetCore.Startup.csproj", "{3E35C06E-1B78-4138-90AD-90C6F420DE49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.DependencyInjection", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.csproj", "{273F283E-8233-45AA-BD7C-D3DDE08F36A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.csproj", "{273F283E-8233-45AA-BD7C-D3DDE08F36A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.URLRouting", "Advanced\02-AspNetCore.RouteToCode\AspNetCore.URLRouting\AspNetCore.URLRouting.csproj", "{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.URLRouting", "Advanced\02-AspNetCore.RouteToCode\AspNetCore.URLRouting\AspNetCore.URLRouting.csproj", "{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreInsertRecords", "EntityFrameworkCore\EFCoreInsertRecords\EFCoreInsertRecords.csproj", "{0F9B5AC7-1C05-4769-9FE8-B539BB0CD6AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -654,6 +656,10 @@ Global
 		{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F9B5AC7-1C05-4769-9FE8-B539BB0CD6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F9B5AC7-1C05-4769-9FE8-B539BB0CD6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F9B5AC7-1C05-4769-9FE8-B539BB0CD6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F9B5AC7-1C05-4769-9FE8-B539BB0CD6AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -786,6 +792,7 @@ Global
 		{3E35C06E-1B78-4138-90AD-90C6F420DE49} = {130B405E-B50B-443E-A919-674CC9E7FA9D}
 		{273F283E-8233-45AA-BD7C-D3DDE08F36A6} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20} = {9B10ED09-6169-4292-BC39-74D5C3CE1649}
+		{0F9B5AC7-1C05-4769-9FE8-B539BB0CD6AF} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
