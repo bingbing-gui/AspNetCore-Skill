@@ -1,4 +1,4 @@
-﻿namespace EFCoreInsertRecords.Models
+﻿namespace EFCoreReadRecords.Models
 {
     public class Employee
     {
@@ -6,6 +6,6 @@
         public int DepartmentId { get; set; }
         public string Name { get; set; }
         public string Designation { get; set; }
-        public virtual Department Department { get; set; }
+        public Department Department { get; set; }
     }
 }

@@ -1,9 +1,10 @@
-﻿using EFCoreInsertRecords.Models;
+﻿
+using EFCoreReadRecords.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-namespace EFCoreInsertRecords.Controllers
+namespace EFCoreReadRecords.Controllers
 {
     public class EmployeeController : Controller
     {
@@ -14,18 +15,19 @@ namespace EFCoreInsertRecords.Controllers
         }
         public async Task<IActionResult> Index()
         {
+
             //var employee = context.Employee.Where(emp => emp.Name == "Matt")
             //                    .Include(s => s.Department)
             //                    .FirstOrDefault();
-
             //var emp = await context.Employee.Where(e => e.Name == "Matt")
             //    .FirstOrDefaultAsync();
             //await context.Entry(emp).Reference(s => s.Department).LoadAsync();
 
-            Employee emp = await context.Employee.Where(e => e.Name == "Matt")
-                            .FirstOrDefaultAsync();
-            string deptName = emp.Department.Name;
-            return View();
+            //Employee emp = await context.Employee.Where(e => e.Name == "Matt")
+            //                .FirstOrDefaultAsync();
+            //string deptName = emp.Department.Name;
+            var employee = context.Employee.Include(s => s.Department);
+            return View(employee);
         }
         public IActionResult Create()
         {
