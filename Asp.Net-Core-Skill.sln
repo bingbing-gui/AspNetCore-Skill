@@ -292,6 +292,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreInsertRecords", "Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreReadRecords", "EntityFrameworkCore\EFCoreReadRecords\EFCoreReadRecords.csproj", "{C879C883-5A8B-487A-9A19-4A3CD5A26FCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreUpdateRecords", "EntityFrameworkCore\EFCoreUpdateRecords\EFCoreUpdateRecords.csproj", "{090E75BE-4117-464C-A5C1-1135D8548C6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -666,6 +668,10 @@ Global
 		{C879C883-5A8B-487A-9A19-4A3CD5A26FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C879C883-5A8B-487A-9A19-4A3CD5A26FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C879C883-5A8B-487A-9A19-4A3CD5A26FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090E75BE-4117-464C-A5C1-1135D8548C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090E75BE-4117-464C-A5C1-1135D8548C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090E75BE-4117-464C-A5C1-1135D8548C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090E75BE-4117-464C-A5C1-1135D8548C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -800,6 +806,7 @@ Global
 		{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20} = {9B10ED09-6169-4292-BC39-74D5C3CE1649}
 		{0F9B5AC7-1C05-4769-9FE8-B539BB0CD6AF} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
 		{C879C883-5A8B-487A-9A19-4A3CD5A26FCF} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
+		{090E75BE-4117-464C-A5C1-1135D8548C6F} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
