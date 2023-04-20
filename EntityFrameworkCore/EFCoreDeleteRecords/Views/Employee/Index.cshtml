@@ -1,8 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "部门数据";
+    ViewData["Title"] = "所有员工​";
 }
-@model IEnumerable<Department>
-
+@model IEnumerable<Employee>
 <div class="container">
     <div class="row mb-3">
         <div class="col-sm-3">
@@ -18,28 +17,24 @@
                 <thead>
                     <tr>
                         <th>编号</th>
-                        <th>名称</th>
+                        <th>姓名</th>
+                        <th>职务</th>
+                        <th>部门</th>
                         <th>修改</th>
-                        <th>删除</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (Department dept in Model)
+                    @foreach (Employee emp in Model)
                     {
                         <tr>
-                            <td>@dept.Id</td>
-                            <td>@dept.Name</td>
+                            <td>@emp.Id</td>
+                            <td>@emp.Name</td>
+                            <td>@emp.Designation</td>
+                            <td>@emp.Department.Name</td>
                             <td>
-                                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@dept.Id">
+                                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@emp.DepartmentId">
                                     修改
                                 </a>
-                            </td>
-                            <td>
-                                <form asp-action="Delete" asp-route-id="@dept.Id" method="post">
-                                    <button type="submit" class="btn btn-sm btn-danger">
-                                        删除
-                                    </button>
-                                </form>
                             </td>
                         </tr>
                     }

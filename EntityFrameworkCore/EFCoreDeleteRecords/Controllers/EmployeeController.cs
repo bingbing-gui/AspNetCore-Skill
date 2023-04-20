@@ -1,11 +1,9 @@
-﻿
-using EFCoreReadRecords.Models;
-using EFCoreUpdateRecords.Models;
+﻿using EFCoreDeleteRecords.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-namespace EFCoreReadRecords.Controllers
+namespace EFCoreDeleteRecords.Controllers
 {
     public class EmployeeController : Controller
     {
@@ -47,15 +45,6 @@ namespace EFCoreReadRecords.Controllers
         {
             context.Add(emp);
             await context.SaveChangesAsync();
-            return RedirectToAction("Index");
-        }
-        [HttpPost]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var emp = new Employee() { Id = id };
-            context.Remove(emp);
-            await context.SaveChangesAsync();
-
             return RedirectToAction("Index");
         }
     }

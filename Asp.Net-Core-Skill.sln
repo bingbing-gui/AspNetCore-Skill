@@ -292,7 +292,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreInsertRecords", "Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreReadRecords", "EntityFrameworkCore\EFCoreReadRecords\EFCoreReadRecords.csproj", "{C879C883-5A8B-487A-9A19-4A3CD5A26FCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreUpdateRecords", "EntityFrameworkCore\EFCoreUpdateRecords\EFCoreUpdateRecords.csproj", "{090E75BE-4117-464C-A5C1-1135D8548C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreUpdateRecords", "EntityFrameworkCore\EFCoreUpdateRecords\EFCoreUpdateRecords.csproj", "{090E75BE-4117-464C-A5C1-1135D8548C6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
