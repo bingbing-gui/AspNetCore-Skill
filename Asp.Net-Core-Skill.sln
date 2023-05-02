@@ -298,7 +298,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreConventions", "Entity
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreConfiguration", "EntityFrameworkCore\EFCoreConfiguration\EFCoreConfiguration.csproj", "{022F2C96-4A07-40A8-BCAA-FBA06F0C636D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreFluentAPIOneToMany", "EntityFrameworkCore\EFCoreFluentAPIOneToMany\EFCoreFluentAPIOneToMany\EFCoreFluentAPIOneToMany.csproj", "{AE523C28-FD46-45AF-BEC1-6A6689B2351D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreFluentAPIOneToMany", "EntityFrameworkCore\EFCoreFluentAPIOneToMany\EFCoreFluentAPIOneToMany.csproj", "{AE523C28-FD46-45AF-BEC1-6A6689B2351D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

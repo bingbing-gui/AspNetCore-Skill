@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "国家";
+}
+@model IEnumerable<Country>
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-sm-3">
+            <a asp-action="Create" class="btn btn-secondary">新增</a>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm">
+            <table class="table table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>删除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Country country in Model)
+                    {
+                        <tr>
+                            <td>@country.Id</td>
+                            <td>@country.Name</td>
+                            <td>
+                                <form asp-action="Delete" asp-route-id="@country.Id" method="post">
+                                    <button type="submit" class="btn btn-sm btn-danger">
+                                        删除
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
