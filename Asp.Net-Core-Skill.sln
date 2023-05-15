@@ -300,11 +300,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreConfiguration", "Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreFluentAPIOneToMany", "EntityFrameworkCore\EFCoreFluentAPIOneToMany\EFCoreFluentAPIOneToMany.csproj", "{AE523C28-FD46-45AF-BEC1-6A6689B2351D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreFluentAPIOneToOne", "EntityFrameworkCore\EFCoreFluentAPIOneToOne\EFCoreFluentAPIOneToOne.csproj", "{E4509682-C77E-47E8-BFE2-1F7863BBD10D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreFluentAPIOneToOne", "EntityFrameworkCore\EFCoreFluentAPIOneToOne\EFCoreFluentAPIOneToOne.csproj", "{E4509682-C77E-47E8-BFE2-1F7863BBD10D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreFluentAPIManyToMany", "EntityFrameworkCore\EFCoreFluentAPIManyToMany\EFCoreFluentAPIManyToMany.csproj", "{DD53E4DF-2C23-408E-8266-919C5CB22E13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreFluentAPIManyToMany", "EntityFrameworkCore\EFCoreFluentAPIManyToMany\EFCoreFluentAPIManyToMany.csproj", "{DD53E4DF-2C23-408E-8266-919C5CB22E13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreExecuteRawSql", "EntityFrameworkCore\EFCoreExecuteRawSql\EFCoreExecuteRawSql.csproj", "{A8EA1959-AB9E-4CDF-90D7-E9BB7C1B8FB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreExecuteRawSql", "EntityFrameworkCore\EFCoreExecuteRawSql\EFCoreExecuteRawSql.csproj", "{A8EA1959-AB9E-4CDF-90D7-E9BB7C1B8FB5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreExecuteStoredProcedures", "EntityFrameworkCore\EFCoreExecuteStoredProcedures\EFCoreExecuteStoredProcedures.csproj", "{E608F852-05E6-42C3-A321-58F64510FC5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14-AspNetCore.Filters", "14-AspNetCore.Filters", "{8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Filters", "Fundamentals\14-AspNetCore.Filters\AspNetCore.Filters\AspNetCore.Filters.csproj", "{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -708,6 +714,14 @@ Global
 		{A8EA1959-AB9E-4CDF-90D7-E9BB7C1B8FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8EA1959-AB9E-4CDF-90D7-E9BB7C1B8FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8EA1959-AB9E-4CDF-90D7-E9BB7C1B8FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E608F852-05E6-42C3-A321-58F64510FC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E608F852-05E6-42C3-A321-58F64510FC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E608F852-05E6-42C3-A321-58F64510FC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E608F852-05E6-42C3-A321-58F64510FC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -849,6 +863,9 @@ Global
 		{E4509682-C77E-47E8-BFE2-1F7863BBD10D} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
 		{DD53E4DF-2C23-408E-8266-919C5CB22E13} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
 		{A8EA1959-AB9E-4CDF-90D7-E9BB7C1B8FB5} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
+		{E608F852-05E6-42C3-A321-58F64510FC5E} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
+		{8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7} = {8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

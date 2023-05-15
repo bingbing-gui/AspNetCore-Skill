@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
 
 namespace AspNetCore.Middleware.MyMiddleware
 {
@@ -21,7 +22,6 @@ namespace AspNetCore.Middleware.MyMiddleware
             using (_logger.BeginScope("TraceIdentifier:{TraceIdentifier}", context.TraceIdentifier))
             {
                 _logger.LogInformation("Start MyMiddleware {time}", DateTime.Now);
-
                 await _next(context);
 
                 _logger.LogInformation("End MyMiddleware {time}", DateTime.Now);
