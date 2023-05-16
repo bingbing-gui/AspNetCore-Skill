@@ -5,7 +5,6 @@ namespace AspNetCore.DependencyInjection.Services
     public class OperationServie : IOperationService
     {
         private readonly ILogger<OperationServie> _logger;
-
         public OperationServie(
             IOperationTransient operationTransient,
             IOperationScoped operationScoped,
@@ -17,11 +16,8 @@ namespace AspNetCore.DependencyInjection.Services
             SingletonOperation = operationSingleton;
             _logger = logger;
         }
-        
         public IOperationTransient TransientOperation { get; }
-        
         public IOperationScoped ScopedOperation { get; }
-        
         public IOperationSingleton SingletonOperation { get; }
 
         public void TestLifetime()

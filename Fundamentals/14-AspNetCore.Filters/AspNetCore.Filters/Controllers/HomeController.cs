@@ -32,7 +32,8 @@ namespace AspNetCore.Filters.Controllers
         {
             return View();
         }
-        [CatchError]
+        //[CatchError]
+        [TypeFilter(typeof(CatchErrorMessage))]
         public IActionResult Exception(int? id)
         {
             if (id == null)

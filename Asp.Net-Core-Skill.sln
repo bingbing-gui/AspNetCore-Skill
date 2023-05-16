@@ -312,6 +312,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14-AspNetCore.Filters", "14
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Filters", "Fundamentals\14-AspNetCore.Filters\AspNetCore.Filters\AspNetCore.Filters.csproj", "{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Configuration", "AspNetCore.Configuration", "{AAE21B7E-8C20-4CD4-87AA-C3DFD1B0BE79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Configuration", "Fundamentals\AspNetCore.Configuration\AspNetCore.Configuration\AspNetCore.Configuration.csproj", "{3C1570F7-4F75-4F50-994B-FD0926E997D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -722,6 +726,10 @@ Global
 		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1570F7-4F75-4F50-994B-FD0926E997D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1570F7-4F75-4F50-994B-FD0926E997D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1570F7-4F75-4F50-994B-FD0926E997D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1570F7-4F75-4F50-994B-FD0926E997D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -866,6 +874,8 @@ Global
 		{E608F852-05E6-42C3-A321-58F64510FC5E} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
 		{8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7} = {8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA}
+		{AAE21B7E-8C20-4CD4-87AA-C3DFD1B0BE79} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{3C1570F7-4F75-4F50-994B-FD0926E997D6} = {AAE21B7E-8C20-4CD4-87AA-C3DFD1B0BE79}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

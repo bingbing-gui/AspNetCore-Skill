@@ -1,7 +1,17 @@
+using AspNetCore.Filters.CustomFilters;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IExceptionFilterMessage, ExceptionFilterMessage>();
+
+builder.Services.AddScoped<TimeElapsed>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddMvc().AddMvcOptions(options => {
+    //options.Filters.AddService(typeof(TimeElapsed));
+    options.Filters.Add(new ShowMessage("Global"));
+});
 
 var app = builder.Build();
 

@@ -19,7 +19,6 @@ namespace AspNetCore6.DependencyInjection.Services
         public IOperationScoped ScopedOperation { get; }
         public IOperationSingleton SingletonOperation { get; }
 
-
         public void TestLifetime()
         {
             _logger.LogInformation("From Service Transient: " + TransientOperation.OperationId);
