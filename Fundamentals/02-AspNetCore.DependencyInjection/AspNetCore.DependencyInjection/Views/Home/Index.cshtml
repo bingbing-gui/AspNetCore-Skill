@@ -1,8 +1,34 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Product>
+@if (ViewData.Count > 0)
+{
+    <table class="table table-bordered align-middle">
+        @foreach (var kvp in ViewData)
+        {
+            <tr>
+                <td>@kvp.Key</td>
+                <td>@string.Format("{0:C2}",kvp.Value)</td>
+            </tr>
+        }
+    </table>
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row mb-3">
+    <div class="col-sm">
+        <table class="table table-bordered align-middle">
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>价格</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@string.Format("{0:C2}",product.Price)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

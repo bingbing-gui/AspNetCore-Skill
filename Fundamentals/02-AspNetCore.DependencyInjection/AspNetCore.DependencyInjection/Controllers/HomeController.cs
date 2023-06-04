@@ -1,37 +1,20 @@
-﻿using AspNetCore.DependencyInjection.Interfaces;
-using AspNetCore.DependencyInjection.Models;
+﻿using AspNetCore.DependencyInjection.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace AspNetCore.DependencyInjection.Controllers
 {
     public class HomeController : Controller
     {
-
-        private readonly IOperationService _operationService;
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(IOperationService operationService, ILogger<HomeController> logger)
+        private IRepository _repository;
+        public HomeController(IRepository repository)
         {
-            _operationService = operationService;
-            _logger = logger;
+            _repository = repository;
         }
-
-        public IActionResult Index()
+        public IActionResult Index([FromServices] ProductSum _productSum)
         {
-            _operationService.TestLifetime();
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewBag.HomeControllerGUID = _repository.ToString();
+            ViewBag.TotalGUID = _productSum.Repository.ToString();
+            return View(_repository.Products);
         }
     }
 }
