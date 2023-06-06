@@ -1,10 +1,10 @@
-var builder = WebApplication.CreateBuilder(args);
+using AspNetCore.Configuration.Services;
 
+var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
+builder.Services.AddSingleton<TotalUsers>();
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -12,16 +12,11 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days.
     app.UseHsts();
 }
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 app.Run();
