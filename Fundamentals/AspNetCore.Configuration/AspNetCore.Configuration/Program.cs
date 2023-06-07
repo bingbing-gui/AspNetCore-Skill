@@ -1,3 +1,4 @@
+using AspNetCore.Configuration.Middlewares;
 using AspNetCore.Configuration.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,10 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseMiddleware<ResponseEditingMiddleware>();
+app.UseMiddleware<RequestEditingMiddleware>();
+app.UseMiddleware<ShortCircuitMiddleware>();
+app.UseMiddleware<ContentMiddleware>();
 app.UseRouting();
 app.UseAuthorization();
 app.MapControllerRoute(
