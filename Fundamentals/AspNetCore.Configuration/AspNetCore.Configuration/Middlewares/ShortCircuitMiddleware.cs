@@ -9,14 +9,21 @@
         }
         public async Task Invoke(HttpContext context)
         {
-            //if (context.Request.Headers["User-Agent"].Any(v => v.Contains("Firefox")))
-            if(context.Items["Firefox"] as bool? == true)
+            try
             {
-                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                //if (context.Request.Headers["User-Agent"].Any(v => v.Contains("Firefox")))
+                if (context.Items["Firefox"] as bool? == true)
+                {
+                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                }
+                else
+                {
+                    await _next(context);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await _next(context);
+                throw;
             }
         }
     }

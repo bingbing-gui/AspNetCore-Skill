@@ -13,5 +13,14 @@ namespace AspNetCore.Configuration.Controllers
         {
             return "总用户人数是" + _totalUsers.TUsers();
         }
+
+        public IActionResult Exception() 
+        {
+            throw new NullReferenceException();
+        }
+        public IActionResult Error()
+        {
+            return View();
+        }
     }
 }

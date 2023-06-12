@@ -1,4 +1,6 @@
-﻿namespace AspNetCore.Configuration.Middlewares
+﻿using Microsoft.AspNetCore.Diagnostics;
+
+namespace AspNetCore.Configuration.Middlewares
 {
     public class RequestEditingMiddleware
     {
@@ -7,8 +9,17 @@
 
         public async Task Invoke(HttpContext httpContext)
         {
-            httpContext.Items["Firefox"] = httpContext.Request.Headers["User-Agent"].Any(v => v.Contains("Firefox"));
-            await _next(httpContext);
+            try
+            {
+               
+
+                httpContext.Items["Firefox"] = httpContext.Request.Headers["User-Agent"].Any(v => v.Contains("Firefox"));
+                await _next(httpContext);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AspNetCore.Configuration.Services;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace AspNetCore.Configuration.Middlewares
 {
@@ -13,13 +14,21 @@ namespace AspNetCore.Configuration.Middlewares
         }
         public async Task Invoke(HttpContext httpContext)
         {
-            if (httpContext.Request.Path == "/middleware")
+            try
             {
-                await httpContext.Response.WriteAsync("this message come from ContextMiddleware" +" TotalUsers=" + _totalUsers.TUsers());
+                if (httpContext.Request.Path == "/middleware")
+                {
+                    await httpContext.Response.WriteAsync("this message come from ContextMiddleware" + " TotalUsers=" + _totalUsers.TUsers());
+                }
+                else
+                {
+                    _nextDelegate(httpContext);
+                    //var exceptionDetails = httpContext.Features.Get<IExceptionHandlerFeature>();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                _nextDelegate(httpContext);
+                throw;
             }
         }
     }
