@@ -1,0 +1,7 @@
+﻿@using Microsoft.Extensions.Options;
+@using AspNetCore.Configuration.Models;
+@inject IOptions<MyWebApi> settings;
+
+<p>@settings.Value.Name</p>
+<p>@settings.Value.Url</p>
+<p>@settings.Value.IsSecured</p>

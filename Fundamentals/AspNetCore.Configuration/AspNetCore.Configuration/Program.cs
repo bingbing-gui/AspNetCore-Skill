@@ -1,10 +1,16 @@
 ﻿using AspNetCore.Configuration.Middlewares;
+using AspNetCore.Configuration.Models;
 using AspNetCore.Configuration.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+
 //builder.Services.AddRazorPages();
 builder.Services.AddSingleton<TotalUsers>();
+
+builder.Services.Configure<MyWebApi>(builder.Configuration.GetSection("APIEndpoints"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -43,17 +49,14 @@ if ((app.Configuration.GetSection("Middleware")?.GetValue<bool>("EnableResponseE
 {
     app.UseMiddleware<ResponseEditingMiddleware>();
 }
-
 if ((app.Configuration.GetSection("Middleware")?.GetValue<bool>("EnableRequestEditingMiddleware")).Value)
 {
     app.UseMiddleware<RequestEditingMiddleware>();
 }
-
 if ((app.Configuration.GetSection("Middleware")?.GetValue<bool>("EnableShortCircuitMiddleware")).Value)
 {
     app.UseMiddleware<ShortCircuitMiddleware>();
 }
-
 if ((app.Configuration.GetSection("Middleware")?.GetValue<bool>("EnableContentMiddleware")).Value)
 {
     app.UseMiddleware<ContentMiddleware>();
