@@ -10,20 +10,31 @@ builder.Services.AddTransient<ProductSum>();
 builder.Services.AddTransient<IRepository, Repository>();
 builder.Services.AddTransient<IStorage, Storage>();
 
-IWebHostEnvironment env = builder.Environment;
-builder.Services.AddTransient<IRepository>(provider =>
-{
-    if (env.IsDevelopment())
-    {
-        var x = provider.GetService<Repository>();
-        return x;
-    }
-    else
-    {
-        return new ProductionRepository();
-    }
+//IWebHostEnvironment env = builder.Environment;
+//builder.Services.AddTransient<IRepository>(provider =>
+//{
+//    if (env.IsDevelopment())
+//    {
+//        var x = provider.GetService<Repository>();
+//        return x;
+//    }
+//    else
+//    {
+//        return new ProductionRepository();
+//    }
 
-});
+//});
+
+builder.Host.ConfigureAppConfiguration((hostingContext, configuration) =>
+{
+    configuration.AddJsonFile("mysettings.json",
+                    optional: false, //file is not optional
+                    reloadOnChange: true);
+}
+);
+
+builder.Services.Configure<MyJson>(builder.Configuration);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
