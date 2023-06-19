@@ -94,16 +94,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamental
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.Startup", "01-AspNetCore.Startup", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-AspNetCore.DependencyInjection", "02-AspNetCore.DependencyInjection", "{F9856C07-A857-4DB7-9323-F58B9513CCA9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DependencyInjection", "AspNetCore.DependencyInjection", "{F9856C07-A857-4DB7-9323-F58B9513CCA9}"
 	ProjectSection(SolutionItems) = preProject
 		依赖注入.txt = 依赖注入.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.DependencyInjection", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.DependencyInjection\AspNetCore6.DependencyInjection.csproj", "{71BD22B7-F35E-4463-958E-3C9523F3051B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.DependencyInjection", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore6.DependencyInjection\AspNetCore6.DependencyInjection.csproj", "{71BD22B7-F35E-4463-958E-3C9523F3051B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.ObjectDisposeFromContainer", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.ObjectDisposeFromContainer", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.FourWaysToDisposeIDisposables", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore6.FourWaysToDisposeIDisposables\AspNetCore6.FourWaysToDisposeIDisposables.csproj", "{5BAB753E-548E-46F0-8FBF-1429B3A486AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.FourWaysToDisposeIDisposables", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore6.FourWaysToDisposeIDisposables\AspNetCore6.FourWaysToDisposeIDisposables.csproj", "{5BAB753E-548E-46F0-8FBF-1429B3A486AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-AspNetCore.Host", "04-AspNetCore.Host", "{531B3AE7-3F2C-4EE5-BB7C-BE490BB64180}"
 EndProject
@@ -284,7 +284,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreMigration", "EntityFr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Startup", "Fundamentals\01-AspNetCore.Startup\AspNetCore.Startup\AspNetCore.Startup.csproj", "{3E35C06E-1B78-4138-90AD-90C6F420DE49}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection", "Fundamentals\02-AspNetCore.DependencyInjection\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.csproj", "{273F283E-8233-45AA-BD7C-D3DDE08F36A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.csproj", "{273F283E-8233-45AA-BD7C-D3DDE08F36A6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.URLRouting", "Advanced\02-AspNetCore.RouteToCode\AspNetCore.URLRouting\AspNetCore.URLRouting.csproj", "{ED94CF8F-FA87-4A2A-AEFC-3050F0833E20}"
 EndProject
@@ -314,7 +314,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Filters", "Funda
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Configuration", "AspNetCore.Configuration", "{AAE21B7E-8C20-4CD4-87AA-C3DFD1B0BE79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Configuration", "Fundamentals\AspNetCore.Configuration\AspNetCore.Configuration\AspNetCore.Configuration.csproj", "{3C1570F7-4F75-4F50-994B-FD0926E997D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Configuration", "Fundamentals\AspNetCore.Configuration\AspNetCore.Configuration\AspNetCore.Configuration.csproj", "{3C1570F7-4F75-4F50-994B-FD0926E997D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
