@@ -1,0 +1,48 @@
+﻿@model Person
+@{
+    ViewData["Title"] = "Home Page";
+}
+@*<form class="form-horizontal" method="post" asp-action="ReceivedDataByRequest">*@
+@*<form class="form-horizontal" method="post" asp-action="ReceivedDataByParameter">*@
+<form class="form-horizontal" method="post" asp-action="ReceivedDataByModelBinding">
+    <div class="mb-3 row">
+        <div class="col-sm-1">
+            <label>名称：</label>
+        </div>
+        <div class="col-sm-11">
+            @*<input class="form-control" name="name" />*@
+            <input class="form-control" asp-for="name" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-1">
+            <label>性别：</label>
+        </div>
+        <div class="col-sm-11">
+            @*<select class="form-control" name="sex">*@
+            <select class="form-control" asp-for="sex">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-11 offset-sm-1">
+            <button type="submit" class="btn btn-primary">提交</button>
+        </div>
+    </div>
+</form>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Photo:</label>
+        <input type="file" class="form-control" name="photo" />
+    </div>
+    <div class="m-1">
+        <button class="btn btn-primary" type="submit">Upload</button>
+    </div>
+</form>
+
+<a href="/Home/ReceivedDataByParameter?name=jack sparrow&sex=m" class="link-primary">Primary link</a>
+
+

@@ -11,6 +11,8 @@ builder.Services.AddSingleton<TotalUsers>();
 
 builder.Services.Configure<MyWebApi>(builder.Configuration.GetSection("APIEndpoints"));
 
+builder.Services.Configure<Connections>(builder.Configuration.GetSection("ConnectionStrings"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -316,6 +316,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Configuration", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Configuration", "Fundamentals\AspNetCore.Configuration\AspNetCore.Configuration\AspNetCore.Configuration.csproj", "{3C1570F7-4F75-4F50-994B-FD0926E997D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Controllers", "AspNetCore.Controllers", "{5623C192-9CDA-487A-9D8F-E000FDDC0FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Controllers", "Fundamentals\AspNetCore.Controllers\AspNetCore.Controllers\AspNetCore.Controllers.csproj", "{593E62C2-1D9E-40B3-8D5D-977E9FAE051A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -730,6 +734,10 @@ Global
 		{3C1570F7-4F75-4F50-994B-FD0926E997D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C1570F7-4F75-4F50-994B-FD0926E997D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C1570F7-4F75-4F50-994B-FD0926E997D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{593E62C2-1D9E-40B3-8D5D-977E9FAE051A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593E62C2-1D9E-40B3-8D5D-977E9FAE051A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593E62C2-1D9E-40B3-8D5D-977E9FAE051A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593E62C2-1D9E-40B3-8D5D-977E9FAE051A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -876,6 +884,8 @@ Global
 		{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7} = {8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA}
 		{AAE21B7E-8C20-4CD4-87AA-C3DFD1B0BE79} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{3C1570F7-4F75-4F50-994B-FD0926E997D6} = {AAE21B7E-8C20-4CD4-87AA-C3DFD1B0BE79}
+		{5623C192-9CDA-487A-9D8F-E000FDDC0FE7} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{593E62C2-1D9E-40B3-8D5D-977E9FAE051A} = {5623C192-9CDA-487A-9D8F-E000FDDC0FE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
