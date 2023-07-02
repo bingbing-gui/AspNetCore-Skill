@@ -23,5 +23,22 @@ namespace AspNetCore.Views.Controllers
         {
             return View();
         }
+        public JsonResult ReturnJson()
+        {
+            return Json(new[] { "Brahma", "Vishnu", "Mahesh" });
+        }
+
+        public StatusCodeResult ReturnBadRequest()
+        {
+            return StatusCode(StatusCodes.Status400BadRequest);
+        }
+        public StatusCodeResult ReturnUnauthorized()
+        {
+            return StatusCode(StatusCodes.Status401Unauthorized);
+        }
+        public StatusCodeResult ReturnNotFound()
+        {
+            return StatusCode(StatusCodes.Status404NotFound);
+        }
     }
 }

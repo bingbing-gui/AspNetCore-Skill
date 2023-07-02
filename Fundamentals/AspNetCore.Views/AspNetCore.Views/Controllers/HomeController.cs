@@ -1,5 +1,6 @@
 ﻿using AspNetCore.Views.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace AspNetCore.Views.Controllers
@@ -15,9 +16,25 @@ namespace AspNetCore.Views.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            //return RedirectToAction("Privacy");
+            return RedirectToActionPermanent("Privacy");
         }
-
+        public RedirectResult RedirectAction()
+        {
+            return Redirect("/List/Search");
+        }
+        public RedirectResult RedirectPermanentAction()
+        {
+            return RedirectPermanent("/List/Search");
+        }
+        public RedirectToRouteResult Redirect()
+        {
+            return RedirectToRoute(new { controller = "Admin", action = "Users", ID = 10 });
+        }
+        public RedirectToRouteResult RedirectPermanent()
+        {
+            return RedirectToRoutePermanent(new { controller = "Admin", action = "Users", ID = 10 });
+        }
         public IActionResult Privacy()
         {
             return View();
