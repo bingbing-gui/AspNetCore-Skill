@@ -318,11 +318,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Configuration", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Controllers", "AspNetCore.Controllers", "{5623C192-9CDA-487A-9D8F-E000FDDC0FE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Controllers", "Fundamentals\AspNetCore.Controllers\AspNetCore.Controllers\AspNetCore.Controllers.csproj", "{593E62C2-1D9E-40B3-8D5D-977E9FAE051A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Controllers", "Fundamentals\AspNetCore.Controllers\AspNetCore.Controllers\AspNetCore.Controllers.csproj", "{593E62C2-1D9E-40B3-8D5D-977E9FAE051A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Views", "AspNetCore.Views", "{DBCEDF96-5F0E-47E0-A8D0-D35D9F1D6F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Views", "Fundamentals\AspNetCore.Views\AspNetCore.Views\AspNetCore.Views.csproj", "{C99ABE0E-FD22-4D93-8BBA-77F998AFAC70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Views", "Fundamentals\AspNetCore.Views\AspNetCore.Views\AspNetCore.Views.csproj", "{C99ABE0E-FD22-4D93-8BBA-77F998AFAC70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Action", "AspNetCore.Action", "{5E5F2170-E23A-4AC6-BE69-871F53911F97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Action", "Fundamentals\AspNetCore.Action\AspNetCore.Action\AspNetCore.Action.csproj", "{FC2D7935-A093-44E4-A8A6-EE412225163B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -746,6 +750,10 @@ Global
 		{C99ABE0E-FD22-4D93-8BBA-77F998AFAC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C99ABE0E-FD22-4D93-8BBA-77F998AFAC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C99ABE0E-FD22-4D93-8BBA-77F998AFAC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2D7935-A093-44E4-A8A6-EE412225163B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2D7935-A093-44E4-A8A6-EE412225163B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2D7935-A093-44E4-A8A6-EE412225163B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2D7935-A093-44E4-A8A6-EE412225163B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -896,6 +904,8 @@ Global
 		{593E62C2-1D9E-40B3-8D5D-977E9FAE051A} = {5623C192-9CDA-487A-9D8F-E000FDDC0FE7}
 		{DBCEDF96-5F0E-47E0-A8D0-D35D9F1D6F98} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{C99ABE0E-FD22-4D93-8BBA-77F998AFAC70} = {DBCEDF96-5F0E-47E0-A8D0-D35D9F1D6F98}
+		{5E5F2170-E23A-4AC6-BE69-871F53911F97} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{FC2D7935-A093-44E4-A8A6-EE412225163B} = {5E5F2170-E23A-4AC6-BE69-871F53911F97}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
