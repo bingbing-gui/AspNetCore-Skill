@@ -1,0 +1,23 @@
+﻿<h1>Welcome to Tokyo</h1>
+<form asp-controller="City" asp-action="Tokyo" method="post">
+    <div class="mb-3 row">
+        <label class="col-sm-1 control-label">名称</label>
+        <div class="col-sm-11">
+            <input class="form-control" name="name" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label class="col-sm-1 control-label">性别</label>
+        <div class="col-sm-11">
+            <select class="form-control" name="sex">
+                <option value="F">Female</option>
+                <option value="M">Male</option>
+            </select>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-11 offset-sm-1">
+            <button class="btn btn-primary" type="submit">保存</button>
+        </div>
+    </div>
+</form>

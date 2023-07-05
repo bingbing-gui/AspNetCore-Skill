@@ -1,0 +1,17 @@
+﻿@if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+{
+    <p>It's a Boring Day</p>
+}
+else
+{
+    <p>It's a Party Day</p>
+}
+@{
+    string[] countries = new string[] { "England", "France", "Germany", "China" };
+    <ul>
+        @foreach (string country in countries)
+        {
+            <li>@countries</li>
+        }
+    </ul>
+}
