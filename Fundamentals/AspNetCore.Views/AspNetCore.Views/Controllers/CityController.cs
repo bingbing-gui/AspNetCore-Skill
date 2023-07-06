@@ -20,5 +20,9 @@ namespace AspNetCore.Views.Controllers
         {
             return View();
         }
+        public IActionResult CallSharedView()
+        {
+            return View();
+        }
     }
 }
