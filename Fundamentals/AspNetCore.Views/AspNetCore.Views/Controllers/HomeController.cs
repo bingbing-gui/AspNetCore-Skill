@@ -12,5 +12,14 @@ namespace AspNetCore.Views.Controllers
         {
             return View();
         }
+        public IActionResult Joke()
+        {
+            return View();
+        }
+        public IActionResult TestLayout()
+        {
+            ViewBag.Title = "Welcome to TestLayout";
+            return View();
+        }
     }
 }

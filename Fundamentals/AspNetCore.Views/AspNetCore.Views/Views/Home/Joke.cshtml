@@ -1,0 +1,5 @@
+﻿@using AspNetCore.Views.Service
+@inject Joke joke;
+
+<h2 class="text-primary">Today's Joke</h2>
+<p>@await joke.GetJoke()</p>
