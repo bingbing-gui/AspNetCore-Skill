@@ -1,0 +1,27 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "新增";
+}
+<form method="post" asp-controller="Home" ,asp-action="Create" asp-antiforgery="true">
+    <div class="mb-3 row">
+        <label class="col-sm-1 control-label" asp-for="Name"></label>
+        <div class="col-sm-11">
+            <input class="form-control" asp-for="Name" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label class="col-sm-1 control-label" asp-for="Price"></label>
+        <div class="col-sm-11">
+            <input class="form-control" asp-for="Price" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label class="col-sm-1 control-label" asp-for="Quantity"></label>
+        <div class="col-sm-11">
+            <input class="form-control" asp-for="Quantity" />
+        </div>
+    </div>
+    <div class="col-sm-11 offset-sm-1">
+        <button type="submit" class="btn btn-primary">新增</button>
+    </div>
+</form>
