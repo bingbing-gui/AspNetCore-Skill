@@ -322,9 +322,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Action", "Fundam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RouteConstraint", "Fundamentals\AspNetCore.Route\AspNetCore.RouteConstraint\AspNetCore.RouteConstraint.csproj", "{67DE06E8-5198-4B3E-87D5-850331F8D459}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.BuiltInTagHelpers", "Fundamentals\AspNetCore.TagHelpers\AspNetCore.BuiltInTagHelpers\AspNetCore.BuiltInTagHelpers.csproj", "{97B359C1-19C0-4590-BB14-71DB2646BB74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.BuiltInTagHelpers", "Fundamentals\AspNetCore.TagHelpers\AspNetCore.BuiltInTagHelpers\AspNetCore.BuiltInTagHelpers.csproj", "{97B359C1-19C0-4590-BB14-71DB2646BB74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.TagHelpers", "Fundamentals\AspNetCore.TagHelpers\AspNetCore.TagHelpers\AspNetCore.TagHelpers.csproj", "{F1BE523F-0438-404C-A067-25DD16861E50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.TagHelpers", "Fundamentals\AspNetCore.TagHelpers\AspNetCore.TagHelpers\AspNetCore.TagHelpers.csproj", "{F1BE523F-0438-404C-A067-25DD16861E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Areas", "Fundamentals\AspNetCore.Route\AspNetCore.Areas\AspNetCore.Areas.csproj", "{99C9A65A-0016-4701-8A24-CF4458095729}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -752,6 +754,10 @@ Global
 		{F1BE523F-0438-404C-A067-25DD16861E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1BE523F-0438-404C-A067-25DD16861E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1BE523F-0438-404C-A067-25DD16861E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C9A65A-0016-4701-8A24-CF4458095729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C9A65A-0016-4701-8A24-CF4458095729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C9A65A-0016-4701-8A24-CF4458095729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C9A65A-0016-4701-8A24-CF4458095729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -903,6 +909,7 @@ Global
 		{67DE06E8-5198-4B3E-87D5-850331F8D459} = {3895ACFA-FFAB-4390-88F2-026236ED2F9C}
 		{97B359C1-19C0-4590-BB14-71DB2646BB74} = {DC592A7A-D047-4941-8429-F2AB317F6586}
 		{F1BE523F-0438-404C-A067-25DD16861E50} = {DC592A7A-D047-4941-8429-F2AB317F6586}
+		{99C9A65A-0016-4701-8A24-CF4458095729} = {3895ACFA-FFAB-4390-88F2-026236ED2F9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
