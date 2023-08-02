@@ -328,7 +328,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.TagHelpers", "Fu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Areas", "Fundamentals\AspNetCore.Route\AspNetCore.Areas\AspNetCore.Areas.csproj", "{99C9A65A-0016-4701-8A24-CF4458095729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.RouteLinks", "Fundamentals\AspNetCore.Route\AspNetCore.RouteLinks\AspNetCore.RouteLinks.csproj", "{EAD8305F-29BC-4C3E-8937-23C45CD9CF7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.RouteLinks", "Fundamentals\AspNetCore.Route\AspNetCore.RouteLinks\AspNetCore.RouteLinks.csproj", "{EAD8305F-29BC-4C3E-8937-23C45CD9CF7E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.AttributeRoute", "Fundamentals\AspNetCore.Route\AspNetCore.AttributeRoute\AspNetCore.AttributeRoute.csproj", "{3E1D0CE1-8DE8-4174-BA9A-0EFDA0506CF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -764,6 +766,10 @@ Global
 		{EAD8305F-29BC-4C3E-8937-23C45CD9CF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD8305F-29BC-4C3E-8937-23C45CD9CF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD8305F-29BC-4C3E-8937-23C45CD9CF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E1D0CE1-8DE8-4174-BA9A-0EFDA0506CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1D0CE1-8DE8-4174-BA9A-0EFDA0506CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1D0CE1-8DE8-4174-BA9A-0EFDA0506CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1D0CE1-8DE8-4174-BA9A-0EFDA0506CF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -917,6 +923,7 @@ Global
 		{F1BE523F-0438-404C-A067-25DD16861E50} = {DC592A7A-D047-4941-8429-F2AB317F6586}
 		{99C9A65A-0016-4701-8A24-CF4458095729} = {3895ACFA-FFAB-4390-88F2-026236ED2F9C}
 		{EAD8305F-29BC-4C3E-8937-23C45CD9CF7E} = {3895ACFA-FFAB-4390-88F2-026236ED2F9C}
+		{3E1D0CE1-8DE8-4174-BA9A-0EFDA0506CF4} = {3895ACFA-FFAB-4390-88F2-026236ED2F9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

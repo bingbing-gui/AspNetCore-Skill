@@ -1,7 +1,6 @@
 ﻿using AspNetCore.AttributeRoute.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
 namespace AspNetCore.AttributeRoute.Controllers
 {
     public class HomeController : Controller
@@ -12,12 +11,11 @@ namespace AspNetCore.AttributeRoute.Controllers
         {
             _logger = logger;
         }
-
+        [Route("CallRoute")]
         public IActionResult Index()
         {
             return View();
         }
-
         public IActionResult Privacy()
         {
             return View();

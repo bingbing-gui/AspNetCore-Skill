@@ -1,7 +1,13 @@
+using AspNetCore.AttributeRoute.CustomConstraint;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.Configure<RouteOptions>(options =>
+   options.ConstraintMap.Add("allowedgods", typeof(OnlyGodsConstraint)));
 
 var app = builder.Build();
 
