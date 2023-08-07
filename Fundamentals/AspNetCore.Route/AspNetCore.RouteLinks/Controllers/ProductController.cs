@@ -8,10 +8,13 @@ namespace AspNetCore.RouteLinks.Controllers
         {
             return "Id Value is: " + id;
         }
-
-        public string List(int id)
+        //public string List(int id)
+        //{
+        //    return "Id Value is: " + id;
+        //}
+        public IActionResult List()
         {
-            return "Id Value is: " + id;
+            return View();
         }
     }
 }

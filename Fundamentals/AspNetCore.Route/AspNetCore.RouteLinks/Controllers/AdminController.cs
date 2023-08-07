@@ -9,5 +9,12 @@ namespace AspNetCore.RouteLinks.Controllers
         {
             return View();
         }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+
     }
 }

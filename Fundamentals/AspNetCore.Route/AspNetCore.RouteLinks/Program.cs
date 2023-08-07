@@ -1,7 +1,15 @@
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+#region 在网页尾部添加斜杠/  小写URL
+builder.Services.Configure<RouteOptions>(options =>
+{
+    options.AppendTrailingSlash = true;
+    options.LowercaseUrls = true;
+});
+#endregion
 
 var app = builder.Build();
 
@@ -32,6 +40,8 @@ app.MapControllerRoute(
     pattern: "Stock/{action}",
     defaults: new { controller = "Home" });
 #endregion
+
+
 
 app.MapControllerRoute(
     name: "sales",
