@@ -1,7 +1,10 @@
+using static AspNetCore.BuiltInTagHelpers.Models.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IRepository, ProductRepository>();
 
 var app = builder.Build();
 

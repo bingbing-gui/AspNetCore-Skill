@@ -7,9 +7,8 @@ namespace AspNetCore.BuiltInTagHelpers.Models
     {
         [DisplayName("名称")]
         public string Name { get; set; }
-
         [DisplayName("价格")]
-        public decimal Price { get; set; }
+        public float Price { get; set; }
         [DisplayName("数量")]
         public int Quantity { get; set; }
     }

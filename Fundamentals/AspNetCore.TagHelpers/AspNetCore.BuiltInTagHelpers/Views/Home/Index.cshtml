@@ -1,8 +1,38 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model IEnumerable<Product>
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-sm-3">
+            <a class="btn btn-primary" asp-action="Create">新增</a>
+            <a asp-action="Create" asp-route-id="20" class="btn btn-dark">新增</a>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm">
+            <table class="table table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <td>数量</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.Name</td>
+                            <td>@product.Price</td>
+                            <td>@product.Quantity</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
