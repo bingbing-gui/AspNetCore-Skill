@@ -75,9 +75,9 @@
     <div class="container">
         <main role="main" class="pb-3">
             <div class="bg-info text-warning">
-                @* expires-after="@TimeSpan.FromSeconds(20)" 20秒之后缓存将失效 *@
-                @* expires-on="@DateTime.Parse("2050-01-01")" 直到2025年过期 *@
-                @*expires-sliding="@TimeSpan.FromSeconds(20)" 这个缓存将在距离上次使用的20s后过期 *@
+                @*5.1 expires-after="@TimeSpan.FromSeconds(20)" 20秒之后缓存将失效 *@
+                @*5.2 expires-on="@DateTime.Parse("2050-01-01")" 直到2025年过期 *@
+                @*5.3 expires-sliding="@TimeSpan.FromSeconds(20)" 这个缓存将在距离上次使用的20s后过期 *@
                 <cache expires-sliding="@TimeSpan.FromSeconds(20)" vary-by="@ViewContext.RouteData.Values["action"]">
                     Date Time: @DateTime.Now.ToString("HH:mm:ss")
                 </cache>
