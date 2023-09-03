@@ -15,7 +15,6 @@ namespace AspNetCore.CustomTagHelpers.CustomTagHelpers
 
             TagBuilder title = new TagBuilder("h1");
             title.InnerHtml.Append(PrePost);
-            
             TagBuilder container = new TagBuilder("div");
             container.Attributes["class"] = "bg-info m-1 p-1";
             container.InnerHtml.AppendHtml(title);
