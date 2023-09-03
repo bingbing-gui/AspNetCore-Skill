@@ -5,7 +5,6 @@ namespace AspNetCore.CustomTagHelpers.CustomTagHelpers
     public class BackgroundColorTH : TagHelper
     {
         public string BackgroundColor { get; set; }
-
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             output.Attributes.SetAttribute("class", $"btn btn-{BackgroundColor}");

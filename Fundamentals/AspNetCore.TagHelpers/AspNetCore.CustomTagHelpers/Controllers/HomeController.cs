@@ -9,14 +9,19 @@ namespace AspNetCore.CustomTagHelpers.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+<<<<<<< HEAD
 
         private readonly IRepository _repository;
         public HomeController(IRepository repository,
                               ILogger<HomeController> logger)
+=======
+        public HomeController(ILogger<HomeController> logger)
+>>>>>>> eb779b8c459ce872f27b988880a0daca499f1fc3
         {
             _repository = repository;
             _logger = logger;
         }
+<<<<<<< HEAD
         public ViewResult Edit()
         {
             ViewBag.Quantity = new SelectList(_repository.Products.Select(p => p.Quantity).Distinct());
