@@ -1,0 +1,47 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create Employee";
+}
+<h2>Create Employee</h2>
+@*<form asp-action="Create" method="post">
+*@
+<form asp-action="DisplayPerson" method="post">
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input asp-for="Id" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="DOB"></label>
+        <input asp-for="DOB" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Role"></label>
+        <select asp-for="Role" class="form-control"
+                asp-items="@new SelectList(Enum.GetNames(typeof(Role)))"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="HomeAddress.HouseNumber"></label>
+        <input asp-for="HomeAddress.HouseNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="HomeAddress.City"></label>
+        <input asp-for="HomeAddress.City" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="HomeAddress.Street"></label>
+        <input asp-for="HomeAddress.Street" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="HomeAddress.PostalCode"></label>
+        <input asp-for="HomeAddress.PostalCode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="HomeAddress.Country"></label>
+        <input asp-for="HomeAddress.Country" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
