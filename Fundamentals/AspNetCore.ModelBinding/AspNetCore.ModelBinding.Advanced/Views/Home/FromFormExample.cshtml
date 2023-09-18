@@ -2,15 +2,14 @@
     ViewData["Title"] = "FromFormExample";
 }
 <h2>From Form</h2>
-<h3>ViewBag["Message"]</h3>
 <form method="post">
     <div class="form-group">
         <label>Id</label>
-        <input class="form-control"/>
+        <input name="id" class="form-control"/>
     </div>
     <div class="form-group">
         <label>Name:</label>
-        <input class="form-control" />
+        <input name="name" class="form-control" />
     </div>
     <button class="btn btn-primary">提交</button>
 </form>
