@@ -1,7 +1,11 @@
+using AspNetCore.ModelBinding.Advanced.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IRepository, EmployeeRepository>();
 
 var app = builder.Build();
 

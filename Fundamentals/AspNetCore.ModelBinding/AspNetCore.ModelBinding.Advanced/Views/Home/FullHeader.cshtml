@@ -1,0 +1,15 @@
+﻿@model FullHeader
+@{
+    ViewData["Title"] = "Full Header";
+}
+<h2>Header</h2>
+<table class="table table-sm table-bordered table-striped">
+    <tr><th>Accept:</th><td>@Model.Accept</td></tr>
+    <tr><th>Accept-Encoding:</th><td>@Model.AcceptEncoding</td></tr>
+    <tr><th>Accept-Language:</th><td>@Model.AcceptLanguage</td></tr>
+    <tr><th>Cache-Control:</th><td>@Model.CacheControl</td></tr>
+    <tr><th>Connection:</th><td>@Model.Connection</td></tr>
+    <tr><th>Host:</th><td>@Model.Host</td></tr>
+    <tr><th>Upgrade-Insecure-Requests:</th><td>@Model.UpgradeInsecureRequests</td></tr>
+    <tr><th>UserAgent:</th><td>@Model.UserAgent</td></tr>
+</table>
