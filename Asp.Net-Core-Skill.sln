@@ -91,15 +91,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.Startup", "01-AspNetCore.Startup", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DependencyInjection", "AspNetCore.DependencyInjection", "{F9856C07-A857-4DB7-9323-F58B9513CCA9}"
-	ProjectSection(SolutionItems) = preProject
-		依赖注入.txt = 依赖注入.txt
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.DependencyInjection", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore6.DependencyInjection\AspNetCore6.DependencyInjection.csproj", "{71BD22B7-F35E-4463-958E-3C9523F3051B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.ObjectDisposeFromContainer", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore6.ObjectDisposeFromContainer\AspNetCore6.ObjectDisposeFromContainer.csproj", "{F7874E47-992B-4024-A321-DF74288406E9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.FourWaysToDisposeIDisposables", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore6.FourWaysToDisposeIDisposables\AspNetCore6.FourWaysToDisposeIDisposables.csproj", "{5BAB753E-548E-46F0-8FBF-1429B3A486AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-AspNetCore.Host", "04-AspNetCore.Host", "{531B3AE7-3F2C-4EE5-BB7C-BE490BB64180}"
 EndProject
@@ -324,9 +315,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.AttributeRoute",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.CustomTagHelpers", "Fundamentals\AspNetCore.TagHelpers\AspNetCore.CustomTagHelpers\AspNetCore.CustomTagHelpers.csproj", "{73B3473B-AA54-4FAE-B88D-6DFC95B0506C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ModelBinding", "Fundamentals\AspNetCore.ModelBinding\AspNetCore.ModelBinding\AspNetCore.ModelBinding.csproj", "{1C90BA2C-1DC3-4154-AAA5-5DEAEABD59F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ModelBinding", "Fundamentals\AspNetCore.ModelBinding\AspNetCore.ModelBinding\AspNetCore.ModelBinding.csproj", "{1C90BA2C-1DC3-4154-AAA5-5DEAEABD59F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ModelBinding.Advanced", "Fundamentals\AspNetCore.ModelBinding\AspNetCore.ModelBinding.Advanced\AspNetCore.ModelBinding.Advanced.csproj", "{8288FE08-23BB-469D-BD8E-09705F277FD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ModelBinding.Advanced", "Fundamentals\AspNetCore.ModelBinding\AspNetCore.ModelBinding.Advanced\AspNetCore.ModelBinding.Advanced.csproj", "{8288FE08-23BB-469D-BD8E-09705F277FD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModeValidation", "AspNetCore.ModeValidation", "{E8BB508C-3FC6-436F-86FC-60F417FEF9E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ModelValidation", "Fundamentals\AspNetCore.ModelValidation\AspNetCore.ModelValidation\AspNetCore.ModelValidation.csproj", "{46479989-FF02-462A-8746-680BD21A0E05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -458,18 +453,6 @@ Global
 		{1AD57972-3CDC-4337-89F2-7E299AF9DCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AD57972-3CDC-4337-89F2-7E299AF9DCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AD57972-3CDC-4337-89F2-7E299AF9DCCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71BD22B7-F35E-4463-958E-3C9523F3051B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7874E47-992B-4024-A321-DF74288406E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7874E47-992B-4024-A321-DF74288406E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7874E47-992B-4024-A321-DF74288406E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7874E47-992B-4024-A321-DF74288406E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BAB753E-548E-46F0-8FBF-1429B3A486AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{057A0F82-37F3-4E05-9605-F37C1C8A82F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{057A0F82-37F3-4E05-9605-F37C1C8A82F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{057A0F82-37F3-4E05-9605-F37C1C8A82F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -762,6 +745,10 @@ Global
 		{8288FE08-23BB-469D-BD8E-09705F277FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8288FE08-23BB-469D-BD8E-09705F277FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8288FE08-23BB-469D-BD8E-09705F277FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46479989-FF02-462A-8746-680BD21A0E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46479989-FF02-462A-8746-680BD21A0E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46479989-FF02-462A-8746-680BD21A0E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46479989-FF02-462A-8746-680BD21A0E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -806,9 +793,6 @@ Global
 		{1AD57972-3CDC-4337-89F2-7E299AF9DCCC} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 		{130B405E-B50B-443E-A919-674CC9E7FA9D} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{F9856C07-A857-4DB7-9323-F58B9513CCA9} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
-		{71BD22B7-F35E-4463-958E-3C9523F3051B} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
-		{F7874E47-992B-4024-A321-DF74288406E9} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
-		{5BAB753E-548E-46F0-8FBF-1429B3A486AB} = {F9856C07-A857-4DB7-9323-F58B9513CCA9}
 		{531B3AE7-3F2C-4EE5-BB7C-BE490BB64180} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{057A0F82-37F3-4E05-9605-F37C1C8A82F2} = {64EAD733-6E08-4A4A-AE0E-B22894AC3642}
 		{972AC5A1-B910-447E-9630-C2F72567354F} = {64EAD733-6E08-4A4A-AE0E-B22894AC3642}
@@ -914,6 +898,8 @@ Global
 		{73B3473B-AA54-4FAE-B88D-6DFC95B0506C} = {DC592A7A-D047-4941-8429-F2AB317F6586}
 		{1C90BA2C-1DC3-4154-AAA5-5DEAEABD59F9} = {1FEDB4D8-96B5-4D10-8E88-AB02C77B4866}
 		{8288FE08-23BB-469D-BD8E-09705F277FD4} = {1FEDB4D8-96B5-4D10-8E88-AB02C77B4866}
+		{E8BB508C-3FC6-436F-86FC-60F417FEF9E3} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
+		{46479989-FF02-462A-8746-680BD21A0E05} = {E8BB508C-3FC6-436F-86FC-60F417FEF9E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
