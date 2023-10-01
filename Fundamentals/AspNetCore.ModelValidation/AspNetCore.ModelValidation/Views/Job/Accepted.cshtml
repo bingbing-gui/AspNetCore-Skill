@@ -3,6 +3,7 @@
     Layout = "_Layout";
     ViewData["Title"] = "接受";
 }
+
 <h2>接受</h2>
 <table class="table table-bordered">
     <tr>
@@ -11,7 +12,7 @@
     </tr>
     <tr>
         <th>出生日期:</th>
-        <td>@Model.DOB.ToString("d")</td>
+        <td>@Model.DOB?.ToString("d")</td>
     </tr>
     <tr>
         <th>性别:</th>

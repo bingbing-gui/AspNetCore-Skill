@@ -2,7 +2,19 @@
 @{
     ViewData["Title"] = "Job Application";
 }
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+</style>
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
 <h2>Job Application</h2>
+@*<div asp-validation-summary="All" class="text-danger"></div>*@
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <form class="m-1 p-1" method="post">
     <div class="mb-3 row">
         <div class="col-sm-1">
@@ -10,6 +22,7 @@
         </div>
         <div class="col-sm-11">
             <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
     </div>
     <div class="mb-3 row">
@@ -18,6 +31,16 @@
         </div>
         <div class="col-sm-11">
             <input asp-for="DOB" type="text" asp-format="{0:d}" class="form-control" />
+            <span asp-validation-for="DOB" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-1">
+            <label asp-for="Email" class="control-label"></label>
+        </div>
+        <div class="col-sm-11">
+            <input asp-for="Email" type="text" asp-format="{0:d}" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
         </div>
     </div>
     <div class="mb-3 row">
@@ -31,6 +54,7 @@
             <input asp-for="Sex" type="radio" value="F" class="form-check" />女
         </div>
         <div class="col-sm-9">
+            <span asp-validation-for="Sex" class="text-danger"></span>
         </div>
     </div>
     <div class="mb-3 row">
@@ -39,7 +63,7 @@
         </div>
         <div class="col-sm-11">
             <select asp-for="Experience" class="form-control">
-                <option value="Select">选择</option>
+                <option value="选择">选择</option>
                 <option value="0">新手</option>
                 <option value="1">0-1 年</option>
                 <option value="2">1-2 年</option>
@@ -47,6 +71,7 @@
                 <option value="4">3-4 年</option>
                 <option value="5">4-5 年</option>
             </select>
+            <span asp-validation-for="Experience" class="text-danger"></span>
         </div>
     </div>
     <div class="mb-3 row">
@@ -59,6 +84,7 @@
             <label asp-for="TermsAccepted" class="form-check-label">
                 我接受条款 & 条件
             </label>
+            <span asp-validation-for="TermsAccepted" class="text-danger"></span>
         </div>
     </div>
     <div class="mb-3 row">
