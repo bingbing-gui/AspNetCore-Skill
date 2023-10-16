@@ -281,9 +281,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreExecuteRawSql", "Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreExecuteStoredProcedures", "EntityFrameworkCore\EFCoreExecuteStoredProcedures\EFCoreExecuteStoredProcedures.csproj", "{E608F852-05E6-42C3-A321-58F64510FC5E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14-AspNetCore.Filters", "14-AspNetCore.Filters", "{8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Filters", "AspNetCore.Filters", "{8C3F2F8F-CC3E-4FCF-9FD8-57158F1D3BDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Filters", "Fundamentals\14-AspNetCore.Filters\AspNetCore.Filters\AspNetCore.Filters.csproj", "{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Filters", "Fundamentals\AspNetCore.Filters\AspNetCore.Filters\AspNetCore.Filters.csproj", "{8B402AE9-CFB3-46C5-82A4-F3DCA51517F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Configuration", "AspNetCore.Configuration", "{AAE21B7E-8C20-4CD4-87AA-C3DFD1B0BE79}"
 EndProject
