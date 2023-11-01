@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+​@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+        .ToList();
+}​
+<form asp-action="Cookie" method="post">
+    <label>Language:</label>
+    <select name="culture" onchange="this.form.submit()" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
+    </select>
+</form>
+​
+<table>
+    <tr>
+        <td>Culture</td>
+        <td>
+            @requestCulture.RequestCulture.Culture.Name
+        </td>
+    </tr>
+    <tr>
+        <td>UICulture</td>
+        <td>
+            @requestCulture.RequestCulture.UICulture.Name
+        </td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>
+            @DateTime.Now.ToLongDateString()
+        </td>
+    </tr>
+    <tr>
+        <td>Currency</td>
+        <td>
+            @(12345.00.ToString("c"))
+        </td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td>
+            @(123.45m.ToString("F2"))
+        </td>
+    </tr>
+</table>
