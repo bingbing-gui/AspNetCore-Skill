@@ -1,4 +1,4 @@
-namespace AspNetCore.GlobalizationLocalization.ResourceFiles.Models
+namespace AspNetCore.GlobalLocalResFiles.Models
 {
     public class ErrorViewModel
     {
