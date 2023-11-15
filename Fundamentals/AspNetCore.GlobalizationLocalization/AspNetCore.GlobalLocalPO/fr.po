@@ -1,0 +1,4 @@
+﻿msgctxt "Views.Home.About"
+
+msgid "Hello world!"
+msgstr "Bonjour le monde!"
