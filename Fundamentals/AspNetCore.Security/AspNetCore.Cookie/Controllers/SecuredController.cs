@@ -11,4 +11,8 @@ namespace AspNetCore.Cookie.Controllers
             return View();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 935a62729cc87e73a0f64826c7000ced97ebce3d
