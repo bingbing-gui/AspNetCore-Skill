@@ -4,19 +4,11 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
-<<<<<<< HEAD
-
-=======
->>>>>>> 935a62729cc87e73a0f64826c7000ced97ebce3d
 namespace AspNetCore.Cookie.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-<<<<<<< HEAD
-
-=======
->>>>>>> 935a62729cc87e73a0f64826c7000ced97ebce3d
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -25,18 +17,12 @@ namespace AspNetCore.Cookie.Controllers
         {
             return View();
         }
-<<<<<<< HEAD
-=======
         [HttpGet]
->>>>>>> 935a62729cc87e73a0f64826c7000ced97ebce3d
         public IActionResult Login()
         {
             return View();
         }
-<<<<<<< HEAD
         [HttpPost]
-=======
->>>>>>> 935a62729cc87e73a0f64826c7000ced97ebce3d
         public async Task<IActionResult> Login(string username, string password, string ReturnUrl)
         {
             if ((username == "Admin") && (password == "Admin"))
@@ -62,10 +48,6 @@ namespace AspNetCore.Cookie.Controllers
         {
             return View();
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> 935a62729cc87e73a0f64826c7000ced97ebce3d
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
