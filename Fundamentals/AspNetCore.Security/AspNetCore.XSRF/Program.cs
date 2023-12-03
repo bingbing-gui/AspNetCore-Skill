@@ -12,9 +12,10 @@ builder.Services.AddControllersWithViews(options =>
 
 builder.Services.AddAntiforgery(options =>
 {
-    // Set Cookie properties using CookieBuilder properties†.
+    //防伪造系统用于在视图中呈现防伪造令牌的隐藏表单域的名称
     options.FormFieldName = "AntiforgeryFieldname";
-    options.HeaderName = "X-CSRF-TOKEN-HEADERNAME";
+    //防伪造系统使用的标头的名称。 如果为 null，则系统仅考虑表单数据
+    options.HeaderName = "X-XSRF-TOKEN";
     options.SuppressXFrameOptionsHeader = false;
 });
 
