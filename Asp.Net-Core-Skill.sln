@@ -307,6 +307,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.XSRF", "Fundamen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.OpenRedirectAttacks", "Fundamentals\AspNetCore.Security\AspNetCore.OpenRedirectAttacks\AspNetCore.OpenRedirectAttacks.csproj", "{9B46CBA3-3B3F-408E-BD62-B3E7EBEA39E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.XSS", "Fundamentals\AspNetCore.Security\AspNetCore.XSS\AspNetCore.XSS.csproj", "{987A041E-7590-4017-8BD8-87937D34AA01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -721,6 +723,10 @@ Global
 		{9B46CBA3-3B3F-408E-BD62-B3E7EBEA39E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B46CBA3-3B3F-408E-BD62-B3E7EBEA39E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B46CBA3-3B3F-408E-BD62-B3E7EBEA39E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987A041E-7590-4017-8BD8-87937D34AA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987A041E-7590-4017-8BD8-87937D34AA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987A041E-7590-4017-8BD8-87937D34AA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987A041E-7590-4017-8BD8-87937D34AA01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -866,6 +872,7 @@ Global
 		{17233462-69F9-4251-B7D9-B5A8F576A7E5} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
 		{6CFA9565-5D7A-4CCA-B207-B377526CAC06} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
 		{9B46CBA3-3B3F-408E-BD62-B3E7EBEA39E1} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
+		{987A041E-7590-4017-8BD8-87937D34AA01} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
