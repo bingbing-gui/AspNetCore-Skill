@@ -1,6 +1,7 @@
 ﻿using AspNetCore.XSS.Models;
 using AspNetCore.XSS.Repository;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace AspNetCore.XSS.Controllers
 {

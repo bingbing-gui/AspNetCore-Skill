@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "博客列表";
 }
+@HtmlEncoder
 <div class="container">
     <div class="row mb-3">
         <div class="col-sm-3">
@@ -27,7 +28,8 @@
                         <tr>
                             <td>@blog.Title</td>
                             @*<td>@blog.Body</td>*@
-                            <td>@Html.Raw(blog.Body)</td>
+                            <td>@System.Text.Encodings.Web.HtmlEncoder.Default.Encode(blog.Body)</td>
+                        @*    <td>@Html.Raw(blog.Body)</td>*@
                             <td>@blog.CreateTime</td>
                         </tr>
                     }
