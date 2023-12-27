@@ -19,6 +19,7 @@ namespace AspNetCore.HttpRequest.Pages.Consumption
         {
             var httpClient = _httpClientFactory.CreateClient("GitHub");
             var httpResponseMessage = await httpClient.GetAsync("repos/dotnet/AspNetCore.Docs/branches");
+
             if (httpResponseMessage.IsSuccessStatusCode)
             {
                 using var contentStream = await httpResponseMessage.Content.ReadAsStreamAsync();

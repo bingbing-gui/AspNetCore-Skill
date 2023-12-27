@@ -3,5 +3,5 @@
 namespace AspNetCore.HttpRequest.GitHub
 {
     public record GitHubBranch(
-     [property: JsonPropertyName("name")] string Name);
+    [property: JsonPropertyName("name")] string Name);
 }

@@ -1,5 +1,4 @@
 using AspNetCore.HttpRequest.GitHub;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspNetCore.HttpRequest.Pages.Consumption

@@ -1,6 +1,5 @@
 using AspNetCore.HttpRequest.GitHub;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 namespace AspNetCore.HttpRequest.Pages
 {
     public class RefitModel : PageModel

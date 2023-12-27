@@ -28,9 +28,10 @@ builder.Services.AddHttpClient("GitHub", httpClient =>
 #endregion
 
 #region ClientTyped
+
 //给GitHubService增加 DelegatingHandler 处理
-builder.Services.AddHttpClient<GitHubService>()
-    .AddHttpMessageHandler<ValidateHeaderHandler>();
+builder.Services.AddHttpClient<GitHubService>();
+    //.AddHttpMessageHandler<ValidateHeaderHandler>();
 
 #endregion
 
