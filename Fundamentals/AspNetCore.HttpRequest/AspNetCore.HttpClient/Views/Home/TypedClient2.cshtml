@@ -1,0 +1,22 @@
+﻿@namespace AspNetCore.HttpClient.GitHub
+@model GitHubRepo
+@{
+    ViewData["Title"] = "Latest GitHub Repo for ASP.NET Docs";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.GetRepoRequestsError)
+{
+    <p>error Please try again later.</p>
+}
+else if (Model.HasPullRequests)
+{
+    @foreach (var repo in Model.RepoRequests)
+    {
+        <p>@repo</p>
+    }
+}
+else
+{
+    <p>No repo found.</p>
+}
