@@ -17,25 +17,20 @@ namespace AspNetCore.HttpClient.Controllers
     {
         private readonly IHttpClientFactory _clientFactory;
         private readonly GitHubService _gitHubService;
-        private readonly RepoService _repoService;
-        private readonly ILogger<HomeController> _logger;
+        private readonly IGitHubClient _gitHubClient;
 
-        public HomeController(ILogger<HomeController> logger,
-            IHttpClientFactory httpClientFactory,
+        public HomeController(IHttpClientFactory httpClientFactory,
             GitHubService gitHubService,
-            RepoService repoService)
+            IGitHubClient gitHubClient)
         {
-            _logger = logger;
             _clientFactory = httpClientFactory;
             _gitHubService = gitHubService;
-            _repoService = repoService;
+            _gitHubClient = gitHubClient;
         }
-
         public IActionResult Index()
         {
             return View();
         }
-
         public async Task<IActionResult> BasicUsage()
         {
             var request = new HttpRequestMessage(HttpMethod.Get,
@@ -55,8 +50,7 @@ namespace AspNetCore.HttpClient.Controllers
             if (reponse.IsSuccessStatusCode)
             {
                 using var responseStream = await reponse.Content.ReadAsStreamAsync();
-                var Branches = await JsonSerializer.DeserializeAsync
-                    <IEnumerable<GitHubBranch>>(responseStream);
+                var Branches = await JsonSerializer.DeserializeAsync<IEnumerable<GitHubBranch>>(responseStream);
                 basicUsageModel.Branches = Branches;
                 basicUsageModel.GetBranchesError = false;
             }
@@ -71,10 +65,8 @@ namespace AspNetCore.HttpClient.Controllers
 
         public async Task<IActionResult> NamedClient()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get,
-                "repos/dotnet/AspNetCore.Docs/pulls");
-            var client = _clientFactory.CreateClient("github");
-            var response = await client.SendAsync(request);
+            var httpClient = _clientFactory.CreateClient("github");
+            var response = await httpClient.GetAsync("repos/dotnet/AspNetCore.Docs/pulls");
             NamedClientModel namedClientModel = new NamedClientModel();
             if (response.IsSuccessStatusCode)
             {
@@ -98,7 +90,7 @@ namespace AspNetCore.HttpClient.Controllers
             try
             {
                 var gitHubIssues = await _gitHubService.GetAspNetDocsIssues();
-                typeClientModel.LatestIssues = (IEnumerable<GitHubIssue>)gitHubIssues;
+                typeClientModel.LatestIssues = gitHubIssues;
             }
             catch (HttpRequestException ex)
             {
@@ -107,23 +99,11 @@ namespace AspNetCore.HttpClient.Controllers
             }
             return View(typeClientModel);
         }
-        public async Task<IActionResult> TypedClient2()
+        public async Task<IActionResult> RefitClient()
         {
-            GitHubRepo gitHubRepo = new GitHubRepo();
-            try
-            {
-                var repos = await _repoService.GetRepos();
-                gitHubRepo.GetRepoRequestsError = false;
-                gitHubRepo.RepoRequests = repos;
-            }
-            catch (HttpRequestException ex)
-            {
-                gitHubRepo.GetRepoRequestsError = true;
-                gitHubRepo.RepoRequests = Array.Empty<string>();
-            }
-            return View(gitHubRepo);
+            var gitHubBranches = await _gitHubClient.GetAspNetCoreDocsBranchesAsync();
+            return View(gitHubBranches);
         }
-
         public IActionResult Privacy()
         {
             return View();

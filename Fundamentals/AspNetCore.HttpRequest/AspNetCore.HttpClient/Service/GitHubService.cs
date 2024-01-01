@@ -9,7 +9,6 @@ namespace AspNetCore.HttpClient.Service
     public class GitHubService
     {
         public System.Net.Http.HttpClient Client { get; }
-
         public GitHubService(System.Net.Http.HttpClient client)
         {
             client.BaseAddress = new Uri("https://api.github.com/");

@@ -10,7 +10,6 @@ namespace AspNetCore.HttpClient.Service
     public class RepoService
     {
         private readonly System.Net.Http.HttpClient _httpClient;
-
         public RepoService(System.Net.Http.HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -18,9 +17,7 @@ namespace AspNetCore.HttpClient.Service
         public async Task<IEnumerable<string>> GetRepos()
         {
             var response = await _httpClient.GetAsync("aspnet/repos");
-
             response.EnsureSuccessStatusCode();
-
             using var responseStream = await response.Content.ReadAsStreamAsync();
             return await JsonSerializer.DeserializeAsync
                 <IEnumerable<string>>(responseStream);
