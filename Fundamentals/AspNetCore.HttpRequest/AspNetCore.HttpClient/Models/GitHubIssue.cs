@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
 
-namespace AspNetCore.HttpClient.GitHub
+namespace AspNetCore.HttpClient.Models
 {
     /// <summary>
     /// A partial representation of an issue object from the GitHub API

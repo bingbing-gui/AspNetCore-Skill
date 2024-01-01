@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
 
-namespace AspNetCore.HttpClient.GitHub
+namespace AspNetCore.HttpClient.Models
 {
     /// <summary>
     /// A partial representation of a pull request object from the GitHub API

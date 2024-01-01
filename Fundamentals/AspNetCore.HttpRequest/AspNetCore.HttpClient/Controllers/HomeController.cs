@@ -1,8 +1,6 @@
-﻿using AspNetCore.HttpClient.GitHub;
-using AspNetCore.HttpClient.Models;
+﻿using AspNetCore.HttpClient.Models;
 using AspNetCore.HttpClient.Service;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 using System;
 using System.Collections.Generic;

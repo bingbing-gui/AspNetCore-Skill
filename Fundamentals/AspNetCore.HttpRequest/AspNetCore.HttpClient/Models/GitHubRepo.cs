@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.HttpClient.GitHub
+namespace AspNetCore.HttpClient.Models
 {
     public class GitHubRepo
     {

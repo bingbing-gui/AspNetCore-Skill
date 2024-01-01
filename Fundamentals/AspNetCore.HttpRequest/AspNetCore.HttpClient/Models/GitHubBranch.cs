@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace AspNetCore.HttpClient.GitHub
+namespace AspNetCore.HttpClient.Models
 {
     /// <summary>
     /// A partial representation of a branch object from the GitHub API

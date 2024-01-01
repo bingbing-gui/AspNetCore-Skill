@@ -1,4 +1,4 @@
-﻿using AspNetCore.HttpClient.GitHub;
+﻿using AspNetCore.HttpClient.Models;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;

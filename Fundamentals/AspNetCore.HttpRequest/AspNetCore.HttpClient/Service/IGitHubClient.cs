@@ -1,4 +1,4 @@
-﻿using AspNetCore.HttpClient.GitHub;
+﻿using AspNetCore.HttpClient.Models;
 using Refit;
 using System.Collections.Generic;
 using System.Threading.Tasks;
