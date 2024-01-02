@@ -1,4 +1,5 @@
-﻿using AspNetCore.UsingHttpVerb.Practice.Models;
+﻿using AspNetCore.HttpClientWithHttpVerb.Models;
+using AspNetCore.UsingHttpVerb.Practice.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AspNetCore.UsingHttpVerb.Practice.Handlers
+namespace AspNetCore.HttpClientWithHttpVerb.Handlers
 {
     public class OperationHandler: DelegatingHandler
     {

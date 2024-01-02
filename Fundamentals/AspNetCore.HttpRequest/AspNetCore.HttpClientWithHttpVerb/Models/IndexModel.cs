@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.UsingHttpVerb.Practice.Models
+namespace AspNetCore.HttpClientWithHttpVerb.Models
 {
     public class IndexModel
     {

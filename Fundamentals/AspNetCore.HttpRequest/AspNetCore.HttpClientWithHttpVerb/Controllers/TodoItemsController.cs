@@ -1,13 +1,11 @@
-﻿using AspNetCore.UsingHttpVerb.Practice.Models;
+﻿using AspNetCore.HttpClientWithHttpVerb.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.UsingHttpVerb.Practice.Controllers
+namespace AspNetCore.HttpClientWithHttpVerb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -18,7 +16,6 @@ namespace AspNetCore.UsingHttpVerb.Practice.Controllers
         {
             _context = context;
         }
-
         public async Task<IEnumerable<TodoItem>> Get() =>
              await _context.TodoItems.AsNoTracking().ToListAsync();
 
@@ -45,7 +42,7 @@ namespace AspNetCore.UsingHttpVerb.Practice.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(long id, TodoItem todoItem)
         {
-            var request=HttpContext.Request;
+            var request = HttpContext.Request;
             if (todoItem.Id != id)
                 return BadRequest();
             _context.Update(todoItem);
@@ -61,7 +58,7 @@ namespace AspNetCore.UsingHttpVerb.Practice.Controllers
             {
                 return NotFound();
             }
-             _context.TodoItems.Remove(todoItem);
+            _context.TodoItems.Remove(todoItem);
             await _context.SaveChangesAsync();
             return NoContent();
         }

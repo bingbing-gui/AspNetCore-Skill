@@ -1,43 +1,72 @@
+using AspNetCore.HttpClientWithHttpVerb.Models;
 using AspNetCore.UsingHttpVerb.Practice.Models;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net.Http;
 
-namespace AspNetCore.UsingHttpVerb.Practice
+var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddDbContext<TodoContext>(options =>
+              options.UseInMemoryDatabase("TodoItems"));
+
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddHttpClient<TodoClient>((serviceProvider, httpClient) =>
 {
-    public class Program
+    var httpRequest = serviceProvider.GetRequiredService<IHttpContextAccessor>().HttpContext.Request;
+    httpClient.BaseAddress = new Uri(UriHelper.BuildAbsolute(
+        httpRequest.Scheme, httpRequest.Host, httpRequest.PathBase));
+    httpClient.Timeout = TimeSpan.FromSeconds(5);
+})
+.ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+{
+    ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, certChain, policyErrors) =>
     {
-        public static void Main(string[] args)
-        {
-            var host=CreateHostBuilder(args).Build();
-
-            using (var serviceScope = host.Services.CreateScope())
-            {
-                var context = serviceScope.ServiceProvider.GetRequiredService<TodoContext>();
-                SeedContext(context);
-                context.SaveChanges();
-            }
-            host.Run();
-        }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-        private static void SeedContext(TodoContext context)
-        {
-            context.TodoItems.Add(new TodoItem { Name = "Task #1", IsComplete = true });
-            context.TodoItems.Add(new TodoItem { Name = "Task #2" });
-            context.TodoItems.Add(new TodoItem { Name = "Task #3" });
-            context.TodoItems.Add(new TodoItem { Name = "Task #4", IsComplete = true });
-        }
+        return true;
     }
 }
+);
+//builder.Services.AddScoped<IOperationScoped, OperationScoped>();
+
+//builder.Services.AddTransient<OperationHandler>();
+//builder.Services.AddTransient<OperationResponseHandler>();
+
+//builder.Services.AddHttpClient("operation")
+//    .AddHttpMessageHandler<OperationHandler>()
+//    .AddHttpMessageHandler<OperationResponseHandler>()
+//    .SetHandlerLifetime(TimeSpan.FromSeconds(50));
+
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+//app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

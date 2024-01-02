@@ -1,31 +1,28 @@
-﻿using AspNetCore.UsingHttpVerb.Practice.Models;
+﻿using AspNetCore.HttpClientWithHttpVerb.Models;
+using AspNetCore.UsingHttpVerb.Practice.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace AspNetCore.UsingHttpVerb.Practice.Controllers
+namespace AspNetCore.HttpClientWithHttpVerb.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly TodoClient _todoClient;
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly IOperationScoped _operationScoped;
+        //private readonly IOperationScoped _operationScoped;
         public HomeController(ILogger<HomeController> logger,
            TodoClient todoClient,
-           IHttpClientFactory httpClientFactory,
-           IOperationScoped operationScoped)
+           IHttpClientFactory httpClientFactory)
         {
             _logger = logger;
             _todoClient = todoClient;
             _httpClientFactory = httpClientFactory;
-            _operationScoped = operationScoped;
         }
         /// <summary>
         /// 调用HttpClient Get
@@ -92,18 +89,18 @@ namespace AspNetCore.UsingHttpVerb.Practice.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-        public async Task<IActionResult> Operation()
-        {
-            var httpClient=_httpClientFactory.CreateClient("operation");
-            var operationIdFromRequestScope = _operationScoped.OperationId;
-            var operationIdFromHandlerScope = await httpClient.GetStringAsync("https://example.com");
-            var operationModel = new OperationModel()
-            { 
-                OperationIdFromRequestScope= operationIdFromRequestScope,
-                OperationIdFromHandlerScope = operationIdFromHandlerScope
-            };
-            return View(operationModel);
-        }
+        //public async Task<IActionResult> Operation()
+        //{
+        //    var httpClient=_httpClientFactory.CreateClient("operation");
+        //    var operationIdFromRequestScope = _operationScoped.OperationId;
+        //    var operationIdFromHandlerScope = await httpClient.GetStringAsync("https://example.com");
+        //    var operationModel = new OperationModel()
+        //    { 
+        //        OperationIdFromRequestScope= operationIdFromRequestScope,
+        //        OperationIdFromHandlerScope = operationIdFromHandlerScope
+        //    };
+        //    return View(operationModel);
+        //}
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
