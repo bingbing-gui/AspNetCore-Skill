@@ -299,6 +299,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.HttpClient", "Fu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.HttpClientWithHttpVerb", "Fundamentals\AspNetCore.HttpRequest\AspNetCore.HttpClientWithHttpVerb\AspNetCore.HttpClientWithHttpVerb.csproj", "{3FBD5500-912C-40E4-9C39-C0845E9ED58E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.HttpClientHander", "Fundamentals\AspNetCore.HttpRequest\AspNetCore.HttpClientHander\AspNetCore.HttpClientHander.csproj", "{CDC410A7-EED4-41D1-8EB8-78425E2BF9D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -709,6 +711,10 @@ Global
 		{3FBD5500-912C-40E4-9C39-C0845E9ED58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FBD5500-912C-40E4-9C39-C0845E9ED58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FBD5500-912C-40E4-9C39-C0845E9ED58E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC410A7-EED4-41D1-8EB8-78425E2BF9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC410A7-EED4-41D1-8EB8-78425E2BF9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC410A7-EED4-41D1-8EB8-78425E2BF9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC410A7-EED4-41D1-8EB8-78425E2BF9D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -851,6 +857,7 @@ Global
 		{987A041E-7590-4017-8BD8-87937D34AA01} = {E2837BD1-E7C6-49B8-950D-646C2A51DBA9}
 		{78C8359E-171C-4A84-B516-9E88CA7BD6DE} = {90282F6E-629A-4280-A57A-25F6A5A0B8C7}
 		{3FBD5500-912C-40E4-9C39-C0845E9ED58E} = {90282F6E-629A-4280-A57A-25F6A5A0B8C7}
+		{CDC410A7-EED4-41D1-8EB8-78425E2BF9D8} = {90282F6E-629A-4280-A57A-25F6A5A0B8C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

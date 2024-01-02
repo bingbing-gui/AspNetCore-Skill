@@ -1,5 +1,4 @@
 using AspNetCore.HttpClientWithHttpVerb.Models;
-using AspNetCore.UsingHttpVerb.Practice.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,10 +11,8 @@ using System.Net.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddDbContext<TodoContext>(options =>
               options.UseInMemoryDatabase("TodoItems"));
-
 
 builder.Services.AddHttpContextAccessor();
 
