@@ -47,6 +47,7 @@ builder.Services.AddHttpClient("PollyRegistryLong")
 
 builder.Services.AddHttpClient("HandlerLifetime")
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
