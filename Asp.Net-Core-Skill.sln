@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.FrameWork.Practice", "ThirdParty.Framwork\MediatR.Framework\MediatR.Framework\MediatR.FrameWork.Practice.csproj", "{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.FrameWork.Practice", "Third-Party.Framwork\MediatR.Framework\MediatR.Framework\MediatR.FrameWork.Practice.csproj", "{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MediatR.Framework", "MediatR.Framework", "{C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EPPlus.Framework", "EPPlus.Framework", "{671F3AA2-C1A2-4C24-A40E-572C2C24447E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPPlus.FrameWork.Practice", "ThirdParty.Framwork\EPPlus.Framework\EPPlus.Framework.Practice\EPPlus.FrameWork.Practice.csproj", "{1A9A62E8-2790-4A5D-9326-3C7B469F820B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPPlus.FrameWork.Practice", "Third-Party.Framwork\EPPlus.Framework\EPPlus.Framework.Practice\EPPlus.FrameWork.Practice.csproj", "{1A9A62E8-2790-4A5D-9326-3C7B469F820B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Log.Practice", "Fundamentals\09-AspNetCore.Loging\Old.Version\AspNetCore.Log.Practice\AspNetCore.Log.Practice.csproj", "{E45522E5-6934-49F1-8F52-D8C1BF6619A9}"
 EndProject
@@ -28,7 +28,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle", "Fundamentals\11-AspNetCore.HandleError\Old.Version\AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.csproj", "{A9381237-5BC6-4F45-96A9-94DA79F6537C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Window.ManualResetEventSlim.Practice", "Task\Window.ManualResetEventSlim.Practice\Window.ManualResetEventSlim.Practice.csproj", "{48EC4989-7FAA-4642-84C5-D255B99BEC17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Window.ManualResetEventSlim.Practice", "CSharp\Task\Window.ManualResetEventSlim.Practice\Window.ManualResetEventSlim.Practice.csproj", "{48EC4989-7FAA-4642-84C5-D255B99BEC17}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.StaticFileMiddle.Pratice", "Fundamentals\13-AspNetCore.StaticFiles\Old.Version\AspNetCore.StaticFileMiddle.Pratice\AspNetCore.StaticFileMiddle.Pratice.csproj", "{71C2313D-9FB7-4954-A25C-39DF7C3C3409}"
 EndProject
@@ -38,19 +38,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.StaticFiles", "F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thread", "Thread", "{2C6ABEFA-CDB5-4F43-B77C-85F3E638AD44}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thread", "Task\Thread\Thread.csproj", "{77A03321-EED2-4420-BD70-1D847E47E125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thread", "CSharp\Task\Thread\Thread.csproj", "{77A03321-EED2-4420-BD70-1D847E47E125}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadPool", "Task\ThreadPool\ThreadPool.csproj", "{4F3CA718-C2BF-4A91-8EB6-D58F39218CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadPool", "CSharp\Task\ThreadPool\ThreadPool.csproj", "{4F3CA718-C2BF-4A91-8EB6-D58F39218CC6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spider", "Spider", "{EB28097F-A219-4C3B-A145-4E89DDED6683}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spider", "ThirdParty.Framwork\Spider\Spider.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spider", "Third-Party.Framwork\Spider\Spider.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketClient", "Socket\SocketClient\SocketClient.csproj", "{E9FDCF20-02F4-4067-96F3-94C50A844426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketClient", "CSharp\Socket\SocketClient\SocketClient.csproj", "{E9FDCF20-02F4-4067-96F3-94C50A844426}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Socket", "Socket", "{ECA94CAE-6395-4A83-8E0A-46079A255CCE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "Socket\SocketServer\SocketServer.csproj", "{D1F7E9A8-9479-46BC-ACAE-580874815C65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "CSharp\Socket\SocketServer\SocketServer.csproj", "{D1F7E9A8-9479-46BC-ACAE-580874815C65}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{E6F9B6BF-15B1-4DDB-BC20-634773C1A663}"
 EndProject
@@ -84,9 +84,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.BranchMiddlePip
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GRPC", "GRPC", "{7CF7B4BD-7EC7-4D40-BBB0-6B6CF1F13088}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.GRPC.Server", "ThirdParty.Framwork\GRPC\AspNetCore.GRPC\AspNetCore.GRPC.Server.csproj", "{C6459550-828B-43EB-A062-988F42157316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.GRPC.Server", "Third-Party.Framwork\GRPC\AspNetCore.GRPC\AspNetCore.GRPC.Server.csproj", "{C6459550-828B-43EB-A062-988F42157316}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPC.Client", "ThirdParty.Framwork\GRPC\GRPC.Client\GRPC.Client.csproj", "{4DA82B43-30DD-4135-8FC9-9A6BD09105F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPC.Client", "Third-Party.Framwork\GRPC\GRPC.Client\GRPC.Client.csproj", "{4DA82B43-30DD-4135-8FC9-9A6BD09105F1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpLinq", "CSharp\CSharpLinq\CSharpLinq.csproj", "{55583B89-1BD6-4912-855F-6B00FA7DA399}"
 EndProject
@@ -126,7 +126,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.StaticFiles.Aut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.EmptyTemplate", "Fundamentals\13-AspNetCore.StaticFiles\AspNetCore6.EmptyTemplate\AspNetCore6.EmptyTemplate.csproj", "{3A661485-40F5-410E-9424-8BA90670A323}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty.Framwork", "ThirdParty.Framwork", "{728878FE-9942-47D3-BC75-2AF0E37719C3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Third-Party.Framwork", "Third-Party.Framwork", "{728878FE-9942-47D3-BC75-2AF0E37719C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModelBinding", "AspNetCore.ModelBinding", "{1FEDB4D8-96B5-4D10-8E88-AB02C77B4866}"
 EndProject
@@ -685,6 +685,7 @@ Global
 		{EB28097F-A219-4C3B-A145-4E89DDED6683} = {728878FE-9942-47D3-BC75-2AF0E37719C3}
 		{889A41A8-E06A-4647-BEB0-3E8E4F7122D6} = {EB28097F-A219-4C3B-A145-4E89DDED6683}
 		{E9FDCF20-02F4-4067-96F3-94C50A844426} = {ECA94CAE-6395-4A83-8E0A-46079A255CCE}
+		{ECA94CAE-6395-4A83-8E0A-46079A255CCE} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 		{D1F7E9A8-9479-46BC-ACAE-580874815C65} = {ECA94CAE-6395-4A83-8E0A-46079A255CCE}
 		{1E88604F-1137-45A1-81C7-D29032B1B984} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 		{BBF6C4A9-33E7-4A15-8CB0-2E4792B75E7D} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
@@ -735,6 +736,7 @@ Global
 		{E2837BD1-E7C6-49B8-950D-646C2A51DBA9} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{9628F40A-FEEB-4428-ADE5-0FAB71307324} = {A958E665-2F95-409B-B98D-A33E26706FE5}
 		{47333C66-F952-495D-A0E0-2454F4A462F0} = {2C45688F-89E6-479F-A55A-9182790B61B2}
+		{11F153F4-CFBA-46DA-880D-A2EE75CD6B94} = {E6F9B6BF-15B1-4DDB-BC20-634773C1A663}
 		{670A008A-881D-44C5-871C-23B2EC724190} = {36F88865-CD87-4011-9E44-3ED5990D4ED9}
 		{A07B329B-D58E-4A6A-B4BC-47BCAAB90D9A} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
 		{FB1717D0-DCFF-4BD3-9330-9876BEF7EC53} = {F0FA7506-5C98-4485-B12C-28228C2E6AB2}
