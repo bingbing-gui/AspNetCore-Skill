@@ -6,7 +6,6 @@ namespace AspNetCore.Startup.Middleware
     public class RequestSetOptionsMiddleware
     {
         private readonly RequestDelegate _next;
-
         public RequestSetOptionsMiddleware(RequestDelegate next)
         {
             _next = next;
