@@ -277,6 +277,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Swagger", "AspNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Swashbuckle", "Fundamentals\AspNetCore.Swagger\AspNetCore.Swashbuckle\AspNetCore.Swashbuckle.csproj", "{8A217CCE-87AB-4FF7-BCE8-ED6B67267283}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.NSwag", "Fundamentals\AspNetCore.Swagger\AspNetCore.NSwag\AspNetCore.NSwag.csproj", "{2FC34480-FAE6-42A5-A593-C6C618743524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -659,6 +661,10 @@ Global
 		{8A217CCE-87AB-4FF7-BCE8-ED6B67267283}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A217CCE-87AB-4FF7-BCE8-ED6B67267283}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A217CCE-87AB-4FF7-BCE8-ED6B67267283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC34480-FAE6-42A5-A593-C6C618743524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC34480-FAE6-42A5-A593-C6C618743524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC34480-FAE6-42A5-A593-C6C618743524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC34480-FAE6-42A5-A593-C6C618743524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -793,6 +799,7 @@ Global
 		{CDC410A7-EED4-41D1-8EB8-78425E2BF9D8} = {90282F6E-629A-4280-A57A-25F6A5A0B8C7}
 		{501CCE23-3EA7-4D91-ADFB-C3E09B8DBEC4} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{8A217CCE-87AB-4FF7-BCE8-ED6B67267283} = {501CCE23-3EA7-4D91-ADFB-C3E09B8DBEC4}
+		{2FC34480-FAE6-42A5-A593-C6C618743524} = {501CCE23-3EA7-4D91-ADFB-C3E09B8DBEC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
