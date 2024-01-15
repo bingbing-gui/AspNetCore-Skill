@@ -19,12 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Scope.Project", "Fundam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Serilog", "Fundamentals\09-AspNetCore.Loging\Old.Version\AspNetCore.Serilog\AspNetCore.Serilog.csproj", "{03026168-A66A-4BE7-930E-CCAC5FC5EED5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-AspNetCore.Middleware", "03-AspNetCore.Middleware", "{64EAD733-6E08-4A4A-AE0E-B22894AC3642}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Middleware", "AspNetCore.Middleware", "{64EAD733-6E08-4A4A-AE0E-B22894AC3642}"
 	ProjectSection(SolutionItems) = preProject
 		中间件.txt = 中间件.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fundamentals\03-AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fundamentals\AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.ExceptionHandle", "Fundamentals\11-AspNetCore.HandleError\Old.Version\AspNetCore.ExceptionHandle\AspNetCore.ExceptionHandle.csproj", "{A9381237-5BC6-4F45-96A9-94DA79F6537C}"
 EndProject
@@ -76,9 +76,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamental
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DependencyInjection", "AspNetCore.DependencyInjection", "{F9856C07-A857-4DB7-9323-F58B9513CCA9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.Middleware", "Fundamentals\03-AspNetCore.Middleware\AspNetCore6.Middleware\AspNetCore6.Middleware.csproj", "{057A0F82-37F3-4E05-9605-F37C1C8A82F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.Middleware", "Fundamentals\AspNetCore.Middleware\AspNetCore6.Middleware\AspNetCore6.Middleware.csproj", "{057A0F82-37F3-4E05-9605-F37C1C8A82F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.BranchMiddlePipeline", "Fundamentals\03-AspNetCore.Middleware\AspNetCore6.BranchMiddlePipeline\AspNetCore6.BranchMiddlePipeline.csproj", "{972AC5A1-B910-447E-9630-C2F72567354F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.BranchMiddlePipeline", "Fundamentals\AspNetCore.Middleware\AspNetCore6.BranchMiddlePipeline\AspNetCore6.BranchMiddlePipeline.csproj", "{972AC5A1-B910-447E-9630-C2F72567354F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GRPC", "GRPC", "{7CF7B4BD-7EC7-4D40-BBB0-6B6CF1F13088}"
 EndProject
