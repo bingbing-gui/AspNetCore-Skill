@@ -74,7 +74,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpOut", "CSharp\CSharpO
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamentals", "{9191ADFA-8918-46BF-9DEB-5351A72FC84B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AspNetCore.Startup", "01-AspNetCore.Startup", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.APPStartup", "AspNetCore.APPStartup", "{130B405E-B50B-443E-A919-674CC9E7FA9D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.DependencyInjection", "AspNetCore.DependencyInjection", "{F9856C07-A857-4DB7-9323-F58B9513CCA9}"
 EndProject
@@ -175,7 +175,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreCodeFirst", "EntityFr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreMigration", "EntityFrameworkCore\EFCoreMigration\EFCoreMigration.csproj", "{BB9E4F78-761B-46D2-A713-9EF4BB1D763E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Startup", "Fundamentals\01-AspNetCore.Startup\AspNetCore.Startup\AspNetCore.Startup.csproj", "{3E35C06E-1B78-4138-90AD-90C6F420DE49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.APPStartup", "Fundamentals\AspNetCore.APPStartup\AspNetCore.Startup\AspNetCore.Startup.csproj", "{3E35C06E-1B78-4138-90AD-90C6F420DE49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DependencyInjection", "Fundamentals\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection\AspNetCore.DependencyInjection.csproj", "{273F283E-8233-45AA-BD7C-D3DDE08F36A6}"
 EndProject
@@ -277,7 +277,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Swagger", "AspNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Swashbuckle", "Fundamentals\AspNetCore.Swagger\AspNetCore.Swashbuckle\AspNetCore.Swashbuckle.csproj", "{8A217CCE-87AB-4FF7-BCE8-ED6B67267283}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.NSwag", "Fundamentals\AspNetCore.Swagger\AspNetCore.NSwag\AspNetCore.NSwag.csproj", "{2FC34480-FAE6-42A5-A593-C6C618743524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.NSwag", "Fundamentals\AspNetCore.Swagger\AspNetCore.NSwag\AspNetCore.NSwag.csproj", "{2FC34480-FAE6-42A5-A593-C6C618743524}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
