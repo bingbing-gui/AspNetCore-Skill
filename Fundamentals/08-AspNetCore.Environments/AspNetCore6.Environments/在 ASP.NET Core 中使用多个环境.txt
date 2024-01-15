@@ -1,11 +1,11 @@
 ﻿1. 环境
 
-
 为了确定运行时环境，ASP.NET Core 从以下环境变量中读取信息：
-
 DOTNET_ENVIRONMENT
 
-ASPNETCORE_ENVIRONMENT，调用 WebApplication.CreateBuilder 方法时。 默认 ASP.NET Core Web 应用模板调用 WebApplication.CreateBuilder。 ASPNETCORE_ENVIRONMENT 值替代 DOTNET_ENVIRONMENT。
+ASPNETCORE_ENVIRONMENT，调用 WebApplication.CreateBuilder 方法时。 默认 ASP.NET Core Web 应用模板调用 
+WebApplication.CreateBuilder，ASPNETCORE_ENVIRONMENT 值替代 DOTNET_ENVIRONMENT。
+
 IHostEnvironment.EnvironmentName 可以设置为任意值，但是框架提供了下列值：
 
 Development：launchSettings.json 文件将本地计算机上的 ASPNETCORE_ENVIRONMENT 设置为 Development。
