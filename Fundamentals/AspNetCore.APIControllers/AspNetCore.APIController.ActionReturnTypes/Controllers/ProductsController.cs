@@ -14,8 +14,6 @@ namespace AspNetCore.APIController.ActionReturnTypes.Controllers
         {
             _productContext = productContext;
         }
-
-
         [HttpGet]
         public Task<List<Product>> Get() =>
         _productContext.Products.OrderBy(p => p.Name).ToListAsync();
