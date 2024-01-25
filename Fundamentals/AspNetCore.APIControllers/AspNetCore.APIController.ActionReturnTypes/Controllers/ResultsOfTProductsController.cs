@@ -29,7 +29,6 @@ namespace AspNetCore.APIController.ActionReturnTypes.Controllers
             {
                 return TypedResults.BadRequest();
             }
-
             _productContext.Products.Add(product);
             await _productContext.SaveChangesAsync();
 
