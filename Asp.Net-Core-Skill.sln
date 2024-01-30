@@ -96,9 +96,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Options", "AspNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.Configuration", "Fundamentals\06-AspNetCore.Configuration\AspNetCore6.Configuration\AspNetCore6.Configuration.csproj", "{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.Options", "Fundamentals\AspNetCore.Options\AspNetCore.Options\AspNetCore.Options.csproj", "{8D3C03EE-28C0-4957-98BC-070DD647FB33}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.OptionsValidation", "Fundamentals\AspNetCore.Options\AspNetCore.OptionsValidation\AspNetCore.OptionsValidation.csproj", "{63B9FF6D-7FFF-4429-9DE8-72B2C3BBE73B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.OptionsValidation", "Fundamentals\AspNetCore.Options\AspNetCore.OptionsValidation\AspNetCore.OptionsValidation.csproj", "{63B9FF6D-7FFF-4429-9DE8-72B2C3BBE73B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08-AspNetCore.Environments", "08-AspNetCore.Environments", "{5A2389B7-0C06-42BC-9677-365264D7F6A6}"
 EndProject
@@ -277,6 +275,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.NSwag", "Fundame
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.APIController.ActionReturnTypes", "Fundamentals\AspNetCore.APIControllers\AspNetCore.APIController.ActionReturnTypes\AspNetCore.APIController.ActionReturnTypes.csproj", "{7B9D117E-F739-412D-8594-D1F57803B7FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.OptionsPattern", "Fundamentals\AspNetCore.Options\AspNetCore.OptionsPattern\AspNetCore.OptionsPattern.csproj", "{BCF7B7D0-FF88-4E73-80EC-2DB79A8974BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -411,10 +411,6 @@ Global
 		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D3C03EE-28C0-4957-98BC-070DD647FB33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D3C03EE-28C0-4957-98BC-070DD647FB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D3C03EE-28C0-4957-98BC-070DD647FB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D3C03EE-28C0-4957-98BC-070DD647FB33}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63B9FF6D-7FFF-4429-9DE8-72B2C3BBE73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63B9FF6D-7FFF-4429-9DE8-72B2C3BBE73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63B9FF6D-7FFF-4429-9DE8-72B2C3BBE73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -663,6 +659,10 @@ Global
 		{7B9D117E-F739-412D-8594-D1F57803B7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B9D117E-F739-412D-8594-D1F57803B7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B9D117E-F739-412D-8594-D1F57803B7FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF7B7D0-FF88-4E73-80EC-2DB79A8974BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF7B7D0-FF88-4E73-80EC-2DB79A8974BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF7B7D0-FF88-4E73-80EC-2DB79A8974BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF7B7D0-FF88-4E73-80EC-2DB79A8974BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -711,7 +711,6 @@ Global
 		{8F676163-7600-45EA-8899-C71A31E8F6D2} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{94401DDF-9986-4E93-A8C4-FB69DB7B2218} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{A8376DC4-9501-45E1-B5FF-6FADDB6C763F} = {8F676163-7600-45EA-8899-C71A31E8F6D2}
-		{8D3C03EE-28C0-4957-98BC-070DD647FB33} = {94401DDF-9986-4E93-A8C4-FB69DB7B2218}
 		{63B9FF6D-7FFF-4429-9DE8-72B2C3BBE73B} = {94401DDF-9986-4E93-A8C4-FB69DB7B2218}
 		{5A2389B7-0C06-42BC-9677-365264D7F6A6} = {9191ADFA-8918-46BF-9DEB-5351A72FC84B}
 		{8B1FEE89-46AC-41DF-985D-76DF9B1E016E} = {5A2389B7-0C06-42BC-9677-365264D7F6A6}
@@ -797,6 +796,7 @@ Global
 		{8A217CCE-87AB-4FF7-BCE8-ED6B67267283} = {501CCE23-3EA7-4D91-ADFB-C3E09B8DBEC4}
 		{2FC34480-FAE6-42A5-A593-C6C618743524} = {501CCE23-3EA7-4D91-ADFB-C3E09B8DBEC4}
 		{7B9D117E-F739-412D-8594-D1F57803B7FB} = {986DB7F9-28BB-41C9-AF3D-D6B96089D417}
+		{BCF7B7D0-FF88-4E73-80EC-2DB79A8974BB} = {94401DDF-9986-4E93-A8C4-FB69DB7B2218}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
