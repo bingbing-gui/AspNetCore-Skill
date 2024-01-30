@@ -26,16 +26,15 @@ namespace AspNetCore.OptionsPattern.Controllers
             var positionOptions = new PositionOptions();
             _configuration.GetSection(PositionOptions.Position).Bind(positionOptions);
             #endregion
-            return View();
+            return View(positionOptions);
         }
         public IActionResult GetOfT()
         {
-
             #region Get 方法
             var positionOptions = _configuration.GetSection(PositionOptions.Position)
                                                      .Get<PositionOptions>();
             #endregion
-            return View();
+            return View(positionOptions);
         }
         public IActionResult Privacy()
         {
