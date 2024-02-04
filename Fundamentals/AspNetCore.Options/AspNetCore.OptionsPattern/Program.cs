@@ -1,4 +1,5 @@
 using AspNetCore.OptionsPattern.Models;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,26 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.Configure<PositionOptions>(
     builder.Configuration.GetSection(PositionOptions.Position));
+
+
+//builder.Services.AddOptions<MyConfigOptions>()
+//            .Bind(builder.Configuration.GetSection(MyConfigOptions.MyConfig))
+//            .ValidateDataAnnotations()
+//            .Validate(config =>
+//            {
+//                if (config.Key2 != 0)
+//                {
+//                    return config.Key3 > config.Key2;
+//                }
+
+//                return true;
+//            }, "Key3 must be > than Key2.");   // Failure message.;
+
+builder.Services.AddOptions<MyConfigOptions>()
+           .Bind(builder.Configuration.GetSection(MyConfigOptions.MyConfig));
+
+builder.Services.AddSingleton<IValidateOptions
+                              <MyConfigOptions>, MyConfigValidation>();
 
 var app = builder.Build();
 
