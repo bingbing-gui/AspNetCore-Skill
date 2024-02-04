@@ -1,5 +1,0 @@
-﻿三种验证方法
-
-1.直接注册验证函数
-2.实现IValidateOptions<TOptions>
-3.使用Microsoft.Extensions.Options.DataAnnotations
