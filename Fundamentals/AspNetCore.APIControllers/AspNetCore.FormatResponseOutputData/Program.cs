@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
 //builder.Services.AddControllers()
 //                .AddXmlSerializerFormatters();
 //builder.Services.AddControllers()
@@ -13,8 +14,12 @@ var builder = WebApplication.CreateBuilder(args);
 //                    options.JsonSerializerOptions.PropertyNamingPolicy = null;
 //                });
 
+//builder.Services.AddControllers()
+//    .AddNewtonsoftJson();
+
 builder.Services.AddControllers()
-    .AddNewtonsoftJson();
+    .AddXmlSerializerFormatters()
+    ;//.AddNewtonsoftJson();
 
 builder.Services.AddSingleton<TodoItemStore>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

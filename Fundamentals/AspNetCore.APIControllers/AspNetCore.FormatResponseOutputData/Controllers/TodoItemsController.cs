@@ -5,6 +5,7 @@ namespace AspNetCore.FormatResponseOutputData.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Produces("application/json")]
     public class TodoItemsController : ControllerBase
     {
         private readonly TodoItemStore _todoItemStore;
