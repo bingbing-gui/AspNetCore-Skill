@@ -1,4 +1,5 @@
 ﻿using AspNetCore.FormatResponseOutputData.Models;
+using Microsoft.AspNetCore.Mvc.Formatters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,9 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddControllers()
 //    .AddNewtonsoftJson();
 
-builder.Services.AddControllers()
-    .AddXmlSerializerFormatters()
-    ;//.AddNewtonsoftJson();
+
 
 builder.Services.AddSingleton<TodoItemStore>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
