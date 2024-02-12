@@ -13,13 +13,18 @@ namespace AspNetCore.API.BasicAuthentication.Controllers
 
         }
         [Authorize]
-        [HttpGet("auth", Name = "BasicAuth")]
+        [HttpGet("Auth", Name = "BasicAuth")]
         public ActionResult BasicAuth()
         {
+            var username = HttpContext.User.Claims
+               .FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?
+               .Value;
+
             var response = new
             {
                 Message = "授权成功",
                 ServerTime = DateTime.Now,
+                Username= username
             };
             return Ok(response);
         }
