@@ -90,10 +90,10 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
             var secret = _configuration.GetSection("JwtSetting:Secret").Value;
             var issue = _configuration.GetSection("JwtSetting:Issuer").Value;
             var audience = _configuration.GetSection("JwtSetting:Audience").Value;
-            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(secret));
 
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(secret));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-            //var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256); 
+
             var token = new JwtSecurityToken(
                 issuer: issue,
                 audience: audience,

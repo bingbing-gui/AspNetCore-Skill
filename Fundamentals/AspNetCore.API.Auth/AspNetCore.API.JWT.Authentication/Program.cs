@@ -26,7 +26,6 @@ builder.Services.AddSwaggerGen(options =>
     //    Type = SecuritySchemeType.ApiKey
     //});
     //options.OperationFilter<SecurityRequirementsOperationFilter>();
-
     var schemeName = "bearer";
     //如果用Token验证，会在Swagger界面上有验证              
     options.AddSecurityDefinition(schemeName, new OpenApiSecurityScheme
