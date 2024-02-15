@@ -19,7 +19,6 @@ namespace AspNetCore.API.BasicAuthentication.Controllers
             var username = HttpContext.User.Claims
                .FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?
                .Value;
-
             var response = new
             {
                 Message = "授权成功",

@@ -6,23 +6,40 @@ using System.Security.Cryptography;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspNetCore.API.JWT.Authentication.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class JwtAuthController : ControllerBase
+    [Route("user")]
+    public class UserController : ControllerBase
     {
         public readonly User _user;
         private readonly IConfiguration _configuration;
-        public JwtAuthController(IConfiguration configuration, User user)
+        public UserController(IConfiguration configuration, User user)
         {
             _configuration = configuration;
             _user = user;
         }
 
-        [HttpPost("register")]
-        public async Task<ActionResult<User>> Register(UserDto request)
+        [Authorize]
+        [HttpGet("auth")]
+        public ActionResult JWTAuth()
+        {
+            var username = HttpContext.User.Claims
+               .FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?
+               .Value;
+            var response = new
+            {
+                Message = "授权成功",
+                ServerTime = DateTime.Now,
+                Username = username
+            };
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<User>> Post(UserDto request)
         {
             CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
@@ -55,7 +72,6 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
             string token = CreateToken(_user);
             return Ok(token);
         }
-
         private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {
             using (var hmac = new HMACSHA512(passwordSalt))
@@ -68,7 +84,7 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.NameIdentifier, user.Username),
                 new Claim(ClaimTypes.Role, "Admin")
             };
             var secret = _configuration.GetSection("JwtSetting:Secret").Value;
@@ -77,7 +93,7 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(secret));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-
+            //var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256); 
             var token = new JwtSecurityToken(
                 issuer: issue,
                 audience: audience,
