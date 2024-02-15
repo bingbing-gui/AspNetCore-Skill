@@ -255,7 +255,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.OptionsPattern",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.FormatResponseOutputData", "Fundamentals\AspNetCore.APIControllers\AspNetCore.FormatResponseOutputData\AspNetCore.FormatResponseOutputData.csproj", "{3E87C770-147D-4602-89D9-29B6A59E1C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.API.BasicAuthentication", "Fundamentals\AspNetCore.API.Auth\AspNetCore.API.BasicAuthentication\AspNetCore.API.BasicAuthentication.csproj", "{9CEADCB0-520B-4352-87E1-A61A3D2E3188}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.API.BasicAuthentication", "Fundamentals\AspNetCore.API.Auth\AspNetCore.API.BasicAuthentication\AspNetCore.API.BasicAuthentication.csproj", "{9CEADCB0-520B-4352-87E1-A61A3D2E3188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.API.JWT.Authentication", "Fundamentals\AspNetCore.API.Auth\AspNetCore.API.JWT.Authentication\AspNetCore.API.JWT.Authentication.csproj", "{2B93A897-21B4-4000-B9AD-D7941A440CE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -611,6 +613,10 @@ Global
 		{9CEADCB0-520B-4352-87E1-A61A3D2E3188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CEADCB0-520B-4352-87E1-A61A3D2E3188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CEADCB0-520B-4352-87E1-A61A3D2E3188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B93A897-21B4-4000-B9AD-D7941A440CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B93A897-21B4-4000-B9AD-D7941A440CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B93A897-21B4-4000-B9AD-D7941A440CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B93A897-21B4-4000-B9AD-D7941A440CE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -735,6 +741,7 @@ Global
 		{BCF7B7D0-FF88-4E73-80EC-2DB79A8974BB} = {94401DDF-9986-4E93-A8C4-FB69DB7B2218}
 		{3E87C770-147D-4602-89D9-29B6A59E1C73} = {986DB7F9-28BB-41C9-AF3D-D6B96089D417}
 		{9CEADCB0-520B-4352-87E1-A61A3D2E3188} = {2F46328B-07C0-4476-845C-D7DFE2F81B4F}
+		{2B93A897-21B4-4000-B9AD-D7941A440CE6} = {2F46328B-07C0-4476-845C-D7DFE2F81B4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
