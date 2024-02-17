@@ -7,6 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using System.Buffers.Text;
+using System.Collections;
 
 namespace AspNetCore.API.JWT.Authentication.Controllers
 {
@@ -21,10 +23,13 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
             _configuration = configuration;
             _user = user;
         }
-
+        /// <summary>
+        /// 验证权限
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
-        [HttpGet("auth")]
-        public ActionResult JWTAuth()
+        [HttpGet]
+        public ActionResult Get()
         {
             var username = HttpContext.User.Claims
                .FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?
@@ -37,7 +42,11 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
             };
             return Ok(response);
         }
-
+        /// <summary>
+        /// 用户注册
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult<User>> Post(UserDto request)
         {
@@ -46,7 +55,8 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
             _user.Username = request.Username;
             _user.PasswordHash = passwordHash;
             _user.PasswordSalt = passwordSalt;
-
+            Console.WriteLine(Convert.ToBase64String(passwordHash));
+            Console.WriteLine(Convert.ToBase64String(passwordSalt));
             return Ok(_user);
         }
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -57,7 +67,11 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
                 passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
         }
-
+        /// <summary>
+        /// 用户登录
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost("login")]
         public async Task<ActionResult<string>> Login(UserDto request)
         {

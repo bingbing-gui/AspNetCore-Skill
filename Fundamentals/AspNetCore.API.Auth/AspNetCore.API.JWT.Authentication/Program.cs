@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
+using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 
@@ -50,6 +51,8 @@ builder.Services.AddSwaggerGen(options =>
                         new string[0]
                     }
                     });
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 var secret = builder.Configuration.GetSection("JwtSetting:Secret").Value;
