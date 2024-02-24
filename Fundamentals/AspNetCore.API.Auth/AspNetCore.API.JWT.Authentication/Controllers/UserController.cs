@@ -103,7 +103,6 @@ namespace AspNetCore.API.JWT.Authentication.Controllers
             {
                 return Unauthorized("Token expired.");
             }
-
             string token = CreateToken(_user);
             var newRefreshToken = GenerateRefreshToken();
             SetRefreshToken(newRefreshToken);
