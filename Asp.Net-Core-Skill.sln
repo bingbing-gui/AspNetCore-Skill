@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.FrameWork.Practice", "Third-Party.Framwork\MediatR.Framework\MediatR.Framework\MediatR.FrameWork.Practice.csproj", "{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.FrameWork.Practice", "Third-Party.Library\MediatR.Framework\MediatR.Framework\MediatR.FrameWork.Practice.csproj", "{DB2EF7CD-D20E-406A-A4A0-6C00DF7D58D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MediatR.Framework", "MediatR.Framework", "{C8749D6C-F5C9-444D-88D4-6C3D6F9EC633}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EPPlus.Framework", "EPPlus.Framework", "{671F3AA2-C1A2-4C24-A40E-572C2C24447E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPPlus.FrameWork.Practice", "Third-Party.Framwork\EPPlus.Framework\EPPlus.Framework.Practice\EPPlus.FrameWork.Practice.csproj", "{1A9A62E8-2790-4A5D-9326-3C7B469F820B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPPlus.FrameWork.Practice", "Third-Party.Library\EPPlus.Framework\EPPlus.Framework.Practice\EPPlus.FrameWork.Practice.csproj", "{1A9A62E8-2790-4A5D-9326-3C7B469F820B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Middleware", "AspNetCore.Middleware", "{64EAD733-6E08-4A4A-AE0E-B22894AC3642}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spider", "Spider", "{EB28097F-A219-4C3B-A145-4E89DDED6683}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spider", "Third-Party.Framwork\Spider\Spider.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spider", "Third-Party.Library\Spider\Spider.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamentals", "{9191ADFA-8918-46BF-9DEB-5351A72FC84B}"
 EndProject
@@ -32,9 +32,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6.BranchMiddlePip
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GRPC", "GRPC", "{7CF7B4BD-7EC7-4D40-BBB0-6B6CF1F13088}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.GRPC.Server", "Third-Party.Framwork\GRPC\AspNetCore.GRPC\AspNetCore.GRPC.Server.csproj", "{C6459550-828B-43EB-A062-988F42157316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.GRPC.Server", "Third-Party.Library\GRPC\AspNetCore.GRPC\AspNetCore.GRPC.Server.csproj", "{C6459550-828B-43EB-A062-988F42157316}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPC.Client", "Third-Party.Framwork\GRPC\GRPC.Client\GRPC.Client.csproj", "{4DA82B43-30DD-4135-8FC9-9A6BD09105F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPC.Client", "Third-Party.Library\GRPC\GRPC.Client\GRPC.Client.csproj", "{4DA82B43-30DD-4135-8FC9-9A6BD09105F1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.TagHelpers", "AspNetCore.TagHelpers", "{DC592A7A-D047-4941-8429-F2AB317F6586}"
 EndProject
@@ -46,7 +46,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Route", "AspNetC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.HttpRequest", "AspNetCore.HttpRequest", "{90282F6E-629A-4280-A57A-25F6A5A0B8C7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Third-Party.Framwork", "Third-Party.Framwork", "{728878FE-9942-47D3-BC75-2AF0E37719C3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Third-Party.Library", "Third-Party.Library", "{728878FE-9942-47D3-BC75-2AF0E37719C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModelBinding", "AspNetCore.ModelBinding", "{1FEDB4D8-96B5-4D10-8E88-AB02C77B4866}"
 EndProject
@@ -177,6 +177,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.API.BasicAuthentication", "Fundamentals\AspNetCore.API.Auth\AspNetCore.API.BasicAuthentication\AspNetCore.API.BasicAuthentication.csproj", "{9CEADCB0-520B-4352-87E1-A61A3D2E3188}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.API.JWT.Authentication", "Fundamentals\AspNetCore.API.Auth\AspNetCore.API.JWT.Authentication\AspNetCore.API.JWT.Authentication.csproj", "{2B93A897-21B4-4000-B9AD-D7941A440CE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NodaTime.Library", "NodaTime.Library", "{A2CEEDCB-BE40-4EDA-A475-F9A04C849553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodaTime.Library", "Third-Party.Library\NodaTime.Library\NodaTime.Library\NodaTime.Library.csproj", "{6EB1D980-A2B4-4F8D-8ABD-EDBDC49AA380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -424,6 +428,10 @@ Global
 		{2B93A897-21B4-4000-B9AD-D7941A440CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B93A897-21B4-4000-B9AD-D7941A440CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B93A897-21B4-4000-B9AD-D7941A440CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB1D980-A2B4-4F8D-8ABD-EDBDC49AA380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB1D980-A2B4-4F8D-8ABD-EDBDC49AA380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB1D980-A2B4-4F8D-8ABD-EDBDC49AA380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB1D980-A2B4-4F8D-8ABD-EDBDC49AA380}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -511,6 +519,8 @@ Global
 		{3E87C770-147D-4602-89D9-29B6A59E1C73} = {986DB7F9-28BB-41C9-AF3D-D6B96089D417}
 		{9CEADCB0-520B-4352-87E1-A61A3D2E3188} = {2F46328B-07C0-4476-845C-D7DFE2F81B4F}
 		{2B93A897-21B4-4000-B9AD-D7941A440CE6} = {2F46328B-07C0-4476-845C-D7DFE2F81B4F}
+		{A2CEEDCB-BE40-4EDA-A475-F9A04C849553} = {728878FE-9942-47D3-BC75-2AF0E37719C3}
+		{6EB1D980-A2B4-4F8D-8ABD-EDBDC49AA380} = {A2CEEDCB-BE40-4EDA-A475-F9A04C849553}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
