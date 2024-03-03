@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HtmlAgility.Library", "HtmlAgility.Library", "{EB28097F-A219-4C3B-A145-4E89DDED6683}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlAgility.Library.Console", "Third-Party.Library\Spider\HtmlAgility.Library.Console.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlAgility.Library.Console", "Third-Party.Library\HtmlAgility.Library\HtmlAgility.Library.Console.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamentals", "{9191ADFA-8918-46BF-9DEB-5351A72FC84B}"
 EndProject
@@ -184,7 +184,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NodaTime.Library", "Third-P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AngleSharp.Library", "AngleSharp.Library", "{DA4AC847-7BB0-4BE8-A2F2-B7919B5B79E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Library.Console", "Third-Party.Library\AngleSharp.Library\AngleSharp.Library.Demo\AngleSharp.Library.Console.csproj", "{A352D6B9-0C33-4798-8AD0-3B4CE8C4CC55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Library.Console", "Third-Party.Library\AngleSharp.Library\AngleSharp.Library.Console.csproj", "{A352D6B9-0C33-4798-8AD0-3B4CE8C4CC55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
