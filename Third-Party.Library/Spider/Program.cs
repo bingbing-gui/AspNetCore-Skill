@@ -9,7 +9,6 @@ namespace Spider
         static void Main(string[] args)
         {
             var rates=GetExchangeRateBySpider();
-
             Console.WriteLine(rates);
             Console.ReadLine();
         }
