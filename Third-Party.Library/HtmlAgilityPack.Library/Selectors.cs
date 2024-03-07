@@ -8,7 +8,7 @@ namespace HtmlAgilityPack.Library
 {
     internal class Selectors
     {
-        public static HtmlNodeCollection SelectNodes()
+        public static void SelectNodes()
         {
             var html =
          @"<TD class=texte width=""50%"">
@@ -26,9 +26,12 @@ namespace HtmlAgilityPack.Library
 
             var htmlNodes = htmlDoc.DocumentNode.SelectNodes("//td/input");
 
-            return htmlNodes;
+            foreach (var node in htmlNodes)
+            {
+                Console.WriteLine(node.Attributes["value"].Value);
+            }
         }
-        public static HtmlNode SelectSingleNode()
+        public static void SelectSingleNode()
         {
             var html =
     @"<TD class=texte width=""50%"">
@@ -43,9 +46,11 @@ namespace HtmlAgilityPack.Library
 
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
-            var htmlNode = htmlDoc.DocumentNode
-                .SelectSingleNode("//td/input");
-            return htmlNode;
+            var value = htmlDoc.DocumentNode
+                .SelectSingleNode("//td/input")
+                .Attributes["value"].Value;
+
+            Console.WriteLine(value);
         }
     }
 }

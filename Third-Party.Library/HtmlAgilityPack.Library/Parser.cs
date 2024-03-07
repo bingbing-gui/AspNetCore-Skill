@@ -1,10 +1,13 @@
 ﻿
+using System;
+using System.Xml;
+
 namespace HtmlAgilityPack.Library
 {
     internal class Parser
     {
         #region From File
-        public static HtmlNode LoadFromFile()
+        public static void LoadFromFile()
         {
             var html =
                @"<!DOCTYPE html>
@@ -22,12 +25,12 @@ namespace HtmlAgilityPack.Library
             var doc = new HtmlDocument();
             doc.Load(path);
             var htmlNode = doc.DocumentNode.SelectSingleNode("//body");
-            return htmlNode;
+            Console.WriteLine(htmlNode.OuterHtml);
         }
         #endregion
 
         #region From String
-        public static HtmlNode LoadFromString()
+        public static void LoadFromString()
         {
             var html =
              @"<!DOCTYPE html>
@@ -41,18 +44,18 @@ namespace HtmlAgilityPack.Library
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
             var htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//body");
-            return htmlNode;
+            Console.WriteLine(htmlNode.OuterHtml);
         }
         #endregion
 
         #region From Web
-        public static HtmlNode LoadFromWeb()
+        public static void LoadFromWeb()
         {
             var html = @"https://html-agility-pack.net/";
             HtmlWeb web = new HtmlWeb();
             var htmlDoc = web.Load(html);
-            var node = htmlDoc.DocumentNode.SelectSingleNode("//head/title");
-            return node;
+            var htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//head/title");
+            Console.WriteLine(htmlNode.OuterHtml);
         }
         #endregion
 

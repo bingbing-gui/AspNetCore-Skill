@@ -9,40 +9,20 @@ namespace HtmlAgilityPack.Library
         static void Main(string[] args)
         {
 
-            #region Parser
-            #region 从文件中加载HTML
-            var htmlNode = Parser.LoadFromFile();
+            //#region Parser 从文件,字符创,web地址中加载HTML
+            //Parser.LoadFromFile();
+            //Parser.LoadFromString();
+            //Parser.LoadFromWeb();
+            //#endregion 
+            //#region Selectors
+            //Selectors.SelectNodes();
+            //Selectors.SelectSingleNode();
+            //#endregion
+            //Manipulation.UsageExampleOfHtmlNodeProperties();
 
-            Console.WriteLine(htmlNode.OuterHtml);
-            #endregion
-
-            #region 从字符创中加载HTML
-            htmlNode = Parser.LoadFromString();
-            Console.WriteLine(htmlNode.OuterHtml);
-            #endregion
-
-            #region 从web地址中加载HTML
-            htmlNode = Parser.LoadFromWeb();
-
-            Console.WriteLine(htmlNode.OuterHtml);
-            #endregion
-
-            #endregion 
-            #region Selectors
-            
-            var htmlNodes = Selectors.SelectNodes();
-            foreach (var node in htmlNodes)
-            {
-                Console.WriteLine(node.Attributes["value"].Value);
-            }
-
-            htmlNode = Selectors.SelectSingleNode();
-            var value = htmlNode.Attributes["value"].Value;
-            Console.WriteLine(value);
-            
-            #endregion
-
-
+            //Manipulation.AppendChild();
+            //Manipulation.AppendChildren();
+            Manipulation.Clone();
             Console.ReadLine();
         }
 
