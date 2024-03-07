@@ -18,9 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Middleware", "As
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Middleware", "Fundamentals\AspNetCore.Middleware\AspNetCore.Middleware\AspNetCore.Middleware.csproj", "{947EEC82-13EB-4D2E-B05F-D4E14DDB697E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HtmlAgility.Library", "HtmlAgility.Library", "{EB28097F-A219-4C3B-A145-4E89DDED6683}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HtmlAgilityPack.Library", "HtmlAgilityPack.Library", "{EB28097F-A219-4C3B-A145-4E89DDED6683}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlAgility.Library.Console", "Third-Party.Library\HtmlAgility.Library\HtmlAgility.Library.Console.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlAgilityPack.Library.Console", "Third-Party.Library\HtmlAgilityPack.Library\HtmlAgilityPack.Library.Console.csproj", "{889A41A8-E06A-4647-BEB0-3E8E4F7122D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamentals", "Fundamentals", "{9191ADFA-8918-46BF-9DEB-5351A72FC84B}"
 EndProject
