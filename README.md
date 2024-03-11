@@ -9,6 +9,6 @@
 | [Third-Party Library](https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/Third-Party.Library) | 常用的ASP.NET Core第三方的库 |
       
 ## Entity FrameworkCore
-| 项目名称                                                                                                                       |描述                                                                         |
+| 项目名称 | 描述 |
 | ----------------------------------------------------------------------------------------------------------------------------  | -------------------------------------------------------------|
 | [Entity FrameworkCore](https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/EntityFrameworkCore)                   | 主要涵盖了Entity FrameworkCore基本使用，基本安装，对实体增删改查，Fluent API使用  |
