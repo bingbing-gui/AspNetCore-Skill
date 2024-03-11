@@ -8,7 +8,7 @@
   </tr>
  <tr>
     <td><a href="https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/EntityFrameworkCore">Entity FrameworkCore</a></td>
-    <td>主要涵盖了Entity FrameworkCore基本使用，基本安装，对实体增删改查，Fluent API使用 </td>
+    <td>主要涵盖了Entity FrameworkCore基本和Fluent API基本使用 </td>
   </tr>
   <tr>
     <td><a href="https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/EntityFrameworkCore">ASP.NET Core Identity</a></td>
