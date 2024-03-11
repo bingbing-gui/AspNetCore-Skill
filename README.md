@@ -1,7 +1,7 @@
 # ASP.NET Core Skill
 这个仓库涵盖了 ASP.NET Core 学习资料，包括 Entity Framework Core、ASP.NET Identity 和 ASP.NET Core 核心知识点，并提供了常用第三方库的示例代码。解决方案的主要目录结构如下：
 | 目录                                                                                                                       |描述   |
-| ----------------------------------------------------------------------------------------------------------| ------------------------------------------------------------ |
+|:----------------------------------------------------------------------------------------------------------|:------------------------------------------------------------ |
 | Fundamentals| ASP.NET Core 基础与高阶技能全攻略|
 | AspNetCore.Identity | 主要涵盖了ASP.NET Core Identity组件中所有功能 |
 | EntityFrameworkCore| 主要涵盖了Entity FrameworkCore基本使用，基本安装，对实体增删改查，Fluent API使用 |
@@ -11,7 +11,7 @@
 ## Entity FrameworkCore
 ## Third-Party.Library
 | 项目名称 | 描述 |
-| ----------------------------------------------------------------------------------------------------------------------------  | -------------------------------------------------------------|
+|:----------------------------------------------------------------------------------------------------------------------------  |:-------------------------------------------------------------|
 | Entity FrameworkCore介绍  |  [Entity FrameworkCore介绍](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486352&idx=1&sn=7c6b71ba2d48c6a8572d4777154c0f06&chksm=9f0054baa877ddacd9054e90745ee5db786d35fc09e082a5ce5ee2f0125dd0860bab3493d753&token=1170622278&lang=zh_CN&scene=21#wechat_redirect)|
 | Entity Framework Core安装  |  [Entity Framework Core安装](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486360&idx=1&sn=aab93026b7506e9e8c1e19d9d099ed24&chksm=9f0054b2a877dda464ddf13c6129e3fa028778336ae08313e508c5fd7befce96125df7c76902&token=1170622278&lang=zh_CN#rd)|
 | Entity Framework Core数据库优先 |  [Entity Framework Core数据库优先](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486484&idx=1&sn=e0911921eac2c1c8f535829c137f35a3&chksm=9f00533ea877da280c08908716e802cd67f34fdcc5e55112a87f66f419437836c78b4e07bccc&token=1170622278&lang=zh_CN&scene=21#wechat_redirect)|
