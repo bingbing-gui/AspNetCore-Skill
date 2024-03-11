@@ -11,4 +11,4 @@
 ## Entity FrameworkCore
 | 项目名称 | 描述 |
 | ----------------------------------------------------------------------------------------------------------------------------  | -------------------------------------------------------------|
-| [Entity FrameworkCore](https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/EntityFrameworkCore)                   | 主要涵盖了Entity FrameworkCore基本使用，基本安装，对实体增删改查，Fluent API使用  |
+| Entity FrameworkCore介绍  |  **[Entity FrameworkCore介绍](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486352&idx=1&sn=7c6b71ba2d48c6a8572d4777154c0f06&chksm=9f0054baa877ddacd9054e90745ee5db786d35fc09e082a5ce5ee2f0125dd0860bab3493d753&token=1170622278&lang=zh_CN&scene=21#wechat_redirect)**|
