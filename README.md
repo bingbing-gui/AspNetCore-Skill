@@ -8,11 +8,11 @@
   </tr>
  <tr>
     <td><a href="https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/EntityFrameworkCore">Entity FrameworkCore</a></td>
-    <td>主要涵盖了Entity FrameworkCore基本和Fluent API基本使用 </td>
+    <td>Entity FrameworkCore系列课程</td>
   </tr>
   <tr>
     <td><a href="https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/EntityFrameworkCore">ASP.NET Core Identity</a></td>
-    <td>主要涵盖了ASP.NET Core Identity组件</td>
+    <td>ASP.NET Core Identity系列课程</td>
   </tr>
   <tr>
     <td><a href="https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/Fundamentals">Fundamentals</a></td>
