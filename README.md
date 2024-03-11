@@ -2,12 +2,14 @@
 这个仓库涵盖了 ASP.NET Core 学习资料，包括 Entity Framework Core、ASP.NET Identity 和 ASP.NET Core 核心知识点，并提供了常用第三方库的示例代码。解决方案的主要目录结构如下：
 | 目录                                                                                                                       |描述   |
 | ----------------------------------------------------------------------------------------------------------| ------------------------------------------------------------ |
-| EntityFrameworkCore| 主要涵盖了Entity FrameworkCore基本使用，基本安装，对实体增删改查，Fluent API使用 |
-| AspNetCore.Identity | 主要涵盖了ASP.NET Core Identity组件中所有功能 |
 | Fundamentals| ASP.NET Core 基础与高阶技能全攻略|
+| AspNetCore.Identity | 主要涵盖了ASP.NET Core Identity组件中所有功能 |
+| EntityFrameworkCore| 主要涵盖了Entity FrameworkCore基本使用，基本安装，对实体增删改查，Fluent API使用 |
 | Third-Party.Library| 常用的ASP.NET Core第三方的库 |
-      
+## Fundamentals
+## AspNetCore.Identity
 ## Entity FrameworkCore
+## Third-Party.Library
 | 项目名称 | 描述 |
 | ----------------------------------------------------------------------------------------------------------------------------  | -------------------------------------------------------------|
 | Entity FrameworkCore介绍  |  [Entity FrameworkCore介绍](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486352&idx=1&sn=7c6b71ba2d48c6a8572d4777154c0f06&chksm=9f0054baa877ddacd9054e90745ee5db786d35fc09e082a5ce5ee2f0125dd0860bab3493d753&token=1170622278&lang=zh_CN&scene=21#wechat_redirect)|
