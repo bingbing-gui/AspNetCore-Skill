@@ -8,3 +8,4 @@
 | [Fundamentals](https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/Fundamentals)                                   | ASP.NET Core 基础与高阶技能全攻略                                                        |
 | [Third-Party Library](https://github.com/bingbing-gui/Asp.Net-Core-Skill/tree/master/Third-Party.Library)                     | 常用的ASP.NET Core第三方的库       |
 
+## Entity FrameworkCore
