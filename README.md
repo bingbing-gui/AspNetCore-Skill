@@ -1,15 +1,15 @@
 # ASP.NET Core Skill
 这个仓库涵盖了 ASP.NET Core 学习资料，包括 Entity Framework Core、ASP.NET Identity 和 ASP.NET Core 核心知识点，并提供了常用第三方库的示例代码。解决方案的主要目录结构如下：
 | 目录                                                                                                                       |描述   |
-|:--------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------|
-| Fundamentals| ASP.NET Core 基础与高阶技能全攻略|
-| AspNetCore.Identity | 主要涵盖了ASP.NET Core Identity组件中所有功能 |
+|:--------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------- |
+| Fundamentals                                                                                  | ASP.NET Core 基础与高阶技能全攻略                                                             |
+| AspNetCore.Identity                                                                           | 主要涵盖了ASP.NET Core Identity组件中所有功能                                                 |
 | EntityFrameworkCore| 主要涵盖了Entity FrameworkCore基本使用，实体增删改查，Fluent API的使用 |
 | Third-Party.Library| 常用的ASP.NET Core第三方的库 |
 ## Fundamentals目录
 | 项目名称 | 项目讲解地址 |
 |:--------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------|
-| AspNetCore.Configuration/AspNetCore.Configuration |[ASP.NET Core 配置系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486815&idx=1&sn=1a4f471b2a8431d771c11d511e8efc5c&chksm=9f005275a877db63515a5304c166b561d1ac476d7d6980c2c26e192d60cdafecd1ba322196c1&token=2146175377&lang=zh_CN&scene=21#wechat_redirect) |
+| AspNetCore.Configuration/AspNetCore.Configuration                                             |[ASP.NET Core 配置系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486815&idx=1&sn=1a4f471b2a8431d771c11d511e8efc5c&chksm=9f005275a877db63515a5304c166b561d1ac476d7d6980c2c26e192d60cdafecd1ba322196c1&token=2146175377&lang=zh_CN&scene=21#wechat_redirect) |
 |AspNetCore.Configuration/AspNetCore.Configuration |[ASP.NET Core 配置系列二](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486833&idx=1&sn=a4de2c6202d559e9968f7170ede99cea&chksm=9f00525ba877db4df4a50a50590103760fd2e4603969b2b2ecfb7a54b414bfba05eecefe1af0&token=2146175377&lang=zh_CN&scene=21#wechat_redirect) |
 | AspNetCore.Configuration/AspNetCore.Configuration |[ASP.NET Core 配置系列三](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486845&idx=1&sn=a9b153b5cff58c5732d51d439bcc5952&chksm=9f005257a877db41dc77a468a9f203deea091969ada466ff4b2730f6066fbaa094484f0d3a8d&token=2146175377&lang=zh_CN&scene=21#wechat_redirect) |
 | AspNetCore.Configuration/AspNetCore.Configuration |[ASP.NET Core 配置系列四](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486847&idx=1&sn=81c1ba7182a6aab6c8958e211b5a9dcf&chksm=9f005255a877db43953e2215a262faedc31c7c9d9083950429a88e5f6a912d7f817a87ab4717&token=2146175377&lang=zh_CN&scene=21#wechat_redirect) |
