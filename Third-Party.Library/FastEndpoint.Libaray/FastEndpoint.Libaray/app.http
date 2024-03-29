@@ -1,0 +1,13 @@
+
+@base=http://localhost:5123
+
+POST {{base}}/api/user/create HTTP/1.1
+Accept: application/json
+Content-Type: application/json; charset=UTF-8
+
+{
+    "FirstName": "Marlon",
+    "LastName": "Brando",
+    "Age": 40
+}
+###

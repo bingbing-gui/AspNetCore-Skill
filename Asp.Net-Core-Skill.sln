@@ -184,7 +184,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Library.Console"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuestPDF.Library", "QuestPDF.Library", "{654426B1-0529-44BB-9647-6CCC2BDF41AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestPDF.Library", "Third-Party.Library\QuestPDF.Library\QuestPDF.Library\QuestPDF.Library.csproj", "{2A9949D0-60B5-4EF5-90CE-44C3C3BB3A3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuestPDF.Library", "Third-Party.Library\QuestPDF.Library\QuestPDF.Library\QuestPDF.Library.csproj", "{2A9949D0-60B5-4EF5-90CE-44C3C3BB3A3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FastEndpoint.Libaray", "FastEndpoint.Libaray", "{6ED5848D-28D2-4523-8E53-1045EB16A54A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastEndpoint.Libaray", "Third-Party.Library\FastEndpoint.Libaray\FastEndpoint.Libaray\FastEndpoint.Libaray.csproj", "{A958ED28-280D-4EE9-B73F-13C60808A6C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -440,6 +444,10 @@ Global
 		{2A9949D0-60B5-4EF5-90CE-44C3C3BB3A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9949D0-60B5-4EF5-90CE-44C3C3BB3A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A9949D0-60B5-4EF5-90CE-44C3C3BB3A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A958ED28-280D-4EE9-B73F-13C60808A6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A958ED28-280D-4EE9-B73F-13C60808A6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A958ED28-280D-4EE9-B73F-13C60808A6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A958ED28-280D-4EE9-B73F-13C60808A6C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -531,6 +539,8 @@ Global
 		{A352D6B9-0C33-4798-8AD0-3B4CE8C4CC55} = {DA4AC847-7BB0-4BE8-A2F2-B7919B5B79E1}
 		{654426B1-0529-44BB-9647-6CCC2BDF41AE} = {728878FE-9942-47D3-BC75-2AF0E37719C3}
 		{2A9949D0-60B5-4EF5-90CE-44C3C3BB3A3E} = {654426B1-0529-44BB-9647-6CCC2BDF41AE}
+		{6ED5848D-28D2-4523-8E53-1045EB16A54A} = {728878FE-9942-47D3-BC75-2AF0E37719C3}
+		{A958ED28-280D-4EE9-B73F-13C60808A6C0} = {6ED5848D-28D2-4523-8E53-1045EB16A54A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
