@@ -186,9 +186,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuestPDF.Library", "QuestPD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuestPDF.Library", "Third-Party.Library\QuestPDF.Library\QuestPDF.Library\QuestPDF.Library.csproj", "{2A9949D0-60B5-4EF5-90CE-44C3C3BB3A3E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FastEndpoint.Libaray", "FastEndpoint.Libaray", "{6ED5848D-28D2-4523-8E53-1045EB16A54A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FastEndpoint.Library", "FastEndpoint.Library", "{6ED5848D-28D2-4523-8E53-1045EB16A54A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastEndpoint.Libaray", "Third-Party.Library\FastEndpoint.Libaray\FastEndpoint.Libaray\FastEndpoint.Libaray.csproj", "{A958ED28-280D-4EE9-B73F-13C60808A6C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastEndpoint.Library", "Third-Party.Library\FastEndpoint.Library\FastEndpoint.Library\FastEndpoint.Library.csproj", "{A958ED28-280D-4EE9-B73F-13C60808A6C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

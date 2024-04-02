@@ -24,3 +24,4 @@ public class MyEndpoint : Endpoint<MyRequest, MyResponse>
 }
 
 
+
