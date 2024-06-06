@@ -1,6 +1,0 @@
-﻿gRPC 客户端项目需要以下 NuGet 包：
-
-Grpc.Net.Client，其中包含 .NET Core 客户端。
-Google.Protobuf 包含适用于 C# 的 Protobuf 消息。
-Grpc.Tools，其中包含适用于 Protobuf 文件的 C# 工具支持。 
-运行时不需要工具包，因此依赖项标记为 PrivateAssets="All"。
