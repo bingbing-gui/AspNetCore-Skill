@@ -1,5 +1,11 @@
-# ASP.NET Core Skill
-这个仓库涵盖了 ASP.NET Core 学习资料，包括 Entity Framework Core、ASP.NET Identity 和 ASP.NET Core 核心知识点，并提供了常用第三方库的示例代码。解决方案的主要目录结构如下：
+ASP.NET Core Skill
+==============================
+这个仓库主要包含了ASP.NET Core 学习资料以及代码例子，包括ASP.NET Identity、ASP.NET Core、Entity Framework Core、核心知识点，同时也包含了ASP.NET Core 第三方开源库。
+## Chapter 1
+*No code samples*
+
+## [Chapter 2]()
+
 | 目录                                                                                                                       |描述   |
 |:--------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------- |
 | Fundamentals                                                                                  | ASP.NET Core 基础与高阶技能全攻略                                                             |
