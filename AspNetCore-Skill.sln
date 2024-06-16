@@ -52,9 +52,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModelBinding", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Security", "AspNetCore.Security", "{E2837BD1-E7C6-49B8-950D-646C2A51DBA9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Identity", "AspNetCore.Identity", "{36F88865-CD87-4011-9E44-3ED5990D4ED9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter01", "Chapter01", "{36F88865-CD87-4011-9E44-3ED5990D4ED9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Identity", "src\AspNetCore.Identity\AspNetCore.Identity.csproj", "{670A008A-881D-44C5-871C-23B2EC724190}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Identity", "src\Chapter01\AspNetCore.Identity.csproj", "{670A008A-881D-44C5-871C-23B2EC724190}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.EFCore", "AspNetCore.EFCore", "{F0FA7506-5C98-4485-B12C-28228C2E6AB2}"
 EndProject
@@ -194,7 +194,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9CD3D2C1-96C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Quartz.Library", "Quartz.Library", "{1CC7A669-E6B0-4286-AFEC-61E744F7F14D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Quartz", "src\AspNetCore.Third-Party.Library\AspNetCore.Quartz\AspNetCore.Quartz.csproj", "{FFE672E2-52BE-4261-9109-67CEDB73BB5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Quartz", "src\AspNetCore.Third-Party.Library\AspNetCore.Quartz\AspNetCore.Quartz.csproj", "{FFE672E2-52BE-4261-9109-67CEDB73BB5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
