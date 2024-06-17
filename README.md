@@ -1,7 +1,7 @@
 asp.net core skill
 ==============================
 这个仓库主要包含了ASP.NET Core 学习资料以及代码例子，包括ASP.NET Identity、ASP.NET Core、Entity Framework Core、核心知识点，同时也包含了ASP.NET Core 第三方开源库。
-## [Chapter 01]()
+## [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
 *No code samples*
 
 ## [Chapter 02]()
