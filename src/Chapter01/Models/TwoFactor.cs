@@ -9,6 +9,6 @@ public class TwoFactor
     [Required]
     [DisplayName("授权码")]
     public string TwoFactorCode { get; set; } = null!;
-    public string? ReturnUrl { get; set; }
+    public string? ReturnUrl { get; set; } 
 }
 }
