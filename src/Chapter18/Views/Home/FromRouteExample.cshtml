@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "FromRouteExample";
+}
+<h2>Body</h2>
+@section scripts {
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function (e) {
+                $.ajax("/Home/FromRouteExample/5",
+                    {
+                        method: "post",
+                        success: function (data) {
+                            $("#id").text(data);
+                        }
+                    });
+            });
+        });
+    </script>
+}
+<table class="table table-sm table-bordered table-striped">
+    <tr><th>Id:</th><td id="id"></td></tr>
+</table>
+<button class="btn btn-primary">Submit</button>
