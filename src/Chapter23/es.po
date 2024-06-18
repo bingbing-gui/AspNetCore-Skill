@@ -1,0 +1,7 @@
+﻿msgid "Hello world!"
+msgstr "¡Hola Mundo!"
+
+msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[1] "French text for first plural"
+msgstr[2] "French text for second plural"
