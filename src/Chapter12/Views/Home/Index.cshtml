@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <p>
+        <a asp-controller="Home" asp-action="Check">Outgoing URL</a>
+    </p>
+    <p>
+        <a asp-controller="Customer" asp-action="Check">Check action of Customer Controller</a>
+    </p>
+    <p>
+        <a asp-controller="Admin" asp-action="Index">Index Action of Admin Controller</a>
+    </p>
+    <p>
+        <a asp-action="Index">Link1</a>
+    </p>
+    <p>
+        <a asp-controller="Product">Link2</a>
+    </p>
+    <p>
+        <a asp-controller="Product" asp-action="Index" asp-route-id="100">Pass 100 to the id segment</a>
+    </p>
+    <p>
+        <a asp-route="sales">Sales</a>
+    </p>
+    <p>
+    <p>
+        @Url.Action("List", "Product", new { id = 10 })
+    </p>
+    <p>
+        <a asp-controller="Product" asp-action="List" asp-fragment="Printing">
+            URL Fragment
+        </a>
+    </p>
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
