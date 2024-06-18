@@ -1,0 +1,34 @@
+﻿@using AspNetCore.Areas.Areas.Sales.Models
+@model Product[]
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Routing</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        @foreach (Product p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Quantity</td>
+                <td>@p.Price</td>
+            </tr>
+        }
+    </table>
+    <p><a asp-action="List">Link1</a></p>
+    <p>
+        <a asp-action="List" asp-controller="Report">Link</a>
+    </p>
+    <p><a asp-action="List" asp-controller="Home" asp-area="Employee">Link3</a></p>
+    <p><a asp-area="" asp-action="List" asp-controller="Home">Link4</a></p>
+</body>
+</html>
