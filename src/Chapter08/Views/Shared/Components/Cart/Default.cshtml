@@ -1,0 +1,22 @@
+﻿@model Product[]
+<table class="table" style="width:50%">
+    <thead class="thead-dark">
+        <tr>
+            <td><u>Product Name</u></td>
+            <td><u>Price</u></td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Product p in Model)
+            {
+                <tr class="table-secondary">
+                    <td>@p.Name</td>
+                    <td>@p.Price</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<p class="p-3 text-white bg-dark">Apply coupon - @ViewBag.Coupon</p>
+
