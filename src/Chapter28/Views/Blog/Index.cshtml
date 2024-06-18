@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Blog>
+@{
+    ViewData["Title"] = "博客列表";
+}
+@HtmlEncoder
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-sm-3">
+            <a asp-action="AddBlog" class="btn btn-primary">新增</a>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm">
+            <table class="table table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>内容</th>
+                        <th>创建日期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Blog blog in Model)
+                    {
+                        <tr>
+                            <td>@blog.Title</td>
+                            @*<td>@blog.Body</td>*@
+                            <td>@System.Text.Encodings.Web.HtmlEncoder.Default.Encode(blog.Body)</td>
+                        @*    <td>@Html.Raw(blog.Body)</td>*@
+                            <td>@blog.CreateTime</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
