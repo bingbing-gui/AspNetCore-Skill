@@ -1,0 +1,20 @@
+﻿<table>
+    <tr>
+        <td>Date</td>
+        <td>
+            @DateTime.Now.ToLongDateString()
+        </td>
+    </tr>
+    <tr>
+        <td>Currency</td>
+        <td>
+            @(12345.00.ToString("c"))
+        </td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td>
+            @(123.45m.ToString("F2"))
+        </td>
+    </tr>
+</table>

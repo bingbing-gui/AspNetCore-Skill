@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+        .ToList();
+}
+<form id="cultureForm" asp-action="Index">
+    <label>语言:</label>
+    <select onchange="SetCulture(this.value)" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
+    </select>
+</form>
+<table class="table culture-table">
+    <tr>
+        <td>Culture</td>
+        <td>
+            @requestCulture.RequestCulture.Culture.Name
+        </td>
+    </tr>
+    <tr>
+        <td>UICulture</td>
+        <td>
+            @requestCulture.RequestCulture.UICulture.Name
+        </td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>
+            @DateTime.Now.ToLongDateString()
+        </td>
+    </tr>
+    <tr>
+        <td>Currency</td>
+        <td>
+            @(98765.00.ToString("c"))
+        </td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td>
+            @(987.87m.ToString("F2"))
+        </td>
+    </tr>
+</table>​
+<script>
+    function SetCulture(selectedValue) {
+        var culture = "/?culture=" + selectedValue + "&ui-culture=" + selectedValue;
+        document.getElementById("cultureForm").action = culture;
+        document.getElementById("cultureForm").submit();
+    }
+</script>
