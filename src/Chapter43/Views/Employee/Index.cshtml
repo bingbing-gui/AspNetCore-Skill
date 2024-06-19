@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "部门数据";
+}
+@model IEnumerable<Employee>
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-sm-3">
+            <a asp-action="Create" class="btn btn-secondary">新增</a>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm">
+            <table class="table table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     @foreach (Employee emp in Model)
+                    {
+                        <tr>
+                            <td>@emp.Id</td>
+                            <td>@emp.Name</td>
+                            <td>@emp.Designation</td>
+                            <td>@emp.Department.Name</td>
+                        </tr>
+                    }                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
