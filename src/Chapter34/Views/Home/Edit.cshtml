@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Edit Item";
+}
+@using AspNetCore.HttpClientWithHttpVerb.Models
+@model TodoItem
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input  hidden="hidden" asp-for="Id"/>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <input asp-for="IsComplete" class="form-check-input">
+                <label asp-for="IsComplete" class="form-check-label">Completed</label>
+            </div>
+            <div class="form-group">
+                <button asp-action="Save" class="btn btn-primary">Save</button>
+                <button asp-action="Delete" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+        <div>
+            <a asp-page="/Index">Back to List</a>
+        </div>
+    </div>
+</div>
