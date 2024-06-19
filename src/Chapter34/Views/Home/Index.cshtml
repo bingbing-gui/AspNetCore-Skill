@@ -1,44 +1,13 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "HttpClient Factory";
 }
-@using AspNetCore.HttpClientWithHttpVerb.Models
-@model IndexModel
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <form asp-action="Create" method="post">
-            <input name="name" placeholder="Something I need to do" class="form-control form-control-sm" />
-            <div class="input-group-append">
-                <button class="btn btn-primary">Add to List</button>
-            </div>
-        </form>
-    </div>
-</div>
-@if (Model.CompleteTodoItems.Any())
-{
-    <hr />
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <ul class="list-group mb-2">
-                @foreach (var todoItem in Model.CompleteTodoItems)
-                {
-                    <a asp-action="Edit" asp-route-id="@todoItem.Id" class="list-group-item list-group-item-action">@todoItem.Name</a>
-                }
-            </ul>
-        </div>
-    </div>
-}
-@if (Model.IncompleteTodoItems.Any())
-{
-    <hr />
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <ul class="list-group mb-2">
-                @foreach (var todoItem in Model.IncompleteTodoItems)
-                {
-                    <a asp-action="Edit" asp-route-id="@todoItem.Id" class="list-group-item list-group-item-action">@todoItem.Name</a>
-                }
-            </ul>
-        </div>
-    </div>
-}
+<h1>@ViewData["Title"]</h1>
+<p><a asp-action="BasicUsage">Basic usage of HttpClientFactory directly.</a></p>
+<p><a asp-action="NamedClient">Use a named client of HttpClientFactory directly.</a></p>
+<p><a asp-action="TypedClient">Use a typed client of HttpClientFactory directly.</a></p>
+<p><a asp-action="RefitClient">Use a RefitClient of HttpClientFactory directly.</a></p>
+@*<p><a asp-page="/UnreliableEndpointConsumer">Use a Polly WaitAndRetry handler.</a></p>*@
+

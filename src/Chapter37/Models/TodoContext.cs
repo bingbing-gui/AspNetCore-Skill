@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 
 
-namespace AspNetCore.NSwag.Models;
+namespace AspNetCore.Swashbuckle.Models;
 
-#pragma warning disable CS1591  
+#pragma warning disable CS1591
 public class TodoContext : DbContext
 {
     public TodoContext(DbContextOptions<TodoContext> options) : base(options) { }
@@ -11,6 +11,5 @@ public class TodoContext : DbContext
     public DbSet<TodoItem> TodoItems => Set<TodoItem>();
 }
 #pragma warning restore CS1591
-
 
 

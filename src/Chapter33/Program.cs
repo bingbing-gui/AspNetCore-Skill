@@ -1,61 +1,99 @@
-﻿using AspNetCore.HttpClient.Service;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Net.Http.Headers;
-using Refit;
-using System;
+﻿using AspNetCore.API.JWT.Authentication.Model;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
+using System.Reflection;
+using System.Security.Claims;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-#region Basic usage
-builder.Services.AddHttpClient();
-#endregion
-#region NamedClient
-builder.Services.AddHttpClient("github", c =>
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+//配置Swagger
+builder.Services.AddSwaggerGen(options =>
 {
-    c.BaseAddress = new Uri("https://api.github.com/");
-    // Github API versioning
-    c.DefaultRequestHeaders.Add("Accept", "application/vnd.github.v3+json");
-    // Github requires a user-agent
-    c.DefaultRequestHeaders.Add("User-Agent", "HttpClientFactory-Sample");
-});
-#endregion
-
-#region Typed clients 使用了transient声明周期
-builder.Services.AddHttpClient<GitHubService>();
-#endregion
-
-#region RefitClient
-builder.Services.AddRefitClient<IGitHubClient>()
-    .ConfigureHttpClient(httpClient =>
+    //options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+    //{
+    //    Description = "Standard Authorization header using the Bearer scheme (\"bearer {token}\")",
+    //    In = ParameterLocation.Header,
+    //    Name = "Authorization",
+    //    Type = SecuritySchemeType.ApiKey
+    //});
+    //options.OperationFilter<SecurityRequirementsOperationFilter>();
+    var schemeName = "bearer";
+    //如果用Token验证，会在Swagger界面上有验证              
+    options.AddSecurityDefinition(schemeName, new OpenApiSecurityScheme
     {
-        httpClient.BaseAddress = new Uri("https://api.github.com/");
-        httpClient.DefaultRequestHeaders.Add(HeaderNames.Accept, "application/vnd.github.v3+json");
-        httpClient.DefaultRequestHeaders.Add(HeaderNames.UserAgent, "HttpRequestsSample");
+        In = ParameterLocation.Header,
+        Description = "请输入不带有bearer的Token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = schemeName,
+        BearerFormat = "JWT"
     });
-#endregion
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = schemeName
+                            }
+                        },
+                        new string[0]
+                    }
+                    });
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
 
-builder.Services.AddControllersWithViews();
+var secret = builder.Configuration.GetSection("JwtSetting:Secret").Value;
+var issuer = builder.Configuration.GetSection("JwtSetting:Issuer").Value;
+var audience = builder.Configuration.GetSection("JwtSetting:Audience").Value;
+//对称加密
+var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
+//签署凭证
+var signingCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha512Signature);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opt =>
+{
+    opt.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = signingKey,
+        ValidateIssuer = true,
+        ValidIssuer = issuer,
+        ValidateAudience = true,
+        ValidAudience = audience,
+        ValidateLifetime = true,
+        RequireExpirationTime = true
+    };
+});
+
+builder.Services.AddSingleton<User>();
+
 var app = builder.Build();
+
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
-else
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-app.UseHttpsRedirection();
-app.UseStaticFiles();
 
-app.UseRouting();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllers();
 
 app.Run();

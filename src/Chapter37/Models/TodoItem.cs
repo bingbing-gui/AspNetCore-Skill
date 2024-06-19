@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace AspNetCore.NSwag.Models;
+namespace AspNetCore.Swashbuckle.Models;
 
 public class TodoItem
 {

@@ -1,4 +1,4 @@
-using AspNetCore.NSwag.Models;
+using AspNetCore.Swashbuckle.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

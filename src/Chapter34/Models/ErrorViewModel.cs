@@ -1,6 +1,6 @@
 using System;
 
-namespace AspNetCore.UsingHttpVerb.Practice.Models
+namespace AspNetCore.HttpClient.Models
 {
     public class ErrorViewModel
     {

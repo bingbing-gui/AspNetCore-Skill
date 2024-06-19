@@ -1,42 +1,43 @@
-using AspNetCore.NSwag.Models;
+using AspNetCore.Swashbuckle.Models;
 using Microsoft.EntityFrameworkCore;
-using NSwag;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddDbContext<TodoContext>(options =>
     options.UseInMemoryDatabase("Todo"));
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddOpenApiDocument(options =>
-{
-    options.PostProcess = document =>
+builder.Services.AddSwaggerGen(options =>
     {
-        document.Info = new OpenApiInfo
+        options.SwaggerDoc("v1", new OpenApiInfo
         {
             Version = "v1",
             Title = "ToDo API",
             Description = "An ASP.NET Core Web API for managing ToDo items",
-            TermsOfService = "https://example.com/terms",
+            TermsOfService = new Uri("https://example.com/terms"),
             Contact = new OpenApiContact
             {
                 Name = "Example Contact",
-                Url = "https://example.com/contact"
+                Url = new Uri("https://example.com/contact")
             },
             License = new OpenApiLicense
             {
                 Name = "Example License",
-                Url = "https://example.com/license"
-            }
-        };
-    };
-});
+                Url = new Uri("https://example.com/license")
+            }          
+        });
+        //    // using System.Reflection;
+        var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+        options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    });
 
 
 var app = builder.Build();
@@ -44,18 +45,14 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    // Add OpenAPI 3.0 document serving middleware
-    // Available at: http://localhost:<port>/swagger/v1/swagger.json
-    app.UseOpenApi();
-    // Add web UIs to interact with the document
-    // Available at: http://localhost:<port>/swagger
-    app.UseSwaggerUI();
-
-    // Add ReDoc UI to interact with the document
-    // Available at: http://localhost:<port>/redoc
-    app.UseReDoc(options =>
+    app.UseSwagger(options =>
     {
-        options.Path = "/redoc";
+        options.SerializeAsV2 = true;
+    });
+    app.UseSwaggerUI(options =>
+    {
+        //options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        //options.RoutePrefix = string.Empty;
     });
 }
 

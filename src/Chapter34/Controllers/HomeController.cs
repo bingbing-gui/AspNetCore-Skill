@@ -1,106 +1,112 @@
-﻿using AspNetCore.HttpClientWithHttpVerb.Models;
-using AspNetCore.UsingHttpVerb.Practice.Models;
+﻿using AspNetCore.HttpClient.Models;
+using AspNetCore.HttpClient.Service;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.ComponentModel.DataAnnotations;
+using Microsoft.Net.Http.Headers;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AspNetCore.HttpClientWithHttpVerb.Controllers
+namespace AspNetCore.HttpClient.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly TodoClient _todoClient;
-        private readonly IHttpClientFactory _httpClientFactory;
-        //private readonly IOperationScoped _operationScoped;
-        public HomeController(ILogger<HomeController> logger,
-           TodoClient todoClient,
-           IHttpClientFactory httpClientFactory)
+        private readonly IHttpClientFactory _clientFactory;
+        private readonly GitHubService _gitHubService;
+        private readonly IGitHubClient _gitHubClient;
+
+        public HomeController(IHttpClientFactory httpClientFactory,
+            GitHubService gitHubService,
+            IGitHubClient gitHubClient)
         {
-            _logger = logger;
-            _todoClient = todoClient;
-            _httpClientFactory = httpClientFactory;
+            _clientFactory = httpClientFactory;
+            _gitHubService = gitHubService;
+            _gitHubClient = gitHubClient;
         }
-        /// <summary>
-        /// 调用HttpClient Get
-        /// </summary>
-        /// <returns></returns>
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var todoItems = await _todoClient.GetItemsAsync();
-            IndexModel indexModel = new IndexModel();
-            var completeTodoItems = todoItems.Where(x => x.IsComplete).ToList();
-            var incompleteTodoItems = todoItems.Except(completeTodoItems).ToList();
-            indexModel.CompleteTodoItems = completeTodoItems;
-            indexModel.IncompleteTodoItems = incompleteTodoItems;
-            return View(indexModel);
+            return View();
         }
-        /// <summary>
-        /// Create Item
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        public async Task<IActionResult> CreateAsync([Required] string name)
+        public async Task<IActionResult> BasicUsage()
         {
-            if (!ModelState.IsValid)
+            var request = new HttpRequestMessage(HttpMethod.Get,
+                "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches")
             {
-                return RedirectToAction(nameof(Index));
-            }
-            var newTodoItem = new TodoItem
-            {
-                Name = name
+                Headers =
+                {
+                    { HeaderNames.Accept, "application/vnd.github.v3+json" },
+                    { HeaderNames.UserAgent, "HttpRequestsSample" }
+                }
             };
-            await _todoClient.CreateItemAsync(newTodoItem);
-            return RedirectToAction(nameof(Index));
+            //request.Headers.Add("Accept", "application/vnd.github.v3+json");
+            //request.Headers.Add("User-Agent", "HttpClientFactory-Sample");            
+            var client = _clientFactory.CreateClient();
+            var reponse = await client.SendAsync(request);
+            BasicUsageModel basicUsageModel = new BasicUsageModel();
+            if (reponse.IsSuccessStatusCode)
+            {
+                using var responseStream = await reponse.Content.ReadAsStreamAsync();
+                var Branches = await JsonSerializer.DeserializeAsync<IEnumerable<GitHubBranch>>(responseStream);
+                basicUsageModel.Branches = Branches;
+                basicUsageModel.GetBranchesError = false;
+            }
+            else
+            {
+                var Branches = Array.Empty<GitHubBranch>();
+                basicUsageModel.Branches = Branches;
+                basicUsageModel.GetBranchesError = true;
+            }
+            return View(basicUsageModel);
         }
-        public async Task<IActionResult> EditAsync(long id)
-        {
-            if (!ModelState.IsValid)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            var todoItem = await _todoClient.GetItemAsync(id);
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
-            return View(todoItem);
-        }
-        public async Task<IActionResult> SaveAsync(TodoItem todoItem)
-        {
-            if (!ModelState.IsValid)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            await _todoClient.SaveItemAsync(todoItem);
 
-            return RedirectToAction(nameof(Index));
-        }
-        public async Task<IActionResult> DeleteAsync(long id)
+        public async Task<IActionResult> NamedClient()
         {
-            if (!ModelState.IsValid)
+            var httpClient = _clientFactory.CreateClient("github");
+            var response = await httpClient.GetAsync("repos/dotnet/AspNetCore.Docs/pulls");
+            NamedClientModel namedClientModel = new NamedClientModel();
+            if (response.IsSuccessStatusCode)
             {
-                return RedirectToAction(nameof(Index));
+                using var responseStream = await response.Content.ReadAsStreamAsync();
+                var PullRequests = await JsonSerializer.DeserializeAsync
+                         <IEnumerable<GitHubPullRequest>>(responseStream);
+                namedClientModel.GetPullRequestsError = false;
+                namedClientModel.PullRequests = PullRequests;
             }
-            await _todoClient.DeleteItemAsync(id);
-
-            return RedirectToAction(nameof(Index));
+            else
+            {
+                namedClientModel.GetPullRequestsError = true;
+                namedClientModel.PullRequests = Array.Empty<GitHubPullRequest>();
+            }
+            return View(namedClientModel);
         }
-        //public async Task<IActionResult> Operation()
-        //{
-        //    var httpClient=_httpClientFactory.CreateClient("operation");
-        //    var operationIdFromRequestScope = _operationScoped.OperationId;
-        //    var operationIdFromHandlerScope = await httpClient.GetStringAsync("https://example.com");
-        //    var operationModel = new OperationModel()
-        //    { 
-        //        OperationIdFromRequestScope= operationIdFromRequestScope,
-        //        OperationIdFromHandlerScope = operationIdFromHandlerScope
-        //    };
-        //    return View(operationModel);
-        //}
+
+        public async Task<IActionResult> TypedClient()
+        {
+            TypeClientModel typeClientModel = new TypeClientModel();
+            try
+            {
+                var gitHubIssues = await _gitHubService.GetAspNetDocsIssues();
+                typeClientModel.LatestIssues = gitHubIssues;
+            }
+            catch (HttpRequestException ex)
+            {
+                typeClientModel.GetIssuesError = true;
+                typeClientModel.LatestIssues = Array.Empty<GitHubIssue>();
+            }
+            return View(typeClientModel);
+        }
+        public async Task<IActionResult> RefitClient()
+        {
+            var gitHubBranches = await _gitHubClient.GetAspNetCoreDocsBranchesAsync();
+            return View(gitHubBranches);
+        }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
