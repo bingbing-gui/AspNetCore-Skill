@@ -1,8 +1,8 @@
-﻿using EFCoreExecuteStoredProcedures.Models;
+﻿using EFCoreExecuteRawSql.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EFCoreExecuteStoredProcedures.Controllers
+namespace EFCoreExecuteRawSql.Controllers
 {
     public class HomeController : Controller
     {

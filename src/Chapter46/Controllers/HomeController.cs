@@ -1,8 +1,8 @@
-﻿using EFCoreConfiguration.Models;
+﻿using EFCoreConventions.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EFCoreConfiguration.Controllers
+namespace EFCoreConventions.Controllers
 {
     public class HomeController : Controller
     {

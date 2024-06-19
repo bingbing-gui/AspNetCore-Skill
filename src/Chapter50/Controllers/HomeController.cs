@@ -1,8 +1,8 @@
-﻿using EFCoreExecuteRawSql.Models;
+﻿using EFCoreFluentAPIManyToMany.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EFCoreExecuteRawSql.Controllers
+namespace EFCoreFluentAPIManyToMany.Controllers
 {
     public class HomeController : Controller
     {

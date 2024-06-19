@@ -1,10 +1,18 @@
-﻿namespace EFCoreFluentAPIOneToOne.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace EFCoreConfiguration.Models
 {
+    [Table("TBL_City")]
     public class City
     {
-        public int Id { get; set; }
+        [Key]
+        public int KeyId { get; set; }
+        [Column("CityName", TypeName = "varchar(25)")]
         public string Name { get; set; }
-        public int CityInformationId { get; set; }
-        public CityInformation CityInformation { get; set; }
+        [NotMapped]
+        public int Population { get; set; }
+        [ForeignKey("FKid")]
+        public Country Country { get; set; }
     }
 }

@@ -1,8 +1,8 @@
-﻿using EFCoreFluentAPIManyToMany.Models;
+﻿using EFCoreFluentAPIOneToMany.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EFCoreFluentAPIManyToMany.Controllers
+namespace EFCoreFluentAPIOneToMany.Controllers
 {
     public class HomeController : Controller
     {

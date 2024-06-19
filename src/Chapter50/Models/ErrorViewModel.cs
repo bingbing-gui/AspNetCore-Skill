@@ -1,4 +1,4 @@
-namespace EFCoreExecuteRawSql.Models
+namespace EFCoreFluentAPIManyToMany.Models
 {
     public class ErrorViewModel
     {

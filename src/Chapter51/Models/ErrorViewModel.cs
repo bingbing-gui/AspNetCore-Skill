@@ -1,4 +1,4 @@
-namespace EFCoreExecuteStoredProcedures.Models
+namespace EFCoreExecuteRawSql.Models
 {
     public class ErrorViewModel
     {

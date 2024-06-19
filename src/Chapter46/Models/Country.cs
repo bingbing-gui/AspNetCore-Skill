@@ -1,15 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace EFCoreConfiguration.Models
+﻿namespace EFCoreConventions.Models
 {
-    [Table("TBL_Country")]
     public class Country
     {
-        [Key]
-        public int KeyId { get; set; }
-
-        [MaxLength(20)]
+        public int Id { get; set; }
         public string Name { get; set; }
+        public ICollection<City> City { get; set; } //Collection Navigation Property
     }
 }

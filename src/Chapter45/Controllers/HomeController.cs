@@ -1,8 +1,8 @@
-﻿using EFCoreConventions.Models;
+﻿using EFCoreDeleteRecords.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EFCoreConventions.Controllers
+namespace EFCoreDeleteRecords.Controllers
 {
     public class HomeController : Controller
     {

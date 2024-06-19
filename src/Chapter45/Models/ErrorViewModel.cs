@@ -1,4 +1,4 @@
-namespace EFCoreConventions.Models
+namespace EFCoreDeleteRecords.Models
 {
     public class ErrorViewModel
     {

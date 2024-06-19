@@ -1,9 +1,10 @@
-using EFCoreFluentAPIManyToMany.Models;
+using EFCoreFluentAPIOneToMany.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<SchoolContext>(option =>
+builder.Services.AddDbContext<CountryContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.

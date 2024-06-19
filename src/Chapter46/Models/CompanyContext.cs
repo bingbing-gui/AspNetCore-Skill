@@ -1,16 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
-namespace EFCoreConfiguration.Models
+namespace EFCoreConventions.Models
 {
     public class CompanyContext : DbContext
     {
-        public CompanyContext(DbContextOptions<CompanyContext> contextOptions)
-            : base(contextOptions)
+        public CompanyContext(DbContextOptions<CompanyContext> options) : base(options)
         {
 
         }
-        public DbSet<City> Cities { get; set; }
 
-        public DbSet<Country> Countries { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+
+        public DbSet<Country> Country { get; set; }
     }
 }

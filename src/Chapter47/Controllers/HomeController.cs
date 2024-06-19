@@ -1,8 +1,8 @@
-﻿using EFCoreFluentAPIOneToOne.Models;
+﻿using EFCoreConfiguration.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EFCoreFluentAPIOneToOne.Controllers
+namespace EFCoreConfiguration.Controllers
 {
     public class HomeController : Controller
     {

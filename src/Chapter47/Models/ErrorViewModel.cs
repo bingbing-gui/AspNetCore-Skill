@@ -1,4 +1,4 @@
-namespace EFCoreFluentAPIOneToOne.Models
+namespace EFCoreConfiguration.Models
 {
     public class ErrorViewModel
     {
