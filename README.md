@@ -36,6 +36,67 @@ namespace Identity.Models {
 AppUser类没有包含任何方法，这是因为IdentityUser类中提供了一些用户属性像用户名，电子邮件，电话，密码hash值等
 如果IdentityUser类不能满足你的要求，你可以在AppUser中添加自己定义的属性，我们会在后面介绍
 IdentityUser 类定义如下常用属性：
+| 名称          | 描述                                     |
+| ------------- | ---------------------------------------- |
+| Id            | 用户唯一ID                               |
+| UserName      | 用户名称                                 |
+| Email         | 用户Email                                |
+| PasswordHash  | 用户密码的Hash值                         |
+| PhoneNumber   | 用户电话号码                             |
+| SecurityStamp | 当每次用户的数据修改时生成随机值         |
+
+### 创建DataBase Context
+
+DataBase Context类继承自`IdentityDbContext<T>`类，T表示User类，在应用程序中使用`AppUser`，`IdentityDbContext`通过使用Entity Framework Core和数据库进行交互。
+
+在`Models`文件夹下创建一个`AppIdentityDbContext`类并继承`IdentityDbContext<AppUser>`类，如下代码：
+```csharp
+namespace Identity.Models{
+   public class AppIdentityDbContext: IdentityDbContext<AppUser>
+    {
+        public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options):
+            base(options)
+        { }
+    }
+}
+```
+### 创建数据库字符串链接
+
+ASP.NET Core Identity 数据库连接字符串包含数据库名，用户名，密码。通常存储在`appsettings.json`文件中，这个文件位于根目录下。
+项目已经包含了这个文件，添加下面配置在你的`appsettings.json`文件中：
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=IdentityDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+}
+```
+连接字符串中`Server`指定SQL Server的LocalDB，`Database`指定数据库名称`IdentityDB`，你也可以起个别的名字。
+
+`Trusted_Connection` 设置为`true`，项目通过使用Windows认证链接到数据库，因此我们不需要提供用户名和密码。
+
+`MultipleActiveResultSets` 该特性表示允许在单个连接中执行多个批处理，使SQL语句执行更快，因此我们将它设置成`true`。
+
+使用`AddDbContext()`方法添加`AppIdentityDbContext`类并且指定它使用SQL Server数据库，连接字符串通过配置文件中获取：
+
+```csharp
+builder.Services.AddDbContext<AppIdentityDbContext>(
+    options =>options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"])
+);
+```
+### 5、添加ASP.NET Core Identity服务
+现在我们配置一下ASP.NET Core Identity 相关服务，代码如下：
+
+```csharp
+builder.Services.AddIdentity<AppUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppIdentityDbContext>()
+    .AddDefaultTokenProviders();
+```
+`AddIdentity`方法的参数类型指定`AppUser`类和`IdentityRole`类。
+
+`AddEntityFrameworkStores`方法指定`Identity`使用`EF Core`作为存储和项目中使用`AppIdentityDbContext`作为DB Context。
+
+`AddDefaultTokenProviders`方法添加默认`Token`提供程序，针对重置密码，电话号码和邮件变更操作以及生成双因子认证的token，这部分我们后面会介绍。
+
+我们前面添加了`app.UseAuthentication()`方法，经过这个方法的每个HTTP请求会将用户的凭据将添加到Cookie或URL中。这使得用户和他发送的HTTP请求就会产生关联。
 
 ## [Chapter 02]()
 ## [Chapter 03]()
