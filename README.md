@@ -1,8 +1,42 @@
 AspNetCore Skill
 ==============================
 这个仓库主要包含了ASP.NET Core 学习资料以及代码例子，包括ASP.NET Identity、ASP.NET Core、Entity Framework Core、核心知识点，同时也包含了ASP.NET Core 第三方开源库。
-## [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
-*ASP.NET Core Identity*
+# [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
+## ASP.NET Core Identity
+ASP.NET Core Identity提供给我们一组工具包和API，它能帮助我们应用程序创建授权和认证功能，也可以用它创建账户并使用用户名和密码进行登录，同时也提供了角色和角色管理功能。ASP.NET Core Identity使用SQL Server/第三方数据库存储用户名和密码，角色和配置数据。
+
+这系列中我们主要使用VS中自带的LocalDB作为演示，你也可以直接从官网上进行下载：[SQL Server Express LocalDB](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16)
+
+### 1. 创建项目
+理解ASP.NET Core Identity最好的方法是通过一个项目学习，我们创建一个ASP.NET Core MVC 项目，名字叫Identity，接下来，我们将配置该项目并且安装必要的包。
+
+### 2. 配置项目
+安装下列NuGet包：
+- `Microsoft.AspNetCore.Identity.EntityFrameworkCore`
+- `Microsoft.EntityFrameworkCore.Design`
+- `Microsoft.EntityFrameworkCore.SqlServer`
+
+### 3. 配置项目
+在`Program.cs`类中添加认证和授权中间件，在`app.UseRouting`后面添加如下代码：
+```csharp
+app.UseAuthentication();
+app.UseAuthorization();
+```
+### 4. 设置ASP.NET Core Identity
+
+ASP.NET Core Identity整个设置过程包括创建新的Model类、配置更改、Controller和Action支持身份验证和授权的操作。
+
+### User类
+User类表示应用程序中的用户，这些用户数据存储在数据库中，User类继承自`IdentityUser`类，位于命名空间`Microsoft.AspNetCore.Identity`中，在`Models`文件夹下创建`AppUser.cs`类。
+```csharp
+namespace Identity.Models {
+    public class AppUser : IdentityUser { }
+}
+```
+AppUser类没有包含任何方法，这是因为IdentityUser类中提供了一些用户属性像用户名，电子邮件，电话，密码hash值等
+如果IdentityUser类不能满足你的要求，你可以在AppUser中添加自己定义的属性，我们会在后面介绍
+IdentityUser 类定义如下常用属性：
+
 ## [Chapter 02]()
 ## [Chapter 03]()
 ## [Chapter 04]()
