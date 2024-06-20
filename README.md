@@ -7,7 +7,7 @@ ASP.NET Core Identity提供给我们一组工具包和API，它能帮助我们�
 
 这系列中我们主要使用VS中自带的LocalDB作为演示，你也可以直接从官网上进行下载：[SQL Server Express LocalDB](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16)
 
-### 1. 创建项目
+### 1、创建项目
 理解ASP.NET Core Identity最好的方法是通过一个项目学习，我们创建一个ASP.NET Core MVC 项目，名字叫Identity，接下来，我们将配置该项目并且安装必要的包。
 
 ### 2. 配置项目
