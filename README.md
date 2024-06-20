@@ -26,7 +26,7 @@ app.UseAuthorization();
 
 ASP.NET Core Identity整个设置过程包括创建新的Model类、配置更改、Controller和Action支持身份验证和授权的操作。
 
-### User类
+#### 4.1 User类
 User类表示应用程序中的用户，这些用户数据存储在数据库中，User类继承自`IdentityUser`类，位于命名空间`Microsoft.AspNetCore.Identity`中，在`Models`文件夹下创建`AppUser.cs`类。
 ```csharp
 namespace Identity.Models {
@@ -45,7 +45,7 @@ IdentityUser 类定义如下常用属性：
 | PhoneNumber   | 用户电话号码                             |
 | SecurityStamp | 当每次用户的数据修改时生成随机值         |
 
-### 创建DataBase Context
+#### 4.2 创建DataBase Context
 
 DataBase Context类继承自`IdentityDbContext<T>`类，T表示User类，在应用程序中使用`AppUser`，`IdentityDbContext`通过使用Entity Framework Core和数据库进行交互。
 
@@ -60,7 +60,7 @@ namespace Identity.Models{
     }
 }
 ```
-### 创建数据库字符串链接
+#### 4.3 创建数据库字符串链接
 
 ASP.NET Core Identity 数据库连接字符串包含数据库名，用户名，密码。通常存储在`appsettings.json`文件中，这个文件位于根目录下。
 项目已经包含了这个文件，添加下面配置在你的`appsettings.json`文件中：
