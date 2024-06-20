@@ -83,7 +83,7 @@ builder.Services.AddDbContext<AppIdentityDbContext>(
 );
 ```
 ### 5、添加ASP.NET Core Identity服务
-现在我们配置一下ASP.NET Core Identity 相关服务，代码如下：
+配置 ASP.NET Core Identity 相关服务，代码如下：
 
 ```csharp
 builder.Services.AddIdentity<AppUser, IdentityRole>()
@@ -97,6 +97,57 @@ builder.Services.AddIdentity<AppUser, IdentityRole>()
 `AddDefaultTokenProviders`方法添加默认`Token`提供程序，针对重置密码，电话号码和邮件变更操作以及生成双因子认证的token，这部分我们后面会介绍。
 
 我们前面添加了`app.UseAuthentication()`方法，经过这个方法的每个HTTP请求会将用户的凭据将添加到Cookie或URL中。这使得用户和他发送的HTTP请求就会产生关联。
+
+### 6. 使用EF Migration 命令创建Identity数据库
+
+现在我们使用Entity Framework Core Migration 命令来创建Identity数据库（我们使用第二种方式）。
+
+我们在程序包管理器控制台中运行Migration命令，你需要安装对应.NET Core CLI，通过下面命令可以安装：
+
+```bash
+dotnet tool install --global dotnet-ef
+```
+接下来我们需要进入 `.csproj` 项目文件所在的目录。我们在程序包管理器控制台中运行 `dir` 来查看当前所在目录。我们可以看到当前目录不是项目所在目录，而是 `Identity.sIn`。
+
+项目文件位于`Identity`文件夹内，使用`cd ./Identity` 进入该文件 夹。我们再次运行dir命令，显示我们当前所在的目录是 `Identity.csproj`文件所在目录：
+
+现在我们运行 EF Core Migration 命令
+
+第一个命令：
+`dotnet ef migrations add InitDBCommand `
+上面的命令需要几秒钟完成，完成之后，我们可以在`Migrations`文件夹能看到生成的文件，文件中包含表的定义。
+第二个命令：
+`dotnet ef database update`
+上面命令将创建数据库以及表，执行完成这个命令我们就可以看到我们表结构。
+
+第二种方法我们可以不使用.NET Core CLI命令，微软给我提供了一个包`Microsoft.EntityFrameworkCore.Tools`。该包提供一些命令帮助我们生成数据库和表，在程序包管理控制台中运行如下两个命令:
+
+`Add-Migration InitDBCommand --创建Migration 
+Update-Database          --将Migration 更新到数据库`
+
+### 7、ASP.NET Core Identity 数据库
+
+我们查看一下刚才创建的数据库
+注意：我们在·`Visual Studio` 菜单找到视图菜单并且打开`SQL Server` 对象资源管理器
+`Identity` 数据库总共有8张表，这些表包含用户记录，角色，Claims，token和登录次数详细信息等
+
+Identity数据库每张表的作用：
+
+- **_EFMigrationsHistory**：包含了前面所有的Migration。
+
+- **AspNetRoleClaims**：按照角色存储Claims。
+
+- **AspNetRoles**：存储所有的角色。
+
+- **AspNetUserClaims**：存储用户的Claims。
+
+- **AspNetUserLogins**：存储用户的登录次数。
+
+- **AspNetUserRoles**：存储用户对应的角色。
+
+- **AspNetUsers**：存储所有用户。
+
+- **AspNetUserTokens**：存储外部认证的token。
 
 ## [Chapter 02]()
 ## [Chapter 03]()
