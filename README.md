@@ -18,7 +18,7 @@ AspNetCore Skill
 > - **IdentityUser**：默认的用户实体类，包含用户的基本信息，如用户名、密码哈希、电子邮件等。
 > - **IdentityRole**：默认的角色实体类，包含角色的基本信息，如角色名称。
 
-**代码例子**：[Asp.Net Core Identity](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter01)
+**代码示例**：[Asp.Net Core Identity](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter01)
 
 **文章链接**
 - [Asp.Net Core Identity 配置](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486141&idx=1&sn=f77635080994c6295cb801e846427a15&chksm=9f005597a877dc816f5fe96bbe0f9ef0ac4d82ef4e6148a4325764ed0dcee75cdad9a49c428e&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
