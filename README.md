@@ -93,10 +93,14 @@ AspNetCore Skill
 - [ASP.NET Core Views系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486961&idx=1&sn=af2c5824f8e56ec6c99e3a77a6a03d0f&chksm=9f0052dba877dbcd2aa41bc181bca8cfeccbb70b98d2b53ee494bc85b6762fa731c322b26c53&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
 - [ASP.NET Core Views系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486966&idx=1&sn=f790d2784b4c2fcd7e53fda17f851401&chksm=9f0052dca877dbca29e604f786d6eaf90fa498b130cb05e1b29763cf8ba61ec3b37fa1ea3ae2&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
 
-# [Chapter 09]()
-- **项目描述**：
-- **代码示例**:
-- **文章链接**：
+# [Chapter 09](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter09)
+
+**项目描述**：Asp.Net Core URL 路由
+
+**代码示例**：[Asp.Net Core URLRouting](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter09)
+
+**文章链接**：[ASP.NET Core 路由](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486984&idx=1&sn=999b344fe347e79bb93b298dc9e43217&chksm=9f005122a877d834057dcf752d1909f04a96cb06862fe486baea23026bcfbd72875c0cb37dca&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
+
 # [Chapter 10]()
 - **项目描述**：
 - **代码示例**:
