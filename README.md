@@ -49,10 +49,14 @@ AspNetCore Skill
 - [ASP.NET Core 配置系列三](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486845&idx=1&sn=a9b153b5cff58c5732d51d439bcc5952&chksm=9f005257a877db41dc77a468a9f203deea091969ada466ff4b2730f6066fbaa094484f0d3a8d&token=2146175377&lang=zh_CN#rd)
 - [ASP.NET Core 配置系列四](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486847&idx=1&sn=81c1ba7182a6aab6c8958e211b5a9dcf&chksm=9f005255a877db43953e2215a262faedc31c7c9d9083950429a88e5f6a912d7f817a87ab4717&token=2146175377&lang=zh_CN#rd)
 - [ASP.NET Core 配置系列五](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486858&idx=1&sn=e722b863483710384138d6e885b7c95e&chksm=9f0052a0a877dbb62fd8057492b092de70c3516fb0a7b5135cfdd5d7e4b26c91af36930c243d&token=2146175377&lang=zh_CN#rd)
-# [Chapter 04]()
-- **项目描述**：
-- **代码示例**:
-- **文章链接**：
+# [Chapter 04](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter04)
+
+**项目描述**：AspNet Core Options模式
+
+**代码示例**：[AspNet Core Options Pattern](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter04)
+
+**文章链接**：[ASP.NET Core中Options模式](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247487805&idx=1&sn=5792825947dd874cc53d188c060848c0&chksm=9f004e17a877c701a325fc9b4444a9beb95c11b4c14f967b94be302e8db56fff20ca41484e33&token=1468182562&lang=zh_CN&scene=21#wechat_redirect)
+
 # [Chapter 05]()
 - **项目描述**：
 - **代码示例**:
