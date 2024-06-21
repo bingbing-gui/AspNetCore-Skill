@@ -4,14 +4,14 @@ AspNetCore Skill
 # [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
 **项目描述**：ASP.NET Core Identity 是一个用于 ASP.NET Core 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能。以下是对 ASP.NET Core Identity 的简单描述：    
 
-**主要特性**
+***主要特性***
 - **用户管理**：支持用户注册、登录、注销、密码重置等基本用户操作。
 - **角色管理**：支持定义角色，并将用户分配到不同的角色，以实现基于角色的访问控制。
 - **认证和授权**：支持多种认证方式（如密码、OAuth、OpenID Connect 等）以及基于角色和声明的授权。
 - **安全特性**：内置支持密码哈希、账户锁定、双因素认证等安全功能。
 - **可扩展性**：通过接口和服务的方式设计，易于扩展和定制，可以集成到各种数据存储（如 SQL Server、MySQL、MongoDB 等）中。
 
-**基本组件**
+***基本组件***
 - **UserManager**：处理用户相关的操作，如创建用户、验证用户密码、获取用户信息等。
 - **RoleManager**：处理角色相关的操作，如创建角色、删除角色、分配角色等。
 - **SignInManager**：处理用户登录、登出和锁定等操作。
@@ -33,27 +33,90 @@ AspNetCore Skill
 - [ASP.NET Core Identity 如何执行用户的电子邮件确认](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486233&idx=1&sn=70654867aaecbcf62c8b918a0fe7253b&chksm=9f005433a877dd25f010752f766b94a0801212f04db84f093fa7a9ed48f62925dfd1599d94d7&token=1757261675&lang=zh_CN&scene=21&poc_token=HINgdWajvh5dE70RFqobJbUTHjpyz-TBnv7oNgsG)
 - [ASP.NET Core Identity 重置密码功能](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486238&idx=1&sn=32fae2f0fa6c50982e160c892c1314bc&chksm=9f005434a877dd220737e9f85ad05045c67084765190c6a91e7f724628024848409b6238203a&token=1650340614&lang=zh_CN&scene=21#wechat_redirect)
 - [ASP.NET Core Identity Lockout](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486301&idx=1&sn=be1c52b47c25f41121f2866c23e63a0e&chksm=9f005477a877dd611facc1f9c2d3aa202f97ef03c6bd4421a33942c7ffb723a34d6252069ca5&token=438614949&lang=zh_CN&scene=21#wechat_redirect)
-## [Chapter 02]()
-## [Chapter 03]()
-## [Chapter 04]()
-## [Chapter 05]()
-## [Chapter 06]()
-## [Chapter 07]()
-## [Chapter 08]()
-## [Chapter 09]()
-## [Chapter 10]()
-## [Chapter 11]()
-## [Chapter 12]()
-## [Chapter 13]()
-## [Chapter 14]()
-## [Chapter 15]()
-## [Chapter 16]()
-## [Chapter 17]()
-## [Chapter 18]()
-## [Chapter 19]()
-## [Chapter 20]()
-## [Chapter 21]()
-## [Chapter 22]()
+# [Chapter 02](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter02)
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 03]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 04]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 05]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 06]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 07]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 08]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 09]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 10]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 11]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 12]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 13]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 14]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 15]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 16]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 17]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 18]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 19]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 20]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 21]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
+# [Chapter 22]()
+- **项目描述**：
+- **代码示例**:
+- **文章链接**：
 | 目录                                                                                                                       |描述   |
 |:--------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------- |
 | Fundamentals                                                                                  | ASP.NET Core 基础与高阶技能全攻略                                                             |
