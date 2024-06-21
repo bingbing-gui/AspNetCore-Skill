@@ -2,7 +2,20 @@ AspNetCore Skill
 ==============================
 这个仓库主要包含了ASP.NET Core 学习资料以及代码例子，包括ASP.NET Identity、ASP.NET Core、Entity Framework Core、核心知识点，同时也包含了ASP.NET Core 第三方开源库。
 # [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
-- **项目描述**：`ASP.NET Core Identity` 是一个用于 `ASP.NET Core` 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能
+- **项目描述**：ASP.NET Core Identity 是一个用于 ASP.NET Core 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能。以下是对 ASP.NET Core Identity 的简单描述：
+## 主要特性
+- **用户管理**：支持用户注册、登录、注销、密码重置等基本用户操作。
+- **角色管理**：支持定义角色，并将用户分配到不同的角色，以实现基于角色的访问控制。
+- **认证和授权**：支持多种认证方式（如密码、OAuth、OpenID Connect 等）以及基于角色和声明的授权。
+- **安全特性**：内置支持密码哈希、账户锁定、双因素认证等安全功能。
+- **可扩展性**：通过接口和服务的方式设计，易于扩展和定制，可以集成到各种数据存储（如 SQL Server、MySQL、MongoDB 等）中。
+## 基本组件
+- **UserManager**：处理用户相关的操作，如创建用户、验证用户密码、获取用户信息等。
+- **RoleManager**：处理角色相关的操作，如创建角色、删除角色、分配角色等。
+- **SignInManager**：处理用户登录、登出和锁定等操作。
+- **IdentityUser**：默认的用户实体类，包含用户的基本信息，如用户名、密码哈希、电子邮件等。
+- **IdentityRole**：默认的角色实体类，包含角色的基本信息，如角色名称。
+
 - **代码例子**：[Asp.Net Core Identity](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter01)
 - **文章链接**：[Asp.Net Core Identity 配置](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486141&idx=1&sn=f77635080994c6295cb801e846427a15&chksm=9f005597a877dc816f5fe96bbe0f9ef0ac4d82ef4e6148a4325764ed0dcee75cdad9a49c428e&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
 - **文章链接**：[ASP.NET Core Identity 用户管理](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486148&idx=1&sn=dae55b414e123c6718e470c21c8c8c21&chksm=9f0055eea877dcf876b2eff0e9fbe3a3f5b66271e4efe2639b7a2caf12ea722e123980e53f9a&scene=21&token=1757261675&lang=zh_CN#wechat_redirect)
