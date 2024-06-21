@@ -458,7 +458,7 @@ AspNetCore Skill
 
 **代码示例**：[EFCoreExecuteRawSql](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter51)
 
-**文章链接**：[Entity Framework Core-使用FromSqlRaw() 执行原生SQL查询](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486699&idx=1&sn=48713b8379f12e180270a7e8c2c100df&chksm=9f0053c1a877dad7fdd7a50fd97946d0fa74368f93d35eba0b25339d177968bffc254d95a40d&token=323179610&lang=zh_CN&scene=21#wechat_redirect)|
+**文章链接**：[Entity Framework Core-使用FromSqlRaw() 执行原生SQL查询](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486699&idx=1&sn=48713b8379f12e180270a7e8c2c100df&chksm=9f0053c1a877dad7fdd7a50fd97946d0fa74368f93d35eba0b25339d177968bffc254d95a40d&token=323179610&lang=zh_CN&scene=21#wechat_redirect)
 
 # [Chapter 52](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter52)
 
@@ -466,7 +466,7 @@ AspNetCore Skill
 
 **代码示例**：[EFCoreExecuteStoredProcedures](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter52)
 
-**文章链接**：[Entity Framework Core执行存储过程](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486707&idx=1&sn=fb77e56489b8140a9a66d5d8c8018c29&chksm=9f0053d9a877dacfdb794538d7fc28f43c74b75bd5ddcfc13e91717054eebddcfd254c4351e2&token=323179610&lang=zh_CN&scene=21#wechat_redirect)|
+**文章链接**：[Entity Framework Core执行存储过程](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486707&idx=1&sn=fb77e56489b8140a9a66d5d8c8018c29&chksm=9f0053d9a877dacfdb794538d7fc28f43c74b75bd5ddcfc13e91717054eebddcfd254c4351e2&token=323179610&lang=zh_CN&scene=21#wechat_redirect)
 
 
 
