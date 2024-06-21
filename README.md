@@ -71,7 +71,7 @@ AspNetCore Skill
 
 **项目描述**：Asp.Net Core 控制器
 
-**代码示例**: [Asp.Net Core 控制器](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter06)
+**代码示例**：[Asp.Net Core 控制器](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter06)
 
 **文章链接**：[ASP.NET Core Controllers](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486901&idx=1&sn=fff8d045f2f5b06dcca07251f67cc034&chksm=9f00529fa877db8906cfaf50bfc1335bff05fff1eeae61d5c02582cd499d36b588187bf0c75d&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
 
