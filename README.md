@@ -68,9 +68,13 @@ AspNetCore Skill
 - [ASP.NET Core 依赖注入系列二](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486889&idx=1&sn=f37abf5047811527b8fbe74dabea45c8&chksm=9f005283a877db95d4a81909348c2c2b4a4ee9095b5524d93ad5b4dd35545c7e9a202a57fd59&token=2146175377&lang=zh_CN#rd)
 - [ASP.NET Core 依赖注入系列三](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486896&idx=1&sn=b91b23179f4343ba4baa15c5f8ba2d99&chksm=9f00529aa877db8c8c9803bd7c6fa8913b012a422c312b4d08959e2f2c6e6c29368782d649cd&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
 # [Chapter 06]()
-- **项目描述**：
-- **代码示例**:
-- **文章链接**：
+
+**项目描述**：Asp.Net Core 控制器
+
+**代码示例**: [Asp.Net Core 控制器](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter06)
+
+**文章链接**：[ASP.NET Core Controllers](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486901&idx=1&sn=fff8d045f2f5b06dcca07251f67cc034&chksm=9f00529fa877db8906cfaf50bfc1335bff05fff1eeae61d5c02582cd499d36b588187bf0c75d&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
+
 # [Chapter 07]()
 - **项目描述**：
 - **代码示例**:
