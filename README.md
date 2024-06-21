@@ -3,7 +3,7 @@ AspNetCore Skill
 这个仓库主要包含了ASP.NET Core 学习资料以及代码例子，包括ASP.NET Identity、ASP.NET Core、Entity Framework Core、核心知识点，同时也包含了ASP.NET Core 第三方开源库。
 # [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
 - **项目描述**：`ASP.NET Core Identity` 是一个用于 `ASP.NET Core` 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能
-- **代码示例**：[项目名称](https://github.com/yourusername/projectname)
+- **代码例子**：[项目名称](https://github.com/yourusername/projectname)
 - **文章链接**:
   
 ## [Chapter 02]()
