@@ -2,33 +2,37 @@ AspNetCore Skill
 ==============================
 这个仓库主要包含了ASP.NET Core 学习资料以及代码例子，包括ASP.NET Identity、ASP.NET Core、Entity Framework Core、核心知识点，同时也包含了ASP.NET Core 第三方开源库。
 # [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
-- **项目描述**：ASP.NET Core Identity 是一个用于 ASP.NET Core 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能。以下是对 ASP.NET Core Identity 的简单描述：
-## 主要特性
+**项目描述**：ASP.NET Core Identity 是一个用于 ASP.NET Core 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能。以下是对 ASP.NET Core Identity 的简单描述：    
+
+**主要特性**
 - **用户管理**：支持用户注册、登录、注销、密码重置等基本用户操作。
 - **角色管理**：支持定义角色，并将用户分配到不同的角色，以实现基于角色的访问控制。
 - **认证和授权**：支持多种认证方式（如密码、OAuth、OpenID Connect 等）以及基于角色和声明的授权。
 - **安全特性**：内置支持密码哈希、账户锁定、双因素认证等安全功能。
 - **可扩展性**：通过接口和服务的方式设计，易于扩展和定制，可以集成到各种数据存储（如 SQL Server、MySQL、MongoDB 等）中。
-## 基本组件
+
+**基本组件**
 - **UserManager**：处理用户相关的操作，如创建用户、验证用户密码、获取用户信息等。
 - **RoleManager**：处理角色相关的操作，如创建角色、删除角色、分配角色等。
 - **SignInManager**：处理用户登录、登出和锁定等操作。
 - **IdentityUser**：默认的用户实体类，包含用户的基本信息，如用户名、密码哈希、电子邮件等。
 - **IdentityRole**：默认的角色实体类，包含角色的基本信息，如角色名称。
 
-- **代码例子**：[Asp.Net Core Identity](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter01)
-- **文章链接**：[Asp.Net Core Identity 配置](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486141&idx=1&sn=f77635080994c6295cb801e846427a15&chksm=9f005597a877dc816f5fe96bbe0f9ef0ac4d82ef4e6148a4325764ed0dcee75cdad9a49c428e&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity 用户管理](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486148&idx=1&sn=dae55b414e123c6718e470c21c8c8c21&chksm=9f0055eea877dcf876b2eff0e9fbe3a3f5b66271e4efe2639b7a2caf12ea722e123980e53f9a&scene=21&token=1757261675&lang=zh_CN#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity中用户名、密码、邮件策略](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486177&idx=1&sn=44c5277b6882deb798db1944d4163e04&chksm=9f0055cba877dcdd3365625bbc08c897e653cdda085a739e86181e75f1b9ede86d7b3fd1f4dd&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity身份认证](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486183&idx=1&sn=baeb28f24399a9b0203f33185e1399a6&chksm=9f0055cda877dcdb80b411805d45d4f0f356dca2351d08209cac5aa0ac670fbc391a91dccb2b&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity角色管理](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486194&idx=1&sn=a213c72dd0564c31a7624c6d99f0d277&chksm=9f0055d8a877dcce3f041eba5e28b3ebe8020fa92979699b2f3cbf2a9a4e16206fa340261c37&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity客户自定义属性](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486202&idx=1&sn=7ec06927330a57a8a78143d88f10f987&chksm=9f0055d0a877dcc62b307d4453943c0cc165b1d9234c3d073a832deb235151970d79f64eef8a&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core  Identity如何使用Claim](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486208&idx=1&sn=846fd71c89106c6c8779d48987156e08&chksm=9f00542aa877dd3cd27d54dd26a92c9dc42ae23c4dcf01e84a8175f31c16847e2dae408ed118&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core  Identity如何使用Policy](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486215&idx=1&sn=9bd90b0c1d2d5583b8da324cbb56c5a6&chksm=9f00542da877dd3be47107268d4def7a92c1bea4b7568a9b4dbb9788754d0942bc378daefc38&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity 2FA 认证](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486232&idx=1&sn=05688acdeb382499c36a7ce054da2565&chksm=9f005432a877dd2444657c506e98dfc7683934a7a699f811cb6c8268cc018693db0e9ef061a2&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity 如何执行用户的电子邮件确认](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486233&idx=1&sn=70654867aaecbcf62c8b918a0fe7253b&chksm=9f005433a877dd25f010752f766b94a0801212f04db84f093fa7a9ed48f62925dfd1599d94d7&token=1757261675&lang=zh_CN&scene=21&poc_token=HINgdWajvh5dE70RFqobJbUTHjpyz-TBnv7oNgsG)
-- **文章链接**：[ASP.NET Core Identity 重置密码功能](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486238&idx=1&sn=32fae2f0fa6c50982e160c892c1314bc&chksm=9f005434a877dd220737e9f85ad05045c67084765190c6a91e7f724628024848409b6238203a&token=1650340614&lang=zh_CN&scene=21#wechat_redirect)
-- **文章链接**：[ASP.NET Core Identity Lockout](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486301&idx=1&sn=be1c52b47c25f41121f2866c23e63a0e&chksm=9f005477a877dd611facc1f9c2d3aa202f97ef03c6bd4421a33942c7ffb723a34d6252069ca5&token=438614949&lang=zh_CN&scene=21#wechat_redirect)
+**代码例子**：[Asp.Net Core Identity](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter01)
+
+**文章链接**
+- [Asp.Net Core Identity 配置](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486141&idx=1&sn=f77635080994c6295cb801e846427a15&chksm=9f005597a877dc816f5fe96bbe0f9ef0ac4d82ef4e6148a4325764ed0dcee75cdad9a49c428e&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Identity 用户管理](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486148&idx=1&sn=dae55b414e123c6718e470c21c8c8c21&chksm=9f0055eea877dcf876b2eff0e9fbe3a3f5b66271e4efe2639b7a2caf12ea722e123980e53f9a&scene=21&token=1757261675&lang=zh_CN#wechat_redirect)
+- [ASP.NET Core Identity中用户名、密码、邮件策略](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486177&idx=1&sn=44c5277b6882deb798db1944d4163e04&chksm=9f0055cba877dcdd3365625bbc08c897e653cdda085a739e86181e75f1b9ede86d7b3fd1f4dd&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Identity身份认证](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486183&idx=1&sn=baeb28f24399a9b0203f33185e1399a6&chksm=9f0055cda877dcdb80b411805d45d4f0f356dca2351d08209cac5aa0ac670fbc391a91dccb2b&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Identity角色管理](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486194&idx=1&sn=a213c72dd0564c31a7624c6d99f0d277&chksm=9f0055d8a877dcce3f041eba5e28b3ebe8020fa92979699b2f3cbf2a9a4e16206fa340261c37&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Identity客户自定义属性](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486202&idx=1&sn=7ec06927330a57a8a78143d88f10f987&chksm=9f0055d0a877dcc62b307d4453943c0cc165b1d9234c3d073a832deb235151970d79f64eef8a&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core  Identity如何使用Claim](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486208&idx=1&sn=846fd71c89106c6c8779d48987156e08&chksm=9f00542aa877dd3cd27d54dd26a92c9dc42ae23c4dcf01e84a8175f31c16847e2dae408ed118&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core  Identity如何使用Policy](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486215&idx=1&sn=9bd90b0c1d2d5583b8da324cbb56c5a6&chksm=9f00542da877dd3be47107268d4def7a92c1bea4b7568a9b4dbb9788754d0942bc378daefc38&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Identity 2FA 认证](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486232&idx=1&sn=05688acdeb382499c36a7ce054da2565&chksm=9f005432a877dd2444657c506e98dfc7683934a7a699f811cb6c8268cc018693db0e9ef061a2&token=1757261675&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Identity 如何执行用户的电子邮件确认](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486233&idx=1&sn=70654867aaecbcf62c8b918a0fe7253b&chksm=9f005433a877dd25f010752f766b94a0801212f04db84f093fa7a9ed48f62925dfd1599d94d7&token=1757261675&lang=zh_CN&scene=21&poc_token=HINgdWajvh5dE70RFqobJbUTHjpyz-TBnv7oNgsG)
+- [ASP.NET Core Identity 重置密码功能](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486238&idx=1&sn=32fae2f0fa6c50982e160c892c1314bc&chksm=9f005434a877dd220737e9f85ad05045c67084765190c6a91e7f724628024848409b6238203a&token=1650340614&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Identity Lockout](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486301&idx=1&sn=be1c52b47c25f41121f2866c23e63a0e&chksm=9f005477a877dd611facc1f9c2d3aa202f97ef03c6bd4421a33942c7ffb723a34d6252069ca5&token=438614949&lang=zh_CN&scene=21#wechat_redirect)
 ## [Chapter 02]()
 ## [Chapter 03]()
 ## [Chapter 04]()
