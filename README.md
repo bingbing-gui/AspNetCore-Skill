@@ -75,14 +75,24 @@ AspNetCore Skill
 
 **文章链接**：[ASP.NET Core Controllers](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486901&idx=1&sn=fff8d045f2f5b06dcca07251f67cc034&chksm=9f00529fa877db8906cfaf50bfc1335bff05fff1eeae61d5c02582cd499d36b588187bf0c75d&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
 
-# [Chapter 07]()
-- **项目描述**：
-- **代码示例**:
-- **文章链接**：
-# [Chapter 08]()
-- **项目描述**：
-- **代码示例**:
-- **文章链接**：
+# [Chapter 07](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter07)
+
+**项目描述**：Asp.Net Core Actions
+
+**代码示例**：[Asp.Net Core Actions](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter07)
+
+**文章链接**：[ASP.NET Core Actions](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486916&idx=1&sn=f1ce92a76d20abb7888eca0b39bbbfe7&chksm=9f0052eea877dbf878b21b25219f4d5ddb82cfc3fff811dfed7c5144ad45b872cb1c1168460f&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
+
+# [Chapter 08](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter08)
+
+**项目描述**：Asp.Net Core 视图
+
+**代码示例**：[AspNetCore.Views](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter08)
+
+**文章链接**
+- [ASP.NET Core Views系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486961&idx=1&sn=af2c5824f8e56ec6c99e3a77a6a03d0f&chksm=9f0052dba877dbcd2aa41bc181bca8cfeccbb70b98d2b53ee494bc85b6762fa731c322b26c53&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
+- [ASP.NET Core Views系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486966&idx=1&sn=f790d2784b4c2fcd7e53fda17f851401&chksm=9f0052dca877dbca29e604f786d6eaf90fa498b130cb05e1b29763cf8ba61ec3b37fa1ea3ae2&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
+
 # [Chapter 09]()
 - **项目描述**：
 - **代码示例**:
