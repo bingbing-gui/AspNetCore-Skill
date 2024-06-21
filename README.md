@@ -37,10 +37,18 @@ AspNetCore Skill
 - **项目描述**：
 - **代码示例**:
 - **文章链接**：
-# [Chapter 03]()
-- **项目描述**：
-- **代码示例**:
-- **文章链接**：
+# [Chapter 03](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter03)
+
+**项目描述**：AspNet Core 配置系统
+
+**代码示例**：[AspNet Core Configuration](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter03) 
+
+**文章链接**
+- [ASP.NET Core 配置系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486815&idx=1&sn=1a4f471b2a8431d771c11d511e8efc5c&chksm=9f005275a877db63515a5304c166b561d1ac476d7d6980c2c26e192d60cdafecd1ba322196c1&token=2146175377&lang=zh_CN#rd)
+- [ASP.NET Core 配置系列二](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486833&idx=1&sn=a4de2c6202d559e9968f7170ede99cea&chksm=9f00525ba877db4df4a50a50590103760fd2e4603969b2b2ecfb7a54b414bfba05eecefe1af0&token=2146175377&lang=zh_CN#rd)
+- [ASP.NET Core 配置系列三](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486845&idx=1&sn=a9b153b5cff58c5732d51d439bcc5952&chksm=9f005257a877db41dc77a468a9f203deea091969ada466ff4b2730f6066fbaa094484f0d3a8d&token=2146175377&lang=zh_CN#rd)
+- [ASP.NET Core 配置系列四](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486847&idx=1&sn=81c1ba7182a6aab6c8958e211b5a9dcf&chksm=9f005255a877db43953e2215a262faedc31c7c9d9083950429a88e5f6a912d7f817a87ab4717&token=2146175377&lang=zh_CN#rd)
+- [ASP.NET Core 配置系列五](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486858&idx=1&sn=e722b863483710384138d6e885b7c95e&chksm=9f0052a0a877dbb62fd8057492b092de70c3516fb0a7b5135cfdd5d7e4b26c91af36930c243d&token=2146175377&lang=zh_CN#rd)
 # [Chapter 04]()
 - **项目描述**：
 - **代码示例**:
