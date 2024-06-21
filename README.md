@@ -34,9 +34,13 @@ AspNetCore Skill
 - [ASP.NET Core Identity 重置密码功能](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486238&idx=1&sn=32fae2f0fa6c50982e160c892c1314bc&chksm=9f005434a877dd220737e9f85ad05045c67084765190c6a91e7f724628024848409b6238203a&token=1650340614&lang=zh_CN&scene=21#wechat_redirect)
 - [ASP.NET Core Identity Lockout](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486301&idx=1&sn=be1c52b47c25f41121f2866c23e63a0e&chksm=9f005477a877dd611facc1f9c2d3aa202f97ef03c6bd4421a33942c7ffb723a34d6252069ca5&token=438614949&lang=zh_CN&scene=21#wechat_redirect)
 # [Chapter 02](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter02)
-- **项目描述**：
-- **代码示例**:
-- **文章链接**：
+
+**项目描述**：Asp.Net Core Identity API
+
+**代码示例**：[Asp.Net Core Identity API](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter02)
+
+**文章链接**：
+
 # [Chapter 03](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter03)
 
 **项目描述**：AspNet Core 配置系统
