@@ -336,14 +336,13 @@ AspNetCore Skill
 - [ASP.NET Core 使用Swagger/OpenAPI文档化API](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247487665&idx=1&sn=bb6836e776d7bbc36e547703429a2fb6&chksm=9f004f9ba877c68db2e472d8578e48001363e13aa1f20a3bf29b8732641f4613e2fb9a7e4593&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
 - [ASP.NET Core 中使用Swashbuckle](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247487666&idx=1&sn=71d91f7cbe59b809c7c7e7e054747985&chksm=9f004f98a877c68e42058c0f283c03ee45a6f303c65041bf182c8ee98239a75503039c0bc1fc&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
 #
-[Chapter 38](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter38)
+# [Chapter 38](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter38)
 
 **项目描述**：ASP.NET Core 使用NSwag
 
 **代码示例**：[Asp.Net Core NSwag](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter38)
 
-**文章链接**
-- [ASP.NET Core 使用NSwag](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247487669&idx=1&sn=dd4569527a3a840c8a508936a64d235b&chksm=9f004f9fa877c689de806c882211353676f7e619bc0c532d35abc0c2ed0145dcef363b5c6ffb&token=2146175377&lang=zh_CN&scene=21#wechat_redirect
+**文章链接**：[ASP.NET Core 使用NSwag](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247487669&idx=1&sn=dd4569527a3a840c8a508936a64d235b&chksm=9f004f9fa877c689de806c882211353676f7e619bc0c532d35abc0c2ed0145dcef363b5c6ffb&token=2146175377&lang=zh_CN&scene=21#wechat_redirect
 
 
 ## EntityFrameworkCore目录
