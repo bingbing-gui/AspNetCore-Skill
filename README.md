@@ -67,7 +67,7 @@ AspNetCore Skill
 - [ASP.NET Core 依赖注入系列一](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486869&idx=1&sn=26ff00ea2ee847d23329958268cf9c66&chksm=9f0052bfa877dba97d4f16d813080159a645162d8c42b501a2ae71e721578d5f7c069a71ea0d&token=2146175377&lang=zh_CN#rd)
 - [ASP.NET Core 依赖注入系列二](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486889&idx=1&sn=f37abf5047811527b8fbe74dabea45c8&chksm=9f005283a877db95d4a81909348c2c2b4a4ee9095b5524d93ad5b4dd35545c7e9a202a57fd59&token=2146175377&lang=zh_CN#rd)
 - [ASP.NET Core 依赖注入系列三](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486896&idx=1&sn=b91b23179f4343ba4baa15c5f8ba2d99&chksm=9f00529aa877db8c8c9803bd7c6fa8913b012a422c312b4d08959e2f2c6e6c29368782d649cd&token=2146175377&lang=zh_CN&scene=21#wechat_redirect)
-# [Chapter 06]()
+# [Chapter 06](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter06)
 
 **项目描述**：Asp.Net Core 控制器
 
