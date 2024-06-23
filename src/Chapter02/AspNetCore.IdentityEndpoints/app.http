@@ -1,43 +1,30 @@
-# For more info on HTTP files go to https://aka.ms/vs/httpfile
 
-@url=https://localhost:7044
-@user=admin
-@password=P@$$w0rd1
-@email=admin@notadomain.com
 
-POST {{url}}/register
+POST http://localhost:5113/account/register
 Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
 
 {
-  "username": "{{user}}",
-  "password": "{{password}}",
-  "email": "{{email}}"
+  "email":"Gbb2@outlook.com",
+  "password":"Gbb21234!"
+}
+
+###
+POST http://localhost:5113/account/login
+Content-Type: application/json
+{
+  "email":"Gbb2@outlook.com",
+  "password":"Gbb21234!"
 }
 
 ###
 
-POST {{url}}/login
-Content-Type: application/json
-
-{
-  "username": "{{user}}",
-  "password": "{{password}}"
-}
+@access_token=CfDJ8KLDKK0zd9lHobgQFPrKDVxnbvKFINNFM27Rki6hnQlFYNZfpp4psxstxbPcuYifRzZovX4YlTtiWNt2sHPEaB_kYUCYe1MNm3OAx4mk16wWQmnZ_RvvmKkqjAYxoUfujnVcM8RvKdGlPyP-IhPM2r8XW6mI41o6vDV-EtHhegBYznHDIUFj1i8MBC2OMROgiUEzq800gDyGYgITlegOIOWFjmbKyEABDkTf6Fw9OMuEcvlumiMWVh4kmQ-oTNCJCJecxkiCRUj3WP0fPZW5_QL3Xp0oNuEz6SAz_uE47fc8K3DIxHg6VO9bNwSq4tBxwQiz9xkqxt6Iy1SKKwF_MlghgNMskg6cZO9BE-mKLubxsNFlY4hsassIXGhhJDpI1CHcH8dK_--XfRszom1_geiEjmr7XUUP5Q7tlLwwjQ3VOHnZSyjaFMCZlBEAAdgL15fB5HEL5WTE9mHFRKL4v6TWIRkUX-igrN-3nQXR0WB8gW4qCGshrVJn-fgdvd0C-_RcBxjjPg6lg121SygvQl3XgHo2gdpgXwLS0IhuSC3d8rBK5wJRyePj8DLTaiEfJmN14VFsy9Ed-lUjXpXkqlrxPytfpz5V97pMncOVZ-jMGq4yAtdPyYS2HF1VzUCGBS0-6wIuEyhBELqyxQjhRnwDLRhVhqrZGfp-zEoN2MCTlqnEGe2Wf5NpZZG6Dfvd3g
+GET http://localhost:5113/weatherforecast
+Authorization: Bearer {{access_token}}
 
 ###
+@access_token=CfDJ8KLDKK0zd9lHobgQFPrKDVxnbvKFINNFM27Rki6hnQlFYNZfpp4psxstxbPcuYifRzZovX4YlTtiWNt2sHPEaB_kYUCYe1MNm3OAx4mk16wWQmnZ_RvvmKkqjAYxoUfujnVcM8RvKdGlPyP-IhPM2r8XW6mI41o6vDV-EtHhegBYznHDIUFj1i8MBC2OMROgiUEzq800gDyGYgITlegOIOWFjmbKyEABDkTf6Fw9OMuEcvlumiMWVh4kmQ-oTNCJCJecxkiCRUj3WP0fPZW5_QL3Xp0oNuEz6SAz_uE47fc8K3DIxHg6VO9bNwSq4tBxwQiz9xkqxt6Iy1SKKwF_MlghgNMskg6cZO9BE-mKLubxsNFlY4hsassIXGhhJDpI1CHcH8dK_--XfRszom1_geiEjmr7XUUP5Q7tlLwwjQ3VOHnZSyjaFMCZlBEAAdgL15fB5HEL5WTE9mHFRKL4v6TWIRkUX-igrN-3nQXR0WB8gW4qCGshrVJn-fgdvd0C-_RcBxjjPg6lg121SygvQl3XgHo2gdpgXwLS0IhuSC3d8rBK5wJRyePj8DLTaiEfJmN14VFsy9Ed-lUjXpXkqlrxPytfpz5V97pMncOVZ-jMGq4yAtdPyYS2HF1VzUCGBS0-6wIuEyhBELqyxQjhRnwDLRhVhqrZGfp-zEoN2MCTlqnEGe2Wf5NpZZG6Dfvd3g
+GET http://localhost:5113/account/manage/info
+Authorization: Bearer {{access_token}}
 
-@token=<your token here>
-GET {{url}}
-Authorization: Bearer {{token}}
-
-
-###
-
-@refreshToken=<your refresh token here>
-
-POST {{url}}/refresh
-Content-Type: application/json
-
-{
-  "refreshToken": "{{refreshToken}}"
-}
