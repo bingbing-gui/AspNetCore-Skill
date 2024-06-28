@@ -35,11 +35,11 @@ AspNetCore Skill
 - [ASP.NET Core Identity Lockout](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486301&idx=1&sn=be1c52b47c25f41121f2866c23e63a0e&chksm=9f005477a877dd611facc1f9c2d3aa202f97ef03c6bd4421a33942c7ffb723a34d6252069ca5&token=438614949&lang=zh_CN&scene=21#wechat_redirect)
 # [Chapter 02](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter02)
 
-**项目描述**：Asp.Net Core Identity API
+**项目描述**：Asp.Net Core Identity API endpoints
 
-**代码示例**：[Asp.Net Core Identity API](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter02)
+**代码示例**：[Asp.Net Core Identity API endpoints](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter02)
 
-**文章链接**：
+**文章链接**：[Asp.Net Core Identity API endpoints]([https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486916&idx=1&sn=f1ce92a76d20abb7888eca0b39bbbfe7&chksm=9f0052eea877dbf878b21b25219f4d5ddb82cfc3fff811dfed7c5144ad45b872cb1c1168460f&token=2146175377&lang=zh_CN&scene=21#wechat_redirect](https://mp.weixin.qq.com/s/SRQ6ccJ_aQZI63eT_IL-Tg))
 
 # [Chapter 03](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter03)
 
