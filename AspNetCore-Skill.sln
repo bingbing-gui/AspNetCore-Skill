@@ -263,6 +263,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastEndpoint.Library", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter56.Third-Party.Quartz", "Chapter56.Third-Party.Quartz", "{D69D12D1-AA47-4082-A80E-4E0FC1194341}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Quartz", "src\Chapter56\AspNetCore.Quartz.csproj", "{B961CE79-ACBF-4227-9470-BBFE92EB1EB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -525,6 +527,10 @@ Global
 		{6D954EA7-F1DD-4883-82E6-A8A633006D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D954EA7-F1DD-4883-82E6-A8A633006D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D954EA7-F1DD-4883-82E6-A8A633006D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B961CE79-ACBF-4227-9470-BBFE92EB1EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B961CE79-ACBF-4227-9470-BBFE92EB1EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B961CE79-ACBF-4227-9470-BBFE92EB1EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B961CE79-ACBF-4227-9470-BBFE92EB1EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -659,6 +665,7 @@ Global
 		{207FC88A-B634-427B-8A9B-B808D79564AD} = {9CD3D2C1-96CC-4062-9BE4-96EF7306CABE}
 		{6D954EA7-F1DD-4883-82E6-A8A633006D27} = {207FC88A-B634-427B-8A9B-B808D79564AD}
 		{D69D12D1-AA47-4082-A80E-4E0FC1194341} = {9CD3D2C1-96CC-4062-9BE4-96EF7306CABE}
+		{B961CE79-ACBF-4227-9470-BBFE92EB1EB7} = {D69D12D1-AA47-4082-A80E-4E0FC1194341}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
