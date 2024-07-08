@@ -442,7 +442,7 @@ AspNetCore Skill
 
 **代码示例**：[EFCoreFluentAPIOneToMany](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter48)
 
-**文章链接**：[Entity Framework Core-使用Fluent API配置一对多关系](https://mp.weixin.qq.com/s?__biz=MzA3NDM1MzIyMQ==&mid=2247486695&idx=1&sn=47c3631d10360417b63f606c918e8679&chksm=9f0053cda877dadb2f95dbbb9ee8d9ae2c10e83e01e697cdbd1a8cd12fa8d6aee558821c6a83&token=304031109&lang=zh_CN&scene=21#wechat_redirect)
+**文章链接**：[Entity Framework Core-使用Fluent API配置一对多关系](https://mp.weixin.qq.com/s/4gqWH93LdBe2_8KUU6oUKA)
 
 # [Chapter 50](https://github.com/bingbing-gui/AspNetCore-Skill/tree/master/src/Chapter50)
 
