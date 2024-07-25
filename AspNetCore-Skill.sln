@@ -241,6 +241,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-analyze-text", "01-analy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "text-analysis", "src\Azure-AI\mslearn-ai-language\01-analyze-text\text-analysis.csproj", "{7947DC72-779C-4775-A2D5-74CFB3D14566}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mslearn-ai-document-intelligence", "mslearn-ai-document-intelligence", "{A6EDB0A5-C419-422C-B98C-F7F83212889C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-prebuild-models", "01-prebuild-models", "{33018D85-A788-4AA2-9F5F-FA444F44D50E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "invoicereader", "src\Azure-AI\mslearn-ai-document-intelligence\01-prebuild-models\invoicereader.csproj", "{FCF963A4-65BE-4E7F-82F4-344480E3524A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -479,6 +485,10 @@ Global
 		{7947DC72-779C-4775-A2D5-74CFB3D14566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7947DC72-779C-4775-A2D5-74CFB3D14566}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7947DC72-779C-4775-A2D5-74CFB3D14566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF963A4-65BE-4E7F-82F4-344480E3524A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF963A4-65BE-4E7F-82F4-344480E3524A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF963A4-65BE-4E7F-82F4-344480E3524A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF963A4-65BE-4E7F-82F4-344480E3524A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -602,6 +612,9 @@ Global
 		{91648EBB-55EC-440F-B1B2-E57867152FD6} = {F9529554-1483-44D7-AA88-85FE0B4624E7}
 		{AEA050BF-62E7-428D-B2E4-BCDFA9C28523} = {91648EBB-55EC-440F-B1B2-E57867152FD6}
 		{7947DC72-779C-4775-A2D5-74CFB3D14566} = {AEA050BF-62E7-428D-B2E4-BCDFA9C28523}
+		{A6EDB0A5-C419-422C-B98C-F7F83212889C} = {F9529554-1483-44D7-AA88-85FE0B4624E7}
+		{33018D85-A788-4AA2-9F5F-FA444F44D50E} = {A6EDB0A5-C419-422C-B98C-F7F83212889C}
+		{FCF963A4-65BE-4E7F-82F4-344480E3524A} = {33018D85-A788-4AA2-9F5F-FA444F44D50E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
