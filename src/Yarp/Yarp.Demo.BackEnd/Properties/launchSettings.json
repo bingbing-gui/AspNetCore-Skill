@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Yarp.Demo.BackEnd": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:9004;http://localhost:58473"
+    }
+  }
+}
