@@ -261,6 +261,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yarp.Demo.FrontEnd", "src\Y
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yarp.Demo.Proxy", "src\Yarp\Yarp.Demo.Proxy\Yarp.Demo.Proxy.csproj", "{5FA3BE65-5757-4394-872E-C2CF055EF767}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowService", "WindowService", "{FE9BE143-0CAA-4C22-AE7D-0464E5CA7DC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowService", "src\WindowService\WindowService\WindowService.csproj", "{14E22FC6-837B-41A9-92BB-26FC25340EE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -515,6 +519,10 @@ Global
 		{5FA3BE65-5757-4394-872E-C2CF055EF767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FA3BE65-5757-4394-872E-C2CF055EF767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FA3BE65-5757-4394-872E-C2CF055EF767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E22FC6-837B-41A9-92BB-26FC25340EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E22FC6-837B-41A9-92BB-26FC25340EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E22FC6-837B-41A9-92BB-26FC25340EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E22FC6-837B-41A9-92BB-26FC25340EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -648,6 +656,8 @@ Global
 		{7E05520C-8B97-4B85-BBC2-F58A23BDC730} = {87E61278-8569-4F7B-AB42-322C444E028D}
 		{4FC1CB01-C035-4484-A688-010C7013A0E7} = {9ADA6256-9F56-4B38-884E-18DC7A99D4E2}
 		{5FA3BE65-5757-4394-872E-C2CF055EF767} = {B3B7F831-4B6C-4D29-AB16-15008A37D46C}
+		{FE9BE143-0CAA-4C22-AE7D-0464E5CA7DC8} = {9CD3D2C1-96CC-4062-9BE4-96EF7306CABE}
+		{14E22FC6-837B-41A9-92BB-26FC25340EE2} = {FE9BE143-0CAA-4C22-AE7D-0464E5CA7DC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
