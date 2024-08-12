@@ -70,6 +70,7 @@ namespace azure_openai_api
                 #endregion
                 // Add code to send request...
                 // Build completion options object
+
                 messagesList.Add(new ChatRequestUserMessage(inputText));
 
                 ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()

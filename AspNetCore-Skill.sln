@@ -269,6 +269,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mslearn-openai", "mslearn-o
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "azure-openai-api", "src\Azure-AI\mslearn-openai\azure-openai-api\azure-openai-api.csproj", "{E9ED3C20-1FCC-4F97-8F5D-8D76C813503B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prompt-engineering", "src\Azure-AI\mslearn-openai\prompt-engineering\prompt-engineering.csproj", "{793D0668-954C-4DD7-A0EA-3EF6ED5F17AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -531,6 +533,10 @@ Global
 		{E9ED3C20-1FCC-4F97-8F5D-8D76C813503B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9ED3C20-1FCC-4F97-8F5D-8D76C813503B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9ED3C20-1FCC-4F97-8F5D-8D76C813503B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793D0668-954C-4DD7-A0EA-3EF6ED5F17AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793D0668-954C-4DD7-A0EA-3EF6ED5F17AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793D0668-954C-4DD7-A0EA-3EF6ED5F17AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793D0668-954C-4DD7-A0EA-3EF6ED5F17AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -668,6 +674,7 @@ Global
 		{14E22FC6-837B-41A9-92BB-26FC25340EE2} = {FE9BE143-0CAA-4C22-AE7D-0464E5CA7DC8}
 		{0AF30470-ABF2-4C04-9A43-8DDC16A32018} = {F9529554-1483-44D7-AA88-85FE0B4624E7}
 		{E9ED3C20-1FCC-4F97-8F5D-8D76C813503B} = {0AF30470-ABF2-4C04-9A43-8DDC16A32018}
+		{793D0668-954C-4DD7-A0EA-3EF6ED5F17AF} = {0AF30470-ABF2-4C04-9A43-8DDC16A32018}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
