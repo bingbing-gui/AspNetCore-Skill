@@ -2,13 +2,16 @@
 using Azure;
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.Configuration;
+using System.Text;
 
 namespace azure_openai_api
 {
     class Program
     {
         static void Main(string[] args)
-        { 
+        {
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            Console.OutputEncoding = Encoding.Unicode;
             IConfiguration config=new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json",true,true)
                 .Build();
@@ -25,8 +28,7 @@ namespace azure_openai_api
             // Initialize the Azure OpenAI client
             OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
             // System message to provide context to the model
-            string systemMessage = @"我是一个徒步爱好者，名叫Forest，帮助人们发现他们所在地区的远足径。如果没有指定地区，我会默认为靠近雷尼尔国家公园。
-                                     然后，我将提供三个不同长度的附近远足径的建议。在推荐时，我还会分享一些关于当地自然的有趣事实。";
+            string systemMessage = @"你是个AI助手";
 
             var messagesList = new List<ChatRequestMessage>()
             {
@@ -71,6 +73,8 @@ namespace azure_openai_api
                 // Add code to send request...
                 // Build completion options object
 
+                #region
+
                 messagesList.Add(new ChatRequestUserMessage(inputText));
 
                 ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
@@ -97,6 +101,7 @@ namespace azure_openai_api
 
                 Console.WriteLine("Response: " + completion + "\n");
 
+                #endregion
             } while (true);
 
         }
