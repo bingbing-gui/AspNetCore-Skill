@@ -10,7 +10,6 @@ namespace azure_openai_api
     {
         static void Main(string[] args)
         {
-            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             Console.OutputEncoding = Encoding.Unicode;
             IConfiguration config=new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json",true,true)
