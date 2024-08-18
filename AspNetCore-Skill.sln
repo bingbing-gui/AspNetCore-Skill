@@ -289,6 +289,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-image-generation", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-use-own-data", "src\Azure-AI\mslearn-openai\06-use-own-data\06-use-own-data.csproj", "{E7140EAE-7EC2-4226-8EFE-F15EB2178654}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspnetcore-knowledge-point", "aspnetcore-knowledge-point", "{EDC74A37-0C09-40BA-B71B-6A572099E116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "query-string", "src\aspnetcore-knowledge-point\query-string\query-string.csproj", "{A89893CC-2F6C-4BE5-971C-CD9AD95636E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -567,6 +571,10 @@ Global
 		{E7140EAE-7EC2-4226-8EFE-F15EB2178654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7140EAE-7EC2-4226-8EFE-F15EB2178654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7140EAE-7EC2-4226-8EFE-F15EB2178654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A89893CC-2F6C-4BE5-971C-CD9AD95636E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A89893CC-2F6C-4BE5-971C-CD9AD95636E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A89893CC-2F6C-4BE5-971C-CD9AD95636E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A89893CC-2F6C-4BE5-971C-CD9AD95636E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -711,6 +719,8 @@ Global
 		{3209E727-218A-46EB-BBD5-EF0C6DF4C55C} = {0AF30470-ABF2-4C04-9A43-8DDC16A32018}
 		{7FA470AB-8BB8-4A27-8D0D-C6E6C071C5F8} = {0AF30470-ABF2-4C04-9A43-8DDC16A32018}
 		{E7140EAE-7EC2-4226-8EFE-F15EB2178654} = {0AF30470-ABF2-4C04-9A43-8DDC16A32018}
+		{EDC74A37-0C09-40BA-B71B-6A572099E116} = {9CD3D2C1-96CC-4062-9BE4-96EF7306CABE}
+		{A89893CC-2F6C-4BE5-971C-CD9AD95636E9} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
