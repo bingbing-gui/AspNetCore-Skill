@@ -9,4 +9,4 @@ namespace Identity.Models
             base(options)
         { }
     }
-    }
+}

@@ -3,12 +3,12 @@ using System.ComponentModel;
 
 namespace Identity.Models
 {
-public class TwoFactor
-{
+    public class TwoFactor
+    {
 
-    [Required]
-    [DisplayName("授权码")]
-    public string TwoFactorCode { get; set; } = null!;
-    public string? ReturnUrl { get; set; } 
-}
+        [Required]
+        [DisplayName("授权码")]
+        public string TwoFactorCode { get; set; } = null!;
+        public string? ReturnUrl { get; set; } 
+    }
 }

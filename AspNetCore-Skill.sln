@@ -291,9 +291,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-use-own-data", "src\Azur
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspnetcore-knowledge-point", "aspnetcore-knowledge-point", "{EDC74A37-0C09-40BA-B71B-6A572099E116}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "query-string", "src\aspnetcore-knowledge-point\query-string\query-string.csproj", "{A89893CC-2F6C-4BE5-971C-CD9AD95636E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "query-string", "src\aspnetcore-knowledge-point\query-string\query-string.csproj", "{A89893CC-2F6C-4BE5-971C-CD9AD95636E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cookies", "src\aspnetcore-knowledge-point\cookies\cookies.csproj", "{7D584BDA-8FD8-49C9-8C23-34DB200C9586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cookies", "src\aspnetcore-knowledge-point\cookies\cookies.csproj", "{7D584BDA-8FD8-49C9-8C23-34DB200C9586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "query-string-create", "src\aspnetcore-knowledge-point\query-string-create\query-string-create.csproj", "{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -581,6 +583,10 @@ Global
 		{7D584BDA-8FD8-49C9-8C23-34DB200C9586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D584BDA-8FD8-49C9-8C23-34DB200C9586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D584BDA-8FD8-49C9-8C23-34DB200C9586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -728,6 +734,7 @@ Global
 		{EDC74A37-0C09-40BA-B71B-6A572099E116} = {9CD3D2C1-96CC-4062-9BE4-96EF7306CABE}
 		{A89893CC-2F6C-4BE5-971C-CD9AD95636E9} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{7D584BDA-8FD8-49C9-8C23-34DB200C9586} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
