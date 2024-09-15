@@ -295,7 +295,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "query-string", "src\aspnetc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cookies", "src\aspnetcore-knowledge-point\cookies\cookies.csproj", "{7D584BDA-8FD8-49C9-8C23-34DB200C9586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "query-string-create", "src\aspnetcore-knowledge-point\query-string-create\query-string-create.csproj", "{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "query-string-create", "src\aspnetcore-knowledge-point\query-string-create\query-string-create.csproj", "{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "read-form-values", "src\aspnetcore-knowledge-point\read-form-values\read-form-values.csproj", "{99260E03-217F-46D3-9B8B-649A87CF266A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -587,6 +589,10 @@ Global
 		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99260E03-217F-46D3-9B8B-649A87CF266A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99260E03-217F-46D3-9B8B-649A87CF266A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99260E03-217F-46D3-9B8B-649A87CF266A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99260E03-217F-46D3-9B8B-649A87CF266A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -735,6 +741,7 @@ Global
 		{A89893CC-2F6C-4BE5-971C-CD9AD95636E9} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{7D584BDA-8FD8-49C9-8C23-34DB200C9586} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{99260E03-217F-46D3-9B8B-649A87CF266A} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}

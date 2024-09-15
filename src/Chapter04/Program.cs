@@ -9,7 +9,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.Configure<PositionOptions>(
     builder.Configuration.GetSection(PositionOptions.Position));
 
-
 //builder.Services.AddOptions<MyConfigOptions>()
 //            .Bind(builder.Configuration.GetSection(MyConfigOptions.MyConfig))
 //            .ValidateDataAnnotations()

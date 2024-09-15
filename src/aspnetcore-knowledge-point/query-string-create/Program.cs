@@ -1,5 +1,4 @@
 ﻿var app = WebApplication.Create();
-
 app.Run(async context =>
 {
     var dicts = new Dictionary<string, string>()
@@ -8,13 +7,11 @@ app.Run(async context =>
         ["name"] = "gui bingbing",
         ["birthday"] = "1986/08/30",
         ["guid"] = Guid.NewGuid().ToString(),
-        ["artist"] = "Bill",
+        ["artist"] = "Bill Gui",
         ["formula"] = "10 * 5 = 50"
     };
-
     var queryString = QueryString.Create(dicts);
-
-    context.Response.Headers.Append("Content-Type", "text/html");
+    context.Response.Headers.Append("Content-Type", "text/html;charset=utf-8");
     await context.Response.WriteAsync($@"<html>
     <head>
         <link rel=""stylesheet"" href=""https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"" />
@@ -30,10 +27,9 @@ app.Run(async context =>
         await context.Response.WriteAsync($"<li>{k.Key} = {k.Value}</li>");
     }
     await context.Response.WriteAsync("</ul>");
-    await context.Response.WriteAsync("<strong>Output</strong><br/>");
+    await context.Response.WriteAsync("<strong>输出</strong><br/>");
     await context.Response.WriteAsync(queryString.Value);
     await context.Response.WriteAsync("</ul>");
     await context.Response.WriteAsync(@"</div></body></html>");
 });
-
 app.Run();
