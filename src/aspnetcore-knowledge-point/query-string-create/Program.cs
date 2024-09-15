@@ -4,7 +4,7 @@ app.Run(async context =>
     var dicts = new Dictionary<string, string>()
     {
         ["id"] = "001",
-        ["name"] = "gui bingbing",
+        ["name"] = "桂兵兵",
         ["birthday"] = "1986/08/30",
         ["guid"] = Guid.NewGuid().ToString(),
         ["artist"] = "Bill Gui",
