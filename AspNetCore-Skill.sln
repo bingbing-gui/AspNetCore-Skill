@@ -297,9 +297,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cookies", "src\aspnetcore-k
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "query-string-create", "src\aspnetcore-knowledge-point\query-string-create\query-string-create.csproj", "{AA247FA4-5BB2-4721-A28F-5B9545AD8C86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "read-form-values", "src\aspnetcore-knowledge-point\read-form-values\read-form-values.csproj", "{99260E03-217F-46D3-9B8B-649A87CF266A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "read-form-values", "src\aspnetcore-knowledge-point\read-form-values\read-form-values.csproj", "{99260E03-217F-46D3-9B8B-649A87CF266A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "form-url-encoded-content", "src\aspnetcore-knowledge-point\form-url-encoded-content\form-url-encoded-content.csproj", "{2010CAD4-1C3B-4DF7-848C-82E96218A819}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "form-url-encoded-content", "src\aspnetcore-knowledge-point\form-url-encoded-content\form-url-encoded-content.csproj", "{2010CAD4-1C3B-4DF7-848C-82E96218A819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "form-upload-file", "src\aspnetcore-knowledge-point\form-upload-file\form-upload-file.csproj", "{4F38BDB0-78DE-46F3-9127-B812103C854F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -599,6 +601,10 @@ Global
 		{2010CAD4-1C3B-4DF7-848C-82E96218A819}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2010CAD4-1C3B-4DF7-848C-82E96218A819}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2010CAD4-1C3B-4DF7-848C-82E96218A819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F38BDB0-78DE-46F3-9127-B812103C854F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F38BDB0-78DE-46F3-9127-B812103C854F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F38BDB0-78DE-46F3-9127-B812103C854F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F38BDB0-78DE-46F3-9127-B812103C854F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -749,6 +755,7 @@ Global
 		{AA247FA4-5BB2-4721-A28F-5B9545AD8C86} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{99260E03-217F-46D3-9B8B-649A87CF266A} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{2010CAD4-1C3B-4DF7-848C-82E96218A819} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{4F38BDB0-78DE-46F3-9127-B812103C854F} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
