@@ -69,6 +69,7 @@ app.MapPost("Upload", async context =>
             {
                 var fileName = Path.Combine(app.Environment.ContentRootPath, f.FileName);
                 File.WriteAllBytes(fileName, ReadFully(body));
+                context.Response.Headers.Append("content-type", "text/html;charset=utf-8");
                 await context.Response.WriteAsync($"上传文件被写入到 {fileName}");
             }
         }
