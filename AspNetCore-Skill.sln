@@ -305,6 +305,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "form-upload-file", "src\asp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "request-header", "src\aspnetcore-knowledge-point\request-header\request-header.csproj", "{0A76C092-9218-42A9-AB15-BC0B4BD24083}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anti-forgery", "src\aspnetcore-knowledge-point\anti-forgery\anti-forgery.csproj", "{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -611,6 +613,10 @@ Global
 		{0A76C092-9218-42A9-AB15-BC0B4BD24083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A76C092-9218-42A9-AB15-BC0B4BD24083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A76C092-9218-42A9-AB15-BC0B4BD24083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -763,6 +769,7 @@ Global
 		{2010CAD4-1C3B-4DF7-848C-82E96218A819} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{4F38BDB0-78DE-46F3-9127-B812103C854F} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{0A76C092-9218-42A9-AB15-BC0B4BD24083} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
