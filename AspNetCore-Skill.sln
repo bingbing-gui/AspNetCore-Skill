@@ -309,6 +309,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "anti-forgery", "src\aspnetc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "http-response", "src\aspnetcore-knowledge-point\http-response\http-response.csproj", "{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "compression-response", "src\aspnetcore-knowledge-point\compression-response\compression-response.csproj", "{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -623,6 +625,10 @@ Global
 		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -777,6 +783,7 @@ Global
 		{0A76C092-9218-42A9-AB15-BC0B4BD24083} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
