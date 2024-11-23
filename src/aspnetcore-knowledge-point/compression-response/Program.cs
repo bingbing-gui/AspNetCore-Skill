@@ -9,7 +9,7 @@ builder.Services.AddResponseCompression(options =>
 {
     options.EnableForHttps = true; // 启用 HTTPS 的压缩
     //options.Providers.Add<GzipCompressionProvider>();
-    options.Providers.Add<CustomCompressionProvider>();
+    //options.Providers.Add<CustomCompressionProvider>();
 });
 
 var app = builder.Build();
