@@ -235,7 +235,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-use-azure-ai-services", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rest_client", "src\Azure-AI\01-use-azure-ai-services\rest-client\rest_client.csproj", "{CC2F8677-A6EC-4F03-B2FD-EED8A602B130}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mslearn-ai-language", "mslearn-ai-language", "{91648EBB-55EC-440F-B1B2-E57867152FD6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-azure-ai-nlp", "03-azure-ai-nlp", "{91648EBB-55EC-440F-B1B2-E57867152FD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-analyze-text", "01-analyze-text", "{AEA050BF-62E7-428D-B2E4-BCDFA9C28523}"
 EndProject
@@ -303,9 +303,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "form-url-encoded-content", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "form-upload-file", "src\aspnetcore-knowledge-point\form-upload-file\form-upload-file.csproj", "{4F38BDB0-78DE-46F3-9127-B812103C854F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "request-header", "src\aspnetcore-knowledge-point\request-header\request-header.csproj", "{0A76C092-9218-42A9-AB15-BC0B4BD24083}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "request-header", "src\aspnetcore-knowledge-point\request-header\request-header.csproj", "{0A76C092-9218-42A9-AB15-BC0B4BD24083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anti-forgery", "src\aspnetcore-knowledge-point\anti-forgery\anti-forgery.csproj", "{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "anti-forgery", "src\aspnetcore-knowledge-point\anti-forgery\anti-forgery.csproj", "{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "http-response", "src\aspnetcore-knowledge-point\http-response\http-response.csproj", "{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -617,6 +619,10 @@ Global
 		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -770,6 +776,7 @@ Global
 		{4F38BDB0-78DE-46F3-9127-B812103C854F} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{0A76C092-9218-42A9-AB15-BC0B4BD24083} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
