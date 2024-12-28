@@ -307,9 +307,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "request-header", "src\aspne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "anti-forgery", "src\aspnetcore-knowledge-point\anti-forgery\anti-forgery.csproj", "{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "http-response", "src\aspnetcore-knowledge-point\http-response\http-response.csproj", "{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "http-response", "src\aspnetcore-knowledge-point\http-response\http-response.csproj", "{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "compression-response", "src\aspnetcore-knowledge-point\compression-response\compression-response.csproj", "{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "compression-response", "src\aspnetcore-knowledge-point\compression-response\compression-response.csproj", "{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-versioning", "src\aspnetcore-knowledge-point\api-versioning\api-versioning.csproj", "{7BD410C9-3E52-4653-9287-4CA4E4A59196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "http-connection", "src\aspnetcore-knowledge-point\http-connection\http-connection.csproj", "{6439A322-8A64-4C66-917B-5ED954EB38F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -629,6 +633,14 @@ Global
 		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD410C9-3E52-4653-9287-4CA4E4A59196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD410C9-3E52-4653-9287-4CA4E4A59196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD410C9-3E52-4653-9287-4CA4E4A59196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD410C9-3E52-4653-9287-4CA4E4A59196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6439A322-8A64-4C66-917B-5ED954EB38F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6439A322-8A64-4C66-917B-5ED954EB38F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6439A322-8A64-4C66-917B-5ED954EB38F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6439A322-8A64-4C66-917B-5ED954EB38F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -784,6 +796,8 @@ Global
 		{54EEDEBC-AE60-4FB4-A2D9-EA69516751E7} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{4A4E9DB2-743C-4967-9EAC-E852A1FD58E4} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{5E1674A3-8FB5-4F96-B1DE-56312B6B7F90} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{7BD410C9-3E52-4653-9287-4CA4E4A59196} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{6439A322-8A64-4C66-917B-5ED954EB38F0} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
