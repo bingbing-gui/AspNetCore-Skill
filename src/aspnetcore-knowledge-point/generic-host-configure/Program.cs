@@ -14,8 +14,8 @@
                 // Add in-memory configuration for host-level
                 configHost.AddInMemoryCollection(new Dictionary<string, string>
                 {
-                     { "Application.Name", "App-01" },
-                     { "Application.Version", "1.0.0" }
+                     { "Application.Name", "Host-Set-01" },
+                     { "Application.Version", "Host-Set-1.0.0" }
                 });
             })
             .ConfigureAppConfiguration((hostContext, configApp) =>
@@ -29,8 +29,8 @@
                 // Add in-memory configuration for app-level
                 configApp.AddInMemoryCollection(new Dictionary<string, string>
                 {
-                     { "Application.Name", "App-01" },
-                     { "Application.Version", "1.0.0" }
+                     { "Application.Name", "App-Set-01" },
+                     { "Application.Version", "App-Set-1.0.0" }
                 });
             })
             .ConfigureServices((hostContext, services) =>
@@ -42,7 +42,6 @@
             {
                 logging.ClearProviders();
                 logging.AddConsole();
-                logging.AddFilter((provider, category, logLevel) => !category.Contains("Microsoft"));
             })
             .Build()
             .RunAsync();
@@ -61,25 +60,10 @@ public class SampleHostedService : IHostedService
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        _logger.LogDebug("=== Testing Configuration Priority ===");
+        _logger.LogInformation("=== Testing Configuration Priority ===");
 
-        // Enumerate all configuration keys and their values
-        foreach (var kvp in _config.AsEnumerable().OrderBy(k => k.Key))
-        {
-            _logger.LogDebug($"Key: {kvp.Key}, Value: {kvp.Value}");
-        }
-
-        // If IConfigurationRoot is available, list all providers
-        if (_config is IConfigurationRoot configRoot)
-        {
-            _logger.LogDebug("=== Configuration Providers ===");
-            foreach (var provider in configRoot.Providers)
-            {
-                _logger.LogDebug($"Provider: {provider}");
-            }
-        }
-
-        _logger.LogDebug("=== End of Configuration Test ===");
+        _logger.LogInformation("Application.Name: {0}", _config["Application.Name"]);
+        _logger.LogInformation("Application.Version: {0}", _config["Application.Version"]);
         return Task.CompletedTask;
     }
 
