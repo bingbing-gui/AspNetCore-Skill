@@ -27,7 +27,5 @@ app.Run(async context =>
         await context.Response.WriteAsync($"<li>{h.Name} = {h.GetValue(h)}</li>");
     }
     await context.Response.WriteAsync("</ul>");
-
-
 });
 app.Run();
