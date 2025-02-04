@@ -323,6 +323,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "generic-host-lifetime", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "application-lifetime", "src\aspnetcore-knowledge-point\application-lifetime\application-lifetime.csproj", "{342BD470-47D9-4767-B97D-EBF27E2BDD8C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "htmx", "htmx", "{95753F9C-9468-4E18-9FAF-F055691117A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -826,6 +828,7 @@ Global
 		{0128AC11-4F32-4B1B-9833-DF3AAD8B98A2} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{55EE79F3-BDFD-4CE1-AEB3-E08642802B6E} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
 		{342BD470-47D9-4767-B97D-EBF27E2BDD8C} = {EDC74A37-0C09-40BA-B71B-6A572099E116}
+		{95753F9C-9468-4E18-9FAF-F055691117A3} = {9CD3D2C1-96CC-4062-9BE4-96EF7306CABE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D279D5-6328-41A9-94C8-B4AA3D633D3B}
