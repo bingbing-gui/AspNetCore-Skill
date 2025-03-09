@@ -29,4 +29,4 @@ Semantic Kernel 将提示与现有 API 结合以执行操作。通过向 AI 模�
 
 # 总结
 
-Semantic Kernel 是一个强大的开源工具包，能够轻松集成最新的 AI 模型，并加速企业级解决方案的交付。它具备灵活性、模块化和可观测性，支持多种编程语言，并提供安全增强功能。通过将现有代码添加为插件，Semantic Kernel 最大化了投资回报，确保负责任的 AI 解决方案大规模交付。文章地址：https://github.com/bingbing-gui/AspNetCore-Skill
+Semantic Kernel 是一个强大的开源工具包，能够轻松集成最新的 AI 模型，并加速企业级解决方案的交付。它具备灵活性、模块化和可观测性，支持多种编程语言，并提供安全增强功能。通过将现有代码添加为插件，Semantic Kernel 最大化了投资回报，确保负责任的 AI 解决方案大规模交付。文章地址：https://github.com/bingbing-gui/AspNetCore-Skill/blob/master/semantic-kernel/001-%E6%99%BA%E8%83%BD%E4%BD%93%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6Semantic%20Kernel%E4%BB%8B%E7%BB%8D.md
