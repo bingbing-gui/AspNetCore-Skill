@@ -121,3 +121,5 @@ builder.Services.AddTransient((serviceProvider)=> {
 
 Kernel是Semantic Kernel框架的核心组件，作为依赖注入容器，管理AI应用所需的所有服务和插件。它支持AI服务选择、Prompt渲染、调用AI服务、解析响应和创建结果。通过依赖注入，可以轻松添加服务和插件，确保AI应用的高效运行和管理。
 文章地址：https://github.com/bingbing-gui/AspNetCore-Skill/blob/master/semantic-kernel/002-Semantic%20Kernel%E6%A1%86%E6%9E%B6%E7%9A%84%E6%A0%B8%E5%BF%83Kernel.md
+
+
