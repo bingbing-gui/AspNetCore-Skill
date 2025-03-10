@@ -1,17 +1,17 @@
 Semantic Kernel 提供了许多不同的组件，这些组件可以单独使用，也可以组合使用。本文概述了这些不同的组件，并解释了它们之间的关系。
 
-# AI 服务连接器（AI Service Connectors）
+## AI 服务连接器（AI Service Connectors）
 
 AI 服务连接器提供了一个抽象层，通过统一的接口暴露来自不同提供商的多种 AI 服务类型。支持的服务包含聊天补全、文本生成、嵌入生成、文本转图像、图像转文本、文本转音频、音频转文本。
 
 默认情况下，当你注册一个**AI 代码实现（插件、技能、函数等）**到 Kernel（核心调度器） 后，Kernel 只会使用 Chat Completion 或 Text Generation。如果要调用嵌入、向量搜索、图像生成等其他服务，需要手动注册并调用。
 
 
-# 向量存储连接器（Vector Store Connectors）
+## 向量存储连接器（Vector Store Connectors）
 
 Semantic Kernel 的向量存储连接器提供了一个抽象层，通过通用接口暴露来自不同提供商的向量存储。Kernel 不会自动 使用任何已注册的向量存储，但可以通过插件将**向量搜索（Vector Search）**暴露给 Kernel。在这种情况下，该插件将可用于 Prompt Templates（提示模板） 和 Chat Completion AI Model（聊天补全 AI 模型）
 
-# 函数和插件(Functions and Plugins)
+## 函数和插件(Functions and Plugins)
 
 插件（Plugins）可以理解为一组命名的功能模块，其中每个插件包含一个或多个可调用的函数。这些插件可以被注册到 Kernel（核心调度器），然后 Kernel 可以用两种方式使用它们：
 
