@@ -1,0 +1,23 @@
+﻿@model IdentityRole
+@{
+    ViewData["Title"] = "新增角色";
+}
+<div asp-validation-summary="All" class="text-danger"></div>
+<form class="form-horizontal" method="post">
+    <div class="mb-3 row">
+        <div class="col-sm-1">
+            <label for="Name" class="control-label">角色名称：</label>
+        </div>
+        <div class="col-sm-11">
+            <input asp-for="Name" class="form-control" placeholder="请输入角色名称" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-11 offset-sm-1">
+            <button type="submit" class="btn btn-primary">保存</button>
+            <button asp-action="Index" class="btn btn-secondary">
+                返回
+            </button>
+        </div>
+    </div>
+</form>

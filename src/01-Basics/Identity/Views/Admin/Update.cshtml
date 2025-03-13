@@ -1,0 +1,57 @@
+﻿@model UpdateUserDTO
+@{
+    ViewData["Title"] = "修改用户";
+}
+<div asp-validation-summary="All" class="text-danger"></div>
+<form class="form" method="post" role="form">
+    <div class="row mb-3">
+        <label asp-for="Id" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Id" class="form-control" disabled />
+        </div>
+    </div>
+     <div class="mb-3 row">
+        <label asp-for="Name" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Name" class="form-control" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Email" class="col-sm-1 form-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Email" class="form-control" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Password" class="col-sm-1 form-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Password" class="form-control" />
+        </div>
+    </div>
+     <div class="mb-3 row">
+        <label asp-for="Age" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Age" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="Country" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <select asp-for="Country" class="form-control" asp-items="@new SelectList(Enum.GetNames(typeof(Country)))">
+                <option selected disabled value="选择">选择国家</option>
+            </select>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="Salary" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Salary" class="form-control" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-11 offset-sm-1">
+            <button class="btn btn-primary">保存</button>
+            <button asp-action="index" class="btn btn-secondary">返回</button>
+        </div>
+    </div>
+</form>

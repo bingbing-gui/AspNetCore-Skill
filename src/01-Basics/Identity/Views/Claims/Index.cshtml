@@ -1,0 +1,48 @@
+﻿@model IEnumerable<System.Security.Claims.Claim>
+@{
+    ViewData["Title"] = "Claims";
+}
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-sm-3">
+            <a asp-action="Create" class="btn btn-primary">新增</a>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm">
+            <table class="table table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>颁发机构</th>
+                        <th>类型</th>
+                        <th>值</th>
+                        <td>删除</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var claim in Model.OrderBy(x => x.Type))
+                    {
+                        <tr>
+                            <td>@claim?.Subject?.Name</td>
+                            <td>@claim?.Issuer</td>
+                            <td>@claim?.Type</td>
+                            <td>@claim?.Value</td>
+                            <td>
+                                <form asp-action="Delete" method="post">
+                                    <input type="hidden" name="claimValues" value="@claim?.Type;@claim?.Value;@claim?.Issuer" />
+                                    <button type="submit" class="btn btn-sm btn-danger">
+                                        删除
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

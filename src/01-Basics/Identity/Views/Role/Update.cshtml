@@ -1,0 +1,58 @@
+﻿@model RoleEdit
+@{
+    ViewData["Title"] = "编辑角色";
+}
+<div asp-validation-summary="All" class="text-danger"></div>
+<style>
+    .table-column-width td {
+        width: 200px
+    }
+</style>
+<form class="form" method="post" role="form">
+    <input type="hidden" name="roleName" value="@Model.Role?.Name" />
+    <input type="hidden" name="roleId" value="@Model.Role?.Id" />
+    <h2><small> @Model.Role.Name 角色包含的用户</small></h2>
+    <table class="table-column-width table table-bordered">
+        @if (!Model.Members!.Any())
+        {
+            <tr>
+                <td>该角色没有关联任何用户</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var appUser in Model.Members ?? new List<AppUser>())
+            {
+                <tr>
+                    <td>@appUser.UserName</td>
+                    <td>
+                        <input type="checkbox" name="DeleteIds" value="@appUser.Id" />
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <h2><small> @Model.Role.Name 角色未包含的用户</small></h2>
+    <table class="table-column-width table table-bordered">
+        @if (!Model.NoMembers!.Any())
+        {
+            <tr>
+                <td>该角色保护所有用户</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var appUser in Model.NoMembers ?? new List<AppUser>())
+            {
+                <tr>
+                    <td>@appUser.UserName</td>
+                    <td>
+                        <input type="checkbox" name="AddIds" value="@appUser.Id" />
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <button class="btn btn-primary">保存</button>
+    <button asp-action="index" class="btn btn-secondary">返回</button>
+</form>
