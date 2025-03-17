@@ -524,11 +524,31 @@ var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
 以下是使用 聊天补全服务 生成响应的两种方式。
 
 ### 非流式ChatCompletion
+要使用 非流式（Non-streaming） 聊天补全，您可以使用以下代码从 AI 代理 生成响应。
+```csharp
+ChatHistory history = [];
+history.AddUserMessage("Hello, how are you?");
 
-
-
+var response = await chatCompletionService.GetChatMessageContentAsync(
+    history,
+    kernel: kernel
+);
+```
 ### 流式ChatCompletion
+要使用 流式（Streaming） 聊天补全，您可以使用以下代码从 AI 代理 生成响应。
+```csharp
+ChatHistory history = [];
+history.AddUserMessage("Hello, how are you?");
+var response = chatCompletionService.GetStreamingChatMessageContentsAsync(
+    chatHistory: history,
+    kernel: kernel
+);
 
+await foreach (var chunk in response)
+{
+    Console.Write(chunk);
+}
+```
 
 
 
