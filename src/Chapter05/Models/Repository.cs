@@ -11,9 +11,7 @@
                 new Product { Name = "Skirts", Price = 29.99M },
                 new Product { Name = "Pants", Price = 40.5M }
             }.ForEach(p => AddProduct(p));
-
         }
-
         public IEnumerable<Product> Products => _storage.Items;
         public Product this[string name] => _storage[name];
         public void AddProduct(Product product) => _storage[product.Name] = product;
