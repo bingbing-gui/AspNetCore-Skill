@@ -15,7 +15,7 @@ AddDefaultTokenProviders();
 builder.Services.Configure<DataProtectionTokenProviderOptions>(opts => opts.TokenLifespan = TimeSpan.FromHours(10));
 
 builder.Services.AddDbContext<AppIdentityDbContext>(
-    options => options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"])
+    options => options.UseSqlite(builder.Configuration["ConnectionStrings:DefaultConnection"])
     );
 
 builder.Services.Configure<IdentityOptions>(options =>
@@ -24,8 +24,8 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.User.RequireUniqueEmail = true;
 
     // 允许任何字符集输入
-    // options.User.AllowedUserNameCharacters = null; 
-    options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz";
+    options.User.AllowedUserNameCharacters = null; 
+    //options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz";
 
     #region 设置密码策略
     options.Password.RequiredLength = 8;

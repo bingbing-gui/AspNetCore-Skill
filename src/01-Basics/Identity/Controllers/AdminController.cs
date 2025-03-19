@@ -48,9 +48,9 @@ namespace Identity.Controllers
                 if (identityResult.Succeeded)
                 {
                     #region 生成电子邮件确认
-                    var token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
-                    var confirmationLink = Url.Action("ConfirmEmail", "Email", new { token, Email = appUser.Email }, Request.Scheme);
-                    _emailService.Send(user.Email, "电子邮件确认", $"<h2>{confirmationLink}</h2>");
+                    // var token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
+                    // var confirmationLink = Url.Action("ConfirmEmail", "Email", new { token, Email = appUser.Email }, Request.Scheme);
+                    // _emailService.Send(user.Email, "电子邮件确认", $"<h2>{confirmationLink}</h2>");
                     #endregion
                     return RedirectToAction("Index", "Admin");
                 }
