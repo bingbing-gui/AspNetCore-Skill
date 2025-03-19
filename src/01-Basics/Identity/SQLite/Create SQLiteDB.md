@@ -22,7 +22,7 @@
       ```
 
 5. **SQLite Tool**
-    - [(https://sqlitestudio.pl/)](https://sqlitestudio.pl/)
+    - [SQLite数据库管理工具](https://sqlitestudio.pl/)
 
 6. **插入数据**
     - 使用以下 SQL 语句插入数据：
