@@ -4,7 +4,7 @@ namespace Identity.Models
 {
     public class RoleEdit
     {
-        public IdentityRole? Role { get; set; }
+        public Role? Role { get; set; }
 
         public IEnumerable<AppUser>? Members { get; set; }
 

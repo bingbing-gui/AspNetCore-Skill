@@ -7,9 +7,9 @@ namespace Identity.Controllers
 {
     public class RoleController : Controller
     {
-        private RoleManager<IdentityRole> _roleManager;
+        private RoleManager<Role> _roleManager;
         private UserManager<AppUser> _userManager;
-        public RoleController(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager)
+        public RoleController(RoleManager<Role> roleManager, UserManager<AppUser> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
@@ -28,7 +28,7 @@ namespace Identity.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _roleManager.CreateAsync(new IdentityRole(name));
+                var result = await _roleManager.CreateAsync(new Role(name));
                 if (result.Succeeded)
                     return RedirectToAction("Index");
                 else

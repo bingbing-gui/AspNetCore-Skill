@@ -7,7 +7,7 @@ namespace Identity.Models
     {
         [Required]
         [DisplayName("编号")]
-        public string Id { get; set; } = null!;
+        public int Id { get; set; }
         [Required]
         [DisplayName("用户名")]
         public string Name { get; set; } = null!;

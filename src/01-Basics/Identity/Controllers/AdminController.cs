@@ -82,7 +82,7 @@ namespace Identity.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(UpdateUserDTO updateUserDTO)
         {
-            var appUser = await _userManager.FindByIdAsync(updateUserDTO.Id);
+            var appUser = await _userManager.FindByIdAsync(updateUserDTO.Id.ToString());
             if (appUser != null)
             {
                 IdentityResult validEmail = null;

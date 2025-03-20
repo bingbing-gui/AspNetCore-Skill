@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddIdentity<AppUser, IdentityRole>().
+builder.Services.AddIdentity<AppUser, Role>().
 AddEntityFrameworkStores<AppIdentityDbContext>().
 AddDefaultTokenProviders();
 

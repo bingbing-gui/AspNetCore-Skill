@@ -4,7 +4,7 @@ using System.Diagnostics.Metrics;
 
 namespace Identity.Models
 {
-    public class AppUser : IdentityUser
+    public class AppUser: IdentityUser<int>
     {
         public int Age
         {
@@ -20,6 +20,21 @@ namespace Identity.Models
         {
             get; set;
         } = null!;
+    }
+       /// <summary>
+   /// Represents a role in the system.
+   /// </summary>
+   public class Role : IdentityRole<int>
+   {
+
+        public Role()
+        {
+            
+        }
+        public Role(string name):base(name)
+        {
+            
+        }
     }
     public enum Country
     {

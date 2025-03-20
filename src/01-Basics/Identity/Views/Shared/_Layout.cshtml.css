@@ -46,3 +46,98 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+/* General Styles */
+body {
+  background-color: #f8f9fa; /* Light gray background for the entire page */
+  font-family: 'Roboto', sans-serif; /* Material Dashboard font */
+}
+
+/* Sidebar Styles */
+nav {
+  background-color: #343a40; /* Dark gray for sidebar */
+  color: #ffffff; /* White text for sidebar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for sidebar */
+}
+
+nav .logo {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #212529; /* Slightly darker gray for logo section */
+  border-bottom: 1px solid #495057; /* Divider below logo */
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #adb5bd; /* Light gray text for links */
+  text-decoration: none;
+  border-radius: 0.375rem; /* Rounded corners for links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+nav a:hover {
+  background-color: #495057; /* Darker gray on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+nav a svg {
+  margin-right: 0.75rem; /* Space between icon and text */
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor; /* Inherit text color */
+}
+
+/* Footer in Sidebar */
+nav .footer {
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  background-color: #212529; /* Darker gray for footer */
+  color: #868e96; /* Muted text color */
+}
+
+/* Header Styles */
+header {
+  background-color: #ffffff; /* White background for header */
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
+}
+
+header h1 {
+  font-size: 1.875rem; /* Larger font size for header title */
+  font-weight: 500;
+  color: #343a40; /* Dark gray text */
+}
+
+/* Main Content Styles */
+main {
+  padding: 1.5rem;
+  background-color: #f8f9fa; /* Light gray background for main content */
+  border-radius: 0.375rem; /* Rounded corners for main content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for main content */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #ffffff; /* White background for footer */
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #868e96; /* Muted text color */
+  border-top: 1px solid #e9ecef; /* Light gray border on top */
+}
+
+footer a {
+  color: #007bff; /* Blue text for links */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth hover effect */
+}
+
+footer a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
