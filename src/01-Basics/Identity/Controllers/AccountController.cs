@@ -160,7 +160,6 @@ namespace Identity.Controllers
             }
             return RedirectToAction("ResetPasswordConfirmation");
         }
-
         [AllowAnonymous]
         public IActionResult ResetPasswordConfirmation()
         {

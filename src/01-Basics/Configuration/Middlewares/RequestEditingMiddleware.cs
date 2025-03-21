@@ -11,8 +11,6 @@ namespace AspNetCore.Configuration.Middlewares
         {
             try
             {
-               
-
                 httpContext.Items["Firefox"] = httpContext.Request.Headers["User-Agent"].Any(v => v.Contains("Firefox"));
                 await _next(httpContext);
             }
