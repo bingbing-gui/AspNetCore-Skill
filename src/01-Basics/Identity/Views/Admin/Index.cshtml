@@ -5,13 +5,13 @@
 <div class="container">
     <div class="row mb-4">
         <div class="col text-end">
-            <a asp-action="Create" class="btn btn-success"><i class="fas fa-plus"></i>新增角色</a>
+            <a asp-action="Create" class="btn btn-success"><i class="bi bi-plus-lg"></i> 新增角色</a>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <table class="table table-striped table-hover table-bordered align-middle">
-                <thead class="table-dark">
+            <table class="table table-striped table-hover table-bordered align-middle radius">
+                <thead class="table-gray">
                     <tr>
                         <th scope="col">编号</th>
                         <th scope="col">名称</th>
@@ -35,14 +35,14 @@
                             <td>@user.Salary</td>
                             <td>
                                 <a class="btn btn-sm btn-warning" asp-action="Update" asp-route-id="@user.Id">
-                                    <i class="fas fa-edit"></i> 编辑
+                                    <i class="bi bi-pencil-square"></i> 编辑
                                 </a>
                             </td>
                             <td>
                                 <form method="post" asp-action="Delete" asp-route-id="@user.Id" role="form"
                                           onsubmit="return confirm('确定要删除该用户吗？');">
                                         <button type="submit" class="btn btn-sm btn-danger">
-                                            <i class="fas fa-trash"></i> 删除
+                                            <i class="bi bi-trash"></i> 删除
                                         </button>
                                 </form>
                             </td>
@@ -53,5 +53,3 @@
         </div>
     </div>
 </div>
-<!-- 引入 FontAwesome 图标支持 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

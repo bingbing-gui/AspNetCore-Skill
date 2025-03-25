@@ -1,143 +1,48 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-a {
-  color: #0077cc;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
-}
-
-/* General Styles */
-body {
-  background-color: #f8f9fa; /* Light gray background for the entire page */
-  font-family: 'Roboto', sans-serif; /* Material Dashboard font */
-}
-
-/* Sidebar Styles */
-nav {
-  background-color: #343a40; /* Dark gray for sidebar */
-  color: #ffffff; /* White text for sidebar */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for sidebar */
-}
-
-nav .logo {
-  padding: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: #212529; /* Slightly darker gray for logo section */
-  border-bottom: 1px solid #495057; /* Divider below logo */
-}
-
-nav a {
-  display: flex;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  color: #adb5bd; /* Light gray text for links */
-  text-decoration: none;
-  border-radius: 0.375rem; /* Rounded corners for links */
-  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
-}
-
-nav a:hover {
-  background-color: #495057; /* Darker gray on hover */
-  color: #ffffff; /* White text on hover */
-}
-
-nav a svg {
-  margin-right: 0.75rem; /* Space between icon and text */
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: currentColor; /* Inherit text color */
-}
-
-/* Footer in Sidebar */
-nav .footer {
-  margin-top: auto;
-  padding: 1rem;
-  font-size: 0.875rem;
-  text-align: center;
-  background-color: #212529; /* Darker gray for footer */
-  color: #868e96; /* Muted text color */
-}
-
-/* Header Styles */
-header {
-  background-color: #ffffff; /* White background for header */
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
-}
-
-header h1 {
-  font-size: 1.875rem; /* Larger font size for header title */
-  font-weight: 500;
-  color: #343a40; /* Dark gray text */
-}
-
-/* Main Content Styles */
-main {
-  padding: 1.5rem;
-  background-color: #f8f9fa; /* Light gray background for main content */
-  border-radius: 0.375rem; /* Rounded corners for main content */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for main content */
-}
-
-/* Footer Styles */
-footer {
-  background-color: #ffffff; /* White background for footer */
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: #868e96; /* Muted text color */
-  border-top: 1px solid #e9ecef; /* Light gray border on top */
-}
-
-footer a {
-  color: #007bff; /* Blue text for links */
-  text-decoration: none;
-  transition: color 0.3s; /* Smooth hover effect */
-}
-
-footer a:hover {
-  color: #0056b3; /* Darker blue on hover */
-}
+﻿
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .layout {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .sidebar {
+        width: 250px;
+        background:#343a40;
+        padding-top: 20px;
+        flex-shrink: 0;
+        border-right: 1px solid #dee2e6;
+    }
+    .sidebar .nav-link {
+        color: #c2c7d0;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin: 2px 4px; 
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+    .sidebar .nav-link:hover {
+        background-color: #4b545c;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+    .sidebar .nav-link.active {
+        background-color: #007bff;
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4); /* 蓝色柔光 */
+        border-radius: 0.5rem;
+    }
+    .sidebar .nav-link i {
+        margin-right: 10px;
+    }
+    .main {
+        flex-grow: 1;
+        overflow-y: auto;
+        background-color: #f8f9fa;
+    }
+    .navbar {
+        background-color: #f8f9fa;
+    }

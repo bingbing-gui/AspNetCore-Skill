@@ -3,24 +3,21 @@
     ViewData["Title"] = "Claims";
 }
 <div class="container">
-    <div class="row mb-3">
-        <div class="col-sm-3">
-            <a asp-action="Create" class="btn btn-primary">新增</a>
+    <div class="row mb-4">
+        <div class="col text-end">
+            <a asp-action="Create" class="btn btn-success"><i class="bi bi-plus-lg"></i> 新增Claim</a>
         </div>
-        <div class="col-sm-3"></div>
-        <div class="col-sm-3"></div>
-        <div class="col-sm-3"></div>
     </div>
-    <div class="row mb-3">
-        <div class="col-sm">
-            <table class="table table-bordered align-middle">
-                <thead>
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-hover table-bordered align-middle radius">
+                <thead class="table-gray">
                     <tr>
-                        <th>名称</th>
-                        <th>颁发机构</th>
-                        <th>类型</th>
-                        <th>值</th>
-                        <td>删除</td>
+                        <th scope="col">名称</th>
+                        <th scope="col">颁发机构</th>
+                        <th scope="col">类型</th>
+                        <th scope="col">值</th>
+                        <td scope="col">删除</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,10 +29,10 @@
                             <td>@claim?.Type</td>
                             <td>@claim?.Value</td>
                             <td>
-                                <form asp-action="Delete" method="post">
+                                <form asp-action="Delete" method="post" onsubmit="return confirm('确定要删除该用户吗？');">
                                     <input type="hidden" name="claimValues" value="@claim?.Type;@claim?.Value;@claim?.Issuer" />
-                                    <button type="submit" class="btn btn-sm btn-danger">
-                                        删除
+                                    <button type="submit" class="btn btn-sm btn-danger" >
+                                        <i class="bi bi-trash"></i> 删除
                                     </button>
                                 </form>
                             </td>
