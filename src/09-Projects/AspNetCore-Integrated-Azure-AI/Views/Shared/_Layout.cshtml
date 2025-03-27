@@ -70,10 +70,15 @@
         <!-- Sidebar -->
         <nav class="sidebar d-flex flex-column">
             <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/" ? "active" : "")" href="/"><i class="bi bi-house-door"></i>Home</a>
-            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/Account/Login" ? "active" : "")" href="/Account/Login"><i class="bi bi-door-open-fill me-2"></i>Login</a>
-            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/Admin/Index" ? "active" : "")" href="/Admin/Index"><i class="bi bi-shield-lock-fill me-2"></i>Admin</a>
-            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/Role/Index" ? "active" : "")" href="/Role/Index"><i class="bi bi-people-fill me-2"></i>Roles</a>
-            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/Claims/Index" ? "active" : "")" href="/Claims/Index"><i class="bi bi-check-circle-fill me-2"></i>Claims</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/AISearch/Index" ? "active" : "")" href="/AISearch/Index"><i class="bi bi-search-heart me-2"></i>搜索服务</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/AISearch/Index" ? "active" : "")" href="/AISearch/Index"><i class="bi bi-shield-check me-2"></i>内容安全审查</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/LanguageService/Index" ? "active" : "")" href="/LanguageService/Index"><i class="bi bi-translate fs-5 me-2"></i>语言服务</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/SpeechService/Index" ? "active" : "")" href="/SpeechService/Index"><i class="bi bi-mic-fill me-2"></i>语音服务</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/NaturalLanguage/Index" ? "active" : "")" href="/NaturalLanguage/Index"><i class="bi bi-chat-text-fill me-2"></i>自然语言</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/KnowledgeMining/Index" ? "active" : "")" href="/KnowledgeMining/Index"><i class="bi bi-lightbulb-fill me-2"></i>知识挖掘</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/Vision/Index" ? "active" : "")" href="/Vision/Index"><i class="bi bi-eye-fill me-2"></i>计算机视觉</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/DocumentIntelligence/Index" ? "active" : "")" href="/DocumentIntelligence/Index"><i class="bi bi-file-earmark-text-fill me-2"></i>智能文档</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/GenerativeAI/Index" ? "active" : "")" href="/GenerativeAI/Index"><i class="bi bi-stars me-2"></i>生成式AI</a>
         </nav>
         <!-- Main Content -->
         <div class="main d-flex flex-column">
