@@ -1,11 +1,130 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "主页";
 }
 
-<div class="text-center">
-    @if (User?.Identity?.IsAuthenticated ?? false)
-    {
-        @Model <a asp-controller="Account" asp-action="Logout" class="btn btn-danger">Logout</a>
+<!-- 这里可以直接写在 Index.cshtml 头部，也可放到 _Layout.cshtml 或独立 CSS文件 -->
+<style>
+    /* 大标题美化 */
+    h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        /* 你也可以换成更大的，比如 2.5rem */
     }
-</div>
+    
+    /* 卡片整体增加圆角、阴影、过渡动画 */
+    .card {
+        border-radius: 12px;           /* 圆角 */
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    /* 鼠标悬停时放大、加深阴影 */
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* 卡片内部的图标、文字样式 */
+    .card i {
+        color: #007BFF; /* 蓝色图标，也可自定义其他颜色 */
+    }
+    .card h5 {
+        color: #007BFF;
+    }
 
+    /* 链接去除下划线并保留蓝色 */
+    .card a.text-decoration-none {
+        color: #007BFF;  
+    }
+    .card a.text-decoration-none:hover {
+        text-decoration: none; /* 保持悬停时无下划线 */
+        color: #0056b3;        /* 悬停时略微加深蓝色 */
+    }
+</style>
+
+<h2 class="mt-3 mb-4">欢迎使用我的AI服务平台</h2>
+
+<!-- 网格布局（Cards） -->
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- 例：搜索服务 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/AISearch/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-search fa-2x"></i> 
+                    <h5 class="mt-3">搜索服务</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- 内容安全审查 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/ContentSafety/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-shield-alt fa-2x"></i>
+                    <h5 class="mt-3">内容安全审查</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- 语言服务 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/LanguageService/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-language fa-2x"></i>
+                    <h5 class="mt-3">语言服务</h5>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 自然语言 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/NaturalLanguage/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-comments fa-2x"></i>
+                    <h5 class="mt-3">自然语言</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- 知识挖掘 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/KnowledgeMining/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-database fa-2x"></i>
+                    <h5 class="mt-3">知识挖掘</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- 计算机视觉 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/Vision/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-eye fa-2x"></i>
+                    <h5 class="mt-3">计算机视觉</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- 智能文档 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/DocumentIntelligence/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-file-alt fa-2x"></i>
+                    <h5 class="mt-3">智能文档</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- 生成式AI -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <a href="/GenerativeAI/Index" class="text-decoration-none p-4">
+                    <i class="fas fa-robot fa-2x"></i>
+                    <h5 class="mt-3">生成式AI</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
