@@ -1,6 +1,58 @@
 AspNetCore Skill
 ==============================
 这个仓库是学习 ASP.NET Core 的宝库，采用最新的 .NET 8 版本，涵盖了从 ASP.NET Identity 到 Entity Framework Core 的所有核心知识点。这里不仅有丰富的学习资料和代码示例，还有许多优秀的第三方开源库，帮助你深入掌握 ASP.NET Core。
+
+<table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; text-align: left;">
+    <thead>
+        <tr>
+            <th style="width: 250px;text-align: center;">一级目录</th>
+            <th style="width: 300px;text-align: center;">子目录项</th>
+            <th style="width: 200px;text-align: center;">数量</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- 01-Basics -->
+        <tr>
+            <td rowspan="10" style="vertical-align: middle; text-align: center;">01-Basics</td>
+            <td>Authentication</td>
+            <td rowspan="10" style="vertical-align: middle; text-align: center;">10</td>
+        </tr>
+        <tr><td>Configuration</td></tr>
+        <tr><td>DI</td></tr>
+        <tr><td>GlobalizationLocalization</td></tr>
+        <tr><td>HttpClient</td></tr>
+        <tr><td>Identity</td></tr>
+        <tr><td>IdentityEndpoint</td></tr>
+        <tr><td>ModelBinding</td></tr>
+        <tr><td>Options</td></tr>
+        <tr><td>Routing</td></tr>
+        <!-- 02-WebAPI -->
+        <tr>
+            <td rowspan="2" style="vertical-align: middle; text-align: center;">02-WebAPI</td>
+            <td>Controllers</td>
+            <td rowspan="2" style="vertical-align: middle; text-align: center;">2</td>
+        </tr>
+        <tr><td>OpenAPI</td></tr>
+        <!-- 03-MVC -->
+        <tr>
+            <td rowspan="11" style="vertical-align: middle; text-align: center;">03-MVC</td>
+            <td>Actions</td>
+            <td rowspan="11" style="vertical-align: middle; text-align: center;">11</td>
+        </tr>
+        <tr><td>Controllers</td></tr>
+        <tr><td>Cookies</td></tr>
+        <tr><td>CORS</td></tr>
+        <tr><td>Filters</td></tr>
+        <tr><td>ModelValidation</td></tr>
+        <tr><td>OpenRedirectAttacks</td></tr>
+        <tr><td>TagHelpers</td></tr>
+        <tr><td>Views</td></tr>
+        <tr><td>XSRF</td></tr>
+        <tr><td>XSS</td></tr>
+    </tbody>
+</table>
+```
+
 # [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
 **项目描述**：ASP.NET Core Identity 是一个用于 ASP.NET Core 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能。以下是对 ASP.NET Core Identity 的简单描述：    
 
