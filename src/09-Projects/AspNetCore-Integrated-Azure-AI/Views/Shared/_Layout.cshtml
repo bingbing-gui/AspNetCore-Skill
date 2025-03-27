@@ -71,7 +71,7 @@
         <nav class="sidebar d-flex flex-column">
             <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/" ? "active" : "")" href="/"><i class="bi bi-house-door"></i>Home</a>
             <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/AISearch/Index" ? "active" : "")" href="/AISearch/Index"><i class="bi bi-search-heart me-2"></i>搜索服务</a>
-            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/AISearch/Index" ? "active" : "")" href="/AISearch/Index"><i class="bi bi-shield-check me-2"></i>内容安全审查</a>
+            <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/ContentSafety/Index" ? "active" : "")" href="/ContentSafety/Index"><i class="bi bi-shield-check me-2"></i>内容安全审查</a>
             <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/LanguageService/Index" ? "active" : "")" href="/LanguageService/Index"><i class="bi bi-translate fs-5 me-2"></i>语言服务</a>
             <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/SpeechService/Index" ? "active" : "")" href="/SpeechService/Index"><i class="bi bi-mic-fill me-2"></i>语音服务</a>
             <a class="nav-link @(ViewContext.HttpContext.Request.Path == "/NaturalLanguage/Index" ? "active" : "")" href="/NaturalLanguage/Index"><i class="bi bi-chat-text-fill me-2"></i>自然语言</a>

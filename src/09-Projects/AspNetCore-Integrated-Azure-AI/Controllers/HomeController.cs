@@ -15,7 +15,7 @@ namespace AspNetCore.Integrated.Azure.AI.Controllers
             _userManager = userManager;
             _logger = logger;
         }
-        [Authorize(Roles = "Manager")]
+        //[Authorize(Roles = "Manager")]
         public async Task<IActionResult> Index()
         {
             var appUser = await _userManager.GetUserAsync(HttpContext.User);
