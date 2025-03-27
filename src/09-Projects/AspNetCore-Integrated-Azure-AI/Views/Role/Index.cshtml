@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<Role>
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col text-end">
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-lg"></i> 新增角色
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-hover table-bordered align-middle radius">
+                    <thead class="table-gray">
+                        <tr>
+                            <th scope="col">编号</th>
+                            <th scope="col">角色名称</th>
+                            <th scope="col">编辑</th>
+                            <th scope="col">删除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var role in Model)
+                        {
+                            <tr>
+                                <td>@role.Id</td>
+                                <td>@role.Name</td>
+                                <td>
+                                    <a class="btn btn-sm btn-warning" asp-action="Update" asp-route-id="@role.Id">
+                                        <i class="bi bi-pencil-square"></i> 编辑
+                                    </a>
+                                </td>
+                                <td>
+                                    <form method="post" asp-action="Delete" asp-route-id="@role.Id" onsubmit="return confirm('确定要删除该角色吗？');">
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="bi bi-trash"></i> 删除
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

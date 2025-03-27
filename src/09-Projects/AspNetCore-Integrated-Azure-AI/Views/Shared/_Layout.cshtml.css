@@ -1,0 +1,48 @@
+﻿
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .layout {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .sidebar {
+        width: 250px;
+        background:#343a40;
+        padding-top: 20px;
+        flex-shrink: 0;
+        border-right: 1px solid #dee2e6;
+    }
+    .sidebar .nav-link {
+        color: #c2c7d0;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin: 2px 4px; 
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+    .sidebar .nav-link:hover {
+        background-color: #4b545c;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+    .sidebar .nav-link.active {
+        background-color: #007bff;
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4); /* 蓝色柔光 */
+        border-radius: 0.5rem;
+    }
+    .sidebar .nav-link i {
+        margin-right: 10px;
+    }
+    .main {
+        flex-grow: 1;
+        overflow-y: auto;
+        background-color: #f8f9fa;
+    }
+    .navbar {
+        background-color: #f8f9fa;
+    }

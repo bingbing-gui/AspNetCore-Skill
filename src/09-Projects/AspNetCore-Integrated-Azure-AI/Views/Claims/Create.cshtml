@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "新增Claim";
+}
+<div asp-validation-summary="All" class="text-danger"></div>
+<form method="post">
+    <div class="mb-3 row align-items-center">
+        <div class="col-sm-1">
+            <label for="ClaimType" class="control-label">Claim 类型:</label>
+        </div>
+        <div class="col-sm-11">
+            <input name="ClaimType" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row align-items-center">
+        <div class="col-sm-1">
+            <label for="ClaimValue">Claim 值:</label>
+        </div>
+        <div class="col-sm-11">
+            <input name="ClaimValue" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row align-items-center">
+        <div class="col-sm-11 offset-sm-1">
+            <button type="submit" class="btn btn-primary">保存</button>
+            <button asp-action="Index" class="btn btn-secondary">
+                返回
+            </button>
+        </div>
+    </div>
+</form>

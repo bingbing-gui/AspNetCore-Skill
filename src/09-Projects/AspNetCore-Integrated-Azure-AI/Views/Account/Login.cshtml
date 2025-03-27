@@ -1,0 +1,33 @@
+﻿@model Login
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="text-danger" asp-validation-summary="All"></div>
+<form class="form-horizontal" role="form" method="post">
+    <div class="mb-3 row">
+        <label asp-for="Email" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Email" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="Password" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <input asp-for="Password" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="RememberMe" class="col-sm-1 control-label"></label>
+        <div class="col-sm-11">
+            <input type="checkbox" asp-for="RememberMe" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-sm-11 offset-sm-1">
+            <button type="submit" class="btn btn-primary">登录</button>
+            <button asp-action="ForgotPassword" class="btn btn-secondary">
+                重置密码
+            </button>
+        </div>
+    </div>
+</form>

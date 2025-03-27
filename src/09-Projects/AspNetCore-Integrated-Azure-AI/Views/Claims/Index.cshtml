@@ -1,0 +1,45 @@
+﻿@model IEnumerable<System.Security.Claims.Claim>
+@{
+    ViewData["Title"] = "Claims";
+}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col text-end">
+            <a asp-action="Create" class="btn btn-success"><i class="bi bi-plus-lg"></i> 新增Claim</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-hover table-bordered align-middle radius">
+                <thead class="table-gray">
+                    <tr>
+                        <th scope="col">名称</th>
+                        <th scope="col">颁发机构</th>
+                        <th scope="col">类型</th>
+                        <th scope="col">值</th>
+                        <td scope="col">删除</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var claim in Model.OrderBy(x => x.Type))
+                    {
+                        <tr>
+                            <td>@claim?.Subject?.Name</td>
+                            <td>@claim?.Issuer</td>
+                            <td>@claim?.Type</td>
+                            <td>@claim?.Value</td>
+                            <td>
+                                <form asp-action="Delete" method="post" onsubmit="return confirm('确定要删除该用户吗？');">
+                                    <input type="hidden" name="claimValues" value="@claim?.Type;@claim?.Value;@claim?.Issuer" />
+                                    <button type="submit" class="btn btn-sm btn-danger" >
+                                        <i class="bi bi-trash"></i> 删除
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
