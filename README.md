@@ -4,34 +4,40 @@ AspNetCore Skill
 
 | 一级目录                | 子目录项                                     | 子目录项数量         |
 |------------------------|----------------------------------------------|----------------------|
-| 01-Basics              | Authentication                              | 0                    |
-| ↑                      | Configuration                               | 0                    |
-| ↑                      | DI                                           | 0                    |
-| ↑                      | GlobalizationLocalization                   | 0                    |
-| ↑                      | HttpClient                                  | 0                    |
-| ↑                      | Identity                                    | 0                    |
-| ↑                      | IdentityEndpoint                            | 0                    |
-| ↑                      | ModelBinding                                | 0                    |
-| ↑                      | Options                                     | 0                    |
-| ↑                      | Routing                                     | 0                    |
-| 02-WebAPI              | Controllers                                 | 0                    |
-| ↑                      | OpenAPI                                     | 0                    |
-| 03-MVC                 | Actions                                     | 0                    |
-| ↑                      | Controllers                                 | 0                    |
-| ↑                      | Cookies                                     | 0                    |
-| ↑                      | CORS                                        | 0                    |
-| ↑                      | Filters                                     | 0                    |
-| ↑                      | ModelValidation                             | 0                    |
-| ↑                      | OpenRedirectAttacks                         | 0                    |
-| ↑                      | TagHelpers                                  | 0                    |
-| ↑                      | Views                                       | 0                    |
-| ↑                      | XSRF                                        | 0                    |
-| ↑                      | XSS                                         | 0                    |
-
-
+| 01-Basics              | Authentication                              | 2                    |
+| ↑                      | Configuration                               | 1                    |
+| ↑                      | DI                                           | 1                    |
+| ↑                      | GlobalizationLocalization                   | 3                    |
+| ↑                      | HttpClient                                  | 3                    |
+| ↑                      | Identity                                    | 1                    |
+| ↑                      | IdentityEndpoint                            | 1                    |
+| ↑                      | ModelBinding                                | 2                    |
+| ↑                      | Options                                     | 1                    |
+| ↑                      | Routing                                     | 5                    |
+| 02-WebAPI              | Controllers                                 | 3                    |
+| ↑                      | OpenAPI                                     | 2                    |
+| 03-MVC                 | Actions                                     | 1                    |
+| ↑                      | Controllers                                 | 1                    |
+| ↑                      | Cookies                                     | 1                    |
+| ↑                      | CORS                                        | 1                    |
+| ↑                      | Filters                                     | 1                    |
+| ↑                      | ModelValidation                             | 1                    |
+| ↑                      | OpenRedirectAttacks                         | 1                    |
+| ↑                      | TagHelpers                                  | 3                    |
+| ↑                      | Views                                       | 1                    |
+| ↑                      | XSRF                                        | 1                    |
+| ↑                      | XSS                                         | 1                    |
+| 04-RazorPages          |                                            |                      |
+| 05-Blazor          |                                            |                      |
+| 06-DataAccess          |                                            |                      |
+| 07-Communications      |                                            |                      |
+| 08-Deployment         |                                            |                      |
+| 09-AI-Agent          |                                            |                      |
+| 10-Third-Party            | AspNetCore-Integrated-Azure-AI              | 1                    |
+| ↑                      | aspnetcore-knowledge-point                  | 1                    |
 
 # [Chapter 01](https://github.com/bingbing-gui/aspnetcore-skill/tree/master/src/Chapter01)
-**项目描述**：ASP.NET Core Identity 是一个用于 ASP.NET Core 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能。以下是对 ASP.NET Core Identity 的简单描述：    
+**项目描述**：ASP.NET Core Identity 是一个用于 ASP.NET Core 应用程序的身份验证和授权系统。它提供了一整套用于管理用户帐户、角色和权限的 API 和服务，允许开发者轻松地实现用户注册、登录、角色管理等功能。以下是对 ASP.NET Core Identity 的简单描述：
 
 > **主要特性**
 > - **用户管理**：支持用户注册、登录、注销、密码重置等基本用户操作。
