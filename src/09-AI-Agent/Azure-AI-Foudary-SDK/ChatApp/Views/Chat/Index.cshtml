@@ -1,0 +1,112 @@
+﻿@{
+    Layout = null; // 不使用布局文件
+}
+<style>
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        max-width: 600px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .chat-messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background-color: #f8f8f8;
+    }
+
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+    .chat-input textarea {
+        flex: 1;
+        resize: none;
+        height: 60px;
+        border-radius: 6px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .chat-input button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+
+    .chat-input button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="chat-container">
+    <div class="chat-messages" id="chatMessages">
+        <!-- 聊天记录将在这里动态显示 -->
+        <p><strong>AI:</strong> 你好！欢迎开始聊天 😊</p>
+    </div>
+    <div class="chat-input">
+        <textarea id="messageInput" placeholder="请输入消息..."></textarea>
+        <button onclick="sendMessage()">发送</button>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function sendMessage() {
+    const input = document.getElementById("messageInput");
+    const msg = input.value.trim();
+    if (msg === "") return;
+
+    const chat = document.getElementById("chatMessages");
+
+    // 显示用户发送的消息
+    const userMsg = `<p><strong>你:</strong> ${msg}</p>`;
+    chat.innerHTML += userMsg;
+    input.value = "";  // 清空输入框
+
+    // 滚动到聊天记录的最底部
+    chat.scrollTop = chat.scrollHeight;
+
+    // 使用 AJAX 请求将用户消息发送到服务器端
+    $.ajax({
+        url: '/Chat/SendMessageAsync', // 服务器端处理消息的 API
+        type: 'POST',
+        contentType: 'application/json', // 设置请求头为 JSON 格式
+        data: JSON.stringify({ message: msg }), // 以 JSON 格式发送数据
+        success: function (response) {
+            // 启动 EventSource 来获取流式响应
+            const source = new EventSource('/Chat/SendMessageAsync');
+            
+            // 监听服务器流式返回的数据
+            source.onmessage = function(event) {
+                const parsed = JSON.parse(event.data);  // 解析每次流式返回的 JSON 数据
+                const aiMsg = `<p><strong>AI:</strong> ${parsed.reply}</p>`;
+                chat.innerHTML += aiMsg;  // 显示 AI 回复
+                chat.scrollTop = chat.scrollHeight;  // 滚动到底部
+            };
+
+            // 处理错误
+            source.onerror = function() {
+                const errorMsg = `<p><strong>AI:</strong> 发送失败，请重试。</p>`;
+                chat.innerHTML += errorMsg;
+            };
+        },
+        error: function () {
+            const errorMsg = `<p><strong>AI:</strong> 发送失败，请重试。</p>`;
+            chat.innerHTML += errorMsg;
+        }
+    });
+}
+</script>
