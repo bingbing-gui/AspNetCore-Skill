@@ -30,66 +30,6 @@ public class ChatController : Controller
     {
         return View();
     }
-    #region
-    //[HttpPost]
-    //[Route("Chat/SendMessageAsync")]  // API 路由
-    //public async Task<string> SendMessageAsync([FromBody] string message)
-    //{
-    //    // 模拟一些生成数据的过程
-    //    var aiReply = $"你说的是： {message}。AI 正在处理...";
-
-    //    // 初始化配置
-    //    IConfigurationBuilder builder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
-    //    IConfigurationRoot configuration = builder.Build();
-    //    string project_connection = configuration["PROJECT_CONNECTION"];
-    //    string model_deployment = configuration["MODEL_DEPLOYMENT"];
-
-    //    // 使用 ClientSecretCredential 代替 Azure CLI 认证
-    //    string clientId = configuration["AZURE_CLIENT_ID"];
-    //    string tenantId = configuration["AZURE_TENANT_ID"];
-    //    string clientSecret = configuration["AZURE_CLIENT_SECRET"];
-
-    //    // 使用 ClientSecretCredential 进行认证
-    //    var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-
-    //    // 初始化项目客户端
-    //    var projectClient = new AIProjectClient(project_connection, credential);
-
-    //    // 获取聊天客户端
-    //    ChatCompletionsClient chat = projectClient.GetChatCompletionsClient();
-
-
-    //    string input_text = message;  // 使用传入的消息作为输入
-
-    //    try
-    //    {
-    //        // 模拟逐步生成响应并流式写入
-    //        // 更新提示消息
-    //        prompt.Add(new ChatRequestUserMessage(input_text));
-    //        var requestOptions = new ChatCompletionsOptions
-    //        {
-    //            Model = model_deployment,
-    //            Messages = prompt
-    //        };
-
-    //        // 获取聊天完成响应
-    //        Response<ChatCompletions> chatResponse = await chat.CompleteAsync(requestOptions);
-    //        var reply = chatResponse.Value.Content;
-
-    //        return reply;
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        // 错误处理
-    //        string errorMessage = $"data: {JsonSerializer.Serialize(new { error = "Error processing the request", details = ex.Message })}\n\n";
-    //        return errorMessage;
-    //    }
-    //    finally
-    //    {
-
-    //    }
-    //}
-    #endregion
     [HttpPost]
     [Route("Chat/SendMessageAsync")]  // API 路由
     public async Task SendMessageAsync([FromBody] string message)

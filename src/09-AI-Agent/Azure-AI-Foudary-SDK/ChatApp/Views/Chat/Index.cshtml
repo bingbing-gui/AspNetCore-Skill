@@ -169,67 +169,6 @@
             sendMessage(); // 发送消息
         }
     }
-    // function sendMessage() {
-    //     const input = document.getElementById("messageInput");
-    //     const msg = input.value.trim();
-    //     if (msg === "") return;
-
-    //     const chat = document.getElementById("chatMessages");
-
-    //       // 显示用户发送的消息
-    //     const userMsg = `<div class="user-message formatted-content"><p>${msg}</p><div class="message-time">${new Date().toLocaleTimeString()}</div></div>`;
-    //     chat.innerHTML += userMsg;
-    //     input.value = "";  // 清空输入框
-
-    //     // 滚动到聊天记录的最底部
-    //     chat.scrollTop = chat.scrollHeight;
-    //     // 显示 "AI 正在思考..." 和加载动画
-    //     const aiWaitingMsg = `
-    //         <p class="ai-waiting">
-    //             <span class="loading-spinner formatted-content"></span> AI 正在思考...
-    //         </p>`;
-    //     chat.innerHTML += aiWaitingMsg;
-    //     chat.scrollTop = chat.scrollHeight;
-
-    //     // 使用 fetch 来发送 POST 请求并处理流式响应
-    //     fetch('/Chat/SendMessageAsync', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(msg)
-    //     })
-    //     .then(response => {
-    //     const reader = response.body.getReader();  // 获取响应流的读取器
-    //     const decoder = new TextDecoder('utf-8');  // 使用 TextDecoder 来解码流
-    //     let fullMessage = '';
-    //     let currentIndex = 0;
-
-    //     // 逐字输出每个字符
-    //     const interval = setInterval(() => {
-    //         reader.read().then(({ done, value }) => {
-    //                 if (done) {
-    //                     clearInterval(interval);  // 流结束时停止逐字输出
-    //                     return;
-    //                 }
-    //                 // 解码当前数据块
-    //                 const chunk = decoder.decode(value, { stream: true });
-    //                 // 将数据块逐个字符添加到 fullMessage
-    //                 fullMessage += chunk;
-
-    //                 // 更新聊天内容
-    //                 const aiMsg = `<div class="ai-message formatted-content"><p>${fullMessage}</p><div class="message-time">${new Date().toLocaleTimeString()}</div></div>`;
-    //                 chat.innerHTML = chat.innerHTML.replace(aiWaitingMsg, aiMsg);  // 替换 "AI 正在思考..." 消息
-    //                 chat.scrollTop = chat.scrollHeight;  // 滚动到底部
-    //             });
-    //         }, 100);  // 每100毫秒显示一个字符
-    //     })
-    //     .catch(error => {
-    //         console.error("Stream error:", error);
-    //         const errorMsg = `<p><strong>AI:</strong> 发送失败，请重试。</p>`;
-    //         chat.innerHTML += errorMsg;
-    //     });
-    // }
     function sendMessage() {
         const input = document.getElementById("messageInput");
         const msg = input.value.trim();
