@@ -41,7 +41,7 @@ public class ChatController : Controller
         response.Headers.Add("Connection", "keep-alive");  // 保持连接
 
         await response.StartAsync();  // 启动响应流
-
+        
         // 初始化配置
         IConfigurationBuilder builder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
         IConfigurationRoot configuration = builder.Build();
@@ -52,7 +52,7 @@ public class ChatController : Controller
         string clientId = configuration["AZURE_CLIENT_ID"];
         string tenantId = configuration["AZURE_TENANT_ID"];
         string clientSecret = configuration["AZURE_CLIENT_SECRET"];
-
+        
         // 使用 ClientSecretCredential 进行认证
         var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
 
@@ -64,9 +64,9 @@ public class ChatController : Controller
 
         // 初始化聊天提示
         var prompt = new List<ChatRequestMessage>
-    {
-        new ChatRequestSystemMessage("你是个AI助手帮助回答问题.")
-    };
+        {
+            new ChatRequestSystemMessage("你是个AI助手帮助回答问题.")
+        };
 
         string input_text = message;  // 使用传入的消息作为输入
 
