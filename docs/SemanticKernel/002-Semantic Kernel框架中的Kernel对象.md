@@ -8,40 +8,32 @@ Kernel是Semantic Kernel整个框架的核心组件，简单来说，Kernel是�
 
 ### 第一步：选择AI服务
 
-**图示**：在Kernel里，AI服务的选择发生在 "Select AI Service"这一阶段。
-
-**描述**：Semantic Kernel 先决定使用哪一个AI模型，如OpenAI或Azure AI。
-
-**特性**：支持 "Model Selection"模型选择，确保调用最合适的AI。
+**图示**：在Kernel里，AI服务的选择发生在 "Select AI Service"这一阶段。  
+**描述**：Semantic Kernel先决定使用哪一个AI模型，如OpenAI或Azure AI。  
+**特性**：支持 "Model Selection"，确保调用最合适的AI。
 
 ### 第二步：渲染Prompt
 
-**图示**：Render Prompt阶段是 Prompt 模板化(Templatization)。
-
-**描述**：Semantic Kernel负责基于预定义的Prompt模板，动态填充变量，使Prompt适配当前任务。
+**图示**：Render Prompt阶段是 Prompt 模板化(Templatization)。  
+**描述**：Semantic Kernel负责基于预定义的Prompt模板，动态填充变量，使Prompt适配当前任务。  
+**特性**：在这个阶段支持Prompt参数化(Parameterization)，便于在不同场景中复用和自定义Prompt。
 
 ### 第三步：调用AI服务
 
-**图示**：Invoke AI Service直接调用 OpenAI、Azure AI 等服务，并处理其响应。
-
-**描述**：当Prompt准备就绪，Semantic Kernel将其发送到AI模型进行推理。
-
-**特性**：在这个阶段，提供可靠性保障(Reliability)，以确保调用稳定。
+**图示**：Invoke AI Service直接调用 OpenAI、Azure AI 等服务，并处理其响应。  
+**描述**：当Prompt准备就绪，Semantic Kernel将其发送到AI模型进行推理。  
+**特性**：在这个阶段提供可靠性保障(Reliability)，以确保调用稳定。
 
 ### 第四步：解析LLM响应
 
-**图示**：Parse LLM Response负责将 AI 生成的原始数据解析成人类可读格式。
-
-**描述**：Semantic Kernel负责解析AI生成的结果，并准备返回到应用程序。
-
+**图示**：Parse LLM Response负责将AI生成的原始数据解析成人类可读格式。  
+**描述**：Semantic Kernel负责解析AI生成的结果，并准备返回到应用程序。  
 **特性**：这个阶段支持遥测和监控(Telemetry and Monitoring)，方便开发者跟踪AI响应。
 
 ### 第五步：创建函数结果
 
-**图示**：Create Function Result代表最终返回的结果，供应用程序使用。
-
-**描述**：Semantic Kernel将解析后的数据整理成合适的格式并返回给你的应用。
-
+**图示**：Create Function Result代表最终返回的结果，供应用程序使用。  
+**描述**：Semantic Kernel将解析后的数据整理成合适的格式并返回给你的应用。  
 **特性**：在这里，开发者可以加入Responsible AI机制，比如过滤不合适的内容，确保AI负责任地运行。
 
 在整个过程中，你可以创建事件(events)和中间件(middleware)，它们会在每个步骤被触发。这意味着你可以执行诸如日志记(logging)向用户提供状态更新，以及最重要的——确保负责任的AI(Responsible AI)等操作，而且所有这些都可以在一个统一的地方完成。

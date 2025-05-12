@@ -39,37 +39,28 @@ public class ChatController : Controller
         response.ContentType = "text/event-stream";  // 设置为 SSE
         response.Headers.Add("Cache-Control", "no-cache");  // 防止缓存
         response.Headers.Add("Connection", "keep-alive");  // 保持连接
-
         await response.StartAsync();  // 启动响应流
-        
         // 初始化配置
         IConfigurationBuilder builder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
         IConfigurationRoot configuration = builder.Build();
         string project_connection = configuration["PROJECT_CONNECTION"];
         string model_deployment = configuration["MODEL_DEPLOYMENT"];
-
         // 使用 ClientSecretCredential 代替 Azure CLI 认证
         string clientId = configuration["AZURE_CLIENT_ID"];
         string tenantId = configuration["AZURE_TENANT_ID"];
         string clientSecret = configuration["AZURE_CLIENT_SECRET"];
-        
         // 使用 ClientSecretCredential 进行认证
         var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-
         // 初始化项目客户端
         var projectClient = new AIProjectClient(project_connection, credential);
-
         // 获取聊天客户端
         ChatCompletionsClient chat = projectClient.GetChatCompletionsClient();
-
         // 初始化聊天提示
         var prompt = new List<ChatRequestMessage>
         {
             new ChatRequestSystemMessage("你是个AI助手帮助回答问题.")
         };
-
         string input_text = message;  // 使用传入的消息作为输入
-
         try
         {
             // 更新提示消息
@@ -79,10 +70,8 @@ public class ChatController : Controller
                 Model = model_deployment,
                 Messages = prompt
             };
-
             // 获取聊天完成流式响应
             var chatResponse = await chat.CompleteStreamingAsync(requestOptions);
-
             // 处理流式响应
             await foreach (var update in chatResponse)  // 等待异步流返回数据
             {
