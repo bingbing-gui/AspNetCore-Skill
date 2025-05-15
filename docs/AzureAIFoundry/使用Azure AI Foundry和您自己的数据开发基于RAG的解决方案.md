@@ -119,23 +119,179 @@ https://learn.microsoft.com/en-us/azure/search/vector-search-overview
 
 ## 创建RAG-based 客户端应用程序
 
-当你为上下文数据创建了一个 Azure AI Search 索引后，就可以将其与 OpenAI 模型结合使用。
-为了让提示词能够基于索引中的数据进行“扎根”，Azure OpenAI SDK 支持在请求中扩展连接信息，指向该索引。
+当你为你的上下文数据创建了一个 Azure AI Search 索引后，就可以把它和 OpenAI 模型配合使用了。为了让提示词（prompt）更有依据，你可以把索引里的数据作为“背景信息”提供给模型。Azure OpenAI 的 SDK 支持你在请求中加上索引的连接信息，从而让模型在生成回答前，先查找这些数据。这种用法在 Azure AI Foundry 项目中，通常会按照下面的图示那样来配置和使用。
 
 在使用 Azure AI Foundry 项目时，采用这种方式的使用模式如下图所示。
 
-1. 使用 Azure AI Foundry 项目的客户端，获取 Azure AI Search 索引的连接信息以及一个 OpenAI 的 ChatClient 对象。
-2. 将索引的连接信息添加到 ChatClient 的配置中，使其能够根据用户的提示词检索扎根数据。
-3. 将带有扎根数据的提示词提交给 Azure OpenAI 模型，以生成具备上下文的回答。
+```mermaid
+graph TD
+    Step1[创建 Azure AI Search 索引]
+    Step2[添加索引连接信息到 OpenAI 请求中]
+    Step3[模型结合索引数据生成上下文响应]
+
+    Step1 --> Step2 --> Step3
+```
+
+中文注释说明：
+
+1. 创建索引：你先在 Azure AI Search 中为你的数据建好索引。
+2. 添加连接信息：在调用 OpenAI 模型时，把这个索引的信息加到请求里。
+3. 生成上下文回复：模型在生成回答时，会参考这个索引中的数据，使回答更有依据。
 
 ``` csharp
 代码
+using Azure.Identity;
+using Azure.AI.Projects;
+using Azure.AI.OpenAI;
+using System.ClientModel;
+using Azure.AI.OpenAI.Chat;
+using OpenAI.Chat;
+...
+
+{
+
+    // Initialize the project client
+    var projectClient = new AIProjectClient(
+        "<region>.api.azureml.ms;<project_id>;<hub_name>;<project_name>",
+        new DefaultAzureCredential()
+    );
+
+    // Get an Azure OpenAI chat client
+    ChatClient chatClient = projectClient.GetAzureOpenAIChatClient("<model_deployment_name>");
+
+    // Use the AI search service connection to get service details
+    var connectionsClient = projectClient.GetConnectionsClient();
+    ConnectionResponse searchConnection = connectionsClient.GetDefaultConnection(ConnectionType.AzureAISearch, true);
+    var searchProperties = searchConnection.Properties as ConnectionPropertiesApiKeyAuth;
+    string search_url = searchProperties.Target;
+    string search_key = searchProperties.Credentials.Key;
+
+
+    // Initialize prompt with system message
+    var prompt = new List<ChatMessage>()
+    {
+        new SystemChatMessage("You are a helpful AI assistant.")
+    };
+
+    // Add a user input message to the prompt
+    Console.WriteLine("Enter a question: ");
+    input_text = Console.ReadLine();
+    prompt.Add(new UserChatMessage(input_text));
+
+    // Additional parameters to apply RAG pattern using the AI Search index
+    ChatCompletionOptions options = new();
+    options.AddDataSource(
+        new AzureSearchChatDataSource()
+        {
+            Endpoint = new Uri(search_url),
+            IndexName = "<azure_ai_search_index_name>",
+            Authentication = DataSourceAuthentication.FromApiKey(search_key),
+        }
+    );
+
+    // Submit the prompt with the index information
+    ChatCompletion completion = chatClient.CompleteChat(prompt, options);
+    var completionText = completion.Content[0].Text;
+
+    // Print the contextualized response
+    Console.WriteLine(completionText);
+}
+```
+
+在这个例子中，搜索是关键词匹配的 —— 也就是说，系统会把用户输入的内容（Prompt）当作搜索词，去和索引中的文本进行文字层面的匹配。
+
+但如果你使用的是支持向量搜索的索引，就可以换一种方式：把文本转成“数字向量”，也就是用一串数字来表示意思。这样，搜索就不只是找文字一样的内容，还可以找意思相近的内容（也叫“语义匹配”）。
+
+要用这种向量搜索的方式，你只需要在 Azure AI Search 的数据源配置中添加一个“嵌入模型”（embedding model），它会帮你把搜索词转成向量，进而实现更智能的搜索。
+
+``` csharp
+
+{
+    ChatCompletionOptions options = new();
+    options.AddDataSource(
+        new AzureSearchChatDataSource()
+        {
+            Endpoint = new Uri(search_url),
+            IndexName = "<azure_ai_search_index_name>",
+            Authentication = DataSourceAuthentication.FromApiKey(search_key),
+            // Params for vector-based query
+            QueryType = "vector",
+            VectorizationSource = DataSourceVectorizer.FromDeploymentName("<embedding_model_deployment_name>"),
+        },
+    );
+}
 
 ```
 
-在这个示例中，索引的搜索方式是基于关键词的 —— 换句话说，查询内容就是用户提示词中的文本，并与索引文档中的文本进行匹配。而如果使用支持向量搜索的索引，也可以采用另一种方式：基于向量的查询，即通过数值向量来表示文本中的词元（tokens）。
+## 在提示词处理流程中集成 RAG 技术
 
-使用向量进行搜索，不仅可以进行字面上的文本匹配，还可以实现基于语义相似性的匹配。
+在把数据上传到 Azure AI Foundry 并通过集成的 Azure AI Search 创建好索引后，你就可以使用 Prompt Flow 来实现 RAG 模式，从而构建一个生成式 AI 应用。
 
-若要使用向量查询，你可以修改 Azure AI Search 数据源配置，添加一个嵌入模型（embedding model），用于将查询文本转换为向量形式进行搜索。
+Prompt Flow 是一个开发框架，它用来设计和管理与大语言模型（LLM）之间的交互流程。
+一个 Prompt Flow（提示词流程）是从一个或多个输入开始的，通常是用户输入的问题或提示词。如果是多轮对话，还会包括当前的聊天历史。
+然后，这个流程会由一系列“工具”连接组成，每个工具负责处理输入数据或其他环境变量中的某一部分内容。你可以在流程中添加不同类型的工具来完成不同的任务，比如：
 
+1. 运行自定义的 Python 代码
+2. 从索引中查找数据（比如之前上传到 Azure AI Search 的内容）
+3. 创建提示词的多个版本 —— 比如改变系统指令或提示内容，以对比不同提示版本的生成效果
+4. 把提示词提交给大语言模型（LLM），让它生成回答
+5. 最后，这个流程会输出一个或多个结果，通常就是把大模型生成的回答返回给用户。
+
+## 在 Prompt Flow 中使用 RAG 模式
+
+在 Prompt Flow 中实现 RAG（检索增强生成）模式的关键，就是使用一个名为 Index Lookup（索引查找） 的工具，从你之前建立的索引中检索相关数据。这样，后面的流程步骤就可以把这些检索到的信息加入到提示词中，再交给大语言模型（LLM）生成回答。
+
+换句话说：
+你先用 Index Lookup 工具去“查资料”，再把这些资料作为“背景信息”添加到提示词里，让大模型回答问题时更有依据、更准确。这样就完成了 RAG 的核心思路：先查 → 再答
+
+## 使用示例创建一个聊天流程
+
+Prompt Flow 提供了很多示例，你可以用它们作为起点来构建自己的 AI 应用。如果你想在应用中结合 RAG（检索增强生成）和语言模型，可以使用一个叫 “基于你数据的多轮问答” 的示例，直接复制（clone）下来使用。
+
+这个示例已经包含了实现 RAG 和语言模型所需的关键组件。
+
+换句话说：
+
+你不用从零开始搭建，只要拿现成的“多轮问答”示例，就能快速搭建一个支持 RAG 的智能问答聊天应用。这个示例里已经集成好了“查数据”和“生成回答”的功能。
+
+你要做的就是：
+
+把用户的聊天记录也算进来，让问题更有“上下文”；
+
+从你上传的数据中找出相关信息；
+
+把这些信息加进问题里，增强提示词；
+
+试着设计不同版本的提示，看看哪种效果更好；
+
+然后把最终的提示词交给大模型，让它生成回答。
+
+🔁 1. 根据聊天历史改写用户问题
+
+流程的第一步是使用一个 大语言模型（LLM）节点，它会接收聊天历史和用户刚才的问题，然后生成一个更完整、更清晰的新问题。
+这样做可以让问题更容易被后续流程理解和处理。
+
+🔍 2. 查找相关信息（Index Lookup）
+
+接下来，使用 Index Lookup 工具 去你之前用 Azure AI Search 创建的搜索索引中查找数据，找出和问题最相关的信息。
+
+💡 提示：你可以进一步了解 Index Lookup 工具的参数设置和用法。
+
+📄 3. 生成提示词上下文（Prompt Context）
+
+Index Lookup 的输出结果是你要用于生成回答的“上下文信息”。
+
+你可以用 Python 节点 对这些检索结果进行处理，把它们整理成一段文本字符串（比如：把内容和来源合并成一段文字），作为发送给语言模型的提示词一部分。
+
+注意：你可以设置输出前几个结果（top-n），按需组合内容，提升质量。
+
+🎛 4. 定义提示词的不同版本（Prompt Variants）
+
+在发送给语言模型的提示词中，你可以设计不同的“版本”来对比哪种提示更有效。
+
+当你在聊天流程中引入 RAG 时，你的目标是让 AI 的回答更有依据、更真实。
+除了查找上下文信息，你还可以通过加入系统提示语（如“请仅依据提供内容作答”）来强化 AI 回答的“可信度”。
+
+💬 5. 搭载上下文进行对话（Chat with Context）
+最后一步，使用 LLM 节点 将构建好的提示词（包括上下文）发送给语言模型，让它基于你的数据生成自然语言的回答。
+这个回答将是整个流程的最终输出。
