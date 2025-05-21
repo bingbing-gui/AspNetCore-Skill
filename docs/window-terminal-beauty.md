@@ -11,7 +11,6 @@ Nerd Font 在流行编程字体的基础上添加了大量图标符号（如 Dev
 github:https://www.nerdfonts.com/font-downloads  
 website:https://www.nerdfonts.com/
 
-
 可从其官网 (https://www.nerdfonts.com/font-downloads) 下载喜欢的字体并安装。作者使用的是：JetBrainsMono Nerd Font，下载完所有字体之后，全部选择字体文件并进行安装。
 
 ## 安装 Oh My Posh
@@ -83,3 +82,6 @@ oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/them
 ```
 
 重启终端即可。
+
+本文介绍了如何使用 Nerd Font 和 Oh My Posh 等工具为 Windows Terminal 和 PowerShell 进行美化。首先安装带有大量图标补丁的 Nerd Font 字体，然后通过 winget 安装 Oh My Posh 并选择合适的主题，在 PowerShell 的配置文件中添加初始化命令以启用美化效果。最后可根据需要更换主题并重启终端完成配置。
+
