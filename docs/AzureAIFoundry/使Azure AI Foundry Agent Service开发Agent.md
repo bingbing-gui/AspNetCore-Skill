@@ -100,6 +100,9 @@ Foundry Agent Service 是微软提供的开发平台，让你可以快速创建�
 
 ## 开发一个简单的智能体
 
+我们使用 Python 构建一个简单智能体并接入自定义数据。当前 Azure AI Foundry Agent Service 的 SDK 仅支持 Python，C# 版本预计稍后推出。以下是在 Azure AI Foundry 中创建智能体的主要步骤：
+
+
 
 
 
