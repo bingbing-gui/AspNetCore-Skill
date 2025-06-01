@@ -20,10 +20,8 @@ namespace SK.FunctionCalling.Controllers
         {
             // 创建 OrderBookPlugin 实例
             OrderBookPlugin orderBookPlugin = new OrderBookPlugin();
-
             // 获取书籍数据，使用 await 等待异步任务的完成
             var books = await orderBookPlugin.GetBookMenuAsync();
-
             // 将书籍数据传递到视图
             return View(books);
         }

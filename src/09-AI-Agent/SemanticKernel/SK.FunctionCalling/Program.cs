@@ -1,7 +1,4 @@
-﻿using Azure;
-using Azure.AI.OpenAI;
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.Connectors.OpenAI;
+﻿using Microsoft.SemanticKernel;
 using SK.FunctionCalling.Plugins;
 
 
@@ -11,20 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// 添加 MVC 服务
-builder.Services.AddControllersWithViews();
-
 // 注册 Semantic Kernel 服务（如果希望通过依赖注入方式使用）
 
 builder.Services.AddSingleton(sp =>
 {
     var kernel = Kernel.CreateBuilder()
      .AddAzureOpenAIChatCompletion(
-         deploymentName: "gpt-4", // 你在 Azure 上配置的模型部署名称
+         deploymentName: "gpt-4.1", // 你在 Azure 上配置的模型部署名称
          endpoint: "",
          apiKey: ""
-     )
-     .Build();
+     ).Build();
+    var logger=kernel.LoggerFactory;
     kernel.ImportPluginFromType<TimePlugin>("Time");
     kernel.ImportPluginFromType<OrderBookPlugin>("OrderBook");
     return kernel;
