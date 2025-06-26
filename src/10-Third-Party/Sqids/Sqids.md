@@ -131,3 +131,7 @@ public class SomeController(SqidsEncoder<int> sqids)
     // 使用 sqids 进行编码解码
 }
 ```
+
+## 总结
+
+Sqids 是一个简单易用的库，可以帮助你将数字转换为看起来随机的字符串，反之亦然。通过自定义选项，你可以灵活地调整编码和解码的行为，以满足特定需求。无论是在 URL 中使用，还是在其他场景中，Sqids 都能为你提供便利。

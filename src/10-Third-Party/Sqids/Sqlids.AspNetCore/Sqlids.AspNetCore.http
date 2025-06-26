@@ -1,0 +1,6 @@
+@Sqlids.AspNetCore_HostAddress = http://localhost:5237
+
+GET {{Sqlids.AspNetCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
