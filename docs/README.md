@@ -20,7 +20,7 @@
 
 ## 🚀 推荐阅读方式
 
-1. 在线阅读（GitHub Pages 发布后） 👉 `https://your-username.github.io/your-repo`
+1. 在线阅读（GitHub Pages 发布后） 👉 `https://github.com/bingbing.gui/AspNetCore-Skill`
 2. 本地浏览：建议使用 [Docsify](https://docsify.js.org/#/) 或 VSCode + Markdown Preview Enhanced 插件。
 3. 配套源码位于 `src/`，可直接运行与修改。
 
@@ -28,7 +28,8 @@
 
 ## 📌 作者 & 项目说明
 
-- 作者：你的名字（可替换）
-- 项目地址：[GitHub 仓库](https://github.com/your-username/your-repo)
+- 作者：桂兵兵（Bill）
+- 项目地址：[GitHub 仓库](https://github.com/bingbing.gui/AspNetCore-Skill)
+- 版本：1.0.0
 - 许可协议：MIT
 
