@@ -1,4 +1,4 @@
-# 🤖 Semantic Kernel提示词、模板与上下文记忆
+# Semantic Kernel提示词、模板与上下文记忆
 
 ---
 
@@ -17,6 +17,7 @@
 在 Semantic Kernel 中，Prompt 是和大语言模型交流的方式。写得好，AI 懂你；写不好，AI 胡说。
 
 ### 常见提示词策略：
+
 
 | 策略名               | 说明               | 文章                                                             |
 |----------------------|--------------------|------------------------------------------------------------------|
@@ -38,19 +39,6 @@ Prompt Template 就像“提示词函数”，不仅可以插入变量，还能�
 | ✅ 原生模板语法     | 使用 `{{$变量}}` 和 `{{函数}}` 语法    | `{{$city}} 天气是 {{weather.getForecast $city}}`                  |
 | ✅ Handlebars 语法 | 类似前端模板引擎，结构强              | `{{request}}，{{#if image}}<image>{{image}}</image>{{/if}}`       |
 
----
-
-### Template 支持多种来源：
-
-| 来源方式               | 是否推荐 | 说明                          |
-|------------------------|----------|-------------------------------|
-| 📄 内联字符串          | ✅       | 简单测试快速开发              |
-| 📝 YAML 文件           | ✅       | 推荐！支持元信息、可版本管理   |
-| 📂 外部 .hbs/.txt 文件 | ✅       | 模板与代码分离，适合多人协作   |
-| 📦 嵌入式资源          | ⚠️       | 用于封装 SDK、自定义程序集     |
-| ⚙️ 动态构造模板         | ❌       | 易错，不利维护                 |
-
----
 
 ### Handlebars YAML 示例：
 
@@ -79,9 +67,10 @@ var function = kernel.CreateFunctionFromPromptYaml(yaml, new HandlebarsPromptTem
 
 ```csharp
 ChatHistory chat = [];
-chat.AddSystemMessage("You are a helpful assistant.");
-chat.AddUserMessage("What's available?");
-chat.AddAssistantMessage("Pizza, pasta, salad.");
+chat.AddSystemMessage("你是一个乐于助人的助手。");
+chat.AddUserMessage("现在可以点些什么？");
+chat.AddAssistantMessage("我们提供披萨、意大利面和沙拉。");
+
 ```
 
 支持图文消息、作者信息：
@@ -90,12 +79,13 @@ chat.AddAssistantMessage("Pizza, pasta, salad.");
 chat.Add(new()
 {
         Role = AuthorRole.User,
-        AuthorName = "Alice",
+        AuthorName = "Alice", // 用户名
         Items = [
-                new TextContent { Text = "What's on the menu?" },
-                new ImageContent { Uri = new Uri("https://example.com/menu.jpg") }
+                new TextContent { Text = "菜单上有哪些？" },
+                new ImageContent { Uri = new Uri("https://example.com/menu.jpg") } // 菜单图片链接
         ]
 });
+
 ```
 
 ---
@@ -103,7 +93,7 @@ chat.Add(new()
 ## 🧩 四、三者协同：构建完整智能对话流程
 
 ✅ Prompt 负责告诉 AI “做什么”  
-✅ Template 让提示结构清晰、可复用  
+✅ Template 让提示词结构清晰、可复用  
 ✅ ChatHistory 让 AI 记住过去，理解上下文
 
 这三者组合起来，就是打造语义感知、连续对话、可维护 AI 系统的核心架构。
