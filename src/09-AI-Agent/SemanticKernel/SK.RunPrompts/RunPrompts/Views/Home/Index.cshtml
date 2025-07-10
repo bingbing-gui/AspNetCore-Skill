@@ -1,8 +1,250 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null; // 不使用布局文件
 }
+<style>
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        max-width: 800px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    .chat-messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background-color: #f8f8f8;
+    }
+
+    .chat-input {
+        display: flex;
+        align-items: center; /* 垂直居中对齐 */
+        justify-content: space-between; /* 左右对齐，使按钮居中 */
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+        .chat-input textarea {
+            flex: 1;
+            resize: none;
+            height: 60px;
+            border-radius: 6px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .chat-input button {
+            margin-left: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px 20px; /* 增加按钮内边距，使按钮更显眼 */
+        }
+
+            .chat-input button:hover {
+                background-color: #0056b3;
+            }
+
+    /* 用户消息 */
+    .user-message {
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+        .user-message p {
+            display: inline-block;
+            max-width: 70%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 12px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            word-wrap: break-word;
+        }
+
+    /* AI 消息 */
+    .ai-message {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+        .ai-message p {
+            display: inline-block;
+            max-width: 70%;
+            padding: 10px;
+            background-color: #f1f1f1;
+            color: #333;
+            border-radius: 12px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            word-wrap: break-word;
+        }
+
+    /* AI 正在思考的样式 */
+    .ai-waiting {
+        font-style: italic;
+        color: #007bff;
+        margin-top: 10px;
+    }
+    /* Loading spinner style */
+    .loading-spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #007bff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+    }
+
+    @@keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    /* 格式化文本样式 */
+    .formatted-content {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+    }
+
+        .formatted-content h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .formatted-content p {
+            margin-bottom: 15px;
+        }
+
+        .formatted-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .formatted-content li {
+            margin-bottom: 5px;
+        }
+
+        .formatted-content strong {
+            font-weight: bold;
+        }
+
+        .formatted-content em {
+            font-style: italic;
+        }
+
+        .formatted-content hr {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+</style>
+
+<div class="chat-container">
+    <div class="chat-messages" id="chatMessages">
+        <!-- 聊天记录将在这里动态显示 -->
+        <p class="formatted-content"><strong>AI:</strong> 你好！欢迎开始聊天 😊</p>
+    </div>
+    <div class="chat-input">
+        <!-- 输入框 -->
+        <textarea id="messageInput"
+                  onkeydown="checkEnter(event)"
+                  placeholder="Demo1 技能：软件工程、C#、Python、绘画、吉他、舞蹈；兴趣：教育、心理学、编程、帮助他人
+Demo2 角色：游戏开发工程师； 技能：软件开发, C#, Python, 画画, 吉他、舞蹈"
+                  style="width: 100%; height: 120px; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        <button onclick="sendMessage()">发送</button>
+    </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function checkEnter(event) {
+        if (event.key === "Enter") {  // 检查是否按下回车键
+            event.preventDefault(); // 阻止换行，防止 textarea 换行
+            sendMessage(); // 发送消息
+        }
+    }
+    function sendMessage() {
+        const input = document.getElementById("messageInput");
+        const msg = input.value.trim();
+        if (msg === "") return;
+        const chat = document.getElementById("chatMessages");
+
+        // 显示用户发送的消息
+        const userMsg = `<div class="user-message formatted-content"><p>${msg}</p><div class="message-time">${new Date().toLocaleTimeString()}</div></div>`;
+        chat.innerHTML += userMsg;
+        input.value = "";  // 清空输入框
+
+        // 滚动到聊天记录的最底部
+        chat.scrollTop = chat.scrollHeight;
+
+
+        //创建一个唯一 AI 回复容器（包含空的 <p> 方便后续填充）
+        const aiContainer = document.createElement('div');
+        aiContainer.className = 'ai-message formatted-content';
+        aiContainer.innerHTML = `
+            <p class="ai-reply"></p>
+            <div class="message-time">${new Date().toLocaleTimeString()}</div>`;
+        chat.appendChild(aiContainer);
+        chat.scrollTop = chat.scrollHeight;
+
+        // 使用 fetch 来发送 POST 请求并处理流式响应
+        fetch('/Chat/SendMessageAsync', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(msg)
+        })
+        .then(response => {
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder('utf-8');
+            let fullMessage = '';
+            const replyP = aiContainer.querySelector('.ai-reply');  // 只针对当前这条 AI 消息
+
+            // 逐步读取流中的数据
+            const processStream = () => {
+                reader.read().then(({ done, value }) => {
+                    if (done) {
+                       return;  // 流读取完毕
+                    }
+                    const chunk = decoder.decode(value, { stream: true });
+                    const chars = [...chunk]; // 拆成字符数组，支持中英文
+                    let i = 0;
+                    const showChar = () => {
+                        if (i < chars.length) {
+                            replyP.textContent += chars[i];
+                            i++;
+                            chat.scrollTop = chat.scrollHeight;
+                            setTimeout(showChar, 30); // 每 30ms 显示一个字符
+                        } else {
+                        // 当前 chunk 显示完了，读取下一个 chunk
+                            processStream();
+                        }
+                    };
+                    showChar(); // 启动显示字符
+                }).catch(error => {
+                    console.error("Stream error:", error);
+                    const errorMsg = `<div class="ai-message formatted-content"><p><strong>AI:</strong> 发送失败，请重试。</p><div class="message-time">${new Date().toLocaleTimeString()}</div></div>`;
+                    chat.innerHTML += errorMsg;
+                });
+            };
+            processStream();
+        })
+        .catch(error => {
+            console.error("Fetch error:", error);
+            const errorMsg = `<div class="ai-message formatted-content"><p><strong>AI:</strong> 请求失败，请重试。</p><div class="message-time">${new Date().toLocaleTimeString()}</div></div>`;
+            chat.innerHTML += errorMsg;
+        });
+    }
+</script>

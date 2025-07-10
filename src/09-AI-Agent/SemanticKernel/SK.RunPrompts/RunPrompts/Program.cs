@@ -1,23 +1,22 @@
+using Microsoft.SemanticKernel;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddSingleton<IKernel>(sp =>
+builder.Services.AddSingleton<Kernel>(sp =>
 {
     var config = sp.GetRequiredService<IConfiguration>();
 
     var kernel = Kernel.CreateBuilder()
         .AddAzureOpenAIChatCompletion(
             deploymentName: "gpt-4.1",
-            endpoint: config["AzureOpenAI:Endpoint"],
-            apiKey: config["AzureOpenAI:ApiKey"]
+            endpoint: "",//config["AzureOpenAI:Endpoint"],
+            apiKey: ""//config["AzureOpenAI:ApiKey"]
         )
         .Build();
-
-    kernel.ImportPluginFromType<TimePlugin>("Time");
-    kernel.ImportPluginFromType<OrderBookPlugin>("OrderBook");
 
     return kernel;
 });

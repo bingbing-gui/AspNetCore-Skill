@@ -21,10 +21,10 @@
 
 | 策略名               | 说明               | 文章                                                             |
 |----------------------|--------------------|------------------------------------------------------------------|
-| 🟢 Zero-shot         | 仅提供任务描述     | [文章一](/AI-Prompts/Zero-shot.md)                               |
-| 🔵 Few-shot          | 提供 1~5 个示例    | [文章二](/AI-Prompts/Few-shot.md)                                |
-| 🟡 Priming Prompting | 设定 AI 身份       | [文章三](/AI-Prompts/PrimingPrompting.md)                        |
-| 🔴 Chain-of-thought  | 引导逐步推理       | [文章四](/AI-Prompts/ChainOfThought.md)                          |
+| 🟢 Zero-shot         | 仅提供任务描述     | [零样本提示词和少良样本提示词](https://mp.weixin.qq.com/s/2UQ3OyLTs3HuRvEqlg9rRw)                               |
+| 🔵 Few-shot          | 提供 1~5 个示例    | [零样本提示词和少良样本提示词](https://mp.weixin.qq.com/s/2UQ3OyLTs3HuRvEqlg9rRw)                                |
+| 🟡 Priming Prompting | 设定 AI 身份       | [提示词诱导](https://mp.weixin.qq.com/s/r-kemVIW13UkVcTbPQkx2A)                        |
+| 🔴 Chain-of-thought  | 引导逐步推理       | [思维链提示](https://mp.weixin.qq.com/s/CjCsC97aT2BgYe3YxuJiHg)                          |
 
 ---
 
@@ -100,6 +100,76 @@ chat.Add(new()
 
 ---
 
+## 🛠️ 五、语义内核提示模板
+
+```csharp
+ var skTemplateFactory = new KernelPromptTemplateFactory();
+ var skPromptTemplate = skTemplateFactory.Create(new PromptTemplateConfig(
+     """
+     你是一名乐于助人的职业顾问。请根据用户的技能和兴趣，推荐最多 5 个合适的职位角色。
+     请以如下 JSON 格式返回内容：
+     "职位推荐":
+     {
+     "recommendedRoles": [],          // 推荐的职位
+     "industries": [],                // 所属行业
+     "estimatedSalaryRange": ""       // 预计薪资范围
+     }
+     我的技能包括：{{$skills}}。我的兴趣包括：{{$interests}}。根据这些，哪些职位适合我？
+     """
+ ));
+ // 渲染提示模板并传入参数
+ var skRenderedPrompt = await skPromptTemplate.RenderAsync(
+    _kernel,
+    new KernelArguments
+    {
+        ["skills"] = skills,
+        ["interests"] = interests
+    }
+);
+```
+
+----
+
+## 🛠️ 六、Handlebars提示词模板
+
+```csharp
+var roleMatch = Regex.Match(message, @"角色[:：](.*?)([;；]|$)");
+var skillMatch = Regex.Match(message, @"技能[:：](.*)");
+string roles = roleMatch.Success ? roleMatch.Groups[1].Value.Trim() : "";
+string skill = skillMatch.Success ? skillMatch.Groups[1].Value.Trim() : "";
+var hbTemplateFactory = new HandlebarsPromptTemplateFactory();
+var hbPromptTemplate = hbTemplateFactory.Create(new PromptTemplateConfig()
+{
+    TemplateFormat = "handlebars",
+    Name = "MissingSkillsPrompt",
+    Template = """
+    <message role="system">
+        指令：你是一名职业顾问。请分析用户当前技能与目标职位要求之间的技能差距。
+    </message>         
+    <message role="user">目标职位：{{targetRole}}</message>
+    <message role="user">当前技能：{{currentSkills}}</message>
+    <message role="assistant">
+     “技能差距分析”：
+     {
+         "缺失技能": [],
+         "建议学习的课程": [],
+         "推荐的认证": []
+     }
+     </message>
+ """
+}
+);
+
+var hbRenderedPrompt = await hbPromptTemplate.RenderAsync(
+_kernel,
+new KernelArguments
+{
+    ["targetRole"] = roles,
+    ["currentSkills"] = skill
+});
+```
+
+----
 ### ✅ 总结一句话
 
 使用 Semantic Kernel 的 Prompt + Template + ChatHistory 组合，你可以轻松构建真正智能、会“聊天”的 AI 应用。
