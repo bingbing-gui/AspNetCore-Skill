@@ -10,18 +10,19 @@
   <body>
     <!-- Docsify 渲染目标 -->
     <div id="app">加载中...</div>
-
     <!-- Docsify 配置对象：必须在 script 前 -->
-     
-   <script>
+  
+  <script>
     window.$docsify = {
       name: 'AI × ASP.NET Core 实战手册',
       homepage: 'README.md',
-      loadSidebar: false,   // ✅ 关闭侧边栏
-      loadNavbar: false,
-      subMaxLevel: 2,
+      loadSidebar: false,       // ✅ 不加载 sidebar.md
+      loadNavbar: false,        // ✅ 不加载 _navbar.md
+      auto2top: true,           // 页面跳转自动回顶部
+      subMaxLevel: 0,           // ✅ 不显示子标题
+      executeScript: true,      // 支持代码块执行
       themeColor: '#3178c6'
-    }
+    };
   </script>
   <!-- 正确加载位置：在 body 最底部 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
