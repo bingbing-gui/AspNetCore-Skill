@@ -41,13 +41,13 @@
 
 ## 🏅 荣誉称号 | Recognition
 
-**Microsoft Most Valuable Professional**  
+> Microsoft Most Valuable Professional
 
 - 授予：桂兵兵（Bill Gui）  
 - 年度：2024–2026  
 - 技术领域：Developer Technologies (.NET)  
 
-**Microsoft Certified: Azure AI Engineer Associate**  
+> Microsoft Certified: Azure AI Engineer Associate
 
 - 持证人：桂兵兵（Bill Gui）  
 - 认证编号：AI-102  
