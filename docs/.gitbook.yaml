@@ -1,7 +1,0 @@
-root: README.md
-
-navigation:
-  - Welcome: README.md
-  - AI基础篇: AI基础篇.md
-  - 提示工程学: 提示工程学/README.md
-  - AI开发框架: AI开发框架/README.md
