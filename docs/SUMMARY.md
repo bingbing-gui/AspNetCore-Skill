@@ -21,16 +21,16 @@
 
 * [第11章：机器学习分类](第11章-机器学习分类.md)
 * [第12章：监督学习之回归与评估模型](第12章-监督学习之回归与评估模型.md)
-* [第13章：监督学习之二元分类(Binary%20classification)](第13章-监督学习之二元分类(Binary classification).md)
-* [第14章：监督学习之多分类(Multiclass%20Classification)](第14章-监督学习之多分类(Multiclass Classification).md)
-* [第15章：无监督学习之聚类(Clustering)](第15章-无监督学习之聚类(Clustering).md)
-* [第16章：深度学习(Deep%20learning)](第16章-深度学习(Deep learning).md)
+* [第13章：监督学习之二元分类](第13章-监督学习之二元分类(Binary classification).md)
+* [第14章：监督学习之多分类](第14章-监督学习之多分类(Multiclass Classification).md)
+* [第15章：无监督学习之聚类](第15章-无监督学习之聚类(Clustering).md)
+* [第16章：深度学习](第16章-深度学习(Deep learning).md)
 
 ## ☁️ Azure AI 实践基础
 
 * [第17章：Azure机器学习](第17章-Azure机器学习.md)
 * [第18章：Azure平台上的AI服务](第18章-Azure平台上的AI服务.md)
-* [第19章：创建并使用Azure%20AI服务](第19章-创建并使用Azure AI 服务.md)
+* [第19章：创建并使用AzureAI服务](第19章-创建并使用Azure AI 服务.md)
 
 ---
 
