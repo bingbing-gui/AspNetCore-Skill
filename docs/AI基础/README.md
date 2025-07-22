@@ -25,10 +25,10 @@
 
 - [第11章：机器学习分类](第11章-机器学习分类.md)
 - [第12章：监督学习之回归与评估模型](第12章-监督学习之回归与评估模型.md)
-- [第13章：监督学习之二元分类(Binary classification)](第13章-监督学习之二元分类%28Binary%20classification%29.md)
-- [第14章：监督学习之多分类(Multiclass Classification)](第14章-监督学习之多分类%28Multiclass%20Classification%29.md)
-- [第15章：无监督学习之聚类(Clustering)](第15章-无监督学习之聚类%28Clustering%29.md)
-- [第16章：深度学习(Deep learning)](第16章-深度学习%28Deep%20learning%29.md)
+- [第13章：监督学习之二元分类(Binary classification)](第13章-监督学习之二元分类(Binary Classification).md)
+- [第14章：监督学习之多分类(Multiclass Classification)](第14章-监督学习之多类分类 (Multiclass Classification).md)
+- [第15章：无监督学习之聚类(Clustering)](第15章-无监督学习之集群(Clustering))
+- [第16章：深度学习(Deep learning)](第16章-深度学习(Deep learning))
 
 ---
 

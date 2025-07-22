@@ -30,7 +30,7 @@
 
 * [第17章：Azure机器学习](第17章-Azure机器学习.md)
 * [第18章：Azure平台上的AI服务](第18章-Azure平台上的AI服务.md)
-* [第19章：创建并使用Azure%20AI服务](第19章-创建并使用Azure AI服务.md)
+* [第19章：创建并使用Azure%20AI服务](第19章-创建并使用Azure AI 服务.md)
 
 ---
 
