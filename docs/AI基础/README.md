@@ -13,7 +13,7 @@
 - [003-了解机器学习](003-了解机器学习.md)
 - [004-计算机视觉](004-计算机视觉.md)
 - [005-机器学习的基础](005-机器学习的基础.md)
-- [006-自然语言处理(NLP)](006-自然语言处理(NLP).md)
+- [006-自监督与推理(NLP)](006-自监督与推理%28NLP%29.md)
 - [007-文档处理和知识提取](007-文档处理和知识提取.md)
 - [008-生成式AI](008-生成式AI.md)
 - [009-AI的挑战和风险](009-AI的挑战和风险.md)
@@ -25,18 +25,18 @@
 
 - [011-机器学习分类](011-机器学习分类.md)
 - [012-监督学习之回归与评估模型](012-监督学习之回归与评估模型.md)
-- [013-监督学习之二元分类(Binary Classification)](013-监督学习之二元分类(Binary Classification).md)
-- [014-监督学习之多分类(Multiclass Classification)](014-监督学习之多分类(Multiclass Classification).md)
-- [015-无监督学习之聚类(Clustering)](015-无监督学习之聚类(Clustering).md)
-- [016-深度学习(Deep learning)](016-深度学习(Deep learning).md)
+- [013-监督学习之二元分类(Binary classification)](013-监督学习之二元分类%28Binary%20classification%29.md)
+- [014-监督学习之多分类(Multiclass Classification)](014-监督学习之多分类%28Multiclass%20Classification%29.md)
+- [015-无监督学习之聚类(Clustering)](015-无监督学习之聚类%28Clustering%29.md)
+- [016-深度学习(Deep learning)](016-深度学习%28Deep%20learning%29.md)
 
 ---
 
 ### ☁️ Azure AI 实践基础
 
 - [017-Azure机器学习](017-Azure机器学习.md)
-- [018-Azure 平台上的 AI 服务](018-Azure 平台上的 AI 服务.md)
-- [019-创建并使用Azure AI 服务](019-创建并使用Azure AI 服务.md)
+- [018-Azure平台上的AI服务](018-Azure平台上的AI服务.md)
+- [019-创建并使用Azure AI服务](019-创建并使用Azure%20AI服务.md)
 
 ---
 
