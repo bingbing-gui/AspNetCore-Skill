@@ -1,8 +1,6 @@
 # Summary
 
-- [首页](README.md)
-
-- 📘 AI 基础篇
+- [作者介绍](README.md)
 
 ## 🧠 人工智能入门
 
