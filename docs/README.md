@@ -11,7 +11,7 @@
 - 📍 **所在城市**：日本·东京  
 - 🏢 **工作方向**：企业应用架构、AI 系统设计、前后端协作、Azure 云计算  
 
-### 📚 擅长领域
+## 📚 擅长领域
 
 - ASP.NET Core / ASP.NET Core MVC / WinForm / WPF / Dapper / EF Core  
 - Postgres / MySql / SqlServer  
