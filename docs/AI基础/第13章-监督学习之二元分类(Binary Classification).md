@@ -1,4 +1,5 @@
-# 监督学习之二元分类 (Binary Classification)
+# 第13章-监督学习之二元分类(Binary Classification)
+
 ---
 
 ## 分类 vs. 回归

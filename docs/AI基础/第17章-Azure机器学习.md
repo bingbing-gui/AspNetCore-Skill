@@ -1,4 +1,5 @@
-# Azure 机器学习 (Azure Machine Learning)  
+# 第17章-Azure机器学习  
+
 
 ## 什么是 Azure 机器学习？  
 
