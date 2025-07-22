@@ -1,4 +1,4 @@
-# Semantic Kernel提示词、模板与上下文记忆
+# 第6章-Semantic-Kernel运行提示词
 
 ---
 

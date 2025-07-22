@@ -1,3 +1,5 @@
+# 第3章-Semantic-Kernel核心组件
+
 ## Kernel介绍
 
 Kernel是Semantic Kernel整个框架的核心组件，简单来说，Kernel是一个依赖注入DI容器，它负责管理运行 AI 应用所需的所有服务和插件。只要你将所有的服务和插件提供给Kernel，AI 就能在需要时无缝使用它们。，由于 Kernel 拥有运行本地代码和AI服务所需的所有服务和插件，因此它几乎被SK SDK 中的所有组件使用，以支持你的AI-Agents。这意味着，无论你在SK中运行提示-prompt还是code，Kernel 都会始终可用，并自动检索和调用所需的服务和插件。

@@ -1,5 +1,5 @@
 
-# 理解并防御 Prompt Injection（提示注入）攻击
+# 第8章-Semantic-Kernel安全篇之防御提示词注入攻击
 
 —— Semantic Kernel 安全机制详解
 

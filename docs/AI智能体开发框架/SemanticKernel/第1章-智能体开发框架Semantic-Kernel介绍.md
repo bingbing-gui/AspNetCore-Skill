@@ -1,4 +1,4 @@
-# Semantic Kernel介绍
+# 第1章-智能体开发框架Semantic-Kernel介绍
 
 Semantic Kernel 是一个轻量级的开源开发工具包，允许您轻松构建 AI 代理，并将最新的 AI 模型集成到您的 C#、Python 或 Java 代码库中。它作为高效的中间件，能够加速企业级解决方案的交付。
 

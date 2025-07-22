@@ -29,14 +29,14 @@
 
 - 🧩 Semantic Kernel 框架
 
-  - [第1章-智能体开发框架Semantic-Kernel介绍](SemanticKernel/001-智能体开发框架Semantic Kernel介绍.md)
-  - [第2章-Semantic-Kernel框架中的Kernel对象](SemanticKernel/002-Semantic Kernel框架中的Kernel对象.md)
-  - [第3章-Semantic-Kernel核心组件](SemanticKernel/003-Semantic Kernel核心组件.md)
-  - [第4章-Semantic-Kernel集成AI服务](SemanticKernel/004-Semantic Kernel集成AI服务.md)
-  - [第5章-Semantic-Kernel中FunctionCalling](SemanticKernel/005-Semantic-Kernel中Function Calling.md)
-  - [第6章-Semantic-Kernel运行提示词](SemanticKernel/006-Semantic-Kernel运行提示词.md)
-  - [第7章-Semantic-Kernel插件介绍](SemanticKernel/007-Semantic-Kernel插件介绍.md)
-  - [第8章-Semantic-Kernel安全篇之防御提示词注入攻击](SemanticKernel/008-Semantic-Kernel安全篇之防御提示词注入攻击.md)
-  - [第9章-Semantic-Kernel函数过滤器](SemanticKernel/009-Semantic-Kernel函数过滤器.md)
+  - [第1章-智能体开发框架Semantic-Kernel介绍](SemanticKernel/第1章-智能体开发框架Semantic-Kernel介绍.md)
+  - [第2章-Semantic-Kernel框架中的Kernel对象](SemanticKernel/第2章-Semantic-Kernel框架中的Kernel对象.md)
+  - [第3章-Semantic-Kernel核心组件](SemanticKernel/第3章-Semantic-Kernel核心组件.md)
+  - [第4章-Semantic-Kernel集成AI服务](SemanticKernel/第4章-Semantic-Kernel集成AI服务.md)
+  - [第5章-Semantic-Kernel中FunctionCalling](SemanticKernel/第5章-Semantic-Kernel中FunctionCalling.md)
+  - [第6章-Semantic-Kernel运行提示词](SemanticKernel/第6章-Semantic-Kernel运行提示词.md)
+  - [第7章-Semantic-Kernel插件介绍](SemanticKernel/第7章-Semantic-Kernel插件介绍.md)
+  - [第8章-Semantic-Kernel安全篇之防御提示词注入攻击](SemanticKernel/第8章-Semantic-Kernel安全篇之防御提示词注入攻击.md)
+  - [第9章-Semantic-Kernel函数过滤器](SemanticKernel/第9章-Semantic-Kernel函数过滤器.md)
 
 - [返回首页](../README.md)

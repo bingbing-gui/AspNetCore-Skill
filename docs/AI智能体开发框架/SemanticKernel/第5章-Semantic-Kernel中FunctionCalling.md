@@ -1,3 +1,4 @@
+# 第5章-Semantic-Kernel中FunctionCalling
 
 ChatCompletion最强大功能之一就是能够从模型中调用函数。这让你可以基于现有代码创建聊天机器人，实现自动化业务流程、生成代码片段等功能。
 

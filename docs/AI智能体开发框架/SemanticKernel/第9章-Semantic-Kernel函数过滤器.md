@@ -1,4 +1,4 @@
-# 🧰 Semantic Kernel 过滤器（Filters）
+# 🧰 第9章-Semantic-Kernel函数过滤器
 
 Semantic Kernel 提供了强大的过滤器机制（Filters），帮助开发者实现函数调用过程的可观察性、安全性与可控性，构建符合企业标准的 Responsible AI 解决方案。
 

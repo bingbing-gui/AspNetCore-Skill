@@ -1,4 +1,6 @@
 
+# 第7章-Semantic-Kernel插件介绍
+
 Semantic Kernel（SK）通过插件机制将传统函数与大语言模型（LLM）整合，实现函数调用功能（Function Calling）。本文将带你了解插件的作用、如何定义和注册插件函数，以及如何通过 AI 自动调用它们。
 
 ---

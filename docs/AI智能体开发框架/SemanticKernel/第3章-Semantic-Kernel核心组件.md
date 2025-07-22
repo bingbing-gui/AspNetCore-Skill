@@ -1,3 +1,5 @@
+# 第3章-Semantic-Kernel核心组件
+
 Semantic Kernel 提供了许多不同的组件，这些组件可以单独使用，也可以组合使用。本文概述了这些不同的组件，并解释了它们之间的关系。
 
 ## AI 服务连接器（AI Service Connectors）
